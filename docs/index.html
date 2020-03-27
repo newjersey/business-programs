@@ -1,48 +1,813 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>New Jersey's COVID-19 Business Support Eligibility Wizard</title>
+    <link rel="stylesheet" href="./bootstrap.min.css"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
+    <link rel="manifest" href="/site.webmanifest"/>
+    <link rel="stylesheet" href="./form-style.css"/>
+  </head>
+  <body>
+    <div class="header">
+      <img alt="cv.business.nj.gov logo" src="./njlogo.png">
+      <a target="_blank" rel="noopener" href="https://cv.business.nj.gov/" class="header__home__url"><svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><title>Group 65</title><g stroke="#FFF" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"><path d="M11.5 6.73v6.77H.5v-11h7.615M4.5 9.5l7-7M13.5 5.5v-5h-5"></path></g></svg>
+        <span>Go to CV.Business.NJ.gov</span></a>
+      <h1>State of New Jersey COVID-19 Business Support Eligibility Wizard</h1>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12">
+          <br/>
+          <div class="no-print preamble">
+            <p>
+              The COVID-19 outbreak is causing extraordinary disruption for companies
+              and non-profits across the Garden State.
+              The NJEDA wants to make it easy for organizations to understand what support
+              programs are available to you to help stabilize your operations and
+              get back on a pathway to growth.
+            </p>
+            <p>
+              This is a beta version of the Eligibility Wizard that focuses on newly announced State Emergency Assistance programs and the SBA disaster loan program.  We will be updating it regularly as new federal, state, local, and philanthropic programs become available.
+            </p>
+          </div>
+          <span class="fixed_marker"></span>
+          <br/>
+          <div class="my_options">
+            <h5>Included programs</h5>
+            <ul>
+              <li class="eag">Emergency Assistance Grant Program</li>
+              <li class="eawcl">Emergency Assistance Loan Program</li>
+              <li class="guarantee">Emergency Assistance Guarantee Program</li>
+              <li class="egp">NJ Entrepreneur Support Program</li>
+            </ul>
+            <ul>
+              <li class="eidl">Federal SBA Emergency Injury Disaster Loans</li>
+              <li class="frelief">Financial relief on existing NJEDA obligations</li>
+              <li class="cdfi">Loans from a CDFI</li>
+              <li class="bank">Financing from a private bank</li>
+            </ul>
+          </div>
+          <div class="hidden_options no-print">
+            <h5>Included programs</h5>
+            <ul>
+              <li class="eag">Emergency Assistance Grant Program</li>
+              <li class="eawcl">Emergency Assistance Loan Program</li>
+              <li class="guarantee">Emergency Assistance Guarantee Program</li>
+              <li class="egp">NJ Entrepreneur Support Program</li>
+            </ul>
+            <ul>
+              <li class="eidl">Federal SBA Emergency Injury Disaster Loans</li>
+              <li class="frelief">Financial relief on existing NJEDA obligations</li>
+              <li class="cdfi">Loans from a CDFI</li>
+              <li class="bank">Financing from a private bank</li>
+            </ul>
+          </div>
+          <form class="form">
+            <div id="q42" class="question">
+              <span class="answered">‣</span>
+              <strong>NJEDA Disclaimer for Business Support Eligibility Wizard</strong>
+              <p>
+                The NJEDA is offering this screening tool that recommends emergency assistance
+                programs for you to consider based upon information you provide about your
+                organization as a courtesy.
+              </p>
+              <p>
+                To apply for a program, you need to apply through the appropriate administering
+                agency. The Eligibility Wizard will provide guidance on how to apply for any
+                benefit on this website but cannot guarantee eligibility. The administering agency
+                will determine final eligibility upon your submission of an application for each program.
+              </p>
+              <p>
+                The information you share for purposes of public benefits screening will be
+                anonymous and can be shared with NJ State agencies to improve access to
+                benefits and programs.
+              </p>
+              <button class="btn btn-primary">
+                Agree
+              </button>
+              <button class="btn btn-dark">
+                Cancel
+              </button>
+            </div>
 
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>COVID-19 Business Assistance Programs</title>
-  <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, minimal-ui" />
-  <meta name="Description" content="Discover which COVID-19 emergency assistance programs are available to your business." />
-  <style>
-    html,
-    body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-    }
+            <h3>Basic Information</h3>
+            <div id="q1" class="question">
+              <span class="answered">‣</span>
+              <p>
+                Is your business/non-profit registered to do business in New Jersey?
+              </p>
+              <button class="btn btn-primary">
+                Yes
+              </button>
+              <button class="btn btn-dark">
+                No
+              </button>
+            </div>
 
-    h1,
-    p {
-      margin: 1em;
-      text-align: center;
-      font-size: xx-large;
-    }
-  </style>
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-</head>
+            <div id="q110" class="question">
+              <span class="answered">‣</span>
+              <p>
+                Is your organization for-profit or not-for-profit?
+              </p>
+              <button class="btn btn-primary">
+                For-profit
+              </button>
+              <button class="btn btn-dark">
+                Not-for-profit
+              </button>
+            </div>
 
-<body>
-  <h1>COVID-19 Business Relief Programs</h1>
-  <p>
-    Coming soon. Meanwhile, please visit <a href="https://cv.business.nj.gov/">cv.business.nj.gov</a>
-  </p>
+            <div class="non-profit">
+              <div id="q11" class="question">
+                <span class="answered">‣</span>
+                <p>
+                  Does your not-for-profit have one of the following designations: 501(c)(3), 501(c)(4), 501(c)(7)?
+                </p>
+                <button class="btn btn-primary">
+                  Yes
+                </button>
+                <button class="btn btn-dark">
+                  No
+                </button>
+              </div>
+            </div>
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140253594-5"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+            <div id="q0" class="question">
+              <span class="answered">‣</span>
+              <p>
+                Does your organization have an existing financial relationship
+                with NJEDA, such as a loan or incentive agreement?
+              </p>
+              <button class="btn btn-primary">
+                Yes
+              </button>
+              <button class="btn btn-dark">
+                No
+              </button>
+            </div>
 
-    gtag('config', 'UA-140253594-5');
-  </script>
-</body>
+            <div id="q7" class="question">
+              <span class="answered">‣</span>
+              <p>
+                Has your business been in operation for one year or more?
+              </p>
+              <button class="btn btn-primary">
+                Yes
+              </button>
+              <button class="btn btn-dark">
+                No
+              </button>
+            </div>
 
+
+            <h3>Physical Location</h3>
+
+            <div id="q2" class="question">
+              <span class="answered">‣</span>
+              <p>
+                Does your organization have a physical commercial location in the State of New Jersey (e.g., a non-homebased office,
+                a physical-retail store, a production facility, a
+                warehouse, etc.)?
+              </p>
+              <button class="btn btn-primary">
+                Yes
+              </button>
+              <button class="btn btn-dark">
+                No
+              </button>
+            </div>
+
+            <div id="q3" class="question">
+              <span class="answered">‣</span>
+              <p>
+                Is your business home-based?
+              </p>
+              <button class="btn btn-primary">
+                Yes
+              </button>
+              <button class="btn btn-dark">
+                No
+              </button>
+            </div>
+
+            <h3>Industry</h3>
+
+            <div id="q12" class="question">
+              <span class="answered">‣</span>
+              <p>
+                Is your organization classified in one of the following industries?
+              </p>
+              <ul>
+                <li>Retail</li>
+                <li>Accommodation & food services</li>
+                <li>Arts, entertainment & recreation </li>
+                <li>Other services, such as repair and maintenance of vehicles, machinery, equipment, or products </li>
+                <li>Other services, such as personal services (barbers, cleaners, nail salons, etc.) or laundry</li>
+              </ul>
+              <button class="btn btn-primary">
+                Yes
+              </button>
+              <button class="btn btn-dark">
+                None of the above
+              </button>
+            </div>
+
+            <div class="for-profit">
+              <div id="q13" class="question">
+                <span class="answered">‣</span>
+                <p>
+                  Is your organization classified in one of the following industries?
+                  <ul>
+                    <li>Technology</li>
+                    <li>Life Sciences</li>
+                    <li>Clean Energy</li>
+                    <li>Offshore wind</li>
+                    <li>Advanced transportation and logistics (does not include traditional logistics such as trucking, wholesale, or warehousing)</li>
+                    <li>Advanced manufacturing</li>
+                    <li>Finance and professional services</li>
+                    <li>Non-retail food and beverage (does not include restaurants, grocery stores, catering companies or other prepared or unprepared retail food outlets)</li>
+                    <li>Film and digital media</li>
+                  </ul>
+                </p>
+                <button class="btn btn-primary">
+                  Yes
+                </button>
+                <button class="btn btn-dark">
+                  None of the above
+                </button>
+              </div>
+            </div>
+
+            <h3>Business Size</h3>
+
+            <div id="q8" class="question">
+              <span class="answered">‣</span>
+              <p>
+                How many W-2 full time equivalent (FTE) employees does
+                your business have?
+
+                <ul>
+                  <li>Count 1 FTE for each full-time employee</li>
+                  <li>Only count yourself as 1 FTE if you treat yourself as a W-2 employee of the company</li>
+                  <li>For each part-time W-2 employee, estimate the number of hours
+                    worked per week, divide that number by 35, and that is the
+                    fractional FTE estimate for that employee.
+                  <li>Do not include 1099 employees in this calculation</li>
+                </ul>
+              </p>
+              <div class="form-group">
+                <label for="fte">Total number of FTEs</label>
+                <small class="form-text text-muted">Examples: 1, 10.5, 15</small>
+                <input id="fte" type="text" class="input form-control form-control-lg" name="fte"/>
+                <button class="btn btn-primary">
+                  Enter
+                </button>
+                <button class="btn btn-info not-sure">
+                  Skip
+                </button>
+              </div>
+            </div>
+
+            <div class="physical_nj entrepreneur">
+              <div id="q4" class="question">
+                <span class="answered">‣</span>
+                <p>
+                  Does your business have <strong>a minimum of 50% of employees in
+                  New Jersey</strong>, as reported on your NJ WR-30 at year end 2019?
+                </p>
+                <button class="btn btn-primary">
+                  Yes
+                </button>
+                <button class="btn btn-dark">
+                  No
+                </button>
+              </div>
+
+              <div id="q5" class="question">
+                <span class="answered">‣</span>
+                <p>
+                  Is your organization's
+                  <strong>primary location / corporate headquarters in New Jersey</strong>,
+                  including at least one C-suite member with a
+                  principal office in New Jersey?
+                </p>
+                <button class="btn btn-primary">
+                  Yes
+                </button>
+                <button class="btn btn-dark">
+                  No
+                </button>
+              </div>
+            </div>
+
+            <h3>Revenue</h3>
+
+            <div id="q9" class="question">
+              <span class="answered">‣</span>
+              <p>
+                Please estimate your business' annual revenue for the year of 2019?
+              </p>
+              <div class="form-group">
+                <small class="form-text text-muted">Examples: $50000; $3,000,000</small>
+                <input type="text" class="input form-control" name="2019_revenue"/>
+              </div>
+              <button class="btn btn-primary">
+                Enter
+              </button>
+              <button class="btn btn-info not-sure">
+                Skip
+              </button>
+            </div>
+
+            <div class="entrepreneur">
+              <div id="q10" class="question">
+                <span class="answered">‣</span>
+                <p>
+                  Please estimate your business' 12-month trailing revenue as of March 9, 2020?
+                </p>
+                <div class="form-group">
+                  <small class="form-text text-muted">Examples: $50000; $3,000,000</small>
+                  <input type="text" class="input form-control" name="12mo_revenue"/>
+                </div>
+                <button class="btn btn-primary">
+                  Enter
+                </button>
+                <button class="btn btn-info not-sure">
+                  Skip
+                </button>
+              </div>
+            </div>
+
+            <h3>Loans and Guarantees</h3>
+
+            <div class="detail_qs">
+              <div id="q16" class="question">
+                <span class="answered">‣</span>
+                <p>
+                  Do you have financial statements that are
+                  CPA prepared, management prepared, or filed copies of business tax returns?
+                </p>
+                <button class="btn btn-primary">
+                  Yes
+                </button>
+                <button class="btn btn-dark">
+                  No
+                </button>
+              </div>
+            </div>
+
+            <div id="q18" class="question">
+              <span class="answered">‣</span>
+              <p>
+                Do you, another owner, or your business have a minimum FICO score of at least 600?
+              </p>
+              <button class="btn btn-primary">
+                Yes
+              </button>
+              <button class="btn btn-info not-sure">
+                Not Sure
+              </button>
+              <button class="btn btn-dark">
+                No
+              </button>
+
+            </div>
+
+            <div class="for-profit">
+              <div id="q19" class="question">
+                <span class="answered">‣</span>
+                <p>
+                  If you are a for-profit business, would all owners with more than 10% ownership in the company be willing to provide
+                  personal guarantees for any emergency loans?
+                </p>
+                <button class="btn btn-primary">
+                  Yes
+                </button>
+                <button class="btn btn-dark">
+                  No
+                </button>
+              </div>
+            </div>
+
+            <h3>Other</h3>
+
+            <div id="q17" class="question">
+              <span class="answered">‣</span>
+              <p>
+                 Are you able to certify that you are in good standing with the
+                 New Jersey Department of Taxation?
+                 <br/>
+                 <em>Note: you may be required to provide a Tax Clearance
+                   Certificate for certain emergency assistance programs.</em>
+              </p>
+              <button class="btn btn-primary">
+                Yes
+              </button>
+              <button class="btn btn-info not-sure">
+                Not Sure
+              </button>
+              <button class="btn btn-dark">
+                No
+              </button>
+            </div>
+
+            <div id="q23" class="question">
+              <span class="answered">‣</span>
+              <p>
+                Are you in good standing with the New Jersey Department of Labor?
+                <br/>
+                <em>Note, you will be required to be in good standing with the New Jersey
+                Department of Labor to be eligible for State assistance.  This means not
+                having unpaid unemployment holdings, unpaid fees, or outstanding employee
+                wage and hour violations.</em>
+              </p>
+              <button class="btn btn-primary">
+                Yes
+              </button>
+              <button class="btn btn-info not-sure">
+                Not Sure
+              </button>
+              <button class="btn btn-dark">
+                No
+              </button>
+            </div>
+
+
+            <div class="detail_qs">
+              <div id="q20" class="question">
+                <span class="answered">‣</span>
+                <p>
+                  Are you, your chief executive officer, or equivalent able to certify that:
+                  <br/>
+                  The organization will make its
+                  <strong>best-effort not to furlough or lay off any individuals</strong>
+                  from the time of application through the end of the COVID-19 outbreak period; businesses that have already furloughed or laid off workers
+                  must <strong>make a best-effort to re-hire those workers as soon as possible</strong>.
+                </p>
+                <button class="btn btn-primary">
+                  Yes
+                </button>
+                <button class="btn btn-dark">
+                  No
+                </button>
+              </div>
+
+              <div id="q22" class="question">
+                <span class="answered">‣</span>
+                <p>
+                  Are you, your chief executive officer, or equivalent able to certify that:
+                  <br/>
+                  Your business has
+                  <strong>a material financial need that cannot be overcome without the use of emergency relief funds</strong>
+                  at this time (e.g., does not have significant cash reserves that can support your operations during this period of economic disruption)
+                </p>
+                <button class="btn btn-primary">
+                  Yes
+                </button>
+                <button class="btn btn-dark">
+                  No
+                </button>
+              </div>
+
+              <div id="q21" class="question">
+                <span class="answered">‣</span>
+                <p>
+                  Are you, your chief executive officer, or equivalent able to certify that:
+                  <br/>
+                  <strong>Your business been negatively impacted by the Covid-19 outbreak?</strong>
+                  Note: negative impact is defined as a business that has been temporarily shut down, has been required to reduce hours, has had at least a 20% drop in revenue, has been materially impacted by employees who cannot work due to the outbreak, or has a supply chain that has materially been disrupted and therefore slowed firm-level production.
+                </p>
+                <button class="btn btn-primary">
+                  Yes
+                </button>
+                <button class="btn btn-dark">
+                  No
+                </button>
+              </div>
+            </div>
+
+            <div id="q14" class="question">
+              <span class="answered">‣</span>
+              <p>
+                Is your business considered one of the following:
+                <span class="badge badge-success">NJ State Programs</span>
+                <ul>
+                  <li>Related to gambling or gaming activities</li>
+                  <li>Related to the purveyance of “adult” (i.e., pornographic, lewd, prurient, obscene) activities, services, products or materials (including nude or semi-nude performances or the sale of sexual aids or devices);</li>
+                  <li>An auction or bankruptcy or fire or “lost-our-lease” or “going-out-of-business” or similar sale;</li>
+                  <li>A traveling merchant</li>
+                  <li>A Christmas tree sales or other outdoor storage;</li>
+                  <li>Any other activity constituting a nuisance</li>
+                  <li>Illegal under the laws of the State of New Jersey"</li>
+                </ul>
+              </p>
+              <button class="btn btn-primary">
+                Yes
+              </button>
+              <button class="btn btn-dark">
+                No
+              </button>
+            </div>
+
+            <div id="q15" class="question">
+              <span class="answered">‣</span>
+              <p>
+                Is your business considered one of the following:
+                <span class="badge badge-success">Federal SBA Programs</span>
+                <ul>
+                  <li>Related to gambling or gaming activities</li>
+                  <li>Agricultural Enterprises (i.e. the primary activity of the business, including its affiliates, is as defined in Section 18(b)(1) of the Small Business Act)</li>
+                  <li>Religious organizations</li>
+                  <li>Charitable organizations</li>
+                  <li>Businesses considered hobbies</li>
+                  <li>Government-owned concerns</li>
+                  <li>Real estate developers - establishments primarily engaged in subdividing real property into lots and developing it for resale on their own account</li>
+                </ul>
+              </p>
+              <button class="btn btn-primary">
+                Yes
+              </button>
+              <button class="btn btn-dark">
+                No
+              </button>
+            </div>
+
+            <h4 class="report-filler">
+                After you answer all questions, a printable guide will appear here.
+                <br/>
+                <button id="guide-btn" class="btn btn-success" onclick="moveToReport(event)">View Guide</button>
+            </h4>
+          </form>
+
+          <div class="report">
+            <h3>Based upon your feedback, you may be eligible for the following New Jersey programs:</h3>
+
+            <button class="btn btn-success no-print" onclick="window.print()">
+              Print this report
+            </button>
+            <button class="btn btn-info no-print" onclick="viewQs(event)">
+              Change Answers
+            </button>
+            <button class="btn btn-warning no-print" onclick="window.location.reload()">
+              Start over
+            </button>
+            <br/>
+            <br/>
+
+            <p><strong>Disclaimer:</strong>
+              <em>
+              The NJEDA is offering this screening tool that recommends emergency assistance
+              programs for you to consider based upon information you provide about your
+              organization as a courtesy.
+            </em>
+            </p>
+            <p>
+              The Eligibility Wizard neither approves nor denies eligibility for programs.
+              It is the responsibility of your company to fully assess your eligibility for
+              any State assistance programs. The full specifications for each emergency
+              assistance program are located on the COVID Business Information Hub:
+              <a href="https://cv.business.nj.gov">https://cv.business.nj.gov</a>.
+              If you have additional questions, please ask them in the chat feature of that website.
+            </p>
+            <p>
+              To apply for a program listed below, you need to apply through the appropriate
+              administering agency. The administering agency will determine final eligibility
+              upon your submission of an application for each program.
+            </p>
+
+            <br class="no-print"/>
+            <br class="no-print"/>
+            <div class="eag">
+              <h4>Emergency Assistance Grant Program</h4>
+              <p>
+                <strong>Description:</strong>
+                An operating expense grant for NJ-based businesses or non-profits
+                with 1-10 full time employees in the retail/accommodation/food
+                service/arts/entertainment/recreation/service industries.
+              </p>
+              <p>
+                <strong>Eligible Uses:</strong>
+                Operating expense support to help stabilize operations and reduce furloughs
+                or layoffs for companies that can demonstrate they have been adversely
+                impacted by the Covid-19 emergency.
+              </p>
+              <p>
+                <strong>Available Funding:</strong>
+                $1K per full-time employee, up to $5,000.
+              </p>
+              <strong>Learn more here</strong>:
+              <a href="https://faq.business.nj.gov/en/articles/3835237" target="_blank">https://faq.business.nj.gov/en/articles/3835237</a>
+            </div>
+
+            <div class="eawcl">
+              <h4>Emergency Assistance Loan Program</h4>
+              <p>
+                <strong>Description:</strong>
+                 A no/low-cost loan for up to 10 years for NJ-based businesses with under $5M in revenue.
+              </p>
+              <p>
+                <strong>Eligible Uses:</strong>
+                Supports business continuity to help stabilize operations and reduce furloughs or layoffs
+                for companies that can demonstrate they have been adversely impacted by the Covid-19 emergency.
+              </p>
+              <p>
+                <strong>Available Funding:</strong>
+                Up to $100,000 of working capital loans for up to 10 years.
+                0% interest rate (years 1-5), NJEDA’s prevailing interest rate floor (capped at 3.0% years 6-10).
+              </p>
+              <strong>Learn more here</strong>:
+              <a href="https://faq.business.nj.gov/en/articles/3835238" target="_blank">https://faq.business.nj.gov/en/articles/3835238</a>
+            </div>
+            <div class="guarantee">
+              <h4>Emergency Assistance Guarantee Program</h4>
+              <p>
+                <strong>Description:</strong>
+                This program is supported by NJEDA but administered by Premier Lenders or Community
+                 Development Finance Institutions. This program provides a guarantee to Premier Lenders or Premier
+                 CDFIs that will issue working capital loans or letters of credit to support business continuity for a range
+                 of COVID-19 related impacts to businesses (reduced revenue, employee shortage, supply chain impact,
+                 etc.)
+              </p>
+              <p>
+                <strong>Eligible Uses:</strong>
+                 Covers operating expenses for New Jersey small businesses and non-profit organizations that have been impacted by the COVID-19 outbreak.
+              </p>
+              <p>
+                <strong>Available Funding:</strong>
+                Benefits include a 50% guarantee of working capital loans, with eligibility for up to a
+                $100K working capital loan; the program can provide up to $10 million in total.
+              </p>
+              <strong>Learn more here</strong>:
+              <a href="https://faq.business.nj.gov/en/articles/3835236" target="_blank">https://faq.business.nj.gov/en/articles/3835236</a>
+            </div>
+            <div class="egp">
+              <h4>Entrepreneur Guarantee Program</h4>
+              <p>
+                <strong>Description:</strong>
+                Program provides 80% loan guarantees for working capital loans to start-up entrepreneurs,
+                encouraging private capital to flow to start-up companies and providing positive reinforcement to a
+                cautious investor marketplace.
+              </p>
+              <p>
+                <strong>Eligible Uses:</strong>
+                 Investors can use this program to provide new funding to NJ entrepreneurial businesses in which they are already an investor.
+              </p>
+              <p>
+                <strong>Available Funding:</strong>
+                There is a $200,000 company exposure cap, with up to $5 million available.
+              </p>
+              <strong>Learn more here</strong>:
+              <a href="https://faq.business.nj.gov/en/articles/3835239" target="_blank">https://faq.business.nj.gov/en/articles/3835239</a>
+            </div>
+            <div class="frelief">
+              <h4>Financial relief on existing NJEDA obligations</h4>
+              <p>
+                <strong>Description:</strong>
+                A series of steps to support existing NJEDA business customers, including a 3-month
+              payment moratorium, waived late fees on loan repayments late fees and/or loan modification fees, and
+              allowing collateral releases, subordinations and substitutions on business assets.
+              </p>
+              <p>
+                <strong>Eligible Uses:</strong>
+                Support for current NJEDA business customers
+              </p>
+              <p>
+                <strong>Availability:</strong> Current NJEDA business customers.
+                Existing NJEDA business customers should reach out to their Servicing Officer for more information.
+              </p>
+            </div>
+
+            <h3>Additional financing options that you may be eligible for:</h3>
+
+            <div class="cdfi">
+              <h4>Loans from a CDFI</h4>
+              <p>
+                Community Development Financial Institutions (CDFIs) play a critical role in
+                providing access to financing tools and resources to businesses and individuals
+                that have difficulty accessing the traditional banking sector. Specifically,
+                the NJEDA has created two programs
+                (<a href="https://faq.business.nj.gov/en/articles/3835240" target="_blank">https://faq.business.nj.gov/en/articles/3835240</a>),
+                the <strong>CDFI Emergency Assistance Grant Program</strong>
+                and the <strong>CDFI Loan Loss Reserve Fund</strong> to help local CDFI’s scale their lending
+                to micro and small businesses, especially in communities and business segments
+                that are traditionally underserved.
+              </p>
+              <p>
+                You can reach out directly to a CDFI to see if you would be eligible for any
+                of their State-supported and non-State supported financing programs.  Click the
+                link above to see a list of New Jersey-based CDFIs that focus on micro and small
+                business financing.
+              </p>
+            </div>
+            <div class="bank">
+              <h4>Financing from a private bank</h4>
+              <p>
+                Often one of the most reliable sources of financing for micro, small, and medium-sized
+                businesses is their traditional business banking partner.  Many banks in New Jersey work
+                with the NJEDA to provide low cost financing to micro, small, and medium-sized enterprises.
+                You can contact your local banking branch for more information.
+              </p>
+            </div>
+
+            <div class="eidl">
+              <h4>Federal Small Business Administration (SBA) Emergency Injury Disaster Loans (EIDL)</h4>
+              <p>
+                <strong>Description:</strong>
+                Provides low-interest federal disaster loans for working capital to small businesses suffering
+              substantial economic injury as a result of the Coronavirus (COVID-19).
+              </p>
+              <p>
+                <strong>Eligible Uses:</strong>
+                Working capital
+              </p>
+              <p>
+                <strong>Availability:</strong>
+                Loans are administered by the federal government. Businesses are advised to submit
+                applications as soon as possible.
+              </p>
+              <strong>Learn more here</strong>:
+              <a href="https://disasterloan.sba.gov/ela" target="_blank">https://disasterloan.sba.gov/ela</a>
+            </div>
+
+            <br/>
+            <br/>
+
+            <button class="btn btn-success no-print" onclick="window.print()">
+              Print this report
+            </button>
+            <button class="btn btn-info no-print" onclick="viewQs()">
+              Change Answers
+            </button>
+            <button class="btn btn-warning no-print" onclick="window.location.reload()">
+              Start over
+            </button>
+            <div style="height:150px">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Exiting Wizard</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>The State of New Jersey COVID-19 Business Support Eligibility Wizard is
+              designed to help organizations registered in New Jersey identify emergency
+              assistance programs for which they are eligible.
+            </p>
+            <p>
+              You can read about all of our programs at <a href="https://cv.business.nj.gov/">https://cv.business.nj.gov/</a>
+            </p>
+            <p>
+              If your business or non-profit is not registered to do business in New Jersey,
+              you are not eligible for NJEDA emergency assistance programs, however, please
+              consider seeking support from the following entities:
+            </p>
+            <ul>
+              <li>Your state’s economic development agency</li>
+              <li>Your local county or municipality’s economic development agency</li>
+              <li>A private bank that may have support programs in your area</li>
+              <li>Your local Community Development Financial Institution (CDFI)</li>
+              <li>The federal Small Business Administration’s Economic Injury Disaster
+                Loan (EIDL)-
+                <a href="https://disasterloan.sba.gov/ela/" target="_blank">https://disasterloan.sba.gov/ela/</a>
+              </li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="window.location.reload()">Start over</button>
+            <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./jquery-3.4.1.slim.min.js"></script>
+    <script src="./popper.min.js"></script>
+    <script src="./bootstrap.min.js"></script>
+    <script src="./formflow.js?v=3">
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="//www.googletagmanager.com/gtag/js?id=UA-140253594-5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-140253594-5');
+    </script>
+  </body>
 </html>

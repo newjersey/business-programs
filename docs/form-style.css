@@ -1,0 +1,149 @@
+body {
+  background-color: #00597c;
+}
+.header {
+  background-color: #fff;
+  padding: 40px;
+  text-align: center;
+  border-bottom: 2px solid #444;
+}
+.header img {
+  max-width: 200px;
+  margin-right: 50px;
+}
+.header a {
+  color: #000;
+  font-size: 80%;
+}
+.header svg {
+  margin-right: 8px;
+}
+.header svg g {
+  stroke: #000 !important;
+}
+.container-fluid {
+  width: 60%;
+  background-color: #fff;
+}
+.modal-dialog {
+  max-width: 600px;
+}
+h2, h3 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+h3 {
+  margin-left: 10px;
+}
+table {
+  border: 1px solid #ccc;
+}
+.question {
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 10px;
+}
+.badge {
+  float: right;
+  margin: 5px;
+  font-size: 110%;
+}
+.btn {
+  font-size: 130%;
+  margin-right: 28px;
+}
+.btn[disabled] {
+  cursor: default;
+}
+.answered {
+  position: absolute;
+  left: -30px;
+  font-size: 40pt;
+  display: none;
+  color: #fff;
+}
+.my_options {
+  background: #efefef;
+}
+.my_options ul {
+  width: 40%;
+  margin-right: 5%;
+  display: inline-block;
+  vertical-align: top;
+}
+.hidden_options {
+  display: none;
+}
+#guide-btn {
+  display: none;
+  margin-top: 8px;
+  font-size: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 900px) {
+  .my_options.scrollme {
+    position: fixed;
+    top: 0;
+    z-index: 999;
+  }
+  .hidden_options.scrollme {
+    display: block;
+    visibility: hidden;
+  }
+}
+input.form-control {
+  margin: 20px;
+  padding: 5px;
+  width: 300px;
+}
+.report-filler {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border: 1px solid #000;
+  text-align: center;
+}
+.report h4 {
+  margin-top: 35px;
+}
+.yes-print {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .container-fluid {
+    width: 90%;
+    margin-left: 10%;
+    margin-right: 0;
+  }
+
+  input {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .header {
+    padding: 20px;
+  }
+
+  .header img {
+    margin: 0;
+  }
+
+  .header a {
+    display: none;
+  }
+
+  .btn {
+    margin-top: 18px;
+  }
+}
+@media print {
+  form, .my_options, .no-print {
+    display: none;
+  }
+  .yes-print {
+    display: inline;
+  }
+}

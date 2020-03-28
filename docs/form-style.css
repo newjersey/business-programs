@@ -67,10 +67,10 @@ table {
   background: #efefef;
 }
 .my_options ul {
-  width: 40%;
+  /* width: 40%;
   margin-right: 5%;
   display: inline-block;
-  vertical-align: top;
+  vertical-align: top; */
 }
 .hidden_options {
   display: none;

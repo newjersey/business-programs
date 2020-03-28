@@ -103,8 +103,6 @@ input.form-control {
 @media (max-width: 1000px) {
   .container-fluid {
     width: 90%;
-    margin-left: 10%;
-    margin-right: 0;
   }
   input {
     max-width: 100%;

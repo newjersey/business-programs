@@ -132,3 +132,15 @@ input.form-control {
     display: inline;
   }
 }
+
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 2em 1em 1em;
+  margin: 1em 0 0;
+}
+
+footer a, footer a:hover {
+  color: white;
+}

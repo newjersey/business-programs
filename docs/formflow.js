@@ -5,117 +5,117 @@ function parseNumber(num) {
 }
 
 var nonprofit_q = 11,
-    requirements = {
-  eag: { // Emergency Assistance Grant
-    required_yes: [1, 2, 12, 16, 17, 20, 21, 22, 23, 42],
-    required_no: [3, 14],
-    eval: {
-      8: function (fte) {
-        fte = parseNumber(fte);
-        return fte >= 1 && fte <= 10;
-      },
-      11: function (val) {
-        return (val === true) || (answers[nonprofit_q] === false);
-      },
-      18: function (val) {
-        return (val === true) || (val === -1); // yes or not sure
+  requirements = {
+    eag: { // Emergency Assistance Grant
+      required_yes: [1, 2, 12, 16, 17, 20, 21, 22, 23, 42],
+      required_no: [3, 14],
+      eval: {
+        8: function (fte) {
+          fte = parseNumber(fte);
+          return fte >= 1 && fte <= 10;
+        },
+        11: function (val) {
+          return (val === true) || (answers[nonprofit_q] === false);
+        },
+        18: function (val) {
+          return (val === true) || (val === -1); // yes or not sure
+        }
+      }
+    },
+    eawcl: { // Emergency Assistance 0% Working Capital
+      required_yes: [1, 2, 7, 16, 17, 20, 21, 22, 23, 42],
+      required_no: [3, 14],
+      eval: {
+        9: function (revenue) {
+          revenue = parseNumber(revenue);
+          return revenue < 5000000;
+        },
+        11: function (val) {
+          return (val === true) || (answers[nonprofit_q] === false);
+        },
+        18: function (val) {
+          return (val === true) || (val === -1); // yes or not sure
+        },
+        19: function (val) {
+          return (val === true) || (answers[nonprofit_q] === true);
+        }
+      }
+    },
+    guarantee: { // Emergency Assistance Guarantee
+      required_yes: [1, 2, 7, 16, 17, 20, 21, 22, 23, 42],
+      required_no: [3, 14],
+      eval: {
+        9: function (revenue) {
+          revenue = parseNumber(revenue);
+          return revenue < 5000000;
+        },
+        11: function (val) {
+          return (val === true) || (answers[nonprofit_q] === false);
+        },
+        18: function (val) {
+          return (val === true) || (val === -1); // yes or not sure
+        },
+        19: function (val) {
+          return (val === true) || (answers[nonprofit_q] === true);
+        }
+      }
+    },
+    egp: { // Entrepreneur Guarantee
+      required_yes: [1, 4, 5, 6, 13, 17, 23, 42],
+      required_no: [3, 14],
+      eval: {
+        8: function (fte) {
+          fte = parseNumber(fte);
+          return fte < 25;
+        },
+        10: function (revenue) {
+          revenue = parseNumber(revenue);
+          return revenue < 5000000;
+        }
+      }
+    },
+    eidl: { // SBA EIDL
+      required_yes: [6, 7, 42],
+      required_no: [3, 15]
+    },
+    frelief: { // NJ EDA relief
+      required_yes: [0, 42]
+    },
+    cdfi: {
+      required_yes: [42],
+      eval: {
+        8: function (fte) {
+          fte = parseNumber(fte);
+          return fte < 20;
+        },
+        9: function (revenue) {
+          revenue = parseNumber(revenue);
+          return revenue < 1000000;
+        },
+        10: function (revenue) {
+          revenue = parseNumber(revenue);
+          return revenue < 1000000;
+        }
+      }
+    },
+    bank: {
+      required_yes: [42],
+      eval: {
+        8: function (fte) {
+          fte = parseNumber(fte);
+          return fte < 20;
+        },
+        9: function (revenue) {
+          revenue = parseNumber(revenue);
+          return revenue >= 100000;
+        },
+        10: function (revenue) {
+          revenue = parseNumber(revenue);
+          return revenue >= 100000;
+        }
       }
     }
-  },
-  eawcl: { // Emergency Assistance 0% Working Capital
-    required_yes: [1, 2, 7, 16, 17, 20, 21, 22, 23, 42],
-    required_no: [3, 14],
-    eval: {
-      9: function (revenue) {
-        revenue = parseNumber(revenue);
-        return revenue < 5000000;
-      },
-      11: function (val) {
-        return (val === true) || (answers[nonprofit_q] === false);
-      },
-      18: function (val) {
-        return (val === true) || (val === -1); // yes or not sure
-      },
-      19: function (val) {
-        return (val === true) || (answers[nonprofit_q] === true);
-      }
-    }
-  },
-  guarantee: { // Emergency Assistance Guarantee
-    required_yes: [1, 2, 7, 16, 17, 20, 21, 22, 23, 42],
-    required_no: [3, 14],
-    eval: {
-      9: function (revenue) {
-        revenue = parseNumber(revenue);
-        return revenue < 5000000;
-      },
-      11: function (val) {
-        return (val === true) || (answers[nonprofit_q] === false);
-      },
-      18: function (val) {
-        return (val === true) || (val === -1); // yes or not sure
-      },
-      19: function (val) {
-        return (val === true) || (answers[nonprofit_q] === true);
-      }
-    }
-  },
-  egp: { // Entrepreneur Guarantee
-    required_yes: [1, 4, 5, 6, 13, 17, 23, 42],
-    required_no: [3, 14],
-    eval: {
-      8: function (fte) {
-        fte = parseNumber(fte);
-        return fte < 25;
-      },
-      10: function (revenue) {
-        revenue = parseNumber(revenue);
-        return revenue < 5000000;
-      }
-    }
-  },
-  eidl: { // SBA EIDL
-    required_yes: [6, 7, 42],
-    required_no: [3, 15]
-  },
-  frelief: { // NJ EDA relief
-    required_yes: [0, 42]
-  },
-  cdfi: {
-    required_yes: [42],
-    eval: {
-      8: function (fte) {
-        fte = parseNumber(fte);
-        return fte < 20;
-      },
-      9: function (revenue) {
-        revenue = parseNumber(revenue);
-        return revenue < 1000000;
-      },
-      10: function (revenue) {
-        revenue = parseNumber(revenue);
-        return revenue < 1000000;
-      }
-    }
-  },
-  bank: {
-    required_yes: [42],
-    eval: {
-      8: function (fte) {
-        fte = parseNumber(fte);
-        return fte < 20;
-      },
-      9: function (revenue) {
-        revenue = parseNumber(revenue);
-        return revenue >= 100000;
-      },
-      10: function (revenue) {
-        revenue = parseNumber(revenue);
-        return revenue >= 100000;
-      }
-    }
-  }
-};
+  };
 var programs = Object.keys(requirements);
 
 var answers = [];
@@ -144,11 +144,11 @@ function nextQuestion(currentQuestion) {
   if (!nextDiv) {
     $("#guide-btn").css({ display: "block" });
   }
-  while(
+  while (
     ($(nextDiv).parent().css("display") === "none")
     ||
     ($(nextDiv).find(".answered").css("color") === "rgb(170, 170, 170)")
-    ) {
+  ) {
     currentQuestion++;
     nextDiv = $(".question")[currentQuestion + 1];
     if (!nextDiv) {
@@ -157,30 +157,30 @@ function nextQuestion(currentQuestion) {
     }
   }
 
-  $(nextDiv).find(".btn, div, p, li").css({opacity: 1});
+  $(nextDiv).find(".btn, div, p, li").css({ opacity: 1 });
   $(nextDiv).find('.btn, input').prop('disabled', false);
   $(nextDiv).find('.answered').css({ display: "block" });
 
-  programs.forEach(function(pcode) {
+  programs.forEach(function (pcode) {
     var muteProgram = false,
-        program = requirements[pcode];
+      program = requirements[pcode];
 
-    (program.required_yes || []).forEach(function(answerToCheck) {
+    (program.required_yes || []).forEach(function (answerToCheck) {
       if (answers[answerToCheck] === false) {
         console.log(pcode + " checks " + answerToCheck + " and sees false instead of true");
         muteProgram = true;
       }
     });
 
-    (program.required_no || []).forEach(function(answerToCheck) {
+    (program.required_no || []).forEach(function (answerToCheck) {
       if (answers[answerToCheck] === true) {
         console.log(pcode + " checks " + answerToCheck + " and sees true instead of false");
         muteProgram = true;
       }
     });
 
-    var answersToEval = Object.keys(program.eval || {}  );
-    answersToEval.forEach(function(answerToCheck) {
+    var answersToEval = Object.keys(program.eval || {});
+    answersToEval.forEach(function (answerToCheck) {
       if ((typeof answers[answerToCheck] !== "undefined")
         && (!program.eval[answerToCheck](answers[answerToCheck]))) {
         muteProgram = true;
@@ -207,25 +207,25 @@ function viewGuide() {
 
 }
 
-$(document).ready(function() {
+$(document).ready(function () {
   $(".report").hide();
 
-  $(".question").each(function(index) {
+  $(".question").each(function (index) {
     var q = this;
     if (index) {
-      $(q).find('.btn, div, p, li').css({opacity: 0.4});
+      $(q).find('.btn, div, p, li').css({ opacity: 0.4 });
       $(q).find('.btn, input').prop('disabled', true);
     } else {
       $(q).find('.answered').css({ display: "block" });
     }
     $(q).find('.answered').click(function (e) {
-      $(q).find('.btn, div, p, li').css({opacity: 1});
+      $(q).find('.btn, div, p, li').css({ opacity: 1 });
     });
 
     var sheet_original_index = q.id.match(/\d+/)[0] * 1;
 
     // YES / ENTER button
-    $(q).find('.btn-primary').click(function(e) {
+    $(q).find('.btn-primary').click(function (e) {
       e.preventDefault();
       answers[sheet_original_index] = true;
 
@@ -269,7 +269,7 @@ $(document).ready(function() {
     });
 
     // NOT SURE / SKIP button (pre-emptive YES)
-    $(q).find('.btn.not-sure').click(function(e) {
+    $(q).find('.btn.not-sure').click(function (e) {
       e.preventDefault();
       answers[sheet_original_index] = -1;
 
@@ -287,7 +287,7 @@ $(document).ready(function() {
     });
 
     // NO button
-    $(q).find('.btn-dark').click(function(e) {
+    $(q).find('.btn-dark').click(function (e) {
       e.preventDefault();
       answers[sheet_original_index] = false;
 

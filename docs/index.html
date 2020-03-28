@@ -914,7 +914,8 @@
   </main>
 
   <footer>
-    <p>Made with ❤️ by <a href="https://github.com/mapmeld" target="_blank">Nick Doiron</a>, a <a href="https://www.usdigitalresponse.org/" target="_blank">US Digital Response</a> volunteer.</p>
+    <p>Made with ❤️ by <a href="https://github.com/mapmeld" target="_blank">Nick Doiron</a>, a <a
+        href="https://www.usdigitalresponse.org/" target="_blank">US Digital Response</a> volunteer.</p>
     <p><a href="https://github.com/newjersey/business-programs">Powered by Open Source</a></p>
   </footer>
 
@@ -974,6 +975,56 @@
     gtag('js', new Date());
 
     gtag('config', 'UA-140253594-6');
+
+    var questions = {
+      "q42": { event_category: 'disclaimer' },
+      "q1": { event_category: 'registered_in_nj' },
+      "q110": { event_category: 'entity' },
+      "q11": { event_category: 'nonprofit_is_eligible' },
+      "q0": { event_category: 'existing_njeda_relationship' },
+      "q7": { event_category: 'year_or_more' },
+      "q2": { event_category: 'physical_location' },
+      "q3": { event_category: 'home_based' },
+      "q12": { event_category: 'eligible_naics' },
+      "q13": { event_category: 'entrepreneur_industry' },
+      "q8": { event_category: 'fte_equiv' },
+      "q4": { event_category: 'employees_majority_nj' },
+      "q5": { event_category: 'hq_in_nj' },
+      "q9": { event_category: '2019_revenues' },
+      "q10": { event_category: '12_month_revenue' },
+      "q16": { event_category: 'have_docs' },
+      "q18": { event_category: 'fico_gte_600' },
+      "q19": { event_category: 'provide_guarantees' },
+      "q17": { event_category: 'tax_clear' },
+      "q23": { event_category: 'dol_clear' },
+      "q20": { event_category: 'will_not_furlough' },
+      "q22": { event_category: 'financial_need' },
+      "q21": { event_category: 'negatively_impacted' },
+      "q14": { event_category: 'sin_business' },
+      "q15": { event_category: 'eidl_disqual_industry' }
+    };
+
+    jQuery('button', 'form.form').click(function () {
+      var $button = jQuery(this);
+      var $question = $button && $button.closest('.question');
+      var questionId = $question && $question.prop('id');
+
+      if (questionId) {
+        var event_category = questions[questionId].event_category;
+        var buttonLabel = $button.text().trim();
+        var value = $question.find('input').val();
+        var data = {
+          'event_category': event_category,
+          'event_label': buttonLabel
+        };
+
+        if (value) {
+          data['value'] = value;
+        }
+
+        gtag('event', 'questionAnswered', data);
+      }
+    });
   </script>
 </body>
 

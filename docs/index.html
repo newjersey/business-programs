@@ -1005,6 +1005,13 @@
       "q15": { event_action: 'eidl_disqual_industry' }
     };
 
+    window.sendResultToGA = function (programName, isEligible) {
+      gtag('event', programName, {
+        'event_category': 'resultShown',
+        'event_label': isEligible ? 'Yes' : 'No'
+      });
+    };
+
     jQuery('[data-ga-label]').click(function () {
       var $button = jQuery(this);
       var buttonLabel = $button.data('ga-label');

@@ -125,6 +125,15 @@ function moveToReport(e) {
   $("form, .hidden_options, .preamble").hide();
   $(".report").show();
   $(window).scrollTop(0);
+
+  $('li li', '.my_options').each(function(i, el) {
+    var $program = $(el);
+    var programName = $program.text().trim();
+    var isEligible = !$program.hasClass('no-print');
+
+    window.sendResultToGA(programName, isEligible);
+  });
+
   return false;
 }
 

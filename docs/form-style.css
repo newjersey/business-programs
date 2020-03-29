@@ -60,7 +60,7 @@ table {
 
 .program {
   background-color: #eee;
-  margin: 1em; 0
+  margin: 1em 0;
   padding: 2em;
 }
 
@@ -199,4 +199,8 @@ footer {
 
 footer a, footer a:hover {
   color: white;
+}
+
+li.no-print {
+  text-decoration: line-through;
 }

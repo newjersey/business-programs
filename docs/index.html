@@ -95,11 +95,11 @@
               <li>
                 State Emergency Support Programs
                 <ul>
-                  <li class="eag">Emergency Assistance Grant Program</li>
-                  <li class="eawcl">Emergency Assistance Loan Program</li>
-                  <li class="guarantee">Emergency Assistance Guarantee Program</li>
-                  <li class="egp">NJ Entrepreneur Support Program</li>
-                  <li class="frelief">Financial relief on existing NJEDA obligations</li>
+                  <li class="eag" data-program-name="Emergency Assistance Grant Program">Emergency Assistance Grant Program</li>
+                  <li class="eawcl" data-program-name="Emergency Assistance Loan Program">Emergency Assistance Loan Program</li>
+                  <li class="guarantee" data-program-name="Emergency Assistance Guarantee Program">Emergency Assistance Guarantee Program</li>
+                  <li class="egp" data-program-name="NJ Entrepreneur Support Program">NJ Entrepreneur Support Program</li>
+                  <li class="frelief" data-program-name="Financial relief on existing NJEDA obligations">Financial relief on existing NJEDA obligations</li>
                 </ul>
               </li>
             </ul>
@@ -107,7 +107,7 @@
               <li>
                 Federal Programs
                 <ul>
-                  <li class="eidl">Federal SBA Emergency Injury Disaster Loans</li>
+                  <li class="eidl" data-program-name="Federal SBA Emergency Injury Disaster Loans">Federal SBA Emergency Injury Disaster Loans</li>
                 </ul>
               </li>
             </ul>
@@ -115,8 +115,8 @@
               <li>
                 Other sources of emergency support
                 <ul>
-                  <li class="cdfi">Loans from a CDFI</li>
-                  <li class="bank">Financing from a private bank</li>
+                  <li class="cdfi" data-program-name="Loans from a CDFI">Loans from a CDFI</li>
+                  <li class="bank" data-program-name="Financing from a private bank">Financing from a private bank</li>
                 </ul>
               </li>
             </ul>
@@ -176,10 +176,10 @@
                 anonymous and may be shared with NJ State agencies to improve access to
                 benefits and programs.
               </p>
-              <button class="btn btn-primary">
+              <button data-label="Agree" class="btn btn-primary">
                 Agree
               </button>
-              <button class="btn btn-dark">
+              <button data-label="Cancel" class="btn btn-dark">
                 Cancel
               </button>
             </div>
@@ -190,10 +190,10 @@
               <p>
                 Is your business/non-profit registered to do business in New Jersey?
               </p>
-              <button class="btn btn-primary">
+              <button data-label="Yes" class="btn btn-primary">
                 Yes
               </button>
-              <button class="btn btn-dark">
+              <button data-label="No" class="btn btn-dark">
                 No
               </button>
             </div>
@@ -203,10 +203,10 @@
               <p>
                 Is your organization for-profit or not-for-profit?
               </p>
-              <button class="btn btn-primary">
+              <button data-label="For-profit" class="btn btn-primary">
                 For-profit
               </button>
-              <button class="btn btn-dark">
+              <button data-label="Not-for-profit" class="btn btn-dark">
                 Not-for-profit
               </button>
             </div>
@@ -217,10 +217,10 @@
                 <p>
                   Does your not-for-profit have one of the following designations: 501(c)(3), 501(c)(4), 501(c)(7)?
                 </p>
-                <button class="btn btn-primary">
+                <button data-label="Yes" class="btn btn-primary">
                   Yes
                 </button>
-                <button class="btn btn-dark">
+                <button data-label="No" class="btn btn-dark">
                   No
                 </button>
               </div>
@@ -232,10 +232,10 @@
                 Does your organization have an existing financial relationship
                 with NJEDA, such as a loan or incentive agreement?
               </p>
-              <button class="btn btn-primary">
+              <button data-label="Yes" class="btn btn-primary">
                 Yes
               </button>
-              <button class="btn btn-dark">
+              <button data-label="No" class="btn btn-dark">
                 No
               </button>
             </div>
@@ -245,10 +245,10 @@
               <p>
                 Has your business been in operation for one year or more?
               </p>
-              <button class="btn btn-primary">
+              <button data-label="Yes" class="btn btn-primary">
                 Yes
               </button>
-              <button class="btn btn-dark">
+              <button data-label="No" class="btn btn-dark">
                 No
               </button>
             </div>
@@ -264,10 +264,10 @@
                 a physical-retail store, a production facility, a
                 warehouse, etc.)?
               </p>
-              <button class="btn btn-primary">
+              <button data-label="Yes" class="btn btn-primary">
                 Yes
               </button>
-              <button class="btn btn-dark">
+              <button data-label="No" class="btn btn-dark">
                 No
               </button>
             </div>
@@ -277,10 +277,10 @@
               <p>
                 Is your business home-based?
               </p>
-              <button class="btn btn-primary">
+              <button data-label="Yes" class="btn btn-primary">
                 Yes
               </button>
-              <button class="btn btn-dark">
+              <button data-label="No" class="btn btn-dark">
                 No
               </button>
             </div>
@@ -303,10 +303,10 @@
                 in an industry with an industry code that starts with 811 or 812 on this list: <a
                   href="https://www.naics.com/six-digit-naics/?code=81"
                   target="_blank">https://www.naics.com/six-digit-naics/?code=81</a></p>
-              <button class="btn btn-primary">
+              <button data-label="Yes" class="btn btn-primary">
                 Yes
               </button>
-              <button class="btn btn-dark">
+              <button data-label="No" class="btn btn-dark">
                 None of the above
               </button>
             </div>
@@ -331,10 +331,10 @@
                     <li>Film and digital media</li>
                   </ul>
                 </p>
-                <button class="btn btn-primary">
+                <button data-label="Yes" class="btn btn-primary">
                   Yes
                 </button>
-                <button class="btn btn-dark">
+                <button data-label="No" class="btn btn-dark">
                   None of the above
                 </button>
               </div>
@@ -361,10 +361,10 @@
                 <label for="fte">Total number of FTEs</label>
                 <small class="form-text text-muted">Examples: 1, 10.5, 15</small>
                 <input id="fte" type="text" class="input form-control form-control-lg" name="fte" />
-                <button class="btn btn-primary">
+                <button data-label="Enter" class="btn btn-primary">
                   Enter
                 </button>
-                <button class="btn btn-info not-sure">
+                <button data-label="Skip" class="btn btn-info not-sure">
                   Skip
                 </button>
               </div>
@@ -377,10 +377,10 @@
                   Does your business have <strong>a minimum of 50% of employees in
                     New Jersey</strong>, as reported on your NJ WR-30 at year end 2019?
                 </p>
-                <button class="btn btn-primary">
+                <button data-label="Yes" class="btn btn-primary">
                   Yes
                 </button>
-                <button class="btn btn-dark">
+                <button data-label="No" class="btn btn-dark">
                   No
                 </button>
               </div>
@@ -393,10 +393,10 @@
                   including at least one C-suite member with a
                   principal office in New Jersey?
                 </p>
-                <button class="btn btn-primary">
+                <button data-label="Yes" class="btn btn-primary">
                   Yes
                 </button>
-                <button class="btn btn-dark">
+                <button data-label="No" class="btn btn-dark">
                   No
                 </button>
               </div>
@@ -413,10 +413,10 @@
                 <small class="form-text text-muted">Example: 50,000</small>
                 <input type="text" class="input form-control" name="2019_revenue" />
               </div>
-              <button class="btn btn-primary">
+              <button data-label="Enter" class="btn btn-primary">
                 Enter
               </button>
-              <button class="btn btn-info not-sure">
+              <button data-label="Skip" class="btn btn-info not-sure">
                 Skip
               </button>
             </div>
@@ -431,10 +431,10 @@
                   <small class="form-text text-muted">Examples: $50000; $3,000,000</small>
                   <input type="text" class="input form-control" name="12mo_revenue" />
                 </div>
-                <button class="btn btn-primary">
+                <button data-label="Enter" class="btn btn-primary">
                   Enter
                 </button>
-                <button class="btn btn-info not-sure">
+                <button data-label="Skip" class="btn btn-info not-sure">
                   Skip
                 </button>
               </div>
@@ -449,10 +449,10 @@
                   Do you have financial statements that are
                   CPA prepared, management prepared, or filed copies of business tax returns?
                 </p>
-                <button class="btn btn-primary">
+                <button data-label="Yes" class="btn btn-primary">
                   Yes
                 </button>
-                <button class="btn btn-dark">
+                <button data-label="No" class="btn btn-dark">
                   No
                 </button>
               </div>
@@ -463,13 +463,13 @@
               <p>
                 Do you, another owner, or your business have a minimum FICO score of at least 600?
               </p>
-              <button class="btn btn-primary">
+              <button data-label="Yes" class="btn btn-primary">
                 Yes
               </button>
-              <button class="btn btn-info not-sure">
+              <button data-label="Not Sure" class="btn btn-info not-sure">
                 Not Sure
               </button>
-              <button class="btn btn-dark">
+              <button data-label="No" class="btn btn-dark">
                 No
               </button>
 
@@ -483,10 +483,10 @@
                   willing to provide
                   personal guarantees for any emergency loans?
                 </p>
-                <button class="btn btn-primary">
+                <button data-label="Yes" class="btn btn-primary">
                   Yes
                 </button>
-                <button class="btn btn-dark">
+                <button data-label="No" class="btn btn-dark">
                   No
                 </button>
               </div>
@@ -503,13 +503,13 @@
                 <em>Note: you may be required to provide a Tax Clearance
                   Certificate for certain emergency assistance programs.</em>
               </p>
-              <button class="btn btn-primary">
+              <button data-label="Yes" class="btn btn-primary">
                 Yes
               </button>
-              <button class="btn btn-info not-sure">
+              <button data-label="Not Sure" class="btn btn-info not-sure">
                 Not Sure
               </button>
-              <button class="btn btn-dark">
+              <button data-label="No" class="btn btn-dark">
                 No
               </button>
             </div>
@@ -524,13 +524,13 @@
                   having unpaid unemployment holdings, unpaid fees, or outstanding employee
                   wage and hour violations.</em>
               </p>
-              <button class="btn btn-primary">
+              <button data-label="Yes" class="btn btn-primary">
                 Yes
               </button>
-              <button class="btn btn-info not-sure">
+              <button data-label="Not Sure" class="btn btn-info not-sure">
                 Not Sure
               </button>
-              <button class="btn btn-dark">
+              <button data-label="No" class="btn btn-dark">
                 No
               </button>
             </div>
@@ -548,10 +548,10 @@
                   already furloughed or laid off workers
                   must <strong>make a best-effort to re-hire those workers as soon as possible</strong>.
                 </p>
-                <button class="btn btn-primary">
+                <button data-label="Yes" class="btn btn-primary">
                   Yes
                 </button>
-                <button class="btn btn-dark">
+                <button data-label="No" class="btn btn-dark">
                   No
                 </button>
               </div>
@@ -568,10 +568,10 @@
                   this
                   period of economic disruption)
                 </p>
-                <button class="btn btn-primary">
+                <button data-label="Yes" class="btn btn-primary">
                   Yes
                 </button>
-                <button class="btn btn-dark">
+                <button data-label="No" class="btn btn-dark">
                   No
                 </button>
               </div>
@@ -589,10 +589,10 @@
                   therefore
                   slowed firm-level production.
                 </p>
-                <button class="btn btn-primary">
+                <button data-label="Yes" class="btn btn-primary">
                   Yes
                 </button>
-                <button class="btn btn-dark">
+                <button data-label="No" class="btn btn-dark">
                   No
                 </button>
               </div>
@@ -616,10 +616,10 @@
                   <li>Illegal under the laws of the State of New Jersey"</li>
                 </ul>
               </p>
-              <button class="btn btn-primary">
+              <button data-label="Yes" class="btn btn-primary">
                 Yes
               </button>
-              <button class="btn btn-dark">
+              <button data-label="No" class="btn btn-dark">
                 No
               </button>
             </div>
@@ -643,10 +643,10 @@
                     developing it for resale on their own account</li>
                 </ul>
               </p>
-              <button class="btn btn-primary">
+              <button data-label="Yes" class="btn btn-primary">
                 Yes
               </button>
-              <button class="btn btn-dark">
+              <button data-label="No" class="btn btn-dark">
                 No
               </button>
             </div>
@@ -978,7 +978,7 @@
 
       if (questionId) {
         var event_action = questions[questionId].event_action;
-        var buttonLabel = $button.text().trim();
+        var buttonLabel = $button.data('label');
         var value = $question.find('input').val();
         var data = {
           'event_category': 'questionAnswered',

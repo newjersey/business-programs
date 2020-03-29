@@ -128,7 +128,7 @@ function moveToReport(e) {
 
   $('li li', '.my_options').each(function(i, el) {
     var $program = $(el);
-    var programName = $program.text().trim();
+    var programName = $program.data('program-name');
     var isEligible = !$program.hasClass('no-print');
 
     window.sendResultToGA(programName, isEligible);

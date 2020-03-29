@@ -689,7 +689,8 @@
             <h4 class="report-filler">
               After you answer all questions, a printable guide will appear here.
               <br />
-              <button id="guide-btn" class="btn btn-success" onclick="moveToReport(event)" data-ga-label="Veiw Guide">View Guide</button>
+              <button id="guide-btn" class="btn btn-success" onclick="moveToReport(event)"
+                data-ga-label="Veiw Guide">View Guide</button>
             </h4>
           </form>
 
@@ -1004,11 +1005,11 @@
       "q15": { event_action: 'eidl_disqual_industry' }
     };
 
-    jQuery('[data-ga-label]').click(function() {
+    jQuery('[data-ga-label]').click(function () {
       var $button = jQuery(this);
       var buttonLabel = $button.data('ga-label');
 
-      console.log('event', buttonLabel, {
+      gtag('event', buttonLabel, {
         'event_category': 'formAction'
       });
     });

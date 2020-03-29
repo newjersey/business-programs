@@ -151,7 +151,7 @@ function nextQuestion(currentQuestion) {
 
   var nextDiv = $(".question")[currentQuestion + 1];
   if (!nextDiv) {
-    $("#guide-btn").css({ display: "block" });
+    $("#guide-btn").prop('disabled', false);
   }
   while (
     ($(nextDiv).parent().css("display") === "none")
@@ -161,7 +161,7 @@ function nextQuestion(currentQuestion) {
     currentQuestion++;
     nextDiv = $(".question")[currentQuestion + 1];
     if (!nextDiv) {
-      $("#guide-btn").css({ display: "block" });
+      $("#guide-btn").prop('disabled', false);
       break;
     }
   }
@@ -270,7 +270,7 @@ $(document).ready(function () {
       }
 
       $(q).find(".answered").css({ color: "#aaa" });
-      $(q).find(".btn").css({ border: "none" });
+      $(q).find(".btn").css({ borderColor: "transparent" });
       $(e.target).css({ border: "3px solid orange" });
 
       nextQuestion(index);
@@ -288,7 +288,7 @@ $(document).ready(function () {
       }
 
       $(q).find(".answered").css({ color: "#888" });
-      $(q).find(".btn").css({ border: "none" });
+      $(q).find(".btn").css({ borderColor: "transparent" });
       $(e.target).css({ border: "3px solid orange" });
 
       nextQuestion(index);
@@ -322,7 +322,7 @@ $(document).ready(function () {
       }
 
       $(q).find(".answered").css({ color: "#888" });
-      $(q).find(".btn").css({ border: "none" });
+      $(q).find(".btn").css({ borderColor: "transparent" });
       $(e.target).css({ border: "3px solid orange" });
 
       nextQuestion(index);

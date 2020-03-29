@@ -8,23 +8,23 @@
 }
 
 h2, h3 {
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
-form h3 {
-  margin-left: 10px;
+  margin-top: 1.4em;
 }
 
 table {
   border: 1px solid #ccc;
 }
 
+.disclaimer {
+  padding-left: 1em;
+  border-left: 4px solid #ccc;
+  margin: 1em 0 3em;
+}
+
 .question {
-  border: 2px solid #ccc;
-  border-radius: 20px;
+  border: 1px solid #ccc;
   padding: 20px;
-  margin: 10px;
+  margin: 1em 0;
 }
 
 .badge {
@@ -35,7 +35,10 @@ table {
 
 .btn {
   font-size: 130%;
-  margin-right: 28px;
+}
+
+.btn + .btn {
+  margin-left: .7em;
 }
 
 .btn[disabled] {
@@ -55,16 +58,76 @@ table {
   padding: 1.2em 1.2em .3em;
 }
 
+.program {
+  background-color: #eee;
+  margin: 1em; 0
+  padding: 2em;
+}
+
+.program p:last-child {
+  margin-bottom: 0;
+}
+
+.actions {
+  margin: 2em 0 3em;
+}
+
 .hidden_options {
   display: none;
 }
 
+.badge {
+  font-size: 1em;
+  font-weight: 500;
+}
+
+.badge-success {
+  background-color: #54910B;
+}
+
+.btn-primary, .btn-primary:focus, .btn-primary:disabled, .btn-primary.disabled, .btn-primary.disabled:hover {
+  background-color: #1777B6;
+  border-color: transparent;
+}
+
+.btn-primary:active {
+  background-color: #1777B6 !important;
+  border-color: transparent !important;
+}
+
+.btn-primary:hover {
+  background-color: #156BA4;
+  border-color: transparent;
+}
+
+.btn {
+  border-width: 3px !important;
+}
+
+.btn:hover {
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+}
+
+.btn-info, .btn-info:focus, .btn-info:disabled, .btn-info.disabled, .btn-info.disabled:hover,
+.btn-success, .btn-success:focus, .btn-success:disabled, .btn-success.disabled, .btn-success.disabled:hover {
+  background-color: #4D840A;
+  border-color: transparent;
+}
+
+.btn-info:active, .btn-success:active {
+  background-color: #4D840A !important;
+  border-color: transparent !important;
+}
+
+.btn-info:hover, .btn-success:hover {
+  background-color: #45770A;
+  border-color: transparent;
+}
+
 #guide-btn {
-  display: none;
-  margin-top: 8px;
-  font-size: 80%;
-  margin-left: auto;
-  margin-right: auto;
+  display: block;
+  margin: 1em auto 1.4em;
+  font-size: 1.4em;
 }
 
 @media (min-width: 900px) {
@@ -86,14 +149,12 @@ input.form-control {
 }
 
 .report-filler {
-  padding-top: 50px;
-  padding-bottom: 50px;
-  border: 1px solid #000;
+  margin: 2em auto 1em;
   text-align: center;
 }
 
 .report h4 {
-  margin-top: 35px;
+  margin-top: 0;
 }
 
 .yes-print {
@@ -116,9 +177,6 @@ input.form-control {
   }
   .header a {
     display: none;
-  }
-  .btn {
-    margin-top: 18px;
   }
 }
 

@@ -687,17 +687,17 @@
             </div>
 
             <h4 class="report-filler">
-              After you answer all questions, a printable guide will appear here.
-              <br />
-              <button id="guide-btn" class="btn btn-success" onclick="moveToReport(event)"
-                data-ga-label="Veiw Guide">View Guide</button>
+              Please answer all questions, then click "View Guide:"
             </h4>
+            <button id="guide-btn" class="btn btn-success" onclick="moveToReport(event)" data-ga-label="Veiw Guide" disabled>
+              View Guide
+            </button>
           </form>
 
           <div class="report">
-            <h3>Based upon your feedback, you may be eligible for the following New Jersey programs:</h3>
+            <h3>Based upon your feedback, you may be eligible for the following New Jersey programs.</h3>
 
-            <div style="padding-left: 1em">
+            <div class="disclaimer">
               <p><strong>Disclaimer:</strong>
                 <em>
                   As a courtesy, the NJEDA is offering this screening tool (the “Eligibility Wizard”)
@@ -722,7 +722,7 @@
               </p>
             </div>
 
-            <div class="eag">
+            <div class="eag program">
               <h4>Emergency Assistance Grant Program</h4>
               <p>
                 <strong>Description:</strong>
@@ -745,7 +745,7 @@
                 target="_blank">https://faq.business.nj.gov/en/articles/3835237</a>
             </div>
 
-            <div class="eawcl">
+            <div class="eawcl program">
               <h4>Emergency Assistance Loan Program</h4>
               <p>
                 <strong>Description:</strong>
@@ -765,7 +765,7 @@
               <a href="https://faq.business.nj.gov/en/articles/3835238"
                 target="_blank">https://faq.business.nj.gov/en/articles/3835238</a>
             </div>
-            <div class="guarantee">
+            <div class="guarantee program">
               <h4>Emergency Assistance Guarantee Program</h4>
               <p>
                 <strong>Description:</strong>
@@ -790,7 +790,7 @@
               <a href="https://faq.business.nj.gov/en/articles/3835236"
                 target="_blank">https://faq.business.nj.gov/en/articles/3835236</a>
             </div>
-            <div class="egp">
+            <div class="egp program">
               <h4>Entrepreneur Guarantee Program</h4>
               <p>
                 <strong>Description:</strong>
@@ -811,7 +811,7 @@
               <a href="https://faq.business.nj.gov/en/articles/3835239"
                 target="_blank">https://faq.business.nj.gov/en/articles/3835239</a>
             </div>
-            <div class="frelief">
+            <div class="frelief program">
               <h4>Financial relief on existing NJEDA obligations</h4>
               <p>
                 <strong>Description:</strong>
@@ -831,7 +831,7 @@
 
             <h3>Additional financing options that you may be eligible for:</h3>
 
-            <div class="cdfi">
+            <div class="cdfi program">
               <h4>Loans from a CDFI</h4>
               <p>
                 Community Development Financial Institutions (CDFIs) play a critical role in
@@ -852,7 +852,7 @@
                 business financing.
               </p>
             </div>
-            <div class="bank">
+            <div class="bank program">
               <h4>Financing from a private bank</h4>
               <p>
                 Often one of the most reliable sources of financing for micro, small, and medium-sized
@@ -862,7 +862,7 @@
               </p>
             </div>
 
-            <div class="eidl">
+            <div class="eidl program">
               <h4>Federal Small Business Administration (SBA) Emergency Injury Disaster Loans (EIDL)</h4>
               <p>
                 <strong>Description:</strong>
@@ -882,19 +882,16 @@
               <a href="https://disasterloan.sba.gov/ela" target="_blank">https://disasterloan.sba.gov/ela</a>
             </div>
 
-            <br />
-            <br />
-
-            <button class="btn btn-success no-print" onclick="window.print()" data-ga-label="Print this report">
-              Print this report
-            </button>
-            <button class="btn btn-info no-print" onclick="viewQs()" data-ga-label="Change Answers">
-              Change Answers
-            </button>
-            <button class="btn btn-warning no-print" onclick="window.location.reload()" data-ga-label="Start over">
-              Start over
-            </button>
-            <div style="height:150px">
+            <div class="actions">
+              <button class="btn btn-primary no-print" onclick="window.print()" data-ga-label="Print this report">
+                Print this report
+              </button>
+              <button class="btn btn-info no-print" onclick="viewQs()" data-ga-label="Change Answers">
+                Change Answers
+              </button>
+              <button class="btn btn-warning no-print" onclick="window.location.reload()" data-ga-label="Start over">
+                Start over
+              </button>
             </div>
           </div>
         </div>

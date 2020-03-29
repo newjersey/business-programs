@@ -62,7 +62,7 @@ var nonprofit_q = 11,
     },
     egp: { // Entrepreneur Guarantee
       required_yes: [1, 4, 5, 6, 13, 17, 23, 42],
-      required_no: [3, 14],
+      required_no: [14],
       eval: {
         8: function (fte) {
           fte = parseNumber(fte);

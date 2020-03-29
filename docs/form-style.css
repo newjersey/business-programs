@@ -204,3 +204,16 @@ footer a, footer a:hover {
 li.no-print {
   text-decoration: line-through;
 }
+
+@media print {
+  body {
+    font-family: sans-serif !important;
+  }
+  .Header-social.no-print {
+    display: none;
+  }
+
+  .Header-bottomRow {
+    width: 100% !important;
+  }
+}

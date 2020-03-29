@@ -689,20 +689,20 @@
             <h4 class="report-filler">
               After you answer all questions, a printable guide will appear here.
               <br />
-              <button id="guide-btn" class="btn btn-success" onclick="moveToReport(event)">View Guide</button>
+              <button id="guide-btn" class="btn btn-success" onclick="moveToReport(event)" data-ga-label="Veiw Guide">View Guide</button>
             </h4>
           </form>
 
           <div class="report">
             <h3>Based upon your feedback, you may be eligible for the following New Jersey programs:</h3>
 
-            <button class="btn btn-success no-print" onclick="window.print()">
+            <button class="btn btn-success no-print" onclick="window.print()" data-ga-label="Print this report">
               Print this report
             </button>
-            <button class="btn btn-info no-print" onclick="viewQs(event)">
+            <button class="btn btn-info no-print" onclick="viewQs(event)" data-ga-label="Change Answers">
               Change Answers
             </button>
-            <button class="btn btn-warning no-print" onclick="window.location.reload()">
+            <button class="btn btn-warning no-print" onclick="window.location.reload()" data-ga-label="Start over">
               Start over
             </button>
             <br />
@@ -896,13 +896,13 @@
             <br />
             <br />
 
-            <button class="btn btn-success no-print" onclick="window.print()">
+            <button class="btn btn-success no-print" onclick="window.print()" data-ga-label="Print this report">
               Print this report
             </button>
-            <button class="btn btn-info no-print" onclick="viewQs()">
+            <button class="btn btn-info no-print" onclick="viewQs()" data-ga-label="Change Answers">
               Change Answers
             </button>
-            <button class="btn btn-warning no-print" onclick="window.location.reload()">
+            <button class="btn btn-warning no-print" onclick="window.location.reload()" data-ga-label="Start over">
               Start over
             </button>
             <div style="height:150px">
@@ -1003,6 +1003,15 @@
       "q14": { event_action: 'sin_business' },
       "q15": { event_action: 'eidl_disqual_industry' }
     };
+
+    jQuery('[data-ga-label]').click(function() {
+      var $button = jQuery(this);
+      var buttonLabel = $button.data('ga-label');
+
+      console.log('event', buttonLabel, {
+        'event_category': 'formAction'
+      });
+    });
 
     jQuery('button', 'form.form').click(function () {
       var $button = jQuery(this);

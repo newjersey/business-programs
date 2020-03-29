@@ -95,11 +95,16 @@
               <li>
                 State Emergency Support Programs
                 <ul>
-                  <li class="eag" data-program-name="Emergency Assistance Grant Program">Emergency Assistance Grant Program</li>
-                  <li class="eawcl" data-program-name="Emergency Assistance Loan Program">Emergency Assistance Loan Program</li>
-                  <li class="guarantee" data-program-name="Emergency Assistance Guarantee Program">Emergency Assistance Guarantee Program</li>
-                  <li class="egp" data-program-name="NJ Entrepreneur Support Program">NJ Entrepreneur Support Program</li>
-                  <li class="frelief" data-program-name="Financial relief on existing NJEDA obligations">Financial relief on existing NJEDA obligations</li>
+                  <li class="eag" data-program-name="Emergency Assistance Grant Program">Emergency Assistance Grant
+                    Program</li>
+                  <li class="eawcl" data-program-name="Emergency Assistance Loan Program">Emergency Assistance Loan
+                    Program</li>
+                  <li class="guarantee" data-program-name="Emergency Assistance Guarantee Program">Emergency Assistance
+                    Guarantee Program</li>
+                  <li class="egp" data-program-name="NJ Entrepreneur Support Program">NJ Entrepreneur Support Program
+                  </li>
+                  <li class="frelief" data-program-name="Financial relief on existing NJEDA obligations">Financial
+                    relief on existing NJEDA obligations</li>
                 </ul>
               </li>
             </ul>
@@ -107,7 +112,8 @@
               <li>
                 Federal Programs
                 <ul>
-                  <li class="eidl" data-program-name="Federal SBA Emergency Injury Disaster Loans">Federal SBA Emergency Injury Disaster Loans</li>
+                  <li class="eidl" data-program-name="Federal SBA Emergency Injury Disaster Loans">Federal SBA Emergency
+                    Injury Disaster Loans</li>
                 </ul>
               </li>
             </ul>
@@ -360,7 +366,8 @@
               <div class="form-group">
                 <label for="fte">Total number of FTEs</label>
                 <small class="form-text text-muted">Examples: 1, 10.5, 15</small>
-                <input id="fte" type="text" class="input form-control form-control-lg" name="fte" />
+                <input id="fte" type="text" class="input form-control form-control-lg" name="fte"
+                  data-action="fte_equiv" />
                 <button data-label="Enter" class="btn btn-primary">
                   Enter
                 </button>
@@ -411,7 +418,7 @@
               </p>
               <div class="form-group">
                 <small class="form-text text-muted">Example: 50,000</small>
-                <input type="text" class="input form-control" name="2019_revenue" />
+                <input type="text" class="input form-control" name="2019_revenue" data-action="2019_revenues" />
               </div>
               <button data-label="Enter" class="btn btn-primary">
                 Enter
@@ -429,7 +436,7 @@
                 </p>
                 <div class="form-group">
                   <small class="form-text text-muted">Examples: $50000; $3,000,000</small>
-                  <input type="text" class="input form-control" name="12mo_revenue" />
+                  <input type="text" class="input form-control" name="12mo_revenue" data-action="12_month_revenue" />
                 </div>
                 <button data-label="Enter" class="btn btn-primary">
                   Enter
@@ -654,7 +661,8 @@
             <h4 class="report-filler">
               Please answer all questions, then click "View Guide:"
             </h4>
-            <button id="guide-btn" class="btn btn-success" onclick="moveToReport(event)" data-ga-label="Veiw Guide" disabled>
+            <button id="guide-btn" class="btn btn-success" onclick="moveToReport(event)" data-ga-label="Veiw Guide"
+              disabled>
               View Guide
             </button>
           </form>
@@ -968,6 +976,17 @@
 
       gtag('event', buttonLabel, {
         'event_category': 'formAction'
+      });
+    });
+
+    jQuery('input[data-action]').change(function () {
+      var $input = jQuery(this);
+      var action = $input.data('action');
+      var value = $input.val();
+
+      gtag('event', action, {
+        'event_category': 'numberEntered',
+        'event_label': value
       });
     });
 

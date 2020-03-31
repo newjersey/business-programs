@@ -1,3 +1,17 @@
+// polyfills
+if (!String.prototype.includes) {
+  String.prototype.includes = function(search, start) {
+    'use strict';
+
+    if (search instanceof RegExp) {
+      throw TypeError('first argument must not be a RegExp');
+    }
+    if (start === undefined) { start = 0; }
+    return this.indexOf(search, start) !== -1;
+  };
+}
+Array.prototype.includes||Object.defineProperty(Array.prototype,"includes",{value:function(r,e){if(null==this)throw new TypeError('"this" is null or not defined');var t=Object(this),n=t.length>>>0;if(0===n)return!1;var i,o,a=0|e,u=Math.max(0<=a?a:n-Math.abs(a),0);for(;u<n;){if((i=t[u])===(o=r)||"number"==typeof i&&"number"==typeof o&&isNaN(i)&&isNaN(o))return!0;u++}return!1}});
+
 function parseNumber(num) {
   return Number(
     String(num).replace(/\,|\;|\$|\s/g, '')
@@ -62,7 +76,7 @@ var nonprofit_q = 11,
     },
     egp: { // Entrepreneur Guarantee
       required_yes: [1, 4, 5, 6, 13, 17, 23, 42],
-      required_no: [3, 14],
+      required_no: [14],
       eval: {
         8: function (fte) {
           fte = parseNumber(fte);
@@ -283,8 +297,12 @@ $(document).ready(function () {
       answers[sheet_original_index] = -1;
 
       // numeric answers going back to not sure / skip
-      if ([8, 9, 10, 12].includes(sheet_original_index)) {
-        answers[sheet_original_index] = undefined;
+      try {
+        // old browser Array.includes
+        if ([8, 9, 10, 12].includes(sheet_original_index)) {
+          answers[sheet_original_index] = undefined;
+        }
+      } catch (e) {
       }
 
       $(q).find(".answered").css({ color: "#888" });

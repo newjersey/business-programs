@@ -417,7 +417,7 @@
                 Please estimate your business' annual revenue for the year of 2019?
               </p>
               <div class="form-group">
-                <small class="form-text text-muted">Example: 50,000</small>
+                <small class="form-text text-muted">Examples: $50000; 3,000,000</small>
                 <input type="text" class="input form-control" name="2019_revenue" data-action="2019_revenues" />
               </div>
               <button data-label="Enter" class="btn btn-primary">
@@ -435,7 +435,7 @@
                   Please estimate your business' 12-month trailing revenue as of March 9, 2020?
                 </p>
                 <div class="form-group">
-                  <small class="form-text text-muted">Examples: $50000; $3,000,000</small>
+                  <small class="form-text text-muted">Examples: $50000; 3,000,000</small>
                   <input type="text" class="input form-control" name="12mo_revenue" data-action="12_month_revenue" />
                 </div>
                 <button data-label="Enter" class="btn btn-primary">
@@ -859,7 +859,7 @@
               <button class="btn btn-primary no-print" onclick="window.print()" data-ga-label="Print this report">
                 Print this report
               </button>
-              <button class="btn btn-info no-print" onclick="viewQs()" data-ga-label="Change Answers">
+              <button class="btn btn-info no-print" onclick="viewQs(event)" data-ga-label="Change Answers">
                 Change Answers
               </button>
               <button class="btn btn-warning no-print" onclick="window.location.reload()" data-ga-label="Start over">
@@ -925,7 +925,7 @@
   <script src="./jquery-3.4.1.slim.min.js"></script>
   <script src="./popper.min.js"></script>
   <script src="./bootstrap.min.js"></script>
-  <script src="./formflow.js?v=3">
+  <script src="./formflow.js?v=5">
   </script>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->

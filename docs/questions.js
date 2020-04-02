@@ -1,4 +1,4 @@
-var questions = {
+var form_questions = {
   "q42": {
     html: "<strong>NJEDA Disclaimer for Organization Support Eligibility Wizard</strong> \
     <p> \

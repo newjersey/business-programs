@@ -232,8 +232,8 @@ $(document).ready(function () {
   var outer_shell = $("#form-qs"),
       firstQuestion = true;
 
-  Object.keys(questions).forEach(function (qcode) {
-    var q = questions[qcode],
+  Object.keys(form_questions).forEach(function (qcode) {
+    var q = form_questions[qcode],
         shell = outer_shell;
 
     if (q === true) {
@@ -300,18 +300,18 @@ $(document).ready(function () {
     // YES / ENTER button
     $(q).find('.btn-primary').click(function (e) {
       e.preventDefault();
-      answers[q.id] = q.input ? $(q).find('input[name="' + q.input.name + '"]').val() : true;
+      answers[q.id] = form_questions[q.id].input ? $(q).find('input[name="' + form_questions[q.id].input.name + '"]').val() : true;
 
-      if (questions[q.id].hard_pass === true) {
+      if (form_questions[q.id].hard_pass === true) {
         hardPass();
       }
-      if (questions[q.id].yes_hides) {
-        questions[q.id].yes_hides.forEach(function (cl) {
+      if (form_questions[q.id].yes_hides) {
+        form_questions[q.id].yes_hides.forEach(function (cl) {
           $("." + cl).hide();
         });
       }
-      if (questions[q.id].no_hides) {
-        questions[q.id].no_hides.forEach(function (cl) {
+      if (form_questions[q.id].no_hides) {
+        form_questions[q.id].no_hides.forEach(function (cl) {
           $("." + cl).show();
         });
       }
@@ -331,15 +331,15 @@ $(document).ready(function () {
     // NOT SURE / SKIP button (pre-emptive YES)
     $(q).find('.btn.not-sure').click(function (e) {
       e.preventDefault();
-      answers[q.id] = q.input ? undefined : -1;
+      answers[q.id] = form_questions[q.id].input ? undefined : -1;
 
-      if (questions[q.id].yes_hides) {
-        questions[q.id].yes_hides.forEach(function (cl) {
+      if (form_questions[q.id].yes_hides) {
+        form_questions[q.id].yes_hides.forEach(function (cl) {
           $("." + cl).show();
         });
       }
-      if (questions[q.id].no_hides) {
-        questions[q.id].no_hides.forEach(function (cl) {
+      if (form_questions[q.id].no_hides) {
+        form_questions[q.id].no_hides.forEach(function (cl) {
           $("." + cl).show();
         });
       }
@@ -357,16 +357,16 @@ $(document).ready(function () {
       e.preventDefault();
       answers[q.id] = false;
 
-      if (questions[q.id].hard_pass === false) {
+      if (form_questions[q.id].hard_pass === false) {
         hardPass();
       }
-      if (questions[q.id].yes_hides) {
-        questions[q.id].yes_hides.forEach(function (cl) {
+      if (form_questions[q.id].yes_hides) {
+        form_questions[q.id].yes_hides.forEach(function (cl) {
           $("." + cl).show();
         });
       }
-      if (questions[q.id].no_hides) {
-        questions[q.id].no_hides.forEach(function (cl) {
+      if (form_questions[q.id].no_hides) {
+        form_questions[q.id].no_hides.forEach(function (cl) {
           $("." + cl).hide();
         });
       }

@@ -435,7 +435,94 @@
   <script src="./popper.min.js"></script>
   <script src="./bootstrap.min.js"></script>
   <script src="./questions.js?v=2"></script>
-  <script src="./formflow.js?v=6">
+  <script src="./formflow.js?v=6"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140253594-6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+
+    gtag('js', new Date());
+
+    gtag('config', 'UA-140253594-6');
+
+    var questions = {
+      "q42": { event_action: 'disclaimer' },
+      "q1": { event_action: 'registered_in_nj' },
+      "q110": { event_action: 'entity' },
+      "q11": { event_action: 'nonprofit_is_eligible' },
+      "q0": { event_action: 'existing_njeda_relationship' },
+      "q7": { event_action: 'year_or_more' },
+      "q2": { event_action: 'physical_location' },
+      "q3": { event_action: 'home_based' },
+      "q12": { event_action: 'eligible_naics' },
+      "q13": { event_action: 'entrepreneur_industry' },
+      "q8": { event_action: 'fte_equiv' },
+      "q4": { event_action: 'employees_majority_nj' },
+      "q5": { event_action: 'hq_in_nj' },
+      "q9": { event_action: '2019_revenues' },
+      "q10": { event_action: '12_month_revenue' },
+      "q16": { event_action: 'have_docs' },
+      "q18": { event_action: 'fico_gte_600' },
+      "q19": { event_action: 'provide_guarantees' },
+      "q17": { event_action: 'tax_clear' },
+      "q23": { event_action: 'dol_clear' },
+      "q20": { event_action: 'will_not_furlough' },
+      "q22": { event_action: 'financial_need' },
+      "q21": { event_action: 'negatively_impacted' },
+      "q14": { event_action: 'sin_business' },
+      "q15": { event_action: 'eidl_disqual_industry' }
+    };
+
+
+    window.sendResultToGA = function (programName, isEligible) {
+      gtag('event', programName, {
+        'event_category': 'resultShown',
+        'event_label': isEligible ? 'Yes' : 'No'
+      });
+    };
+
+    jQuery('[data-ga-label]').click(function () {
+      var $button = jQuery(this);
+      var buttonLabel = $button.data('ga-label');
+
+      gtag('event', buttonLabel, {
+        'event_category': 'formAction'
+      });
+    });
+
+    jQuery('input[data-action]').change(function () {
+      var $input = jQuery(this);
+      var action = $input.data('action');
+      var value = $input.val();
+
+      gtag('event', action, {
+        'event_category': 'numberEntered',
+        'event_label': value
+      });
+    });
+
+    jQuery('button', 'form.form').click(function () {
+      var $button = jQuery(this);
+      var $question = $button && $button.closest('.question');
+      var questionId = $question && $question.prop('id');
+
+      if (questionId) {
+        var event_action = questions[questionId].event_action;
+        var buttonLabel = $button.data('label');
+        var value = $question.find('input').val();
+        var data = {
+          'event_category': 'questionAnswered',
+          'event_label': buttonLabel
+        };
+
+        if (value) {
+          data['value'] = value;
+        }
+
+        gtag('event', event_action, data);
+      }
+    });
   </script>
 </body>
 </html>

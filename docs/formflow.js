@@ -300,7 +300,7 @@ $(document).ready(function () {
     // YES / ENTER button
     $(q).find('.btn-primary').click(function (e) {
       e.preventDefault();
-      answers[q.id] = q.input ? $(q).find('input[name="' + q.input.name + '"]').val() : true;
+      answers[q.id] = questions[q.id].input ? $(q).find('input[name="' + questions[q.id].input.name + '"]').val() : true;
 
       if (questions[q.id].hard_pass === true) {
         hardPass();
@@ -331,7 +331,7 @@ $(document).ready(function () {
     // NOT SURE / SKIP button (pre-emptive YES)
     $(q).find('.btn.not-sure').click(function (e) {
       e.preventDefault();
-      answers[q.id] = q.input ? undefined : -1;
+      answers[q.id] = questions[q.id].input ? undefined : -1;
 
       if (questions[q.id].yes_hides) {
         questions[q.id].yes_hides.forEach(function (cl) {

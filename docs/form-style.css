@@ -52,6 +52,14 @@ table {
   display: none;
   color: #fff;
 }
+.answered.please-answer {
+  display: block;
+  color: #000;
+}
+.answered.already-answered {
+  color: rgb(170, 170, 170);
+  display: block;
+}
 
 .my_options {
   background: #efefef;

@@ -1,3 +1,22 @@
+var language_defaults = {
+  en: {
+    yes_text: "Yes",
+    no_text: "No",
+    skip: "Skip",
+    not_sure: "Not Sure",
+    examples: "Examples",
+    enter: "Enter"
+  },
+  es: {
+    yes_text: "Sí",
+    no_text: "No",
+    skip: "Pasar",
+    not_sure: "Pasar",
+    examples: "Ejemplos",
+    enter: "Ingresar su respuesta"
+  }
+};
+
 var questions = {
   "q42": {
     html: "<strong>NJEDA Disclaimer for Organization Support Eligibility Wizard</strong> \
@@ -21,10 +40,18 @@ var questions = {
     </p>",
     hard_pass: false, // if saying no to agreement
     yes_text: "Agree",
-    no_text: "Cancel"
+    no_text: "Cancel",
+    es: {
+      html: "Ejemplo en español",
+      yes_text: "Acordar",
+      no_text: "Cancelar"
+    }
   },
 
-  "Basic Information": true,
+  "Basic Information": {
+    header: true,
+    es: "Información básica"
+  },
   "q1": {
     hard_pass: false, // if saying no to NJ
     html: "<p> \
@@ -37,7 +64,11 @@ var questions = {
     </p>",
     yes_text: "For-profit",
     no_text: "Not-for-profit",
-    yes_hides: ["non-profit"]
+    yes_hides: ["non-profit"],
+    es: {
+      yes_text: "Con fines de lucro",
+      no_text: "Sin ánimo de lucro"
+    }
   },
   "q11": {
     classes: "non-profit",
@@ -58,7 +89,10 @@ var questions = {
     </p>"
   },
 
-  "Physical Location": true,
+  "Physical Location": {
+    header: true,
+    es: "Ubicación fisica"
+  },
   "q2": {
     html: "<p> \
       Does your organization have a physical commercial location in the State of New Jersey (e.g., a \
@@ -76,7 +110,10 @@ var questions = {
     yes_hides: ["detail_qs"]
   },
 
-  "Industry": true,
+  "Industry": {
+    header: true,
+    es: "Industria"
+  },
   "q12": {
     html: "<p> \
       Is your organization classified in one of the following industries? \
@@ -93,7 +130,10 @@ var questions = {
         <a href=\"https://www.naics.com/six-digit-naics/?code=81\" target=\"_blank\"> \
         https://www.naics.com/six-digit-naics/?code=81</a> \
     </p>",
-    no_text: "None of the above"
+    no_text: "None of the above",
+    es: {
+      no_text: "Ninguna de las anteriores"
+    }
   },
   "q13": {
     classes: "for-profit",
@@ -115,10 +155,16 @@ var questions = {
       </ul> \
     </p>",
     no_text: "None of the above",
-    no_hides: ["entrepreneur"]
+    no_hides: ["entrepreneur"],
+    es: {
+      no_text: "Ninguna de las anteriores"
+    }
   },
 
-  "Business Size": true,
+  "Business Size": {
+    header: true,
+    es: "Tamaño del negocio"
+  },
 
   "q8": {
     html: "<p> \
@@ -138,7 +184,12 @@ var questions = {
       label: "Total number of FTEs",
       examples: "1, 10.5, 15"
     },
-    skippable: true
+    skippable: true,
+    es: {
+      input: {
+        label: "El numero total"
+      }
+    }
   },
   "q4": {
     classes: "physical_nj entrepreneur",
@@ -157,7 +208,10 @@ var questions = {
     </p>"
   },
 
-  "Revenue": true,
+  "Revenue": {
+    header: true,
+    es: "Ingresos"
+  },
   "q9": {
     html: "<p> \
       Please estimate your business' annual revenue for the year of 2019? \
@@ -181,7 +235,10 @@ var questions = {
     skippable: true
   },
 
-  "Loans and Guarantees": true,
+  "Loans and Guarantees": {
+    header: true,
+    es: "Préstamos y garantías"
+  },
   "q16": {
     classes: "detail_qs physical_nj",
     html: "<p> \
@@ -193,7 +250,10 @@ var questions = {
     html: "<p> \
       Do you, another owner, or your business have a minimum FICO score of at least 600? \
     </p>",
-    skippable: "Not Sure"
+    skippable: "Not Sure",
+    es: {
+      skippable: "Pasar"
+    }
   },
   "q19": {
     classes: "for-profit",
@@ -204,7 +264,10 @@ var questions = {
     </p>"
   },
 
-  "Other": true,
+  "Other": {
+    header: true,
+    es: "Otras"
+  },
   "q17": {
     html: "<p> \
       Are you able to certify that you are in good standing with the \
@@ -213,7 +276,10 @@ var questions = {
       <em>Note: you may be required to provide a Tax Clearance \
         Certificate for certain emergency assistance programs.</em> \
     </p>",
-    skippable: "Not Sure"
+    skippable: "Not Sure",
+    es: {
+      skippable: "Pasar"
+    }
   },
   "q23": {
     html: "<p> \
@@ -224,7 +290,10 @@ var questions = {
         having unpaid unemployment holdings, unpaid fees, or outstanding employee \
         wage and hour violations.</em> \
     </p>",
-    skippable: "Not Sure"
+    skippable: "Not Sure",
+    es: {
+      skippable: "Pasar"
+    }
   },
 
   "q20": {

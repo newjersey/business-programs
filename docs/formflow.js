@@ -279,7 +279,7 @@ $(document).ready(function () {
         formplace.append($("<small>").attr("class", "form-text text-muted").text(language_defaults[select_lang].examples + ": " + (lang_src.input.examples || q.input.examples)));
       }
 
-      formplace.append($("<input>").attr("type", "text").attr("class", "input form-control form-control-lg").attr("name", q.input.name));
+      formplace.append($("<input>").attr("type", "text").attr("class", "input form-control form-control-lg").attr("name", q.input.name).attr("id", q.input.name));
       formplace.append($("<button>").attr("class", "btn btn-primary").attr("data-label", language_defaults[select_lang].enter).text(language_defaults[select_lang].enter));
 
       if (lang_src.skippable || q.skippable) {

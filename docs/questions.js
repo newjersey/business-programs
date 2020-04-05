@@ -376,3 +376,10 @@ var questions = {
     </ul>"
   }
 };
+
+if (module) {
+  module.exports = {
+    language_defaults: language_defaults,
+    questions: questions
+  };
+}

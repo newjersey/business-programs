@@ -20,9 +20,10 @@ function parseNumber(num) {
 
 var nonprofit_q = 11,
     yearlong_q = 7,
+    nj_business_q = 1,
   requirements = {
     eag: { // Emergency Assistance Grant
-      required_yes: [201, 1, 2, 12, 17, 23, 42],
+      required_yes: [1, 2, 12, 17, 23, 42],
       required_no: [3, 14],
       eval: {
         8: function (fte) {
@@ -38,7 +39,7 @@ var nonprofit_q = 11,
       }
     },
     eawcl: { // Emergency Assistance 0% Working Capital
-      required_yes: [201, 1, 2, 7, 16, 17, 20, 21, 22, 23, 42],
+      required_yes: [1, 2, 7, 16, 17, 20, 21, 22, 23, 42],
       required_no: [3, 14],
       eval: {
         9: function (revenue) {
@@ -57,7 +58,7 @@ var nonprofit_q = 11,
       }
     },
     guarantee: { // Emergency Assistance Guarantee
-      required_yes: [201, 1, 2, 7, 16, 17, 20, 21, 22, 23, 42],
+      required_yes: [1, 2, 7, 16, 17, 20, 21, 22, 23, 42],
       required_no: [3, 14],
       eval: {
         9: function (revenue) {
@@ -76,7 +77,7 @@ var nonprofit_q = 11,
       }
     },
     egp: { // Entrepreneur Guarantee
-      required_yes: [201, 1, 4, 5, 6, 13, 17, 23, 42],
+      required_yes: [1, 4, 5, 6, 13, 17, 23, 42],
       required_no: [14],
       eval: {
         8: function (fte) {
@@ -90,12 +91,15 @@ var nonprofit_q = 11,
       }
     },
     eidl: { // SBA EIDL
-      required_yes: [6, 18, 21, 42, 201, 206],
+      required_yes: [6, 18, 21, 42, 206],
       required_no: [15],
       eval: {
         8: function (fte) {
           fte = parseNumber(fte);
           return fte < 500;
+        },
+        201: function(val) {
+          return (val === true) || (answers[nj_business_q] === true);
         },
         204: function(val) {
           return (val === true) || (answers[yearlong_q] === true);
@@ -140,12 +144,15 @@ var nonprofit_q = 11,
       }
     },
     eidl_advance: {
-      required_yes: [18, 21, 201, 206],
+      required_yes: [18, 21, 206],
       required_no: [15],
       eval: {
         8: function (fte) {
           fte = parseNumber(fte);
           return fte < 500;
+        },
+        201: function(val) {
+          return (val === true) || (answers[nj_business_q] === true);
         },
         204: function(val) {
           return (val === true) || (answers[yearlong_q] === true);
@@ -153,22 +160,28 @@ var nonprofit_q = 11,
       }
     },
     a7: {
-      required_yes: [18, 201, 205],
+      required_yes: [18, 205],
       required_no: [15],
       eval: {
         9: function (revenue) {
           revenue = parseNumber(revenue);
           return revenue < 5000000;
+        },
+        201: function(val) {
+          return (val === true) || (answers[nj_business_q] === true);
         }
       }
     },
     ppp: {
-      required_yes: [201, 20, 21],
+      required_yes: [20, 21],
       required_no: [],
       eval: {
         8: function (fte) {
           fte = parseNumber(fte);
           return fte < 500;
+        },
+        201: function(val) {
+          return (val === true) || (answers[nj_business_q] === true);
         },
         202: function(val) {
           return (val === true) || (answers[nonprofit_q] === false);
@@ -179,8 +192,13 @@ var nonprofit_q = 11,
       }
     },
     sba_debt: {
-      required_yes: [201, 203],
-      required_no: []
+      required_yes: [203],
+      required_no: [],
+      eval: {
+        201: function(val) {
+          return (val === true) || (answers[nj_business_q] === true);
+        }
+      }
     }
   };
 var programs = Object.keys(requirements);
@@ -305,7 +323,9 @@ $(document).ready(function () {
       e.preventDefault();
       answers[sheet_original_index] = true;
 
-      if (sheet_original_index === 2) { // physically in NJ
+      if (sheet_original_index === 1) { // show non-NJ
+        $('.not_registered_nj').hide();
+      } else if (sheet_original_index === 2) { // physically in NJ
         $('.physical_nj').show();
         $('.not_in_nj').hide();
 
@@ -371,8 +391,10 @@ $(document).ready(function () {
       e.preventDefault();
       answers[sheet_original_index] = false;
 
-      if (sheet_original_index === 1) { // not registers in NJ
+      if (sheet_original_index === 201) { // not registered in USA
         hardPass();
+      } else if (sheet_original_index === 1) { // show non-NJ
+        $('.not_registered_nj').show();
       } else if (sheet_original_index === 2) { // not physically in NJ
         $('.physical_nj').hide();
         $('.not_in_nj').show();

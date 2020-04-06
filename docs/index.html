@@ -1036,7 +1036,7 @@
   </script>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
-  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140253594-6"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140253594-6"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
@@ -1069,7 +1069,14 @@
       "q22": { event_action: 'financial_need' },
       "q21": { event_action: 'negatively_impacted' },
       "q14": { event_action: 'sin_business' },
-      "q15": { event_action: 'eidl_disqual_industry' }
+      "q15": { event_action: 'eidl_disqual_industry' },
+      "q201": { event_action: 'registered_in_usa' },
+      "q202": { event_action: 'nonprofit_sba_eligible' },
+      "q203": { event_action: 'existing_sba_relationship' },
+      "q204": { event_action: 'feb_2020_or_older' },
+      "q205": { event_action: 'tried_other_lenders' },
+      "q206": { event_action: 'certify_fed_business' }
+
     };
 
     window.sendResultToGA = function (programName, isEligible) {
@@ -1120,7 +1127,7 @@
         gtag('event', event_action, data);
       }
     });
-  </script> -->
+  </script>
 </body>
 
 </html>

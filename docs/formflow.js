@@ -323,7 +323,7 @@ $(document).ready(function () {
       e.preventDefault();
       answers[sheet_original_index] = true;
 
-      if (sheet_original_index === 1) { // show non-NJ
+      if (sheet_original_index === 1) { // hide non-NJ
         $('.not_registered_nj').hide();
       } else if (sheet_original_index === 2) { // physically in NJ
         $('.physical_nj').show();
@@ -336,6 +336,8 @@ $(document).ready(function () {
         }
       } else if (sheet_original_index === 3) { // home business
         $('.detail_qs').hide();
+      } else if (sheet_original_index === 7) { // hide Feb 2020 date
+        $('.newbie').hide();
       } else if (sheet_original_index === 8) { // how many FTE
         answers[sheet_original_index] = $("input[name='fte']").val();
       } else if (sheet_original_index === 9) { // 2019 revenue
@@ -404,6 +406,8 @@ $(document).ready(function () {
         } else if (answers[2] === true) {
           $('.detail_qs').show();
         }
+      } else if (sheet_original_index === 7) { // show Feb 2020 date
+        $('.newbie').show();
       } else if (sheet_original_index === 11) { // non-profit detail
         $('.for-profit').show();
       } else if (sheet_original_index === 13) { // entrepreneur

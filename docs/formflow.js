@@ -23,7 +23,7 @@ var nonprofit_q = 11,
     nj_business_q = 1,
   requirements = {
     eag: { // Emergency Assistance Grant
-      required_yes: [1, 2, 12, 17, 23, 42],
+      required_yes: [1, 2, 12, 17, 20, 21, 22, 23, 42],
       required_no: [3, 14],
       eval: {
         8: function (fte) {

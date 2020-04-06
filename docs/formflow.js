@@ -19,9 +19,10 @@ function parseNumber(num) {
 }
 
 var nonprofit_q = 11,
+    yearlong_q = 7,
   requirements = {
     eag: { // Emergency Assistance Grant
-      required_yes: [1, 2, 12, 16, 17, 20, 21, 22, 23, 42],
+      required_yes: [201, 1, 2, 12, 17, 23, 42],
       required_no: [3, 14],
       eval: {
         8: function (fte) {
@@ -37,7 +38,7 @@ var nonprofit_q = 11,
       }
     },
     eawcl: { // Emergency Assistance 0% Working Capital
-      required_yes: [1, 2, 7, 16, 17, 20, 21, 22, 23, 42],
+      required_yes: [201, 1, 2, 7, 16, 17, 20, 21, 22, 23, 42],
       required_no: [3, 14],
       eval: {
         9: function (revenue) {
@@ -56,7 +57,7 @@ var nonprofit_q = 11,
       }
     },
     guarantee: { // Emergency Assistance Guarantee
-      required_yes: [1, 2, 7, 16, 17, 20, 21, 22, 23, 42],
+      required_yes: [201, 1, 2, 7, 16, 17, 20, 21, 22, 23, 42],
       required_no: [3, 14],
       eval: {
         9: function (revenue) {
@@ -75,7 +76,7 @@ var nonprofit_q = 11,
       }
     },
     egp: { // Entrepreneur Guarantee
-      required_yes: [1, 4, 5, 6, 13, 17, 23, 42],
+      required_yes: [201, 1, 4, 5, 6, 13, 17, 23, 42],
       required_no: [14],
       eval: {
         8: function (fte) {
@@ -89,8 +90,17 @@ var nonprofit_q = 11,
       }
     },
     eidl: { // SBA EIDL
-      required_yes: [6, 7, 42],
-      required_no: [3, 15]
+      required_yes: [6, 18, 21, 42, 201, 206],
+      required_no: [15],
+      eval: {
+        8: function (fte) {
+          fte = parseNumber(fte);
+          return fte < 500;
+        },
+        204: function(val) {
+          return (val === true) || (answers[yearlong_q] === true);
+        }
+      }
     },
     frelief: { // NJ EDA relief
       required_yes: [0, 42]
@@ -128,6 +138,49 @@ var nonprofit_q = 11,
           return revenue >= 100000;
         }
       }
+    },
+    eidl_advance: {
+      required_yes: [18, 21, 201, 206],
+      required_no: [15],
+      eval: {
+        8: function (fte) {
+          fte = parseNumber(fte);
+          return fte < 500;
+        },
+        204: function(val) {
+          return (val === true) || (answers[yearlong_q] === true);
+        }
+      }
+    },
+    a7: {
+      required_yes: [18, 201, 205],
+      required_no: [15],
+      eval: {
+        9: function (revenue) {
+          revenue = parseNumber(revenue);
+          return revenue < 5000000;
+        }
+      }
+    },
+    ppp: {
+      required_yes: [201, 20, 21],
+      required_no: [],
+      eval: {
+        8: function (fte) {
+          fte = parseNumber(fte);
+          return fte < 500;
+        },
+        202: function(val) {
+          return (val === true) || (answers[nonprofit_q] === false);
+        },
+        204: function(val) {
+          return (val === true) || (answers[yearlong_q] === true);
+        }
+      }
+    },
+    sba_debt: {
+      required_yes: [201, 203],
+      required_no: []
     }
   };
 var programs = Object.keys(requirements);

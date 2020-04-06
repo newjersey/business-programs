@@ -114,6 +114,18 @@
                 <ul>
                   <li class="eidl" data-program-name="Federal SBA Emergency Injury Disaster Loans">Federal SBA Emergency
                     Injury Disaster Loans</li>
+                  <li class="eidl_advance" data-program-name="">
+                    Federal SBA Economic Injury Diaster Loan Advance
+                  </li>
+                  <li class="a7" data-program-name="">
+                    SBA 7(a) Loan Program
+                  </li>
+                  <li class="ppp" data-program-name="">
+                    Paycheck Protection Program (PPP) Loans
+                  </li>
+                  <li class="sba_debt" data-program-name="">
+                    Small Business Debt Relief Program
+                  </li>
                 </ul>
               </li>
             </ul>
@@ -204,6 +216,22 @@
               </button>
             </div>
 
+            <div class="not_nj">
+              <div id="q201" class="question">
+                <span class="answered">‣</span>
+                <p>
+                  Is your business/non-profit registered to do business in the
+                  United States or its territories?
+                </p>
+                <button data-label="Yes" class="btn btn-primary">
+                  Yes
+                </button>
+                <button data-label="No" class="btn btn-dark">
+                  No
+                </button>
+              </div>
+            </div>
+
             <div id="q110" class="question">
               <span class="answered">‣</span>
               <p>
@@ -220,8 +248,23 @@
             <div class="non-profit">
               <div id="q11" class="question">
                 <span class="answered">‣</span>
+                <span class="badge badge-success">NJ State Programs</span>
                 <p>
                   Does your not-for-profit have one of the following designations: 501(c)(3), 501(c)(4), 501(c)(7)?
+                </p>
+                <button data-label="Yes" class="btn btn-primary">
+                  Yes
+                </button>
+                <button data-label="No" class="btn btn-dark">
+                  No
+                </button>
+              </div>
+
+              <div id="q202" class="question">
+                <span class="answered">‣</span>
+                <span class="badge badge-success">Federal SBA Programs</span>
+                <p>
+                  Does your not-for-profit have one of the following designations: 501(c)(3), 501(c)(19)?
                 </p>
                 <button data-label="Yes" class="btn btn-primary">
                   Yes
@@ -246,6 +289,19 @@
               </button>
             </div>
 
+            <div id="q203" class="question">
+              <span class="answered">‣</span>
+              <p>
+                Does your organization have any non-disaster SBA loans, in particular 7(a), 504, and/or microloans?
+              </p>
+              <button data-label="Yes" class="btn btn-primary">
+                Yes
+              </button>
+              <button data-label="No" class="btn btn-dark">
+                No
+              </button>
+            </div>
+
             <div id="q7" class="question">
               <span class="answered">‣</span>
               <p>
@@ -259,6 +315,20 @@
               </button>
             </div>
 
+            <div class="newbie">
+              <div id="q204" class="question">
+                <span class="answered">‣</span>
+                <p>
+                  Has your business been in operation since February 15, 2020?
+                </p>
+                <button data-label="Yes" class="btn btn-primary">
+                  Yes
+                </button>
+                <button data-label="No" class="btn btn-dark">
+                  No
+                </button>
+              </div>
+            </div>
 
             <h3>Physical Location</h3>
 
@@ -542,6 +612,19 @@
               </button>
             </div>
 
+            <div id="q205" class="question">
+              <span class="answered">‣</span>
+              <p>
+                Has the business owner tried and failed to get funds from other financial lenders?
+                (i.e. Banks and credit unions, short term business loans, personal loans etc.)
+              </p>
+              <button data-label="Yes" class="btn btn-primary">
+                Yes
+              </button>
+              <button data-label="No" class="btn btn-dark">
+                No
+              </button>
+            </div>
 
             <div class="detail_qs">
               <div id="q20" class="question">
@@ -603,6 +686,30 @@
                   No
                 </button>
               </div>
+            </div>
+
+            <div id="q206" class="question">
+              <span class="answered">‣</span>
+              <p>
+                Are you, your chief executive officer or the equivalent able to certify that
+                (This question is to determine eligibility for Federal Small Business Administration EIDL)
+              </p>
+              <ul>
+                <li>The organization is not engaged in any illegal activity (as defined by Federal guidelines).</li>
+                <li>No principal of the organization with a 50 percent or greater ownership interest is more than sixty (60) days delinquent on child support obligations.</li>
+                <li>The organization does not present live performances of a prurient sexual nature or derive directly or indirectly more than de minimis gross revenue through the sale of products or services, or the presentation of any depictions or displays, of a prurient sexual nature.</li>
+                <li>The organization is not in the business of lobbying</li>
+                <li>The organization cannot be a state, local, or municipal government entity and cannot be a member of Congress.</li>
+              </ul>
+              <button data-label="Yes" class="btn btn-primary">
+                Yes
+              </button>
+              <button data-label="Skip" class="btn btn-info not-sure">
+                Skip
+              </button>
+              <button data-label="No" class="btn btn-dark">
+                No
+              </button>
             </div>
 
             <div id="q14" class="question">
@@ -925,7 +1032,7 @@
   <script src="./jquery-3.4.1.slim.min.js"></script>
   <script src="./popper.min.js"></script>
   <script src="./bootstrap.min.js"></script>
-  <script src="./formflow.js?v=5">
+  <script src="./formflow.js?v=7">
   </script>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->

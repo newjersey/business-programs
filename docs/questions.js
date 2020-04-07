@@ -18,7 +18,7 @@ var language_defaults = {
 };
 
 var questions = {
-  "q42": {
+  "q0_accept_disclaimer": {
     html: "<strong>NJEDA Disclaimer for Organization Support Eligibility Wizard</strong> \
     <p> \
       As a courtesy, the NJEDA is offering this screening tool (the “Eligibility Wizard”) \
@@ -52,13 +52,13 @@ var questions = {
     header: true,
     es: "Información básica"
   },
-  "q1": {
+  "q1_is_non_profit_reg_in_nj": {
     hard_pass: false, // if saying no to NJ
     html: "<p> \
       Is your business/non-profit registered to do business in New Jersey? \
     </p>"
   },
-  "q110": {
+  "q110_is_non_profit": {
     html: "<p> \
       Is your organization for-profit or not-for-profit? \
     </p>",
@@ -70,20 +70,20 @@ var questions = {
       no_text: "Sin ánimo de lucro"
     }
   },
-  "q11": {
+  "q11_has_501_designation": {
     classes: "non-profit",
     html: "<p> \
       Does your not-for-profit have one of the following designations: 501(c)(3), 501(c)(4), 501(c)(7)? \
     </p>",
     yes_hides: ["for-profit"]
   },
-  "q0": {
+  "q0_relationship_with_njeda": {
     html: "<p> \
       Does your organization have an existing financial relationship \
       with NJEDA, such as a loan or incentive agreement? \
     </p>"
   },
-  "q7": {
+  "q7_in_operation_more_than_year": {
     html: "<p> \
       Has your business been in operation for one year or more? \
     </p>"
@@ -93,7 +93,7 @@ var questions = {
     header: true,
     es: "Ubicación fisica"
   },
-  "q2": {
+  "q2_physical_location_in_nj": {
     html: "<p> \
       Does your organization have a physical commercial location in the State of New Jersey (e.g., a \
       non-homebased office, \
@@ -103,7 +103,7 @@ var questions = {
     yes_hides: ["not_in_nj"],
     no_hides: ["physical_nj"]
   },
-  "q3": {
+  "q3_is_home_based": {
     html: "<p> \
       Is your business home-based? \
     </p>",
@@ -114,7 +114,7 @@ var questions = {
     header: true,
     es: "Industria"
   },
-  "q12": {
+  "q12_is_specific_industry": {
     html: "<p> \
       Is your organization classified in one of the following industries? \
     </p> \
@@ -135,7 +135,7 @@ var questions = {
       no_text: "Ninguna de las anteriores"
     }
   },
-  "q13": {
+  "q13_is_specific_industry": {
     classes: "for-profit",
     html: "<p> \
       Is your organization classified in one of the following industries? \
@@ -166,7 +166,7 @@ var questions = {
     es: "Tamaño del negocio"
   },
 
-  "q8": {
+  "q8_number_of_fte": {
     html: "<p> \
       How many W-2 full time equivalent (FTE) employees does \
       your business have? \
@@ -191,14 +191,14 @@ var questions = {
       }
     }
   },
-  "q4": {
+  "q4_more_than_50pct_empl_in_nj": {
     classes: "physical_nj entrepreneur",
     html: "<p> \
       Does your business have <strong>a minimum of 50% of employees in \
         New Jersey</strong>, as reported on your NJ WR-30 at year end 2019? \
     </p>"
   },
-  "q5": {
+  "q5_primary_location_in_nj": {
     classes: "physical_nj entrepreneur",
     html: "<p> \
       Is your organization's \
@@ -212,7 +212,7 @@ var questions = {
     header: true,
     es: "Ingresos"
   },
-  "q9": {
+  "q9_annual_revenue_2019": {
     html: "<p> \
       Please estimate your business' annual revenue for the year of 2019? \
     </p>",
@@ -223,7 +223,7 @@ var questions = {
     },
     skippable: true
   },
-  "q10": {
+  "q10_annual_revenue_12mo_trailing": {
     classes: "entrepreneur",
     html: "<p> \
       Please estimate your business' 12-month trailing revenue as of March 9, 2020? \
@@ -239,14 +239,14 @@ var questions = {
     header: true,
     es: "Préstamos y garantías"
   },
-  "q16": {
+  "q16_has_tax_returns": {
     classes: "detail_qs physical_nj",
     html: "<p> \
       Do you have financial statements that are \
       CPA prepared, management prepared, or filed copies of business tax returns? \
     </p>"
   },
-  "q18": {
+  "q18_has_acceptable_fico": {
     html: "<p> \
       Do you, another owner, or your business have a minimum FICO score of at least 600? \
     </p>",
@@ -255,7 +255,7 @@ var questions = {
       skippable: "Pasar"
     }
   },
-  "q19": {
+  "q19_personal_guaruntee": {
     classes: "for-profit",
     html: "<p> \
       If you are a for-profit business, would all owners with more than 10% ownership in the company be \
@@ -268,7 +268,7 @@ var questions = {
     header: true,
     es: "Otras"
   },
-  "q17": {
+  "q17_in_good_standing_with_nj_taxes": {
     html: "<p> \
       Are you able to certify that you are in good standing with the \
       New Jersey Department of Taxation? \
@@ -281,7 +281,7 @@ var questions = {
       skippable: "Pasar"
     }
   },
-  "q23": {
+  "q23_in_good_standing_with_nj_dept_labor": {
     html: "<p> \
       Are you in good standing with the New Jersey Department of Labor? \
       <br /> \
@@ -296,7 +296,7 @@ var questions = {
     }
   },
 
-  "q20": {
+  "q20_will_not_layoff": {
     classes: "detail_qs physical_nj",
     html: "<p> \
       Are you, your chief executive officer, or equivalent able to certify that: \
@@ -308,7 +308,7 @@ var questions = {
       must <strong>make a best-effort to re-hire those workers as soon as possible</strong>. \
     </p>"
   },
-  "q22": {
+  "q22_has_material_need": {
     classes: "detail_qs physical_nj",
     html: "<p> \
       Are you, your chief executive officer, or equivalent able to certify that: \
@@ -321,7 +321,7 @@ var questions = {
       period of economic disruption) \
     </p>"
   },
-  "q21": {
+  "q21_has_covid_impact": {
     classes: "detail_qs physical_nj",
     html: "<p> \
       Are you, your chief executive officer, or equivalent able to certify that: \
@@ -336,7 +336,7 @@ var questions = {
     </p>"
   },
 
-  "q14": {
+  "q14_is_prohibited_type": {
     hard_pass: true, // if saying yes to illegal business
     html: "<p> \
       Is your business considered one of the following: \
@@ -355,7 +355,7 @@ var questions = {
       <li>Illegal under the laws of the State of New Jersey</li> \
     </ul>"
   },
-  "q15": {
+  "q15_is_prohibited_type_2": {
     // hard_pass: true, // if saying yes to illegal business
     html: "<p> \
       Is your business considered one of the following: \

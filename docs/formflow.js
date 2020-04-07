@@ -18,112 +18,126 @@ function parseNumber(num) {
   );
 }
 
-var nonprofit_q = "q11",
+var nonprofit_q = "q11_has_501_designation",
   requirements = {
     eag: { // Emergency Assistance Grant
-      required_yes: ["q1", "q2", "q12", "q16", "q17", "q20", "q21", "q22", "q23", "q42"],
-      required_no: ["q3", "q14"],
+      required_yes: [
+        "q1_is_non_profit_reg_in_nj", "q2_physical_location_in_nj", "q12_is_specific_industry",
+        "q16_has_tax_returns", "q17_in_good_standing_with_nj_taxes", "q20_will_not_layoff",
+        "q21_has_covid_impact", "q22_has_material_need", "q23_in_good_standing_with_nj_dept_labor",
+        "q0_accept_disclaimer"],
+      required_no: ["q3_is_home_based", "q14_is_prohibited_type"],
       eval: {
-        "q8": function (fte) {
+        "q8_number_of_fte": function (fte) {
           fte = parseNumber(fte);
           return fte >= 1 && fte <= 10;
         },
-        "q11": function (val) {
+        "q11_has_501_designation": function (val) {
           return (val === true) || (answers[nonprofit_q] === false);
         },
-        "q18": function (val) {
+        "q18_has_acceptable_fico": function (val) {
           return (val === true) || (val === -1); // yes or not sure
         }
       }
     },
     eawcl: { // Emergency Assistance 0% Working Capital
-      required_yes: ["q1", "q2", "q7", "q16", "q17", "q20", "q21", "q22", "q23", "q42"],
-      required_no: ["q3", "q14"],
+      required_yes: [
+        "q1_is_non_profit_reg_in_nj", "q2_physical_location_in_nj",
+        "q7_in_operation_more_than_year", "q16_has_tax_returns", "q17_in_good_standing_with_nj_taxes",
+        "q20_will_not_layoff", "q21_has_covid_impact", "q22_has_material_need",
+        "q23_in_good_standing_with_nj_dept_labor", "q0_accept_disclaimer"],
+      required_no: ["q3_is_home_based", "q14_is_prohibited_type"],
       eval: {
-        "q9": function (revenue) {
+        "q9_annual_revenue_2019": function (revenue) {
           revenue = parseNumber(revenue);
           return revenue < 5000000;
         },
-        "q11": function (val) {
+        "q11_has_501_designation": function (val) {
           return (val === true) || (answers[nonprofit_q] === false);
         },
-        "q18": function (val) {
+        "q18_has_acceptable_fico": function (val) {
           return (val === true) || (val === -1); // yes or not sure
         },
-        "q19": function (val) {
+        "q19_personal_guaruntee": function (val) {
           return (val === true) || (answers[nonprofit_q] === true);
         }
       }
     },
     guarantee: { // Emergency Assistance Guarantee
-      required_yes: ["q1", "q2", "q7", "q16", "q17", "q20", "q21", "q22", "q23", "q42"],
-      required_no: ["q3", "q14"],
+      required_yes: [
+        "q1_is_non_profit_reg_in_nj", "q2_physical_location_in_nj", "q7_in_operation_more_than_year",
+        "q16_has_tax_returns", "q17_in_good_standing_with_nj_taxes", "q20_will_not_layoff", "q21_has_covid_impact",
+        "q22_has_material_need", "q23_in_good_standing_with_nj_dept_labor", "q0_accept_disclaimer"],
+      required_no: ["q3_is_home_based", "q14_is_prohibited_type"],
       eval: {
-        "q9": function (revenue) {
+        "q9_annual_revenue_2019": function (revenue) {
           revenue = parseNumber(revenue);
           return revenue < 5000000;
         },
-        "q11": function (val) {
+        "q11_has_501_designation": function (val) {
           return (val === true) || (answers[nonprofit_q] === false);
         },
-        "q18": function (val) {
+        "q18_has_acceptable_fico": function (val) {
           return (val === true) || (val === -1); // yes or not sure
         },
-        "q19": function (val) {
+        "q19_personal_guaruntee": function (val) {
           return (val === true) || (answers[nonprofit_q] === true);
         }
       }
     },
     egp: { // Entrepreneur Guarantee
-      required_yes: ["q1", "q4", "q5", "q6", "q13", "q17", "q23", "q42"],
-      required_no: ["q14"],
+      required_yes: [
+        "q1_is_non_profit_reg_in_nj", "q4_more_than_50pct_empl_in_nj", "q5_primary_location_in_nj",
+        "q6", "q13_is_specific_industry", "q17_in_good_standing_with_nj_taxes",
+        "q23_in_good_standing_with_nj_dept_labor", "q0_accept_disclaimer"],
+      required_no: ["q14_is_prohibited_type"],
       eval: {
-        "q8": function (fte) {
+        "q8_number_of_fte": function (fte) {
           fte = parseNumber(fte);
           return fte < 25;
         },
-        "q10": function (revenue) {
+        "q10_annual_revenue_12mo_trailing": function (revenue) {
           revenue = parseNumber(revenue);
           return revenue < 5000000;
         }
       }
     },
     eidl: { // SBA EIDL
-      required_yes: ["q6", "q7", "q42"],
-      required_no: ["q3", "q15"]
+      required_yes: ["q6", "q7_in_operation_more_than_year", "q0_accept_disclaimer"],
+      required_no: ["q3_is_home_based", "q15_is_prohibited_type_2"]
     },
     frelief: { // NJ EDA relief
-      required_yes: ["q0", "q42"]
+      required_yes: ["q0_relationship_with_njeda", "q0_accept_disclaimer"]
     },
     cdfi: {
-      required_yes: ["q42"],
+      required_yes: ["q0_accept_disclaimer"],
       eval: {
-        "q8": function (fte) {
+        "q8_number_of_fte": function (fte) {
           fte = parseNumber(fte);
           return fte < 20;
         },
-        "q9": function (revenue) {
+        "q9_annual_revenue_2019": function (revenue) {
           revenue = parseNumber(revenue);
           return revenue < 1000000;
         },
-        "q10": function (revenue) {
+        "q10_annual_revenue_12mo_trailing": function (revenue) {
           revenue = parseNumber(revenue);
           return revenue < 1000000;
         }
       }
     },
     bank: {
-      required_yes: ["q42"],
+      required_yes: ["q0_accept_disclaimer"],
       eval: {
-        "q8": function (fte) {
+        "q8_number_of_fte": function (fte) {
           fte = parseNumber(fte);
           return fte < 20;
         },
-        "q9": function (revenue) {
+        "q9_annual_revenue_2019": function (revenue) {
           revenue = parseNumber(revenue);
           return revenue >= 100000;
         },
-        "q10": function (revenue) {
+        "q10_annual_revenue_12mo_trailing": function (revenue) {
           revenue = parseNumber(revenue);
           return revenue >= 100000;
         }
@@ -332,8 +346,8 @@ $(document).ready(function () {
         });
       }
 
-      if (q.id === "q110") { // for-profit or non-profit
-        answers["q11"] = undefined;
+      if (q.id === "q110_is_non_profit") { // for-profit or non-profit
+        answers["q11_has_501_designation"] = undefined;
       }
 
       $(q).find(".answered").addClass("already-answered");

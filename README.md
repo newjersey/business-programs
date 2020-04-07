@@ -12,7 +12,7 @@ Sample question:
 
 ```javascript
 {
-  "q110": {
+  "q110_is_non_profit": {
     html: "<p> \
       Is your organization for-profit or not-for-profit? \
     </p>",
@@ -46,17 +46,17 @@ Attributes:
 
 In ```docs/formflow.js```, set which question codes should be answered YES
 or NO. More complex questions, such as numeric values, are answered with
-functions.  If the user clicks "Skip", "Not Sure", or otherwise avoids a 
+functions.  If the user clicks "Skip", "Not Sure", or otherwise avoids a
 question, it will not count against them (i.e. "required_no" behaves more like
 "dont_answer_yes")
 
 ```javascript
 {
   loan_program_A: {
-    required_yes: ["q1", "q2", "q12"],
-    required_no: ["q3", "q14"],
+    required_yes: ["q1_is_non_profit_reg_in_nj", "q2_physical_location_in_nj", "q12_is_specific_industry"],
+    required_no: ["q3_is_home_based", "q14_is_prohibited_type"],
     eval: {
-      "q8": function (fte) {
+      "q8_number_of_fte": function (fte) {
         fte = parseNumber(fte);
         return fte >= 1 && fte <= 10;
       }

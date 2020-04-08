@@ -303,12 +303,23 @@ $(document).ready(function () {
   var outer_shell = $("#form-qs"),
       firstQuestion = true;
 
+  var lang_options = Object.keys(language_defaults),
+      select_lang = "en";
+  if (lang_options.length > 1 && window.location.search.indexOf("lang=") > -1) {
+    select_lang = window.location.search.split("lang=")[1].split("&")[0].toLowerCase();
+    if (!lang_options.includes(select_lang)) {
+      select_lang = "en";
+    }
+    console.log("set language: " + select_lang);
+  }
+
   Object.keys(form_questions).forEach(function (qcode) {
     var q = form_questions[qcode],
+        lang_src = (select_lang == "en") ? q : (questions[qcode][select_lang] || {input:{}}),
         shell = outer_shell;
 
-    if (q === true) {
-      shell.append($("<h3>").text(qcode));
+    if (q.header) {
+      shell.append($("<h3>").text(select_lang === "en" ? qcode : lang_src));
       return;
     }
 
@@ -318,7 +329,7 @@ $(document).ready(function () {
       shell = inner_shell;
     }
 
-    var qdiv = $("<div>").attr("id", qcode).attr("class", "question").html(q.html);
+    var qdiv = $("<div>").attr("id", qcode).attr("class", "question").html(lang_src.html || q.html);
     shell.append(qdiv);
 
     var arrow = $("<span>").attr("class", "answered").text("‣")
@@ -332,25 +343,30 @@ $(document).ready(function () {
       var formplace = $("<div>").attr("class", "form-group");
       qdiv.append(formplace);
 
-      if (q.input.label) {
-        formplace.append($("<label>").attr("for", q.input.name).text(q.input.label));
+      if (lang_src.input.label || q.input.label) {
+        formplace.append($("<label>").attr("for", q.input.name).text(lang_src.input.label || q.input.label));
       }
-      if (q.input.examples) {
-        formplace.append($("<small>").attr("class", "form-text text-muted").text("Examples: " + q.input.examples));
+      if (lang_src.input.examples || q.input.examples) {
+        formplace.append($("<small>").attr("class", "form-text text-muted").text(language_defaults[select_lang].examples + ": " + (lang_src.input.examples || q.input.examples)));
       }
 
-      formplace.append($("<input>").attr("type", "text").attr("class", "input form-control form-control-lg").attr("name", q.input.name));
-      formplace.append($("<button>").attr("class", "btn btn-primary").attr("data-label", "Enter").text("Enter"));
+      formplace.append($("<input>").attr("type", "text").attr("class", "input form-control form-control-lg").attr("name", q.input.name).attr("id", q.input.name));
+      formplace.append($("<button>").attr("class", "btn btn-primary").attr("data-label", language_defaults[select_lang].enter).text(language_defaults[select_lang].enter));
 
-      if (q.skippable) {
-        formplace.append($("<button>").attr("class", "btn btn-info not-sure").attr("data-label", q.skippable.length ? q.skippable : "Skip").text(q.skippable.length ? q.skippable : "Skip"));
+      if (lang_src.skippable || q.skippable) {
+        var skip_label = (q.skippable && q.skippable.length) ? (lang_src.skippable || q.skippable) : language_defaults[select_lang].skip;
+        formplace.append($("<button>").attr("class", "btn btn-info not-sure").attr("data-label", skip_label).text(skip_label));
       }
     } else {
-      qdiv.append($("<button>").attr("class", "btn btn-primary").attr("data-label", q.yes_text || "Yes").text(q.yes_text || "Yes"));
-      if (q.skippable) {
-        qdiv.append($("<button>").attr("class", "btn btn-info not-sure").attr("data-label", q.skippable.length ? q.skippable : "Not Sure").text(q.skippable.length ? q.skippable : "Not Sure"));
+      var yes_label = lang_src.yes_text || language_defaults[select_lang].yes_text,
+          not_sure_label = (q.skippable && q.skippable.length) ? (lang_src.skippable || q.skippable) : language_defaults[select_lang].not_sure,
+          no_label = lang_src.no_text || language_defaults[select_lang].no_text;
+
+      qdiv.append($("<button>").attr("class", "btn btn-primary").attr("data-label", yes_label).text(yes_label));
+      if (lang_src.skippable || q.skippable) {
+        qdiv.append($("<button>").attr("class", "btn btn-info not-sure").attr("data-label", not_sure_label).text(not_sure_label));
       }
-      qdiv.append($("<button>").attr("class", "btn btn-dark").attr("data-label", q.no_text || "No").text(q.no_text || "No"));
+      qdiv.append($("<button>").attr("class", "btn btn-dark").attr("data-label", no_label).text(no_label));
     }
   });
 

@@ -1,3 +1,22 @@
+var language_defaults = {
+  en: {
+    yes_text: "Yes",
+    no_text: "No",
+    skip: "Skip",
+    not_sure: "Not Sure",
+    examples: "Examples",
+    enter: "Enter"
+  },
+  es: {
+    yes_text: "Sí",
+    no_text: "No",
+    skip: "Pasar",
+    not_sure: "Pasar",
+    examples: "Ejemplos",
+    enter: "Ingresar su respuesta"
+  }
+};
+
 var form_questions = {
   "q42": {
     html: "<strong>NJEDA Disclaimer for Organization Support Eligibility Wizard</strong> \

@@ -26,10 +26,18 @@ var form_questions = {
 
   "Basic Information": true,
   "q1": {
-    hard_pass: false, // if saying no to NJ
     html: "<p> \
       Is your business/non-profit registered to do business in New Jersey? \
-    </p>"
+    </p>",
+    yes_hides: ["not_registered_nj"]
+  },
+  "q201": {
+    classes: "not_registered_nj",
+    html: "<p> \
+      Is your business/non-profit registered to do business in the \
+      United States or its territories? \
+    </p>",
+    hard_pass: false
   },
   "q110": {
     html: "<p> \
@@ -41,10 +49,18 @@ var form_questions = {
   },
   "q11": {
     classes: "non-profit",
-    html: "<p> \
+    html: "<span class=\"badge badge-success\">NJ State Programs</span> \
+    <p> \
       Does your not-for-profit have one of the following designations: 501(c)(3), 501(c)(4), 501(c)(7)? \
     </p>",
     yes_hides: ["for-profit"]
+  },
+  "q202": {
+    classes: "non-profit",
+    html: "<span class=\"badge badge-success\">Federal SBA Programs</span> \
+    <p> \
+      Does your not-for-profit have one of the following designations: 501(c)(3), 501(c)(19)? \
+    </p>"
   },
   "q0": {
     html: "<p> \
@@ -52,9 +68,21 @@ var form_questions = {
       with NJEDA, such as a loan or incentive agreement? \
     </p>"
   },
+  "q203": {
+    html: "<p> \
+      Does your organization have any non-disaster SBA loans, in particular 7(a), 504, and/or microloans? \
+    </p>"
+  },
   "q7": {
     html: "<p> \
       Has your business been in operation for one year or more? \
+    </p>",
+    yes_hides: ["newbie"]
+  },
+  "q204": {
+    classes: "newbie",
+    html: "<p> \
+      Has your business been in operation since February 15, 2020? \
     </p>"
   },
 
@@ -227,6 +255,11 @@ var form_questions = {
     skippable: "Not Sure"
   },
 
+  "q205": {
+    html: "<p>Has the business owner tried and failed to get funds from other financial lenders? \
+      (i.e. Banks and credit unions, short term business loans, personal loans etc.)</p>"
+  },
+
   "q20": {
     classes: "detail_qs physical_nj",
     html: "<p> \
@@ -265,6 +298,21 @@ var form_questions = {
       therefore \
       slowed firm-level production. \
     </p>"
+  },
+
+  "q206": {
+    html: "<p> \
+      Are you, your chief executive officer or the equivalent able to certify that \
+      (This question is to determine eligibility for Federal Small Business Administration EIDL) \
+    </p> \
+    <ul> \
+      <li>The organization is not engaged in any illegal activity (as defined by Federal guidelines).</li> \
+      <li>No principal of the organization with a 50 percent or greater ownership interest is more than sixty (60) days delinquent on child support obligations.</li> \
+      <li>The organization does not present live performances of a prurient sexual nature or derive directly or indirectly more than de minimis gross revenue through the sale of products or services, or the presentation of any depictions or displays, of a prurient sexual nature.</li> \
+      <li>The organization is not in the business of lobbying</li> \
+      <li>The organization cannot be a state, local, or municipal government entity and cannot be a member of Congress.</li> \
+    </ul>",
+    skippable: "Skip"
   },
 
   "q14": {

@@ -19,9 +19,11 @@ function parseNumber(num) {
 }
 
 var nonprofit_q = "q11",
+  yearlong_q = "q7",
+  nj_business_q = "q1",
   requirements = {
     eag: { // Emergency Assistance Grant
-      required_yes: ["q1", "q2", "q12", "q16", "q17", "q20", "q21", "q22", "q23", "q42"],
+      required_yes: ["q1", "q2", "q12", "q17", "q20", "q21", "q22", "q23", "q42"],
       required_no: ["q3", "q14"],
       eval: {
         "q8": function (fte) {
@@ -89,8 +91,20 @@ var nonprofit_q = "q11",
       }
     },
     eidl: { // SBA EIDL
-      required_yes: ["q6", "q7", "q42"],
-      required_no: ["q3", "q15"]
+      required_yes: ["q6", "q18", "q21", "q42", "q206"],
+      required_no: ["q15"],
+      eval: {
+        "q8": function (fte) {
+          fte = parseNumber(fte);
+          return fte < 500;
+        },
+        "q201": function(val) {
+          return (val === true) || (answers[nj_business_q] === true);
+        },
+        "q204": function(val) {
+          return (val === true) || (answers[yearlong_q] === true);
+        }
+      }
     },
     frelief: { // NJ EDA relief
       required_yes: ["q0", "q42"]
@@ -126,6 +140,63 @@ var nonprofit_q = "q11",
         "q10": function (revenue) {
           revenue = parseNumber(revenue);
           return revenue >= 100000;
+        }
+      }
+    },
+    eidl_advance: {
+      required_yes: ["q18", "q21", "q206"],
+      required_no: ["q15"],
+      eval: {
+        "q8": function (fte) {
+          fte = parseNumber(fte);
+          return fte < 500;
+        },
+        "q201": function(val) {
+          return (val === true) || (answers[nj_business_q] === true);
+        },
+        "q204": function(val) {
+          return (val === true) || (answers[yearlong_q] === true);
+        }
+      }
+    },
+    a7: {
+      required_yes: ["q18", "q205"],
+      required_no: ["q15"],
+      eval: {
+        "q9": function (revenue) {
+          revenue = parseNumber(revenue);
+          return revenue < 5000000;
+        },
+        "q201": function(val) {
+          return (val === true) || (answers[nj_business_q] === true);
+        }
+      }
+    },
+    ppp: {
+      required_yes: ["q20", "q21"],
+      required_no: [],
+      eval: {
+        "q8": function (fte) {
+          fte = parseNumber(fte);
+          return fte < 500;
+        },
+        "q201": function(val) {
+          return (val === true) || (answers[nj_business_q] === true);
+        },
+        "q202": function(val) {
+          return (val === true) || (answers[nonprofit_q] === false);
+        },
+        "q204": function(val) {
+          return (val === true) || (answers[yearlong_q] === true);
+        }
+      }
+    },
+    sba_debt: {
+      required_yes: ["q203"],
+      required_no: [],
+      eval: {
+        "q201": function(val) {
+          return (val === true) || (answers[nj_business_q] === true);
         }
       }
     }

@@ -213,6 +213,14 @@ li.no-print {
   text-decoration: line-through;
 }
 
+/* show only English disclaimer by default */
+.disclaimer {
+  display: none;
+}
+.disclaimer.en {
+  display: block;
+}
+
 @media print {
   body {
     font-family: sans-serif !important;

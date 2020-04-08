@@ -199,6 +199,10 @@ var nonprofit_q = "q11",
           return (val === true) || (answers[nj_business_q] === true);
         }
       }
+    },
+    counseling: {
+      required_yes: [],
+      required_no: []
     }
   };
 var programs = Object.keys(requirements);
@@ -312,14 +316,68 @@ $(document).ready(function () {
     }
     console.log("set language: " + select_lang);
   }
+  if (select_lang !== "en") {
+    $(".disclaimer.en").css({display: "none"});
+    $(".disclaimer." + select_lang).css({display: "block"});
+
+    if (language_defaults[select_lang].additional_financing) {
+      $("#additional_financing").text(language_defaults[select_lang].additional_financing);
+    }
+  }
+
+  Object.keys(program_descriptions).forEach(function (pcode) {
+    var p = program_descriptions[pcode],
+      lang_src = (select_lang === "en") ? p : p[select_lang],
+      shell = $(".program." + pcode);
+
+    // language changes name of program or adds parenthetical alt_name
+    if (lang_src.name) {
+      $(shell).find("h4").text(lang_src.name);
+      $("li." + pcode).text(lang_src.name);
+    } else if (lang_src.alt_name) {
+      $(shell).find("h4").append("<br/>(" + lang_src.alt_name + ")");
+      $("li." + pcode).append(" (" + lang_src.alt_name + ")");
+    }
+
+    if (lang_src.html) {
+      // raw HTML dump
+      $(shell).append(lang_src.html);
+    } else {
+      // structured HTML sections
+      ["description", "uses", "funding", "availability"].forEach(function (section) {
+        if (lang_src[section] || p[section]) {
+          $(shell).append("<p><strong>" + language_defaults[select_lang][section] + "</strong>: "
+            + (lang_src[section] || p[section]) + "</p>");
+        }
+      });
+    }
+
+    if (lang_src.resources) {
+      var innerhtml = "<p><strong>" + language_defaults[select_lang].resources + "</strong>:<br/>";
+
+      lang_src.resources.forEach(function (resource, index) {
+        if (index) {
+          innerhtml += "<br/><br/>";
+        }
+        innerhtml += "<strong>" + resource.name + "</strong> - " + resource.info;
+        innerhtml += " <a href='" + resource.link + "' target='_blank'>" + resource.link + "</a>";
+      });
+      $(shell).append($("<p>").html(innerhtml));
+    }
+
+    if (lang_src.learn_more) {
+      $(shell).append("<strong>" + language_defaults[select_lang].learn_more + "</strong>:");
+      $(shell).append('<a href="' + lang_src.learn_more + '" target="_blank">' + lang_src.learn_more + '</a>');
+    }
+  });
 
   Object.keys(form_questions).forEach(function (qcode) {
     var q = form_questions[qcode],
-        lang_src = (select_lang == "en") ? q : (questions[qcode][select_lang] || {input:{}}),
+        lang_src = (select_lang === "en") ? q : (form_questions[qcode][select_lang] || {input:{}}),
         shell = outer_shell;
 
     if (q.header) {
-      shell.append($("<h3>").text(select_lang === "en" ? qcode : lang_src));
+      shell.append($("<h3>").text(typeof lang_src === "string" ? lang_src : qcode));
       return;
     }
 
@@ -343,11 +401,11 @@ $(document).ready(function () {
       var formplace = $("<div>").attr("class", "form-group");
       qdiv.append(formplace);
 
-      if (lang_src.input.label || q.input.label) {
+      if ((lang_src.input && lang_src.input.label) || q.input.label) {
         formplace.append($("<label>").attr("for", q.input.name).text(lang_src.input.label || q.input.label));
       }
-      if (lang_src.input.examples || q.input.examples) {
-        formplace.append($("<small>").attr("class", "form-text text-muted").text(language_defaults[select_lang].examples + ": " + (lang_src.input.examples || q.input.examples)));
+      if ((lang_src.input && lang_src.input.examples) || q.input.examples) {
+        formplace.append($("<small>").attr("class", "form-text text-muted").text(language_defaults[select_lang].examples + ": " + (lang_src.input || q.input).examples));
       }
 
       formplace.append($("<input>").attr("type", "text").attr("class", "input form-control form-control-lg").attr("name", q.input.name).attr("id", q.input.name));
@@ -466,4 +524,8 @@ $(document).ready(function () {
       return false;
     });
   });
+
+  if (window.location.search.indexOf("reportnow") > -1) {
+    moveToReport({preventDefault:()=>{}});
+  }
 });

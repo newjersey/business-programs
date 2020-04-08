@@ -173,6 +173,14 @@ $(document).ready(function () {
         var skip_label = (q.skippable && q.skippable.length) ? (lang_src.skippable || q.skippable) : language_defaults[select_lang].skip;
         formplace.append($("<button>").attr("class", "btn btn-info not-sure").attr("data-label", skip_label).text(skip_label));
       }
+    } else if (q.select) {
+      var select = $("<select>").attr("id", q.select.name).attr("name", q.select.name);
+
+      select.append($('<option/>').attr("value", "none"));
+      for (key in q.select.options) {
+        select.append($('<option/>').attr("value", key).text(q.select.options[key]));
+      }
+      qdiv.append(select);
     } else {
       var yes_label = lang_src.yes_text || language_defaults[select_lang].yes_text,
           not_sure_label = (q.skippable && q.skippable.length) ? (lang_src.skippable || q.skippable) : language_defaults[select_lang].not_sure,
@@ -199,6 +207,17 @@ $(document).ready(function () {
     // $(q).find('.answered').click(function (e) {
     //   $(q).find('.btn, div, p, li').css({ opacity: 1 });
     // });
+
+    $(q).find("select").change(function(e) {
+      e.preventDefault();
+      answers[q.id] = e.target.value;
+
+      $(q).find(".answered").addClass("already-answered");
+      $(q).find(".btn").css({ borderColor: "transparent" });
+
+      nextQuestion(index);
+      return false;
+    });
 
     // YES / ENTER button
     $(q).find('.btn-primary').click(function (e) {

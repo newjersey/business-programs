@@ -52,6 +52,14 @@ table {
   display: none;
   color: #fff;
 }
+.answered.please-answer {
+  display: block;
+  color: #000;
+}
+.answered.already-answered {
+  color: rgb(170, 170, 170);
+  display: block;
+}
 
 .my_options {
   background: #efefef;
@@ -161,6 +169,10 @@ input.form-control {
   display: none;
 }
 
+#report_intro_sba {
+  display: none;
+}
+
 @media (max-width: 1000px) {
   .container-fluid {
     width: 90%;
@@ -203,6 +215,38 @@ footer a, footer a:hover {
 
 li.no-print {
   text-decoration: line-through;
+}
+
+.es_only {
+  display: none;
+}
+
+div.languages {
+  position: absolute;
+  left: 5%;
+  top: 220px;
+}
+div.languages li {
+  border: 1px solid #888;
+  padding: 10px;
+  padding-right: 20px;
+  letter-spacing: 2px;
+}
+div.languages li:first-child {
+  border-bottom: none;
+}
+select.languages {
+  display: none;
+}
+@media (max-width: 1000px) {
+  div.languages {
+    display: none;
+  }
+  select.languages {
+    display: block;
+    font-size: 20pt;
+    margin: 20pt auto;
+  }
 }
 
 @media print {

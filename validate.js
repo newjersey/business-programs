@@ -1,7 +1,7 @@
 // validate questions file
 // flags issues with uniqueness, types, etc.
 
-const { questions, language_defaults } = require("./docs/questions");
+const { questions, language_defaults } = require("./docs/sba/questions");
 
 
 

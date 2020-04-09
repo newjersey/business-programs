@@ -67,7 +67,7 @@ function nextQuestion(currentQuestion) {
     }
   }
 
-  $(nextDiv).find(".btn, div, p, li").css({ opacity: 1 });
+  $(nextDiv).find(".btn, div, p, li, select").css({ opacity: 1 });
   $(nextDiv).find('.btn, input').prop('disabled', false);
   $(nextDiv).find('.answered').addClass("please-answer");
 
@@ -135,7 +135,7 @@ $(document).ready(function () {
         shell = outer_shell;
 
     if (q.header) {
-      shell.append($("<h3>").text(lang_src));
+      shell.append($("<h3>").text(select_lang === "en" ? qcode : lang_src));
       return;
     }
 
@@ -176,10 +176,11 @@ $(document).ready(function () {
     } else if (q.select) {
       var select = $("<select>").attr("id", q.select.name).attr("name", q.select.name);
 
-      select.append($('<option/>').attr("value", "none"));
+      select.append($('<option>').attr("value", "none").text("No selection"));
       for (key in q.select.options) {
-        select.append($('<option/>').attr("value", key).text(q.select.options[key]));
+        select.append($('<option>').attr("value", key).text(q.select.options[key]));
       }
+      select.val("none");
       qdiv.append(select);
     } else {
       var yes_label = lang_src.yes_text || language_defaults[select_lang].yes_text,
@@ -198,7 +199,7 @@ $(document).ready(function () {
     var q = this;
     if (index) {
       // hidden question styles
-      $(q).find('.btn, div, p, li').css({ opacity: 0.4 });
+      $(q).find('.btn, div, p, li, select').css({ opacity: 0.4 });
       $(q).find('.btn, input').prop('disabled', true);
     } else {
       // very first question (must be visible for strters)
@@ -225,7 +226,7 @@ $(document).ready(function () {
       answers[q.id] = questions[q.id].input ? $(q).find('input[name="' + questions[q.id].input.name + '"]').val() : true;
 
       if (questions[q.id].hard_pass === true) {
-        hardPass();
+        return hardPass();
       }
       if (questions[q.id].yes_hides) {
         questions[q.id].yes_hides.forEach(function (cl) {
@@ -280,7 +281,7 @@ $(document).ready(function () {
       answers[q.id] = false;
 
       if (questions[q.id].hard_pass === false) {
-        hardPass();
+        return hardPass();
       }
       if (questions[q.id].yes_hides) {
         questions[q.id].yes_hides.forEach(function (cl) {

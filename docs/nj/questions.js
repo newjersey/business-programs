@@ -380,7 +380,7 @@ var questions = {
 
 
 
-if (module) {
+if (typeof module !== "undefined") {
   module.exports = {
     language_defaults: language_defaults,
     questions: questions

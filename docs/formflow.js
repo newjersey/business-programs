@@ -316,9 +316,16 @@ $(document).ready(function () {
     }
     console.log("set language: " + select_lang);
   }
-  if (select_lang !== "en") {
-    $(".disclaimer.en").css({display: "none"});
-    $(".disclaimer." + select_lang).css({display: "block"});
+
+  $("select.languages").val(select_lang).on('change', function(e) {
+    window.location.href = "/?lang=" + e.target.value;
+  });
+
+  if (select_lang === "en") {
+
+  } else {
+    $(".en_only").css({display: "none"});
+    $("." + select_lang + "_only").css({display: "block"});
 
     if (language_defaults[select_lang].additional_financing) {
       $("#additional_financing").text(language_defaults[select_lang].additional_financing);

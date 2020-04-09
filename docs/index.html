@@ -24,7 +24,7 @@
   <meta name="Description" content="Learn about support programs available to help stabilize your business." />
 
   <link rel="stylesheet" href="bootstrap.min.css" />
-  <link rel="stylesheet" href="form-style.css?v=2" />
+  <link rel="stylesheet" href="form-style.css?v=3" />
   <link rel="stylesheet" href="header.css" />
 
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
@@ -53,13 +53,21 @@
               <div class="Header-stateLogoPhrase--info Text--large">COVID-19 Information Hub</div>
             </div>
           </a>
-          <div class="Header-right Text--small">
+          <div class="Header-right Text--small en_only">
             <p><strong class="Text--bold">Call (General COVID-19 Questions)</strong>: <a href="tel://+211"
                 data-ya-track="covidquestions" class="Link--secondary">2-1-1</a> (7a-11p)</p>
             <p><strong class="Text--bold">Call (Clinical Questions)</strong>: <a href="tel://+18009621253"
                 data-ya-track="clinicalquestions" class="Link--secondary">1-800-962-1253</a> (24/7)</p>
             <p><strong class="Text--bold">Text NJCOVID to <a href="sms:+898211?&amp;body=NJCOVID" data-ya-track="alerts"
                   class="Link--secondary">898-211</a></strong> to receive alerts</p>
+          </div>
+          <div class="Header-right Text--small es_only">
+            <p><strong class="Text--bold">Llame al (preguntas generales sobre la COVID-19)</strong>: <a href="tel://+211"
+                data-ya-track="covidquestions" class="Link--secondary">2-1-1</a> (de 7 a.m.-11 p.m.)</p>
+            <p><strong class="Text--bold">Llame al (preguntas clínicas)</strong>: <a href="tel://+18009621253"
+                data-ya-track="clinicalquestions" class="Link--secondary">1-800-962-1253</a> (las 24 horas, los 7 días de la semana)</p>
+            <p><strong class="Text--bold">Envíe un mensaje de texto</strong> con la palabra <strong class="Text--bold">NJCOVID al <a href="sms:+898211?&amp;body=NJCOVID" data-ya-track="alerts"
+                  class="Link--secondary">898-211</a></strong> para recibir alertas</p>
           </div>
         </div>
       </div>
@@ -68,32 +76,61 @@
 
   <main>
     <div class="container-fluid">
+      <div class="languages" class="no-print">
+        <li><a href="./">English</a></li>
+        <li><a href="./?lang=es">Español</a></li>
+      </div>
       <div class="row">
         <div class="col-sm-12">
           <br />
           <div class="no-print preamble">
-            <h1>Emergency Assistance Eligibility Wizard</h1>
-            <p>
-              The COVID-19 outbreak is causing extraordinary disruption for companies
-              and non-profits across the Garden State.
-              The NJEDA wants to make it easy for organizations to understand what support
-              programs are available to you to help stabilize your operations and
-              get back on a pathway to growth.
-            </p>
-            <p>
-              This is a beta version of the Eligibility Wizard that focuses on newly announced State Emergency
-              Assistance
-              programs and the SBA disaster loan program. We will be updating it regularly as new federal, state, local,
-              and philanthropic programs become available.
-            </p>
+            <div style="text-align: center">
+              <select class="languages" class="no-print">
+                <option value="en">English</option>
+                <option value="es">Español</option>
+              </select>
+            </div>
+            <div class="en_only">
+              <h1>Emergency Assistance Eligibility Wizard</h1>
+              <p>
+                The COVID-19 outbreak is causing extraordinary disruption for companies
+                and non-profits across the Garden State.
+                The NJEDA wants to make it easy for organizations to understand what support
+                programs are available to you to help stabilize your operations and
+                get back on a pathway to growth.
+              </p>
+              <p>
+                This is a beta version of the Eligibility Wizard that focuses on newly announced State Emergency
+                Assistance
+                programs and the SBA disaster loan program. We will be updating it regularly as new federal, state, local,
+                and philanthropic programs become available.
+              </p>
+            </div>
+            <div class="es_only">
+              <h1>Asistente de Elegibilidad de Asistencia para Emergencias</h1>
+              <p>
+                El brote de COVID-19 está causando trastornos extraordinarios para las empresas y
+  organizaciones sin fines de lucro en todo el estado de New Jersey. Es el deseo de New Jersey
+  Economic Development Authority (NJEDA) facilitar que las organizaciones comprendan qué
+  programas de apoyo están disponibles para ayudarlas a estabilizar sus operaciones y reanudar
+  su crecimiento.
+              </p>
+              <p>
+Esta es una versión beta del Asistente de Elegibilidad que se centra en los programas estatales
+de asistencia para emergencias recientemente anunciados y el programa de préstamos por
+desastre de la U.S. Small Business Administration (SBA). Lo actualizaremos regularmente a
+medida que estén disponibles nuevos programas federales, estatales, locales y filantrópicos.
+              </p>
+            </div>
           </div>
-          <span class="fixed_marker"></span>
           <br />
           <div class="my_options">
-            <h5>Included programs</h5>
+            <h5 class="en_only">Included programs</h5>
+            <h5 class="es_only">Programas incluidos</h5>
             <ul>
               <li>
-                State Emergency Support Programs
+                <span class="en_only">State Emergency Support Programs</span>
+                <span class="es_only">Programas estatales de asistencia para emergencias</span>
                 <ul>
                   <li class="eag" data-program-name="Emergency Assistance Grant Program">Emergency Assistance Grant
                     Program</li>
@@ -110,7 +147,8 @@
             </ul>
             <ul>
               <li>
-                Federal Programs
+                <span class="en_only">Federal Programs</span>
+                <span class="es_only">Programas federales</span>
                 <ul>
                   <li class="eidl" data-program-name="Federal SBA Emergency Injury Disaster Loans">Federal SBA Emergency
                     Injury Disaster Loans</li>
@@ -131,14 +169,16 @@
             </ul>
             <ul>
               <li>
-                Other sources of emergency support
+                <span class="en_only">Other sources of emergency support</span>
+                <span class="es_only">Otras fuentes de asistencia para emergencias</span>
                 <ul>
                   <li class="cdfi" data-program-name="Loans from a CDFI">Loans from a CDFI</li>
                   <li class="bank" data-program-name="Financing from a private bank">Financing from a private bank</li>
                 </ul>
               </li>
             </ul>
-            <p>We’ll check your eligibility for these types of support based on the information you provide below.</p>
+            <p class="en_only">We’ll check your eligibility for these types of support based on the information you provide below.</p>
+            <p class="es_only">Verificaremos su elegibilidad para estos tipos de asistencia en función de la información que proporcione a continuación.</p>
           </div>
           <div class="hidden_options no-print">
             <h5>Included programs</h5>
@@ -179,19 +219,26 @@
               -->
             </div>
 
-            <h4 class="report-filler">
-              Please answer all questions, then click "View Guide:"
+            <h4 class="report-filler en_only">
+              Please answer all questions, then click "View Guide"
+            </h4>
+            <h4 class="report-filler es_only">
+              Responda todas las preguntas y, luego, haga clic en “Ver guía”
             </h4>
             <button id="guide-btn" class="btn btn-success" onclick="moveToReport(event)" data-ga-label="Veiw Guide"
               disabled>
-              View Guide
+              <span class="en_only">View Guide</span>
+              <span class="es_only">Ver guía</span>
             </button>
           </form>
 
           <div class="report">
-            <h3 id="report_intro">Based upon your feedback, you may be eligible for the following New Jersey programs.</h3>
+            <h3 id="report_intro">
+              <span class="en_only">Based upon your feedback, you may be eligible for the following New Jersey programs.</span>
+              <span class="es_only">Según sus comentarios, usted puede ser elegible para los siguientes programas de New Jersey.</span>
+            </h3>
 
-            <div class="disclaimer en">
+            <div class="disclaimer en_only">
               <p><strong>Disclaimer:</strong>
                 <em>
                   As a courtesy, the NJEDA is offering this screening tool (the “Eligibility Wizard”)
@@ -215,7 +262,7 @@
                 upon your submission of an application to that agency for the respective program.
               </p>
             </div>
-            <div class="disclaimer es">
+            <div class="disclaimer es_only">
               <strong>Descargo de responsabilidad de NJEDA</strong>:
                 <p>Como cortesía, NJEDA ofrece esta herramienta de evaluación (el
                   “Asistente de Eligibilidad”) que enumera los programas de asistencia para emergencias que
@@ -286,6 +333,7 @@
             </div>
 
             <div class="sba_debt program">
+              <h4>Small Business Debt Relief Program</h4>
             </div>
 
             <div class="program counseling">
@@ -293,13 +341,16 @@
 
             <div class="actions">
               <button class="btn btn-primary no-print" onclick="window.print()" data-ga-label="Print this report">
-                Print this report
+                <span class="en_only">Print this report</span>
+                <span class="es_only">Imprimir esta guía</span>
               </button>
               <button class="btn btn-info no-print" onclick="viewQs(event)" data-ga-label="Change Answers">
-                Change Answers
+                <span class="en_only">Change Answers</span>
+                <span class="es_only">Cambiar respuestas</span>
               </button>
               <button class="btn btn-warning no-print" onclick="window.location.reload()" data-ga-label="Start over">
-                Start over
+                <span class="en_only">Start over</span>
+                <span class="es_only">Comenzar de nuevo</span>
               </button>
             </div>
           </div>

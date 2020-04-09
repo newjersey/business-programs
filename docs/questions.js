@@ -176,7 +176,8 @@ var form_questions = {
   },
 
   "Physical Location": {
-    header: true
+    header: true,
+    es: "Ubicación física"
   },
   "q2": {
     html: "<p> \
@@ -205,7 +206,8 @@ var form_questions = {
   },
 
   "Industry": {
-    header: true
+    header: true,
+    es: "Industria"
   },
   "q12": {
     html: "<p> \
@@ -277,7 +279,8 @@ var form_questions = {
   },
 
   "Business Size": {
-    header: true
+    header: true,
+    es: "Tamaño de la empresa"
   },
 
   "q8": {
@@ -339,7 +342,8 @@ var form_questions = {
   },
 
   "Revenue": {
-    header: true
+    header: true,
+    es: "Ingresos"
   },
   "q9": {
     html: "<p> \
@@ -373,7 +377,8 @@ var form_questions = {
   },
 
   "Loans and Guarantees": {
-    header: true
+    header: true,
+    es: "Préstamos y garantías"
   },
   "q16": {
     classes: "detail_qs physical_nj",
@@ -408,7 +413,8 @@ var form_questions = {
   },
 
   "Other": {
-    header: true
+    header: true,
+    es: "Otras"
   },
   "q17": {
     html: "<p> \

@@ -214,11 +214,39 @@ li.no-print {
 }
 
 /* show only English disclaimer by default */
-.disclaimer {
+.disclaimer, .es_only {
   display: none;
 }
 .disclaimer.en {
   display: block;
+}
+
+div.languages {
+  position: absolute;
+  left: 5%;
+  top: 220px;
+}
+div.languages li {
+  border: 1px solid #888;
+  padding: 10px;
+  padding-right: 20px;
+  letter-spacing: 2px;
+}
+div.languages li:first-child {
+  border-bottom: none;
+}
+select.languages {
+  display: none;
+}
+@media (max-width: 1000px) {
+  div.languages {
+    display: none;
+  }
+  select.languages {
+    display: block;
+    font-size: 20pt;
+    margin: 20pt auto;
+  }
 }
 
 @media print {

@@ -226,8 +226,8 @@ var form_questions = {
         https://www.naics.com/six-digit-naics/?code=81</a> \
     </p>",
     no_text: "None of the above",
-    html: {
-      es: "<p>¿Está clasificada su organización en una de las siguientes industrias?</p> \
+    es: {
+      html: "<p>¿Está clasificada su organización en una de las siguientes industrias?</p> \
       <ul> \
         <li>Minorista</li> \
         <li>Servicios de alojamiento y alimentos</li> \
@@ -262,8 +262,8 @@ var form_questions = {
     </p>",
     no_text: "None of the above",
     no_hides: ["entrepreneur"],
-    html: {
-      es: "<p>¿Está clasificada su organización en una de las siguientes industrias?</p>\
+    es: {
+      html: "<p>¿Está clasificada su organización en una de las siguientes industrias?</p>\
         <ul> \
           <li>Tecnología</li> \
           <li>Ciencias biológicas</li> \

@@ -25,7 +25,7 @@ var language_defaults = {
     uses: "Usos elegibles",
     funding: "Fondos disponibles",
     availability: "Disponibilidad",
-    learn_more: "Obtenga más información aquí:",
+    learn_more: "Obtenga más información aquí",
     additional_financing: "Las opciones de financiación adicionales para las que puede ser elegible son las siguientes:",
     resources: "Recursos"
   }
@@ -597,8 +597,6 @@ var form_questions = {
       <li>Agricultural Enterprises (i.e. the primary activity of the business, including its affiliates, is \
         as \
         defined in Section 18(b)(1) of the Small Business Act)</li> \
-      <li>Religious organizations</li> \
-      <li>Charitable organizations</li> \
       <li>Businesses considered hobbies</li> \
       <li>Government-owned concerns</li> \
       <li>Real estate developers - establishments primarily engaged in subdividing real property into lots \
@@ -612,8 +610,6 @@ var form_questions = {
       <ul> \
         <li>Relacionada con actividades de apuestas o juego.</li> \
         <li>Empresas agrícolas (es decir, la actividad principal de la empresa, incluidas sus filiales, es la definida en la Sección 18(b)(1) de la Small Business Act)</li> \
-        <li>Organizaciones religiosas</li> \
-        <li>Organizaciones de caridad</li> \
         <li>Negocios considerados como pasatiempos</li> \
         <li>Negocios propiedad del gobierno</li> \
         <li>Promotores inmobiliarios: establecimientos dedicados principalmente a subdividir bienes inmuebles en lotes y desarrollarlos para revenderlos por cuenta propia</li> \

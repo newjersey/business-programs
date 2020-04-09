@@ -147,12 +147,16 @@ var program_descriptions = {
     substantial economic injury as a result of the Coronavirus (COVID-19).",
     uses: "Working capital",
     availability: "Loans are administered by the federal government. Businesses are advised to submit \
-    applications as soon as possible.",
+    applications as soon as possible. Businesses with over 500 FTE employees should confirm that their \
+    business meets the definition of ‘small business concern’ before applying - please use the \
+    <a href=\"https://www.sba.gov/size-standards\">https://www.sba.gov/size-standards</a>",
     learn_more: "https://disasterloan.sba.gov/ela",
     es: {
       description: "Ofrece préstamos federales de bajo interés por desastre para capital de trabajo a pequeñas empresas que sufren daños económicos sustanciales a causa del Coronavirus (COVID-19).",
       uses: "Capital de trabajo",
-      availability: " El gobierno federal administra los préstamos. Se aconseja a las empresas que presenten sus solicitudes lo antes posible."
+      availability: " El gobierno federal administra los préstamos. Se aconseja a las empresas que presenten sus solicitudes lo antes posible. \
+        Las empresas con más de 500 empleados equivalentes a tiempo completo (full-time equivalent, FTE) deben confirmar que su empresa cumple con la definición de ‘pequeña empresa’ antes de presentar la solicitud; utilice\
+        <a href=\"https://www.sba.gov/size-standards\">https://www.sba.gov/size-standards</a>"
     }
   },
   eidl_advance: {
@@ -162,12 +166,17 @@ var program_descriptions = {
     uses: "May be used to keep employees on payroll, to pay for sick leave, meet increased \
       production costs due to supply chain disruptions, or pay business obligations, \
       including debts, rent and mortgage payments.",
-    availability: "Loans are administered by the federal government. Businesses must first apply for an EIDL.",
+    availability: "Loans are administered by the federal government. Businesses must first apply for an EIDL. \
+      Businesses with over 500 FTE employees should confirm that their \
+      business meets the definition of ‘small business concern’ before applying - please use the \
+      <a href=\"https://www.sba.gov/size-standards\">https://www.sba.gov/size-standards</a>",
     learn_more: "https://www.sba.gov/page/coronavirus-covid-19-small-business-guidance-loan-resources",
     es: {
       description: "Ofrece un adelanto de emergencia de hasta $10,000, dentro de los 3 días posteriores de solicitar el SBA Economic Injury Disaster Loan (EIDL), a pequeñas empresas y organizaciones privadas sin fines de lucro que han sido perjudicadas por la COVID-19. <em>Este adelanto de préstamo no deberá devolverse.</em>",
       uses: "Se puede utilizar para mantener a los empleados en nómina, pagar licencias por enfermedad, cubrir el aumento de costos de producción debido a interrupciones en la cadena de suministro, o pagar obligaciones comerciales, incluidos pagos de deudas, alquiler e hipoteca.",
-      availability: "El gobierno federal administra los préstamos. Primero, las empresas deben solicitar el EIDL."
+      availability: "El gobierno federal administra los préstamos. Primero, las empresas deben solicitar el EIDL. \
+        Las empresas con más de 500 empleados equivalentes a tiempo completo (full-time equivalent, FTE) deben confirmar que su empresa cumple con la definición de ‘pequeña empresa’ antes de presentar la solicitud; utilice\
+        <a href=\"https://www.sba.gov/size-standards\">https://www.sba.gov/size-standards</a>"
     }
   },
   a7: {
@@ -194,12 +203,17 @@ var program_descriptions = {
       care benefits, retirement benefits, or pay for State or local tax assessed on the \
       compensation of employees.",
     availability: "Loans are administered by eligible SBA 7(a) lenders. SBA has a free referral \
-      service tool called Lender Match to help find a lender near you.",
+      service tool called Lender Match to help find a lender near you. \
+      Businesses with over 500 FTE employees should confirm that their \
+      business meets the definition of ‘small business concern’ before applying - please use the \
+      <a href=\"https://www.sba.gov/size-standards\">https://www.sba.gov/size-standards</a>",
     learn_more: "https://www.sba.gov/page/coronavirus-covid-19-small-business-guidance-loan-resources",
     es: {
       description: "Proporciona asistencia de flujo de caja a través de préstamos con garantía federal del 100 % a los empleadores que mantienen su nómina durante esta emergencia. Si los empleadores mantienen su nómina, <em>los préstamos serán condonados</em>.",
       uses: "Puede utilizarse para mantener a los empleados en nómina, pagar vacaciones, licencias por maternidad/paternidad, familiar, médica o por enfermedad, pagar por despido o desvinculación, pagar beneficios de salud grupales, beneficios de jubilación o pagar impuestos estatales o locales sobre la compensación de empleados. ",
-      availability: "Los préstamos son administrados por prestamistas SBA 7(a) elegibles. La SBA tiene una herramienta de servicio de remisión gratuita llamada Lender Match para ayudarlo a encontrar un prestamista cercano."
+      availability: "Los préstamos son administrados por prestamistas SBA 7(a) elegibles. La SBA tiene una herramienta de servicio de remisión gratuita llamada Lender Match para ayudarlo a encontrar un prestamista cercano. \
+        Las empresas con más de 500 empleados equivalentes a tiempo completo (full-time equivalent, FTE) deben confirmar que su empresa cumple con la definición de ‘pequeña empresa’ antes de presentar la solicitud; utilice\
+        <a href=\"https://www.sba.gov/size-standards\">https://www.sba.gov/size-standards</a>"
     }
   },
   sba_debt: {
@@ -221,57 +235,21 @@ var program_descriptions = {
       availability: "La ayuda está disponible de inmediato para aquellos que tienen un préstamo de la SBA no relacionado con desastres y para aquellos que obtienen un préstamo 7(a), 504, o microloan dentro de los seis meses posteriores a la promulgación de la ley por parte del Presidente."
     }
   },
-  counseling: {
-    description: "Additional funds provided to resource partners and associations to expand their \
-      reach and better support small business owners with counseling and up-to-date \
-      information regarding COVID-19.",
-    resources: [
-      {
-        name:"Small Business Development Centers (SBDC)",
-        info:"a national network of leading universities, colleges, state economic development agencies and private partners",
-        link:"https://americassbdc.org/about-us/"
-      },
-      {
-        name:"Women's Business Center (WBC)",
-        info:"a national network of centers that offer one-on-one counseling, training, networking, workshops, technical assistance and mentoring to entrepreneurs",
-        link:"https://www.awbc.org/"
-      },
-      {
-        name:"SCORE",
-        info:"a network of volunteer, expert business mentors dedicated to helping small businesses",
-        link:"https://www.score.org/"
-      },
-      {
-        name:"Minority Business Development Agency's Business Centers (MBDCs)",
-        info:"network of centers to provide business assistance to Minority Business Enterprises",
-        link:"https://www.mbda.gov/"
-      }
-    ],
+  add_on: {
+    html: "<p>The New Jersey Economic Development Authority (NJEDA) is partnering with four \
+      organizations to offer support services to businesses seeking federal financial assistance \
+       through Small Business Administration (SBA) programs. These organizations will help small \
+       business owners file their applications through the SBA to receive working capital loans \
+       to help them survive this crisis.</p>",
+    learn_more: "https://faq.business.nj.gov/en/articles/3835241-can-i-get-help-applying-to-federal-or-state-financial-assistance-programs",
     es: {
-      name: "Asesoramiento y capacitación",
-      description: "Fondos adicionales proporcionados a asociaciones y socios de recursos para expandir su alcance y apoyar mejor a los propietarios de pequeñas empresas con asesoramiento e información actualizada sobre la COVID-19.",
-      resources: [
-        {
-          name:"Small Business Development Centers (SBDC)",
-          info:"una red nacional de universidades, institutos terciarios, agencias estatales de desarrollo económico y socios privados.",
-          link:"https://americassbdc.org/about-us/"
-        },
-        {
-          name:"Women's Business Center (WBC)",
-          info:"una red nacional de centros que ofrecen asesoramiento individual, capacitación, establecimiento de contactos, talleres, asistencia técnica y tutoría para nuevos empresarios",
-          link:"https://www.awbc.org/"
-        },
-        {
-          name:"SCORE",
-          info:"una red de mentores empresariales expertos voluntarios dedicados a ayudar a pequeñas empresas",
-          link:"https://www.score.org/"
-        },
-        {
-          name:"Minority Business Development Agency's Business Centers (MBDCs)",
-          info:"una red de centros para proporcionar asistencia comercial a las empresas comerciales de minorías.",
-          link:"https://www.mbda.gov/"
-        }
-      ]
+      name: "Asistencia adicional para empresas",
+      html: "<p>New Jersey Economic Development Authority (NJEDA) se asocia con cuatro organizaciones \
+        para ofrecer servicios de apoyo a empresas que buscan asistencia financiera federal a \
+        través de los programas de la Small Business Administration (SBA). Estas organizaciones \
+        ayudarán a los propietarios de pequeñas empresas a presentar sus solicitudes a través de \
+        la SBA para recibir préstamos de capital de trabajo destinados a ayudarlos a superar esta \
+        crisis.</p>"
     }
   }
 };

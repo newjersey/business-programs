@@ -94,10 +94,6 @@ var nonprofit_q = "q11",
       required_yes: ["q6", "q18", "q21", "q42", "q206"],
       required_no: ["q15"],
       eval: {
-        "q8": function (fte) {
-          fte = parseNumber(fte);
-          return fte < 500;
-        },
         "q201": function(val) {
           return (val === true) || (answers[nj_business_q] === true);
         },
@@ -147,10 +143,6 @@ var nonprofit_q = "q11",
       required_yes: ["q18", "q21", "q206"],
       required_no: ["q15"],
       eval: {
-        "q8": function (fte) {
-          fte = parseNumber(fte);
-          return fte < 500;
-        },
         "q201": function(val) {
           return (val === true) || (answers[nj_business_q] === true);
         },
@@ -176,10 +168,6 @@ var nonprofit_q = "q11",
       required_yes: ["q20", "q21"],
       required_no: [],
       eval: {
-        "q8": function (fte) {
-          fte = parseNumber(fte);
-          return fte < 500;
-        },
         "q201": function(val) {
           return (val === true) || (answers[nj_business_q] === true);
         },
@@ -213,6 +201,23 @@ function moveToReport(e) {
   e.preventDefault();
   $("form, .hidden_options, .preamble").hide();
   $(".report").show();
+
+  var njeligible = $(".program.eag").css("display")
+    + $(".program.eawcl").css("display")
+    + $(".program.guarantee").css("display")
+    + $(".program.egp").css("display")
+    + $(".program.frelief").css("display");
+  if (njeligible.indexOf("block") === -1) {
+    // only federal
+    $("#report_intro_nj").hide();
+    $("#report_intro_sba").show();
+    $("#report_continue_sba").hide();
+  } else {
+    $("#report_intro_nj").show();
+    $("#report_intro_sba").hide();
+    $("#report_continue_sba").show();
+  }
+
   $(window).scrollTop(0);
 
   $('li li', '.my_options').each(function(i, el) {
@@ -372,9 +377,9 @@ $(document).ready(function () {
       $(shell).append($("<p>").html(innerhtml));
     }
 
-    if (lang_src.learn_more) {
-      $(shell).append("<strong>" + language_defaults[select_lang].learn_more + "</strong>:");
-      $(shell).append('<a href="' + lang_src.learn_more + '" target="_blank">' + lang_src.learn_more + '</a>');
+    if (lang_src.learn_more || p.learn_more) {
+      $(shell).append("<strong>" + language_defaults[select_lang].learn_more + "</strong>:&nbsp;&nbsp;");
+      $(shell).append('<a href="' + (lang_src.learn_more || p.learn_more) + '" target="_blank">' + (lang_src.learn_more || p.learn_more) + '</a>');
     }
   });
 

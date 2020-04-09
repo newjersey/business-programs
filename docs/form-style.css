@@ -169,6 +169,10 @@ input.form-control {
   display: none;
 }
 
+#report_intro_sba {
+  display: none;
+}
+
 @media (max-width: 1000px) {
   .container-fluid {
     width: 90%;
@@ -213,12 +217,8 @@ li.no-print {
   text-decoration: line-through;
 }
 
-/* show only English disclaimer by default */
-.disclaimer, .es_only {
+.es_only {
   display: none;
-}
-.disclaimer.en {
-  display: block;
 }
 
 div.languages {

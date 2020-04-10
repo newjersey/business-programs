@@ -380,12 +380,15 @@ medida que estén disponibles nuevos programas federales, estatales, locales y f
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title">Exiting Wizard</h5>
+          <h5 class="modal-title">
+            <span class="en_only">Exiting Wizard</span>
+            <span class="es_only">Salir</span>
+          </h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body">
+        <div class="modal-body en_only">
           <p>The State of New Jersey COVID-19 Business Support Eligibility Wizard is
             designed to help organizations registered in New Jersey identify emergency
             assistance programs for which they are eligible.
@@ -410,8 +413,33 @@ medida que estén disponibles nuevos programas federales, estatales, locales y f
             </li>
           </ul>
         </div>
+        <div class="modal-body es_only">
+          <p>El Asistente de Elegibilidad de COVID-19 del Estado de Nueva Jersey está
+            diseñado para ayudar a las organizaciones registradas en Nueva Jersey a
+            identificar programas de asistencia de emergencia para los cuales son elegibles.
+          </p>
+          <p>
+            Puede leer sobre todos nuestros programas en <a
+              href="https://cv.business.nj.gov/">https://cv.business.nj.gov/</a>
+          </p>
+          <p>
+            Si su empresa o sin fines de lucro no está registrada para hacer negocios en Nueva Jersey, no es elegible para los programas de asistencia de emergencia de NJEDA, sin embargo, considere buscar el apoyo de las siguientes entidades:
+          </p>
+          <ul>
+            <li>La agencia de desarrollo económico de su estado</li>
+            <li>La agencia de desarrollo económico de su condado o municipio local</li>
+            <li>Un banco privado que puede tener programas de apoyo en su área</li>
+            <li>Su local Community Development Financial Institution (CDFI)</li>
+            <li>Los programas federales de la Small Business Administration -
+              <a href="https://disasterloan.sba.gov/ela/" target="_blank">https://disasterloan.sba.gov/ela/</a>
+            </li>
+          </ul>
+        </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary" onclick="window.location.reload()">Start over</button>
+          <button type="button" class="btn btn-primary" onclick="window.location.reload()">
+            <span class="en_only">Start over</span>
+            <span class="es_only">Comenzar de nuevo</span>
+          </button>
           <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
         </div>
       </div>

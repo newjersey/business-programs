@@ -1,3 +1,10 @@
+'use strict';
+if (typeof console === "undefined") {
+  console = {
+    log: function(){}
+  }
+}
+
 var language_defaults = {
   en: {
     yes_text: "Yes",

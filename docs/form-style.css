@@ -67,9 +67,21 @@ table {
 }
 
 .program {
-  background-color: #eee;
-  margin: 1em 0;
-  padding: 2em;
+  margin: 2em 0;
+}
+
+.program dt,
+.program dd {
+  margin-bottom: 1.5em;
+}
+
+.program .row {
+  margin-bottom: 0;
+}
+
+.program ul {
+  padding-left: 1rem;
+  margin: 0;
 }
 
 .program p:last-child {
@@ -167,6 +179,10 @@ input.form-control {
 
 .yes-print {
   display: none;
+}
+
+.counseling .card {
+  margin-bottom: 2em;
 }
 
 @media (max-width: 1000px) {

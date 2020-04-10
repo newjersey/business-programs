@@ -456,10 +456,10 @@ var form_questions = {
   },
 
   "q205": {
-    html: "<p>Has the business owner tried and failed to get funds from other financial lenders? \
+    html: "<p>Have you or another business owner tried and failed to get funds from other financial lenders? \
       (i.e. Banks and credit unions, short term business loans, personal loans etc.)</p>",
     es: {
-      html: "<p>¿Ha intentado el dueño de la empresa, sin éxito, obtener fondos de otros prestamistas financieros? (Es decir, bancos y cooperativas de crédito, préstamos comerciales a corto plazo, préstamos personales, etc.).</p>"
+      html: "<p>¿Ha intentado usted o otro dueño de la empresa, sin éxito, obtener fondos de otros prestamistas financieros? (Es decir, bancos y cooperativas de crédito, préstamos comerciales a corto plazo, préstamos personales, etc.).</p>"
     }
   },
 
@@ -527,7 +527,7 @@ var form_questions = {
   "q206": {
     html: "<p> \
       Are you, your chief executive officer or the equivalent able to certify that \
-      (This question is to determine eligibility for Federal Small Business Administration EIDL) \
+      <span class=\"badge badge-success\">Federal SBA Programs</span> \
     </p> \
     <ul> \
       <li>The organization is not engaged in any illegal activity (as defined by Federal guidelines).</li> \
@@ -540,8 +540,7 @@ var form_questions = {
     es: {
       html: "<p> \
         ¿Puede usted, su director ejecutivo o una persona en un puesto equivalente garantizar lo siguiente? \
-        <br/> \
-        (Esta pregunta es para determinar la elegibilidad para el préstamo EIDL de la Federal Small Business Administration) \
+        <span class=\"badge badge-success\">Federal SBA Programs</span> \
       </p> \
       <ul> \
         <li>La organización no participa en ninguna actividad ilegal (como se define en las pautas federales).</li> \

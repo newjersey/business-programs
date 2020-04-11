@@ -1,4 +1,3 @@
-'use strict';
 if (typeof console === "undefined") {
   console = {
     log: function(){}

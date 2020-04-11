@@ -538,6 +538,6 @@ $(document).ready(function () {
   });
 
   if (window.location.search.indexOf("reportnow") > -1) {
-    moveToReport({preventDefault:()=>{}});
+    moveToReport({preventDefault:function(){}});
   }
 });

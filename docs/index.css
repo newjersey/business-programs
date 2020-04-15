@@ -1,0 +1,126 @@
+body {
+  font-family: "public sans", Helvetica, sans-serif;
+}
+
+/* resets */
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin-top: 0px;
+}
+
+h2 {
+  margin-bottom: 30px;
+}
+
+.btn-danger {
+  background-color: #cc0000;
+}
+
+/* page styles */
+main .container,
+footer .container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+a[type="button"] {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+footer {
+  background-color: black;
+  color: white;
+}
+
+/* Nav */
+nav.navbar {
+  background-color: #002e6d;
+  padding-top: 20px;
+}
+
+.navbar-brand {
+  text-transform: uppercase;
+  font-size: 1.1rem;
+}
+
+li.nav-item {
+  margin: 0 10px;
+}
+
+.navbar-dark .navbar-nav a.nav-link {
+  color: white;
+}
+
+/* Hero styles */
+.hero ul {
+  margin-top: 20px;
+}
+
+.hero-buttons {
+  margin-top: 50px;
+}
+
+.hero-buttons .row + .row {
+  margin-top: 10px;
+}
+
+.hero-buttons .btn-toolbar {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-buttons .col-6 + .col-6 {
+  padding-left: 5px;
+}
+
+.hero-buttons .col-6:first-child {
+  padding-right: 5px;
+}
+
+aside {
+  font-size: 12px;
+}
+
+/* What we do styles */
+
+.cta-container .btn {
+  margin-top: 20px;
+}
+
+/* Stats styles */
+.stats.card {
+  padding: 30px;
+}
+
+/* helpers */
+
+.blue-background {
+  background-color: #002e6d;
+  color: white;
+}
+
+footer a {
+  color: white;
+}
+
+.blue-background a:not([type="button"]) {
+  color: white;
+  text-decoration: underline;
+}
+
+.grey-background {
+  background-color: #f2f2f2;
+}
+
+.shadow {
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc; /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow: 3px 3px 5px 6px #ccc; /* Firefox 3.5 - 3.6 */
+  box-shadow: 3px 3px 5px 6px #ccc; /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}

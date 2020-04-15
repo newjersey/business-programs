@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <meta property="og:title" content="COVID-19 Emergency Assistance Eligibility Wizard">
+  <meta property="og:title" content="COVID-19 SMB Loan Information">
   <meta property="og:description" content="Learn about support programs available to help stabilize your business.">
   <!-- <meta property="og:image" content="https://">
   <meta property="og:image:width" content="506">
@@ -15,385 +15,179 @@
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@USDResponse">
-  <meta name="twitter:title" content="COVID-19 Emergency Assistance Eligibility Wizard">
+  <meta name="twitter:title" content="COVID-19 SMB Loan Information">
   <meta name="twitter:description" content="Learn about support programs available to help stabilize your business.">
   <!-- <meta name="twitter:image" content="https://"> -->
   <meta name="twitter:creator" content="@USDResponse" />
 
-  <title>COVID-19 Emergency Assistance Eligibility Wizard</title>
+  <title>COVID-19 SMB Loan Information</title>
   <meta name="Description" content="Learn about support programs available to help stabilize your business." />
 
   <link rel="stylesheet" href="bootstrap.min.css" />
-  <link rel="stylesheet" href="form-style.css" />
   <link rel="stylesheet" href="header.css" />
+  <link rel="stylesheet" href="index.css" />
 <!--
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
   <link rel="manifest" href="site.webmanifest"> -->
+  <script src="https://kit.fontawesome.com/27d11a5149.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
-  <div class="wizard-header">
-    <div class="Header" data-ya-scope="header">
-      <div class="Header-wrapper">
-        <div class="Header-topRowWrapper no-print">
-          <div class="Header-topRow l-container">
-            <div class="Header-official">
-              <img class="Header-stateSeal" src="" alt="">
-              <span class="Header-stateSealPhrase"></span>
-            </div>
-            <div class="Header-linkSide Text--small">
-              Return to
-              <a class="Link--secondary Header-link" href="#" data-ya-track="slashhelp#">
-                main page
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="Header-bottomRow l-container">
-            <a class="Header-logo" href="https://covid19.nj.gov/" data-ya-track="covidhub">
-              <!-- <img class="Header-stateLogo" src="images/nj_media_image.35a37698.svg" alt=""> -->
-              <div class="Header-stateLogoPhrase">
-                <div class="Header-stateLogoPhrase--name">State</div>
-                <div class="Header-stateLogoPhrase--info Text--large">COVID-19 Information Hub</div>
-              </div>
-            </a>
-          <div class="Header-right Text--small">
-            <!-- <p><strong class="Text--bold">Call (General COVID-19 Questions)</strong>: <a href="tel://+211"
-                data-ya-track="covidquestions" class="Link--secondary">2-1-1</a> (7a-11p)</p>
-            <p><strong class="Text--bold">Call (Clinical Questions)</strong>: <a href="tel://+18009621253"
-                data-ya-track="clinicalquestions" class="Link--secondary">1-800-962-1253</a> (24/7)</p>
-            <p><strong class="Text--bold">Text NJCOVID to <a href="sms:+898211?&amp;body=NJCOVID" data-ya-track="alerts"
-                  class="Link--secondary">898-211</a></strong> to receive alerts</p> -->
-          </div>
-        </div>
+  <nav class="navbar navbar-dark navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="#">Covid loan tool</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#what-we-do">What we do</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#who-we-are">Who we are</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#government-partners">Government Partners</a>
+          </li>
+        </ul>
       </div>
     </div>
-  </div>
-
+  </nav>
   <main>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-12">
-          <br />
-          <div class="no-print preamble">
-            <h1>Emergency Assistance Eligibility Wizard</h1>
-            <p>
-              The COVID-19 outbreak is causing extraordinary disruption for companies
-              and non-profits across the United States.
-              The NJEDA wants to make it easy for organizations to understand what support
-              programs are available to you to help stabilize your operations and
-              get back on a pathway to growth.
-            </p>
-            <p>
-              This is a beta version of the Eligibility Wizard that focuses on the Federal
-              PPP and SBA disaster loan programs. We will be updating it regularly as new
-              federal, state, local, and philanthropic programs become available.
-            </p>
-          </div>
-          <span class="fixed_marker"></span>
-          <br />
-          <div class="my_options">
-            <h5>Included programs</h5>
-            <ul>
-              <li>
-                Federal Programs
-                <ul>
-                  <li class="eidl" data-program-name="Federal SBA Emergency Injury Disaster Loans">Federal SBA Emergency
-                    Injury Disaster Loans</li>
-                  <li class="ppp" data-program-name="Paycheck Protection Program (PPP) Loans">
-                    Paycheck Protection Program (PPP) Loans
-                  </li>
-                  <li class="sba_debt" data-program-name="Federal SBA Debt Relief Program">
-                    Federal SBA Debt Relief Program
-                  </li>
-                  <li class="sba_7a" data-program-name="SBA 7(a) Loan Program">
-                    SBA 7(a) Loan Program
-                  </li>
-                </ul>
-              </li>
+    <section class="blue-background hero">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <h2>Understand Covid-19 loan options for small business owners</h2>
+            <p>Use this tool to quickly figure out which federal and state loans programs you qualify for and get directed to clear next steps.</p>
+            <ul class="fa-ul">
+              <li><span class="fa-li"><i class="fas fa-arrow-circle-right"></i></span><b>Fast, easy & step-by-step</b> -- Takes less than ten minutes</li>
+              <li><span class="fa-li"><i class="fas fa-arrow-circle-right"></i></span><b>Loan options explained</b> -- Narrow down your options</li>
+              <li><span class="fa-li"><i class="fas fa-arrow-circle-right"></i></span><b>Clear next steps</b> -- You’ll know what to do next</li>
             </ul>
-            <p>We’ll check your eligibility for these types of support based on the information you provide below.</p>
           </div>
-          <form class="form">
-            <div id="form-qs">
-              <!--
-                questions fill in here
-              -->
+          <div class="col-sm-4 offset-sm-1 hero-buttons">
+            <div class="row">
+              <div class="col-12">
+                <a type="button" class="btn btn-danger" href="questionnaire">Check my loan options</a>
+              </div> 
             </div>
-
-            <h4 class="report-filler">
-              Please answer all questions, then click "View Guide:"
-            </h4>
-            <button id="guide-btn" class="btn btn-success" onclick="moveToReport(event)" data-ga-label="Veiw Guide"
-              disabled>
-              View Guide
-            </button>
-          </form>
-
-          <div class="report">
-            <h3>Based upon your feedback, you may be eligible for the following <strong>federal</strong> programs.</h3>
-            <div class="disclaimer">
-              <p><strong>Disclaimer:</strong>
-                <br/>
-                The Eligibility Wizard neither approves nor denies eligibility for programs,
-                nor does it reserve any funding or a place in any application queue.
-              </p>
-              <p>
-                To apply for a program listed below, you need to apply through the appropriate
-                administering agency. The administering agency will determine all eligibility
-                requirements after you submit an application.
-              </p>
-            </div>
-
-            <div class="eidl program card">
-              <div class="card-header">
-                <h4>Economic Injury Disaster Loan (EIDL)</h4>
+            <div class="row">
+              <div class="col-6">
+                <a type="button" class="btn btn-outline-light" href="#what-we-do">Learn more</a>
               </div>
-              <div class="card-body">
-                <dl class="row">
-                  <dt class="col-sm-3">What is it?</dt>
-                  <dd class="col-sm-9">A low-interest disaster loan</dd>
-
-                  <dt class="col-sm-3">Who is it for?</dt>
-                  <dd class="col-sm-9">
-                    <ul>
-                      <li>Businesses with under 500 employees</li>
-                      <li>Private non-profit organizations</li>
-                      <li>501(c)(19) veterans’ organizations</li>
-                      <li>Some businesses with 500+ employees.<br/><a href="https://www.sba.gov/size-standards/" target="_blank">Check to see if your business qualifies.</a></li>
-                    </ul>
-                  </dd>
-
-                  <dt class="col-sm-3">What can I use it&nbsp;for?</dt>
-                  <dd class="col-sm-9">Working capital</dd>
-
-                  <dt class="col-sm-3">When do I need to&nbsp;apply?</dt>
-                  <dd class="col-sm-9">As soon as possible</dd>
-
-                  <dt class="col-sm-3">More information</dt>
-                  <dd class="col-sm-9">You may qualify for an emergency advance of up to $10,000 for payroll, sick leave, and business obligations. within 3 days after you submit. <a href="https://www.sba.gov/funding-programs/loans/coronavirus-relief-options/economic-injury-disaster-loan-emergency-advance">Learn more about applying for an advance.</a></dd>
-                </dl>
-              </div>
-              <div class="card-footer">
-                <a href="https://covid19relief.sba.gov/" class="no-print btn btn-primary" target="_blank">Apply for an EIDL</a>
-                <p class="yes-print">Apply for an EIDL: https://covid19relief.sba.gov/</p>
+              <div class="col-6">
+                <a type="button" class="btn btn-outline-light" href="#government-partners">Gov't partners</a>
               </div>
             </div>
-
-            <div class="ppp program card">
-              <div class="card-header">
-                <h4>Paycheck Protection Program (PPP) Loans</h4>
+            <div class="row">
+              <div class="col-sm-12 text-center">
+                <aside>*The eligibility quiz takes approximately 10 minutes</aside>
               </div>
-              <div class="card-body">
-                <dl class="row">
-                  <dt class="col-sm-3">What is it?</dt>
-                  <dd class="col-sm-9">A 100% federally guaranteed loan</dd>
-
-                  <dt class="col-sm-3">Who is it for?</dt>
-                  <dd class="col-sm-9">
-                    <p>Employers who maintain their payroll during the emergency.</p>
-
-                    <p>If the employer maintains their payroll, the lender will forgive the loan.</p>
-                  </dd>
-
-                  <dt class="col-sm-3">What can I use it&nbsp;for?</dt>
-                  <dd class="col-sm-9">
-                    <ul>
-                      <li>Employee payroll</li>
-                      <li>Employee vacation, sick, parental, medical, or family leave</li>
-                      <li>Employee dismissal or separation</li>
-                      <li>Retirement and group health care benefits</li>
-                      <li>State or local employee compensation tax</li>
-                    </ul>
-                  </dd>
-                </dl>
-              </div>
-              <div class="card-footer">
-                <a href="https://www.sba.gov/paycheckprotection/find" class="no-print btn btn-primary" target="_blank">Find a PPP lender near you</a>
-                <p class="yes-print">Find a PPP lender near you: https://www.sba.gov/paycheckprotection/find</p>
-              </div>
-            </div>
-
-            <div class="sba_7a program card">
-              <div class="card-header">
-                <h4>Federal 7(a) Loan</h4>
-              </div>
-              <div class="card-body">
-                <dl class="row">
-                  <dt class="col-sm-3">What is it?</dt>
-                  <dd class="col-sm-9">A federal loan of up to $5 million. The Small Business Administration will guarantee 75–85% of the loan.</dd>
-
-                  <dt class="col-sm-3">What can I use it&nbsp;for?</dt>
-                  <dd class="col-sm-9">
-                    <ul>
-                      <li>Working capital</li>
-                      <li>Expanding, buying, or starting a business</li>
-                      <li>Buying or building real estate</li>
-                      <li>Refinancing your organization’s debt</li>
-                      <li>Buying equipment or inventory</li>
-                    </ul>
-                  </dd>
-                </dl>
-              </div>
-              <div class="card-footer">  
-                <a href="https://www.sba.gov/paycheckprotection/find" class="no-print btn btn-primary" target="_blank">Find a lender near you</a>
-                <p class="yes-print">Find a lender near you: https://www.sba.gov/paycheckprotection/find</p>
-              </div>
-            </div>
-
-            <div class="sba_debt program card">
-              <div class="card-header">
-                <h4>Small Business Debt Relief Program</h4>
-              </div>
-              <div class="card-body">
-                
-                <dl class="row">
-                  <dt class="col-sm-3">What is it?</dt>
-                  <dd class="col-sm-9">If your organization has an SBA loan, SBA will cover all payments for six months.</dd>
-
-                  <dt class="col-sm-3">Who is it for?</dt>
-                  <dd class="col-sm-9">
-                    <ul>
-                      <li>Small businesses with non-disaster SBA loans</li>
-                      <li>New borrowers who receive 7(a), 504, and microloans before September 27, 2020</li>
-                    </ul>
-                  </dd>
-                </dl>
-              </div>
-              <div class="card-footer">
-                <a href="https://www.sba.gov/funding-programs/loans/coronavirus-relief-options/sba-debt-relief" class="no-print btn btn-primary" target="_blank">Learn more about debt relief programs</a>
-                <p class="yes-print">Learn more about debt relief programs: https://www.sba.gov/funding-programs/loans/coronavirus-relief-options/sba-debt-relief</p>
-              </div>
-            </div>
-
-            <h3>Counseling and Training</h3>
-
-            <p>These organizations received federal funding to counsel small business owners and provide up-to-date COVID-19 information.</p>
-
-            <div class="row counseling">
-              <div class="col-md-6">
-                <div class="card">
-                  <div class="card-header">  
-                    <h4 class="h6">Small Business Development Centers (SBDCs)</h4>
-                  </div>
-                  <div class="card-body">
-                    <p class="card-text">A national network of leading universities, colleges, state economic development agencies and private partners.</p>
-                  </div>
-                  <div class="card-footer">
-                    <a href="https://americassbdc.org/about-us/" class="btn btn-primary" class="no-print">Learn about SBDCs</a>
-                    <p class="yes-print">https://americassbdc.org/about-us/</p>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="col-md-6">
-                <div class="card">
-                  <div class="card-header">  
-                    <h4 class="h6">Women's Business Centers (WBCs)</h4>
-                  </div>
-                  <div class="card-body">
-                    <p class="card-text">Offers one-on-one counseling, training, networking, workshops, technical assistance and mentoring to entrepreneurs.</p>
-                  </div>
-                  <div class="card-footer">
-                    <a href="https://www.awbc.org/" class="btn btn-primary" class="no-print">Learn about WBCs</a>
-                    <p class="yes-print">https://www.awbc.org/</p>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="col-md-6">
-                <div class="card">
-                  <div class="card-header">  
-                    <h4 class="h6">SCORE</h4>
-                  </div>
-                  <div class="card-body">
-                    <p class="card-text">A network of expert mentors dedicated to helping small businesses.</p>
-                  </div>
-                  <div class="card-footer">
-                    <a href="https://www.score.org/" class="btn btn-primary" class="no-print">Learn about SCORE</a>
-                    <p class="yes-print">https://www.score.org/</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-md-6">
-                <div class="card">
-                  <div class="card-header">  
-                    <h4 class="h6">Minority Business Development Agency's Business Centers (MBDCs)</h4>
-                  </div>
-                  <div class="card-body">
-                    <p class="card-text">A network that helps Minority Business Enterprises.</p>
-                  </div>
-                  <div class="card-footer">
-                    <a href="https://www.mbda.gov/businesscenters#4/" class="btn btn-primary" class="no-print">Find a business center</a>
-                    <p class="yes-print">https://www.mbda.gov/businesscenters#4/</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="actions">
-              <button class="btn btn-primary no-print" onclick="window.print()" data-ga-label="Print this report">
-                Print this report
-              </button>
-              <button class="btn btn-info no-print" onclick="viewQs(event)" data-ga-label="Change Answers">
-                Change Answers
-              </button>
-              <button class="btn btn-warning no-print" onclick="window.location.reload()" data-ga-label="Start over">
-                Start over
-              </button>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
+
+    <section class="grey-background" id="what-we-do">
+      <div class="container cta-container">
+        <div class="row grey-background text-center">
+          <div class="col-sm-12">
+            <h2>What we help you understand</h2>
+          </div>
+          <div class="col-sm-4">
+            <h3>CARES Act</h3>
+            <p>The Covid-19 stimulus is the largest ever in American history. More than $350 billion has been allocated to support small business.</p>
+          </div>
+          <div class="col-sm-4">
+            <h3>So many options</h3>
+            <p>There are numerous federal and state loan options available. We help you figure out which to apply for.</p>
+          </div>
+          <div class="col-sm-4">
+            <h3>Conflicting information</h3>
+            <p>We’ve done the research. You can depend on specific, correct, and actionable information. </p>
+          </div>
+          <a type="button" class="btn btn-danger" href="questionnaire">Check my loan options</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="who-we-are">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-sm-4">
+            <div class="card shadow stats">
+              <h3>76,834</h3>
+              <p>Small business owners have used this tool to learn about their options</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="grey-background" id="government-partners">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-sm-8">
+            <h3>Government office in need of assistance?</h3>
+          </div>
+          <div class="col-sm-4">
+            <a type="button" class="btn btn-outline-dark" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfdwDvDnFd2dOyuMKuhjn0uUy5uw4Vf5lnVZQDH0obslTCrOg/viewform">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="blue-background">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8">
+            <h3>This site is brought to you by U.S. Digital Response, a volunteer-run, non-partisan effort to assist the U.S. government.</h3>
+          </div>
+          <div class="col-sm-4">
+            <p>To learn more about USDR or volunteer yourself, please visit the <a target="_blank" href="https://www.usdigitalresponse.org/">USDR site</a>.</p>
+            <p>
+              If you have feedback or questions about this website, we’d love to hear from you.
+              Send use a message on <a href="mailto:info@usdigitalresponse.org">email</a> or <a target="_blank" href="https://twitter.com/USDResponse">Twitter</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="no-print">
-    <p>Made with ❤️ by the <a href="https://innovation.nj.gov/">New Jersey Office of Innovation</a>
-        &amp;
-        <a href="https://www.usdigitalresponse.org/" target="_blank">US Digital Response</a> volunteers.</p>
-    <p><a href="https://github.com/newjersey/business-programs">Powered by Open Source</a></p>
-  </footer>
-
-  <div class="modal" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Exiting Wizard</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <p>The Business Support Eligibility Wizard is
-            designed to help businesses and non-profits registered in the USA
-            to match with emergency assistance programs.
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8">
+          <p>
+            <b>COVID-19 Loan Eligibility Wizard for U.S. Small Business Owners</b>
           </p>
-          <ul>
-            <li>Your state’s economic development agency</li>
-            <li>Your local county or municipality’s economic development agency</li>
-            <li>A private bank that may have support programs in your area</li>
-            <li>Your local Community Development Financial Institution (CDFI)</li>
-            <li>The federal Small Business Administration’s Economic Injury Disaster
-              Loan (EIDL)-
-              <a href="https://disasterloan.sba.gov/ela/" target="_blank">https://disasterloan.sba.gov/ela/</a>
-            </li>
-          </ul>
+          <p>
+            The purpose of this website is to provide small business owners free resources that they
+            can use to acquire emergency financing.
+          </p>
+          <p>
+            Brought to you by U.S. Digital Response, a volunter-run, non-partisan effort to help
+            federal, state, and local government with technology, data, design, operations,
+            communications, project management, and more during the COVID-19 crisis. We provide
+            free assistance to all government entities across the country. 
+          </p>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary" onclick="window.location.reload()">Start over</button>
-          <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+        <div class="col-sm-3 offset-sm-1">
+          <p><b>Contact us</b></p>
+          <p><a href="mailto:info@usdigitalresponse.org">Email</a></p>
+          <p><a target="_blank" href="https://twitter.com/USDResponse">Twitter</a></p> 
         </div>
       </div>
     </div>
-  </div>
+  </footer>
 
   <script src="./jquery-3.4.1.slim.min.js"></script>
-  <script src="./popper.min.js"></script>
   <script src="./bootstrap.min.js"></script>
   <script src="./sba/questions.js"></script>
   <script src="./sba/requirements.js"></script>

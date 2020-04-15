@@ -351,6 +351,10 @@ $(document).ready(function () {
       $("li." + pcode).append(" (" + lang_src.alt_name + ")");
     }
 
+    if (lang_src.disclaimer || p.disclaimer) {
+      $(shell).append($("<blockquote>").text((lang_src.disclaimer || p.disclaimer)));
+    }
+
     if (lang_src.html) {
       // raw HTML dump
       $(shell).append(lang_src.html);

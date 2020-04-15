@@ -1,5 +1,6 @@
 var program_descriptions = {
   eag: {
+    disclaimer: "The Small Business Emergency Assistance Grant is now closed.",
     description: "An operating expense grant for NJ-based businesses or non-profits \
       with 1-10 full time employees in the retail/accommodation/food \
       service/arts/entertainment/recreation/service industries.",
@@ -22,6 +23,7 @@ var program_descriptions = {
   },
 
   eawcl: {
+    disclaimer: "The Small Business Assistance Loan Program is significantly oversubscribed and new applications will not be reviewed.",
     description: "A no/low-cost loan for up to 10 years for NJ-based businesses with under $5M in revenue.",
     uses: "Supports business continuity to help stabilize operations and reduce furloughs or layoffs \
       for companies that can demonstrate they have been adversely impacted by the Covid-19 emergency.",

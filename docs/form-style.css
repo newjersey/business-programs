@@ -173,6 +173,17 @@ input.form-control {
   display: none;
 }
 
+blockquote {
+  margin-top: 6px;
+  margin-left: -10px;
+  font-size: 95%;
+  background: #fff;
+}
+.program blockquote {
+  font-weight: bold;
+  font-size: 110%;
+}
+
 @media (max-width: 1000px) {
   .container-fluid {
     width: 90%;

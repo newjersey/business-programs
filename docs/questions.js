@@ -57,7 +57,10 @@ var form_questions = {
       The information you share for purposes of this Eligibility Wizard will be \
       anonymous and may be shared with NJ State agencies to improve access to \
       benefits and programs. \
-    </p>",
+    </p> \
+    <blockquote> \
+      At this time, the Small Business Emergency Assistance Grant application is closed and the Small Business Emergency Assistance Loan Program is significantly oversubscribed. We encourage you to continue with the Eligibility Wizard to determine other financing opportunities your business may be eligible for. \
+    </blockquote> ",
     hard_pass: false, // if saying no to agreement
     yes_text: "Agree",
     no_text: "Cancel",
@@ -83,7 +86,10 @@ var form_questions = {
           debe hacerlo a través de la agencia administradora correspondiente. La agencia \
           administradora determinará todos los requisitos de elegibilidad en el momento en que \
           usted envíe la solicitud a esa agencia para el respectivo programa. \
-        </p>"
+        </p> \
+        <blockquote> \
+          At this time, the Small Business Emergency Assistance Grant application is closed and the Small Business Emergency Assistance Loan Program is significantly oversubscribed. We encourage you to continue with the Eligibility Wizard to determine other financing opportunities your business may be eligible for. \
+        </blockquote>"
     }
   },
 

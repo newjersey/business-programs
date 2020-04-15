@@ -11,6 +11,7 @@ var program_descriptions = {
     learn_more: "https://faq.business.nj.gov/en/articles/3835237",
     es: {
       alt_name: "Programa de Subsidios para Asistencia de Emergencia",
+      disclaimer: "El Emergency Assistant Grant (Programa de Subsidios para Asistencia de Emergencia) ahora está cerrada",
       description: "Un subsidio para gastos operativos de empresas u organizaciones sin fines de lucro \
         con sede en NJ que cuenten con 1 a 10 empleados de tiempo completo en las \
         siguientes industrias: minorista, alojamiento, servicio de alimentos, artes, \
@@ -32,6 +33,7 @@ var program_descriptions = {
     learn_more: "https://faq.business.nj.gov/en/articles/3835238",
     es: {
       alt_name: "Programa de Préstamos para Asistencia de Emergencia",
+      disclaimer: "El Assistance Loan Program (Programa de Préstamos para Asistencia de Emergencia) está excesivamente suscrito y no se revisarán las nuevas solicitudes",
       description: "Un préstamo sin costo/de bajo costo por hasta 10 años para empresas \
         con sede en NJ que tengan ingresos inferiores a $5 millones.",
       uses: "Apoya la continuidad del negocio con el fin de ayudar a estabilizar las \

@@ -5,10 +5,6 @@ var requirements = {
     required_yes: ["in_usa", "since_february", "disclaimer", "illegal_business_eidl", "illegal_business_SBA"],
     required_no: []
   },
-  eidl_advance: { // SBA EIDL advance
-    required_yes: ["in_usa", "since_february", "disclaimer", "illegal_business_SBA", "illegal_business_eidl"],
-    required_no: []
-  },
   ppp: { // Paycheck Protection Program
     required_yes: ["in_usa", "for_workers", "current_economy", "disclaimer", "since_february", "fewer_than_500"],
     required_no: [],

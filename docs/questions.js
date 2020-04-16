@@ -59,7 +59,8 @@ var form_questions = {
       benefits and programs. \
     </p> \
     <blockquote> \
-      At this time, the Small Business Emergency Assistance Grant application is closed and the Small Business Emergency Assistance Loan Program is significantly oversubscribed. We encourage you to continue with the Eligibility Wizard to determine other financing opportunities your business may be eligible for. \
+      At this time, the Small Business Emergency Assistance Grant and the Small Business Emergency Assistance Loan Program applications \
+      have closed. We encourage you to continue with the Eligibility Wizard to determine other financing opportunities your business may be eligible for. \
     </blockquote> ",
     hard_pass: false, // if saying no to agreement
     yes_text: "Agree",
@@ -88,9 +89,9 @@ var form_questions = {
           usted envíe la solicitud a esa agencia para el respectivo programa. \
         </p> \
         <blockquote> \
-          En este momento, la solicitud de Emergency Assistance Grant (Programa de Subsidios para Asistencia de Emergencia) está cerrada y \
-          el Emergency Assistance Loan Program (Programa de Préstamos para Asistencia de Emergencia) está \
-          significativamente suscrito en exceso. Le sugerimos a que continúe con El Asistente de Elegibilidad para determinar otras oportunidades de financiamiento para las que su empresa puede ser elegible. \
+          En este momento, las solicitudes de Emergency Assistance Grant (Programa de Subsidios para Asistencia de Emergencia) y \
+          el Emergency Assistance Loan Program (Programa de Préstamos para Asistencia de Emergencia) están cerradas.  \
+          Le sugerimos a que continúe con El Asistente de Elegibilidad para determinar otras oportunidades de financiamiento para las que su empresa puede ser elegible. \
         </blockquote>"
     }
   },

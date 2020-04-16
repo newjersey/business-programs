@@ -24,7 +24,7 @@ var program_descriptions = {
   },
 
   eawcl: {
-    disclaimer: "The Small Business Assistance Loan Program is significantly oversubscribed and new applications will not be reviewed.",
+    disclaimer: "The Small Business Assistance Loan Program application window has closed.",
     description: "A no/low-cost loan for up to 10 years for NJ-based businesses with under $5M in revenue.",
     uses: "Supports business continuity to help stabilize operations and reduce furloughs or layoffs \
       for companies that can demonstrate they have been adversely impacted by the Covid-19 emergency.",
@@ -33,7 +33,7 @@ var program_descriptions = {
     learn_more: "https://faq.business.nj.gov/en/articles/3835238",
     es: {
       alt_name: "Programa de Préstamos para Asistencia de Emergencia",
-      disclaimer: "El Assistance Loan Program (Programa de Préstamos para Asistencia de Emergencia) está excesivamente suscrito y no se revisarán las nuevas solicitudes",
+      disclaimer: "En este momento, las solicitudes de el Assistance Loan Program (Programa de Préstamos para Asistencia de Emergencia) están cerrada",
       description: "Un préstamo sin costo/de bajo costo por hasta 10 años para empresas \
         con sede en NJ que tengan ingresos inferiores a $5 millones.",
       uses: "Apoya la continuidad del negocio con el fin de ayudar a estabilizar las \

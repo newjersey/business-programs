@@ -124,3 +124,23 @@ footer a {
   -moz-box-shadow: 3px 3px 5px 6px #ccc; /* Firefox 3.5 - 3.6 */
   box-shadow: 3px 3px 5px 6px #ccc; /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
 }
+
+/* PPP table */
+
+.ppp-table ul {
+  padding-left: 1rem;
+}
+
+.ppp-table td,
+.ppp-table th {
+  min-width: 12rem;
+}
+
+.ppp-table-name {
+  width: 25%;
+}
+
+.ppp-table-who {
+  width: 35%;
+}
+

@@ -2,6 +2,7 @@
   "name": "small-business-programs",
   "version": "0.1.0",
   "private": true,
+  "homepage": "/questions",
   "dependencies": {
     "@hapi/joi": "^17.1.1",
     "aws-amplify": "^3.0.7",

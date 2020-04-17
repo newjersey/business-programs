@@ -13,7 +13,7 @@ import TextArea from '../components/form-components/TextArea'
 
 export function initializeForm(): Form {
   const rawForm = form
-  
+
   // Validate the schema against our Joi schema
   // which makes it easier to identify issues in the form
   // than standard TS type validation (which just prints the error
@@ -41,7 +41,12 @@ export const getCopy = (id: string) => {
 
 export function translate(copy: Copy, language: string): string {
   let text = copy[language]
-  
+
+  // TODO: handle untranslated strings more gracefully?
+  if (text === undefined) {
+    text = copy["en"]
+  }
+
   // Apply templating variables by looking for `{{VARIABLE_NAME}}` fields:
   text = text.replace(/\{\{([A-Z_]+)\}\}/g, (m, key) => {
     // `key` is the regex-captured value inside the curly braces:

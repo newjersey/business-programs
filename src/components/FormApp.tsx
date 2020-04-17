@@ -22,12 +22,12 @@ const FormApp: React.FC<{}> = () => {
   const { pages, seal } = form;
 
   const pageTitles = [
-    translate(getCopy("introduction"), language),
-    ...pages.map((page) => translate(page.title, language)),
+    ...pages.map((page) => {
+      return translate(page.title, language)
+    }),
     translate(getCopy("submit"), language),
   ];
   const pageComponents = [
-    <Introduction />,
     ...pages.map((page) => <Form page={page} />),
     <Review />,
   ];
@@ -49,9 +49,6 @@ const FormApp: React.FC<{}> = () => {
 
   return (
     <Box align="center" pad="medium" direction="column">
-      <Card margin={{ bottom: "small" }} pad="small" background="white">
-        {translate(getCopy("demo-warning"), language)}
-      </Card>
       <Box width="100%" height="100%" justify="center" direction="row">
         <Card
           width="50%"
@@ -77,17 +74,12 @@ const FormApp: React.FC<{}> = () => {
               <Button
                 color="black !important"
                 onClick={onClickNext}
-                label={
-                  currentIndex === 0
-                    ? translate(getCopy("get-started"), language)
-                    : translate(getCopy("next"), language)
-                }
+                label={translate(getCopy("next"), language)}
               />
             )}
           </Box>
         </Card>
         <Sidebar
-          seal={seal}
           pages={pageTitles}
           currentIndex={currentIndex}
           setCurrentIndex={setNextPage}

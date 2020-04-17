@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react'
 import { Question as QuestionInterface } from '../forms/types'
 import { getComponent } from '../forms'
-import { Box, Heading, Text } from 'grommet'
+import { Box, Heading, Text, Markdown } from 'grommet'
 import { LanguageContext } from '../contexts/language';
 import { translate } from '../forms/index';
 import { FormContext } from '../contexts/form';
@@ -26,7 +26,7 @@ const Question: React.FC<Props> = (props) => {
         <Heading style={{
           maxWidth: 'none'
         }} color="black" level={4} margin="none">{translate(question.name, language)}</Heading>
-        {question.instructions && <Text size="small" color="black" margin={{ top: 'xsmall' }} >{translate(question.instructions, language)}</Text>}
+        {question.instructions && <Markdown color="black">{translate(question.instructions, language)}</Markdown>}
       </Box>
       <Component width="100%" question={question} />
       <Box margin={{ top: 'xsmall' }}>

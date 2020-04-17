@@ -20,8 +20,7 @@ h2 {
 }
 
 /* page styles */
-main .container,
-footer .container {
+main .container {
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -32,30 +31,6 @@ a[type="button"] {
   margin-right: auto;
   font-size: 1.2rem;
   line-height: 1.8;
-}
-
-footer {
-  background-color: black;
-  color: white;
-}
-
-/* Nav */
-nav.navbar {
-  background-color: #002e6d;
-  padding-top: 20px;
-}
-
-.navbar-brand {
-  text-transform: uppercase;
-  font-size: 1.1rem;
-}
-
-li.nav-item {
-  margin: 0 10px;
-}
-
-.navbar-dark .navbar-nav a.nav-link {
-  color: white;
 }
 
 /* Hero styles */
@@ -106,10 +81,6 @@ aside {
   color: white;
 }
 
-footer a {
-  color: white;
-}
-
 .blue-background a:not([type="button"]) {
   color: white;
   text-decoration: underline;
@@ -143,4 +114,3 @@ footer a {
 .ppp-table-who {
   width: 35%;
 }
-

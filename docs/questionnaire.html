@@ -63,6 +63,7 @@
     <link rel="stylesheet" href="bootstrap.min.css" />
     <link rel="stylesheet" href="form-style.css" />
     <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="footer.css" />
     <!--
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
@@ -71,53 +72,29 @@
   </head>
 
   <body>
-    <div class="wizard-header">
-      <div class="Header" data-ya-scope="header">
-        <div class="Header-wrapper">
-          <div class="Header-topRowWrapper no-print">
-            <div class="Header-topRow l-container">
-              <div class="Header-official">
-                <img class="Header-stateSeal" src="" alt="" />
-                <span class="Header-stateSealPhrase"></span>
-              </div>
-              <div class="Header-linkSide Text--small">
-                Return to
-                <a
-                  class="Link--secondary Header-link"
-                  href="#"
-                  data-ya-track="slashhelp#"
-                >
-                  main page
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="Header-bottomRow l-container">
-            <a
-              class="Header-logo"
-              href="https://covid19.nj.gov/"
-              data-ya-track="covidhub"
-            >
-              <!-- <img class="Header-stateLogo" src="images/nj_media_image.35a37698.svg" alt=""> -->
-              <div class="Header-stateLogoPhrase">
-                <div class="Header-stateLogoPhrase--name">State</div>
-                <div class="Header-stateLogoPhrase--info Text--large">
-                  COVID-19 Information Hub
-                </div>
-              </div>
-            </a>
-            <div class="Header-right Text--small">
-              <!-- <p><strong class="Text--bold">Call (General COVID-19 Questions)</strong>: <a href="tel://+211"
-                data-ya-track="covidquestions" class="Link--secondary">2-1-1</a> (7a-11p)</p>
-            <p><strong class="Text--bold">Call (Clinical Questions)</strong>: <a href="tel://+18009621253"
-                data-ya-track="clinicalquestions" class="Link--secondary">1-800-962-1253</a> (24/7)</p>
-            <p><strong class="Text--bold">Text NJCOVID to <a href="sms:+898211?&amp;body=NJCOVID" data-ya-track="alerts"
-                  class="Link--secondary">898-211</a></strong> to receive alerts</p> -->
-            </div>
-          </div>
+    <nav class="navbar navbar-dark navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="#">Covid loan tool</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href=".">Back to info page</a>
+            </li>
+          </ul>
         </div>
       </div>
-    </div>
+    </nav>
 
     <main>
       <div class="container-fluid">
@@ -133,6 +110,42 @@
                 support programs are available to you to help stabilize your
                 operations and get back on a pathway to growth.
               </p>
+            </div>
+            <span class="fixed_marker"></span>
+            <br />
+            <div class="my_options">
+              <h5>Included programs</h5>
+              <ul>
+                <li>
+                  Federal Programs
+                  <ul>
+                    <li
+                      class="eidl"
+                      data-program-name="Federal SBA Emergency Injury Disaster Loans"
+                    >
+                      Federal SBA Emergency Injury Disaster Loans
+                    </li>
+                    <li
+                      class="ppp"
+                      data-program-name="Paycheck Protection Program (PPP) Loans"
+                    >
+                      Paycheck Protection Program (PPP) Loans
+                    </li>
+                    <li
+                      class="sba_debt"
+                      data-program-name="Federal SBA Debt Relief Program"
+                    >
+                      Federal SBA Debt Relief Program
+                    </li>
+                    <li
+                      class="sba_7a"
+                      data-program-name="SBA 7(a) Loan Program"
+                    >
+                      SBA 7(a) Loan Program
+                    </li>
+                  </ul>
+                </li>
+              </ul>
               <p>
                 This is a beta version of the Eligibility Wizard that focuses on
                 the Federal PPP and SBA disaster loan programs. We will be
@@ -537,28 +550,46 @@
                 >
                   Start over
                 </button>
+                
               </div>
             </div>
           </div>
         </div>
       </div>
     </main>
-
     <footer class="no-print">
-      <p>
-        Made with ❤️ by the
-        <a href="https://innovation.nj.gov/">New Jersey Office of Innovation</a>
-        &amp;
-        <a href="https://www.usdigitalresponse.org/" target="_blank"
-          >US Digital Response</a
-        >
-        volunteers.
-      </p>
-      <p>
-        <a href="https://github.com/newjersey/business-programs"
-          >Powered by Open Source</a
-        >
-      </p>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8">
+            <p>
+              <b
+                >COVID-19 Loan Eligibility Wizard for U.S. Small Business
+                Owners</b
+              >
+            </p>
+            <p>
+              The purpose of this website is to provide small business owners
+              free resources that they can use to acquire emergency financing.
+            </p>
+            <p>
+              Brought to you by U.S. Digital Response, a volunter-run,
+              non-partisan effort to help federal, state, and local government
+              with technology, data, design, operations, communications, project
+              management, and more during the COVID-19 crisis. We provide free
+              assistance to all government entities across the country.
+            </p>
+          </div>
+          <div class="col-sm-3 offset-sm-1">
+            <p><b>Contact us</b></p>
+            <p><a href="mailto:info@usdigitalresponse.org">Email</a></p>
+            <p>
+              <a target="_blank" href="https://twitter.com/USDResponse"
+                >Twitter</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <div class="modal" tabindex="-1" role="dialog">

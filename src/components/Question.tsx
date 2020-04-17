@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react'
 import { Question as QuestionInterface } from '../forms/types'
 import { getComponent } from '../forms'
-import { Box, Heading, Text } from 'grommet'
+import { Box, Heading, Text, Markdown } from 'grommet'
 import { LanguageContext } from '../contexts/language';
 import { translate } from '../forms/index';
 import { FormContext } from '../contexts/form';
@@ -20,13 +20,15 @@ const Question: React.FC<Props> = (props) => {
   const value = values[question.id]
   const hasSwitch = question.switch && value && typeof value === 'string'
 
+  // simple formatting for the question text
+  const text = translate(question.name, language).replace(/\n/g, "\n<br/>")
+
   return (
     <Box direction="column" margin={{ bottom: 'small' }}>
       <Box fill={true} margin={{ bottom: 'small' }}>
-        <Heading style={{
-          maxWidth: 'none'
-        }} color="black" level={4} margin="none">{translate(question.name, language)}</Heading>
-        {question.instructions && <Text size="small" color="black" margin={{ top: 'xsmall' }} >{translate(question.instructions, language)}</Text>}
+        <Text size="medium" color="black" margin={{ top: 'large' }}>
+          {<span className="foo" dangerouslySetInnerHTML={{__html: text}} />}
+        </Text>
       </Box>
       <Component width="100%" question={question} />
       <Box margin={{ top: 'xsmall' }}>

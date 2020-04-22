@@ -1,0 +1,220 @@
+{
+  "seal": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Seal_of_California.svg",
+  "variables": {},
+  "instructions": {
+    "get-started": {
+      "en": "Get Started"
+    },
+    "next": {
+      "en": "Next"
+    },
+    "yes": {
+      "en": "Yes"
+    },
+    "no": {
+      "en": "No"
+    },
+    "introduction": {
+      "en": "Introduction"
+    },
+    "submit": {
+      "en": "Review & Submit"
+    },
+    "back": {
+      "en": "Go Back"
+    },
+    "language": {
+      "en": "Language"
+    },
+    "progress": {
+      "en": "Progress"
+    },
+    "complete": {
+      "en": "Complete"
+    },
+    "results": {
+      "en": "Results"
+    }
+  },
+  "pages": [
+    {
+      "title": {
+        "en": "Basic Info"
+      },
+      "heading": {
+        "en": "Basic Info"
+      },
+      "questions": [
+        {
+          "id": "business_type",
+          "name": {
+            "en": "Business Type"
+          },
+          "type": "dropdown",
+          "required": true,
+          "options": [
+            {
+              "id": "non_profit",
+              "name": {
+                "en": "Non-Profit - 501(c)(3)"
+              }
+            },
+            {
+              "id": "veterans",
+              "name": {
+                "en": "Veterans Organization - 501(c)(19)"
+              }
+            },
+            {
+              "id": "tribal",
+              "name": {
+                "en": "Tribal"
+              }
+            },
+            {
+              "id": "independent_contractor",
+              "name": {
+                "en": "Independent Contractor"
+              }
+            },
+            {
+              "id": "self_employed",
+              "name": {
+                "en": "Self Employed"
+              }
+            },
+            {
+              "id": "none_of_the_above",
+              "name": {
+                "en": "None of the Above"
+              }
+            }
+          ]
+        },
+        {
+          "id": "located_in_us",
+          "name": {
+            "en": "Is your business/non-profit registered to do business in the United States or its territories?"
+          },
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "id": "business_age",
+          "name": {
+            "en": "When did your business begin operation?"
+          },
+          "type": "datepicker"
+        },
+        {
+          "id": "employee_count",
+          "name": {
+            "en": "Do you have:\n- 500 or less employees\n- meet the SBA industry size standard for small business (www.sba.gov/size-standards)"
+          },
+          "type": "boolean",
+          "required": true
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "Eligability"
+      },
+      "heading": {
+        "en": "Eligability"
+      },
+      "questions": [
+        {
+          "id": "is_illegal",
+          "name": {
+            "en": "Are you, your chief executive officer or the equivalent able to certify that (This question is to determine eligibility for Federal Small Business Administration EIDL) \n- The organization is not engaged in any illegal activity (as defined by Federal guidelines). \n- No principal of the organization with a 50 percent or greater ownership interest is more than sixty (60) days delinquent on child support obligations.\n- Applicant is not an agricultural enterprise (e.g., farm), other than an aquaculture enterprise, agricultural cooperative, or nursery. \n- The organization does not present live performances of a prurient sexual nature or derive directly or indirectly more than de minimis gross revenue through the sale of products or services, or the presentation of any depictions or displays, of a prurient sexual nature. \n- The organization is not in the business of lobbying \n- The organization cannot be a state, local, or municipal government entity and cannot be a member of Congress."
+          },
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "id": "is_necessary_bc_of_economic_trouble",
+          "name": {
+            "en": "Does current economic uncertainty make the loan necessary to support your ongoing operations?"
+          },
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "id": "will_be_used_for_employment",
+          "name": {
+            "en": "The funds will be used to retain workers and maintain payroll or to make mortgage, lease, and utility payments"
+          },
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "id": "can_verify_numbers",
+          "name": {
+            "en": "You are able to provide documentation that verifies the number of full-time equivalent employees on payroll and the dollar amounts of payroll costs, covered mortgage interest payments, covered rent payments, and covered utilities."
+          },
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "id": "is_barred",
+          "name": {
+            "en": "Are you presently suspended, debarred, proposed for debarment, declared ineligible, voluntarily excluded from participation in this transaction by any Federal department or agency, or presently involved in any\nbankruptcy?"
+          },
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "id": "is_delinquent",
+          "name": {
+            "en": "Has the Applicant, any owner of the Applicant, or any business owned or controlled by any of them, ever obtained a direct or\nguaranteed loan from SBA or any other Federal agency that is currently delinquent or has defaulted in the last 7 years and\ncaused a loss to the government?"
+          },
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "id": "is_criminal",
+          "name": {
+            "en": "Is the Applicant (if an individual) or any individual owning 20% or more of the equity of the Applicant subject\nto an indictment, criminal information, arraignment, or other means by which formal criminal charges are\nbrought in any jurisdiction, or presently incarcerated, or on probation or parole?"
+          },
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "id": "is_felony",
+          "name": {
+            "en": "Within the last 5 years, for any felony, has the Applicant (if an individual) or any owner of the Applicant 1)\nbeen convicted; 2) pleaded guilty; 3) pleaded nolo contendere; 4) been placed on pretrial diversion; or 5) been\nplaced on any form of parole or probation (including probation before judgment)?"
+          },
+          "type": "boolean",
+          "required": true
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "Other Loans"
+      },
+      "heading": {
+        "en": "Other Loans"
+      },
+      "questions": [
+        {
+          "id": "has_other_sba_loans",
+          "name": {
+            "en": "Does your organization have any non-disaster SBA loans, in particular 7(a), 504, and/or microloans?"
+          },
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "id": "has_other_sba_disaster_loans",
+          "name": {
+            "en": "Do you have any existing SBA Disaster (Home or Business) Loans?"
+          },
+          "type": "boolean",
+          "required": true
+        }
+      ]
+    }
+  ]
+}

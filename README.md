@@ -2,6 +2,32 @@
 
 Survey to recommend programs for small businesses
 
+# Docs v2
+
+This describes the new React-based form interface.
+
+## Build
+
+To test a "production" build:
+
+ $ yarn build
+ $ cp -r build docs/questions
+ $ cd docs && python -m SimpleHTTPServer
+
+## Development
+
+On the first run:
+
+  $ yarn install
+
+And then to test the form interface:
+
+  $ yarn start
+
+This will open a browser window with just the form.
+
+The contents of the form itself are defined in src/form.json
+
 # Documentation
 
 ## Questions

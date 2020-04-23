@@ -1,0 +1,13 @@
+footer .container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+footer {
+  background-color: black;
+  color: white;
+}
+
+footer a {
+  color: white;
+}

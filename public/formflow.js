@@ -42,8 +42,7 @@ var programs = Object.keys(requirements);
 
 var answers = {};
 
-function moveToReport(e) {
-  e.preventDefault();
+function moveToReport() {
   $("form, .hidden_options, .preamble").hide();
   $(".report").show();
   $(window).scrollTop(0);
@@ -154,7 +153,7 @@ function hardPass() {
   return false;
 }
 
-$(document).ready(function () {
+function formSetup() {
   $(".report").hide();
 
   var outer_shell = $("#form-qs"),
@@ -419,4 +418,4 @@ $(document).ready(function () {
         return false;
       });
   });
-});
+}

@@ -8,12 +8,12 @@ import Review from "./Review";
 import Form from "./Form";
 import { LanguageContext } from "../contexts/language";
 import { translate, getCopy } from "../forms/index";
-import ResultsButton from "./ResultsButton"
+import ResultsButton from "./ResultsButton";
 
-import { FormContext, Values, Errors, Value } from '../contexts/form'
+import { FormContext, Values, Errors, Value } from "../contexts/form";
 
 interface FormValues {
-  [questionId: string]: string
+  [questionId: string]: string;
 }
 
 const FormApp: React.FC<{}> = () => {
@@ -23,19 +23,19 @@ const FormApp: React.FC<{}> = () => {
   const { pages, seal } = form;
 
   const pageTitles = pages.map((page) => {
-      return translate(page.title, language)
-  })
+    return translate(page.title, language);
+  });
 
-  const pageComponents = [
-    ...pages.map((page) => <Form page={page} />),
-  ];
+  const pageComponents = [...pages.map((page) => <Form page={page} />)];
 
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [formValues, setFormValues] = useState<Values>({});
-  const [formErrors, setFormErrors] = useState<Errors>({})
+  const [formErrors, setFormErrors] = useState<Errors>({});
 
-  const setFormValue = (key: string, value: Value) => setFormValues({ ...formValues, [key]: value })
-  const setFormError = (key: string, value: string) => setFormErrors({ ...formErrors, [key]: value })
+  const setFormValue = (key: string, value: Value) =>
+    setFormValues({ ...formValues, [key]: value });
+  const setFormError = (key: string, value: string) =>
+    setFormErrors({ ...formErrors, [key]: value });
 
   const setNextPage = (index: number) => {
     setCurrentIndex(index);
@@ -56,7 +56,14 @@ const FormApp: React.FC<{}> = () => {
           flexDirection="column"
           textAlign="left"
         >
-          <FormContext.Provider value={{ setError: setFormError, setValue: setFormValue, values: formValues, errors: formErrors }}>
+          <FormContext.Provider
+            value={{
+              setError: setFormError,
+              setValue: setFormValue,
+              values: formValues,
+              errors: formErrors,
+            }}
+          >
             {pageComponents[currentIndex]}
             <Box justify="between" pad="medium" direction="row">
               {currentIndex > 0 && (
@@ -78,7 +85,6 @@ const FormApp: React.FC<{}> = () => {
               )}
             </Box>
           </FormContext.Provider>
-
         </Card>
         <Sidebar
           pages={pageTitles}

@@ -1,0 +1,22 @@
+footer {
+  color: white;
+  .container {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    p {
+      padding-right: 3rem;
+    }
+  }
+
+  a,
+  a:hover {
+    color: white;
+    text-decoration: underline;
+  }
+
+  img {
+    width: 24px;
+    margin-right: 0.5rem;
+  }
+}

@@ -1,8 +1,8 @@
+@import "~uswds/dist/css/uswds.css";
+body {
+  font-family: Public Sans, Helvetica, sans-serif;
+}
 .content-page {
-  body {
-    font-family: "public sans", Helvetica, sans-serif;
-  }
-
   /* resets */
   h1,
   h2,
@@ -12,8 +12,22 @@
     margin-top: 0px;
   }
 
+  p,
+  li {
+    font-size: 1rem;
+  }
+
+  section {
+    margin-top: 3rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+
   h2 {
-    margin-bottom: 30px;
+    margin-bottom: 1.5rem;
   }
 
   .btn-danger {

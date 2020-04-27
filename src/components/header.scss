@@ -1,0 +1,25 @@
+nav {
+  .navbar-brand {
+    text-transform: uppercase;
+    font-size: 1.1rem;
+
+    img {
+      width: 21px;
+      height: 21px;
+    }
+  }
+
+  li.nav-item {
+    margin: 0 10px;
+  }
+
+  &.navbar-dark,
+  &.navbar-dark a,
+  &.navbar-dark .navbar-nav .nav-link {
+    color: white;
+  }
+  &.navbar-dark a,
+  &.navbar-dark .navbar-nav .nav-link {
+    text-decoration: underline;
+  }
+}

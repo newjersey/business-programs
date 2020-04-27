@@ -47,13 +47,13 @@ function moveToReport() {
   $(".report").show();
   $(window).scrollTop(0);
 
-  $("li li", ".my_options").each(function (i, el) {
-    var $program = $(el);
-    var programName = $program.data("program-name");
-    var isEligible = !$program.hasClass("no-print");
+  // $("li li", ".my_options").each(function (i, el) {
+  //   var $program = $(el);
+  //   var programName = $program.data("program-name");
+  //   var isEligible = !$program.hasClass("no-print");
 
-    window.sendResultToGA(programName, isEligible);
-  });
+  //   window.sendResultToGA(programName, isEligible);
+  // });
 
   return false;
 }
@@ -236,7 +236,7 @@ function formSetup() {
       );
       formplace.append(
         $("<button>")
-          .attr("class", "btn btn-primary")
+          .attr("class", "usa-button primary-button")
           .attr("data-label", language_defaults[select_lang].enter)
           .text(language_defaults[select_lang].enter)
       );
@@ -248,7 +248,7 @@ function formSetup() {
             : language_defaults[select_lang].skip;
         formplace.append(
           $("<button>")
-            .attr("class", "btn btn-info not-sure")
+            .attr("class", "usa-button usa-button--outline")
             .attr("data-label", skip_label)
             .text(skip_label)
         );
@@ -277,21 +277,21 @@ function formSetup() {
 
       qdiv.append(
         $("<button>")
-          .attr("class", "btn btn-primary")
+          .attr("class", "usa-button primary-button")
           .attr("data-label", yes_label)
           .text(yes_label)
       );
       if (lang_src.skippable || q.skippable) {
         qdiv.append(
           $("<button>")
-            .attr("class", "btn btn-info not-sure")
+            .attr("class", "usa-button usa-button--outline")
             .attr("data-label", not_sure_label)
             .text(not_sure_label)
         );
       }
       qdiv.append(
         $("<button>")
-          .attr("class", "btn btn-dark")
+          .attr("class", "usa-button usa-button--base")
           .attr("data-label", no_label)
           .text(no_label)
       );
@@ -327,7 +327,7 @@ function formSetup() {
 
     // YES / ENTER button
     $(q)
-      .find(".btn-primary")
+      .find(".primary-button")
       .click(function (e) {
         e.preventDefault();
         answers[q.id] = questions[q.id].input
@@ -365,7 +365,7 @@ function formSetup() {
 
     // NOT SURE / SKIP button (pre-emptive YES)
     $(q)
-      .find(".btn.not-sure")
+      .find(".usa-button--outline")
       .click(function (e) {
         e.preventDefault();
         answers[q.id] = questions[q.id].input ? undefined : -1;
@@ -391,7 +391,7 @@ function formSetup() {
 
     // NO button
     $(q)
-      .find(".btn-dark")
+      .find(".usa-button--base")
       .click(function (e) {
         e.preventDefault();
         answers[q.id] = false;

@@ -2,6 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
+import Header from "./Header";
+import Footer from "./Footer";
+
 function PPPLoanInfo() {
   return (
     <div className="content-page">
@@ -17,48 +20,20 @@ function PPPLoanInfo() {
           content="Learn about PPP programs available to help stabilize your business."
         />
       </Helmet>
-      <nav className="navbar navbar-dark navbar-expand-lg">
-        <div className="container">
-          <a className="navbar-brand" href="#">
-            Covid loan tool
-          </a>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav ml-auto">
-              <li className="nav-item">
-                <a className="nav-link" href="#where-to-apply">
-                  Where to apply
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#national-lenders">
-                  National lenders
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#regional-lenders">
-                  Regional Lenders
-                </a>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/">
-                  Back to info page
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+      <Header
+        links={[
+          <a className="nav-link" href="#where-to-apply">
+            Where to apply
+          </a>,
+          <a className="nav-link" href="#national-lenders">
+            National lenders
+          </a>,
+          <a className="nav-link" href="#regional-lenders">
+            Regional Lenders
+          </a>,
+        ]}
+      />
+
       <main>
         <section>
           <div className="container">
@@ -458,45 +433,7 @@ function PPPLoanInfo() {
         </section>
       </main>
 
-      <footer className="no-print">
-        <div className="container">
-          <div className="row">
-            <div className="col-sm-8">
-              <p>
-                <b>
-                  COVID-19 Loan Eligibility Wizard for U.S. Small Business
-                  Owners
-                </b>
-              </p>
-              <p>
-                The purpose of this website is to provide small business owners
-                free resources that they can use to acquire emergency financing.
-              </p>
-              <p>
-                Brought to you by U.S. Digital Response, a volunteer-run,
-                non-partisan effort to help federal, state, and local government
-                with technology, data, design, operations, communications,
-                project management, and more during the COVID-19 crisis. We
-                provide free assistance to all government entities across the
-                country.
-              </p>
-            </div>
-            <div className="col-sm-3 offset-sm-1">
-              <p>
-                <b>Contact us</b>
-              </p>
-              <p>
-                <a href="mailto:info@usdigitalresponse.org">Email</a>
-              </p>
-              <p>
-                <a target="_blank" href="https://twitter.com/USDResponse">
-                  Twitter
-                </a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

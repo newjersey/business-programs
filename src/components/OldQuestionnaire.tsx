@@ -2,8 +2,9 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
-import "./header.css";
-import "./footer.css";
+import Header from "./Header";
+import Footer from "./Footer";
+
 import "./form-style.scss";
 
 declare function moveToReport(): any;
@@ -31,33 +32,13 @@ function OldQuestionnaire() {
           content="Learn about support programs available to help stabilize your business."
         />
       </Helmet>
-      <nav className="navbar navbar-dark navbar-expand-lg">
-        <div className="container">
-          <a className="navbar-brand" href="#">
-            Covid loan tool
-          </a>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav ml-auto">
-              <li className="nav-item">
-                <Link className="nav-link" to="/">
-                  Back to info page
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+      <Header
+        links={[
+          <Link className="nav-link" to="/">
+            Back to info page
+          </Link>,
+        ]}
+      />
       <main className="questionnaire">
         <div className="container-fluid">
           <div className="row">
@@ -247,7 +228,7 @@ function OldQuestionnaire() {
                   <div className="card-footer">
                     <a
                       href="https://covid19relief.sba.gov/"
-                      className="no-print btn btn-primary"
+                      className="no-print usa-button"
                       target="_blank"
                     >
                       Apply for an EIDL
@@ -300,7 +281,7 @@ function OldQuestionnaire() {
                   <div className="card-footer">
                     <a
                       href="https://www.sba.gov/paycheckprotection/find"
-                      className="no-print btn btn-primary"
+                      className="no-print usa-button"
                       target="_blank"
                     >
                       Find a PPP lender near you
@@ -339,7 +320,7 @@ function OldQuestionnaire() {
                   <div className="card-footer">
                     <a
                       href="https://www.sba.gov/paycheckprotection/find"
-                      className="no-print btn btn-primary"
+                      className="no-print usa-button"
                       target="_blank"
                     >
                       Find a lender near you
@@ -378,7 +359,7 @@ function OldQuestionnaire() {
                   <div className="card-footer">
                     <a
                       href="https://www.sba.gov/funding-programs/loans/coronavirus-relief-options/sba-debt-relief"
-                      className="no-print btn btn-primary"
+                      className="no-print usa-button"
                       target="_blank"
                     >
                       Learn more about debt relief programs
@@ -414,8 +395,9 @@ function OldQuestionnaire() {
                       </div>
                       <div className="card-footer">
                         <a
+                          target="_blank"
                           href="https://americassbdc.org/about-us/"
-                          className="btn btn-primary no-print"
+                          className="no-print usa-button"
                         >
                           Learn about SBDCs
                         </a>
@@ -440,8 +422,9 @@ function OldQuestionnaire() {
                       </div>
                       <div className="card-footer">
                         <a
+                          target="_blank"
                           href="https://www.awbc.org/"
-                          className="btn btn-primary no-print"
+                          className="no-print usa-button"
                         >
                           Learn about WBCs
                         </a>
@@ -464,7 +447,8 @@ function OldQuestionnaire() {
                       <div className="card-footer">
                         <a
                           href="https://www.score.org/"
-                          className="btn btn-primary no-print"
+                          target="_blank"
+                          className="no-print usa-button"
                         >
                           Learn about SCORE
                         </a>
@@ -488,8 +472,9 @@ function OldQuestionnaire() {
                       </div>
                       <div className="card-footer">
                         <a
+                          target="_blank"
                           href="https://www.mbda.gov/businesscenters#4/"
-                          className="btn btn-primary no-print"
+                          className="no-print usa-button"
                         >
                           Find a business center
                         </a>
@@ -503,21 +488,21 @@ function OldQuestionnaire() {
 
                 <div className="actions">
                   <button
-                    className="btn btn-primary no-print"
+                    className="no-print usa-button"
                     onClick={() => window.print()}
                     data-ga-label="Print this report"
                   >
                     Print this report
                   </button>
                   <button
-                    className="btn btn-info no-print"
+                    className="no-print usa-button usa-button--outline"
                     onClick={(event) => viewQs(event.nativeEvent)}
                     data-ga-label="Change Answers"
                   >
                     Change Answers
                   </button>
                   <button
-                    className="btn btn-warning no-print"
+                    className="no-print usa-button usa-button--secondary"
                     onClick={() => window.location.reload()}
                     data-ga-label="Start over"
                   >
@@ -529,45 +514,7 @@ function OldQuestionnaire() {
           </div>
         </div>
       </main>
-      <footer className="no-print">
-        <div className="container">
-          <div className="row">
-            <div className="col-sm-8">
-              <p>
-                <b>
-                  COVID-19 Loan Eligibility Wizard for U.S. Small Business
-                  Owners
-                </b>
-              </p>
-              <p>
-                The purpose of this website is to provide small business owners
-                free resources that they can use to acquire emergency financing.
-              </p>
-              <p>
-                Brought to you by U.S. Digital Response, a volunteer-run,
-                non-partisan effort to help federal, state, and local government
-                with technology, data, design, operations, communications,
-                project management, and more during the COVID-19 crisis. We
-                provide free assistance to all government entities across the
-                country.
-              </p>
-            </div>
-            <div className="col-sm-3 offset-sm-1">
-              <p>
-                <b>Contact us</b>
-              </p>
-              <p>
-                <a href="mailto:info@usdigitalresponse.org">Email</a>
-              </p>
-              <p>
-                <a target="_blank" href="https://twitter.com/USDResponse">
-                  Twitter
-                </a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
       <div className="modal" tabIndex={-1} role="dialog">
         <div className="modal-dialog" role="document">
           <div className="modal-content">

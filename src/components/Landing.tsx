@@ -47,7 +47,7 @@ function Landing() {
                 </p>
                 <p>Learn what you’ll need to prepare your loan applications.</p>
                 <Link to="/questionnaire">
-                  <button disabled className="usa-button usa-button--big">
+                  <button className="usa-button usa-button--big">
                     Get Started
                   </button>
                 </Link>

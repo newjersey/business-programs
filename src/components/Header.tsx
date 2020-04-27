@@ -12,11 +12,7 @@ const Header: React.FC<Props> = ({ links = [] }) => (
       <a className="navbar-brand" href="#">
         <img src="/usdr_logo_white.png" alt="USDR Logo" />
       </a>
-      Built by&nbsp;
-      <a href="https://www.usdigitalresponse.org/" target="_blank">
-        United States Digital Response
-      </a>
-      , a non-partisan effort to assist the U.S. government
+      COVID-19 Federal Loan Info
       {links.length && (
         <>
           <button

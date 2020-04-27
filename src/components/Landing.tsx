@@ -39,28 +39,19 @@ function Landing() {
           <div className="row">
             <div className="col-md-6">
               <section>
-                <h1>
-                  Find out which COVID-19 loans your business qualifies for.
-                </h1>
+                <h1>Check your eligibility for federal loans</h1>
 
+                <p>
+                  Answering a few questions using this free tool will help
+                  determine which financial relief programs you’re eligible for.
+                </p>
                 <Link to="/questionnaire">
                   <button className="usa-button usa-button--big">
                     Get Started
                   </button>
                 </Link>
               </section>
-              <section>
-                <aside>
-                  If you are a government office in need of assistance, please{" "}
-                  <a
-                    target="_blank"
-                    href="https://docs.google.com/forms/d/e/1FAIpQLSfdwDvDnFd2dOyuMKuhjn0uUy5uw4Vf5lnVZQDH0obslTCrOg/viewform"
-                  >
-                    contact us
-                  </a>
-                  .
-                </aside>
-              </section>
+
               <section>
                 <h2>What is it?</h2>
                 <p>
@@ -74,7 +65,7 @@ function Landing() {
               </section>
               <section>
                 <h2>Who is it for?</h2>
-                <p>All small business including</p>
+                <p>This free tool is for U.S.-based businesses including:</p>
                 <ul>
                   <li>Nonprofits</li>
                   <li>Veteran's organizations</li>
@@ -84,8 +75,15 @@ function Landing() {
                   <li>Independent contractors</li>
                 </ul>
                 <p>
-                  If your business has over 500 employees, you should{" "}
-                  <Link to="/questionnaire">check to see if you qualify</Link>.
+                  If you have more than 500 employees, your business may still
+                  qualify for certain loans. Visit the{" "}
+                  <a
+                    href="https://www.sba.gov/document/support--table-size-standards"
+                    target="_blank"
+                  >
+                    Small Business Administration size standards
+                  </a>{" "}
+                  to look up the guidelines for your industry.
                 </p>
                 <Link to="/questionnaire">
                   <button className="usa-button">
@@ -96,18 +94,17 @@ function Landing() {
               <section>
                 <h2>Government partners</h2>
                 <p>
-                  This questionnaire screens for federal loans, as well as state
-                  loans from New Jersey. We plan to add more states as soon as
-                  possible.
+                  This eligibility checker screens for federal loans and New
+                  Jersey state loans. We plan on adding other state programs.
                 </p>
                 <p>
-                  If you work for a government agency and want to include your
-                  loan programs in this questionnaire, please{" "}
+                  If you’re from a government agency and would like to include
+                  your state’s programs, please contact the{" "}
                   <a
                     target="_blank"
                     href="https://docs.google.com/forms/d/e/1FAIpQLSfdwDvDnFd2dOyuMKuhjn0uUy5uw4Vf5lnVZQDH0obslTCrOg/viewform"
                   >
-                    contact us
+                    US Digital Response
                   </a>
                   .
                 </p>

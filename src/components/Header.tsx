@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "./header.scss";
 
@@ -9,10 +10,10 @@ interface Props {
 const Header: React.FC<Props> = ({ links = [] }) => (
   <nav className="navbar navbar-dark navbar-expand-lg bg-primary-vivid">
     <div className="container">
-      <a className="navbar-brand" href="#">
+      <Link className="navbar-brand" to="/">
         <img src="/usdr_logo_white.png" alt="USDR Logo" />
-      </a>
-      COVID-19 Federal Loan Info
+      </Link>
+      Federal Loan Assistant
       {links.length && (
         <>
           <button

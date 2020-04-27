@@ -226,7 +226,7 @@ function OldQuestionnaire() {
                     </dl>
                   </div>
                   <div className="card-footer">
-                    <a
+                    {/* <a
                       href="https://covid19relief.sba.gov/"
                       className="no-print usa-button"
                       target="_blank"
@@ -235,7 +235,10 @@ function OldQuestionnaire() {
                     </a>
                     <p className="yes-print">
                       Apply for an EIDL: https://covid19relief.sba.gov/
-                    </p>
+                    </p> */}
+                    Update April 27, 2020: Applications paused At this time, the
+                    SBA is no longer accepting new applications for COVID-19
+                    related assistance.
                   </div>
                 </div>
 

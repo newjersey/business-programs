@@ -45,8 +45,9 @@ function Landing() {
                   Answering a few questions using this free tool will help
                   determine which financial relief programs you’re eligible for.
                 </p>
+                <p>Learn what you’ll need to prepare your loan applications.</p>
                 <Link to="/questionnaire">
-                  <button className="usa-button usa-button--big">
+                  <button disabled className="usa-button usa-button--big">
                     Get Started
                   </button>
                 </Link>

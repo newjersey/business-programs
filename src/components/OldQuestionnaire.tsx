@@ -56,46 +56,7 @@ function OldQuestionnaire() {
               </div>
               <span className="fixed_marker"></span>
               <br />
-              <div className="my_options">
-                <h5>Included programs</h5>
-                <ul>
-                  <li>
-                    Federal Programs
-                    <ul>
-                      <li
-                        className="eidl"
-                        data-program-name="Federal SBA Emergency Injury Disaster Loans"
-                      >
-                        Federal SBA Emergency Injury Disaster Loans
-                      </li>
-                      <li
-                        className="ppp"
-                        data-program-name="Paycheck Protection Program (PPP) Loans"
-                      >
-                        Paycheck Protection Program (PPP) Loans
-                      </li>
-                      <li
-                        className="sba_debt"
-                        data-program-name="Federal SBA Debt Relief Program"
-                      >
-                        Federal SBA Debt Relief Program
-                      </li>
-                      <li
-                        className="sba_7a"
-                        data-program-name="SBA 7(a) Loan Program"
-                      >
-                        SBA 7(a) Loan Program
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-                <p>
-                  This is a beta version of the Eligibility Wizard that focuses
-                  on the Federal PPP and SBA disaster loan programs. We will be
-                  updating it regularly as new federal, state, local, and
-                  philanthropic programs become available.
-                </p>
-              </div>
+
               <span className="fixed_marker"></span>
               <br />
               <div className="my_options">

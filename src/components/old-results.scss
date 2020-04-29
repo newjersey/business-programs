@@ -1,0 +1,17 @@
+.questionnaire {
+  ul.program_list li {
+    text-decoration: line-through;
+  }
+
+  ul.program_list li.is_eligible {
+    text-decoration: none;
+  }
+
+  .report .program {
+    display: none;
+  }
+
+  .report .program.is_eligible {
+    display: block;
+  }
+}

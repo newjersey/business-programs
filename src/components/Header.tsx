@@ -11,10 +11,10 @@ const Header: React.FC<Props> = ({ links = [] }) => (
   <nav className="navbar navbar-dark navbar-expand-lg bg-primary-vivid">
     <div className="container">
       <Link className="navbar-brand" to="/">
-        <img src="/usdr_logo_white.png" alt="USDR Logo" />
+        <img src="/usdr_logo_white.png" alt="USDR Logo" /> Federal Loan
+        Assistant
       </Link>
-      Federal Loan Assistant
-      {links.length && (
+      {links.length > 0 && (
         <>
           <button
             className="navbar-toggler"

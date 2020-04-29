@@ -46,7 +46,7 @@ function Landing() {
                   determine which financial relief programs you’re eligible for.
                 </p>
                 <p>Learn what you’ll need to prepare your loan applications.</p>
-                <Link to="/questionnaire">
+                <Link to="/questions">
                   <button className="usa-button usa-button--big">
                     Get Started
                   </button>
@@ -86,7 +86,7 @@ function Landing() {
                   </a>{" "}
                   to look up the guidelines for your industry.
                 </p>
-                <Link to="/questionnaire">
+                <Link to="/questions">
                   <button className="usa-button">
                     Take our 10-minute questionnaire
                   </button>

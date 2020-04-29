@@ -11,6 +11,8 @@ import { translate, getCopy } from "../forms/index";
 import ResultsButton from "./ResultsButton";
 
 import { FormContext, Values, Errors, Value } from "../contexts/form";
+import Header from "./Header";
+import Footer from "./Footer";
 
 interface FormValues {
   [questionId: string]: string;
@@ -46,53 +48,57 @@ const FormApp: React.FC<{}> = () => {
   const onClickBack = () => setNextPage(currentIndex - 1);
 
   return (
-    <Box align="center" pad="medium" direction="column">
-      <Box width="100%" height="100%" justify="center" direction="row">
-        <Card
-          width="50%"
-          background="white"
-          display="flex"
-          justify="between"
-          flexDirection="column"
-          textAlign="left"
-        >
-          <FormContext.Provider
-            value={{
-              setError: setFormError,
-              setValue: setFormValue,
-              values: formValues,
-              errors: formErrors,
-            }}
+    <>
+      <Header />
+      <Box align="center" pad="medium" direction="column">
+        <Box width="100%" height="100%" justify="center" direction="row">
+          <Card
+            width="50%"
+            background="white"
+            display="flex"
+            justify="between"
+            flexDirection="column"
+            textAlign="left"
           >
-            {pageComponents[currentIndex]}
-            <Box justify="between" pad="medium" direction="row">
-              {currentIndex > 0 && (
-                <Button
-                  border={{ radius: 0 }}
-                  color="black !important"
-                  onClick={onClickBack}
-                  label={translate(getCopy("back"), language)}
-                />
-              )}
-              {currentIndex + 1 < pageTitles.length ? (
-                <Button
-                  color="black !important"
-                  onClick={onClickNext}
-                  label={translate(getCopy("next"), language)}
-                />
-              ) : (
-                <ResultsButton />
-              )}
-            </Box>
-          </FormContext.Provider>
-        </Card>
-        <Sidebar
-          pages={pageTitles}
-          currentIndex={currentIndex}
-          setCurrentIndex={setNextPage}
-        />
+            <FormContext.Provider
+              value={{
+                setError: setFormError,
+                setValue: setFormValue,
+                values: formValues,
+                errors: formErrors,
+              }}
+            >
+              {pageComponents[currentIndex]}
+              <Box justify="between" pad="medium" direction="row">
+                {currentIndex > 0 && (
+                  <Button
+                    border={{ radius: 0 }}
+                    color="black !important"
+                    onClick={onClickBack}
+                    label={translate(getCopy("back"), language)}
+                  />
+                )}
+                {currentIndex + 1 < pageTitles.length ? (
+                  <Button
+                    color="black !important"
+                    onClick={onClickNext}
+                    label={translate(getCopy("next"), language)}
+                  />
+                ) : (
+                  <ResultsButton />
+                )}
+              </Box>
+            </FormContext.Provider>
+          </Card>
+          <Sidebar
+            pages={pageTitles}
+            currentIndex={currentIndex}
+            setCurrentIndex={setNextPage}
+          />
+        </Box>
       </Box>
-    </Box>
+      <Footer />
+    </>
   );
 };
 

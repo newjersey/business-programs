@@ -2,12 +2,14 @@ import React from "react";
 import { Grommet } from "grommet";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import "./App.css";
 import FormApp from "./components/FormApp";
 import { LanguageProvider } from "./contexts/language";
 import Landing from "./components/Landing";
 import OldQuestionnaire from "./components/OldQuestionnaire";
 import PPPLoanInfo from "./components/PPPLoanInfo";
+import OldResults from "./components/OldResults";
+
+import "./App.css";
 
 const theme = {
   global: {
@@ -53,6 +55,9 @@ function App() {
             </Route>
             <Route exact path="/ppp-loans">
               <PPPLoanInfo />
+            </Route>
+            <Route exact path="/results">
+              <OldResults />
             </Route>
             <Route exact path="/">
               <Landing></Landing>

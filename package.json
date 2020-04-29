@@ -30,6 +30,11 @@
     "compile": "run-p amplify:*",
     "postbuild": "react-snap"
   },
+  "reactSnap": {
+    "include": [
+      "/results"
+    ]
+  },
   "eslintConfig": {
     "extends": "react-app"
   },

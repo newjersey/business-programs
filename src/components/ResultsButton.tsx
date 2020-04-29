@@ -35,12 +35,12 @@ function evalRuleSet(values: Record<string, any>, ruleSet: Rule[]) {
     }
     if (op === "eq") {
       return inputValueAsString === value;
-    } else if (op === "lt") {
-      return inputValueAsString < value;
+    } else if (op === "le") {
+      return inputValueAsString <= value;
     } else {
       assert(false, `unknown op ${op}`);
     }
-  });
+  })
 }
 
 const ResultsButton: React.FC<{}> = (props) => {

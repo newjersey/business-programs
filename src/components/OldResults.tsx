@@ -64,12 +64,6 @@ const OldResults: React.FC = () => {
                         Federal SBA Debt Relief Program
                       </li>
                       <li
-                        className="sba_7a"
-                        data-program-name="SBA 7(a) Loan Program"
-                      >
-                        SBA 7(a) Loan Program
-                      </li>
-                      <li
                         className="ca_small_biz"
                         data-program-name="California Small Business Finance Center"
                       >
@@ -215,45 +209,6 @@ const OldResults: React.FC = () => {
                     </a>
                     <p className="yes-print">
                       Find a PPP lender near you:
-                      https://www.sba.gov/paycheckprotection/find
-                    </p>
-                  </div>
-                </div>
-
-                <div className="sba_7a program card">
-                  <div className="card-header">
-                    <h4>Federal 7(a) Loan</h4>
-                  </div>
-                  <div className="card-body">
-                    <dl className="row">
-                      <dt className="col-sm-3">What is it?</dt>
-                      <dd className="col-sm-9">
-                        A federal loan of up to $5 million. The Small Business
-                        Administration will guarantee 75–85% of the loan.
-                      </dd>
-
-                      <dt className="col-sm-3">What can I use it&nbsp;for?</dt>
-                      <dd className="col-sm-9">
-                        <ul>
-                          <li>Working capital</li>
-                          <li>Expanding, buying, or starting a business</li>
-                          <li>Buying or building real estate</li>
-                          <li>Refinancing your organization’s debt</li>
-                          <li>Buying equipment or inventory</li>
-                        </ul>
-                      </dd>
-                    </dl>
-                  </div>
-                  <div className="card-footer">
-                    <a
-                      href="https://www.sba.gov/paycheckprotection/find"
-                      className="no-print btn btn-primary"
-                      target="_blank"
-                    >
-                      Find a lender near you
-                    </a>
-                    <p className="yes-print">
-                      Find a lender near you:
                       https://www.sba.gov/paycheckprotection/find
                     </p>
                   </div>

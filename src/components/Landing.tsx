@@ -9,11 +9,11 @@ import "./footer.scss";
 import "./index.scss";
 
 interface Props {
-  ca?: boolean
+  ca?: boolean;
 }
 
-const Landing : React.FC<Props> = (props) => {
-  const { ca } = props
+const Landing: React.FC<Props> = (props) => {
+  const { ca } = props;
 
   return (
     <div className="content-page">
@@ -45,7 +45,7 @@ const Landing : React.FC<Props> = (props) => {
           <div className="row">
             <div className="col-md-6">
               <section>
-                <h1>Check your eligibility for federal loans</h1>
+                <h1>Check your eligibility for small business loans</h1>
 
                 <p>
                   Answering a few questions using this free tool will help
@@ -101,8 +101,9 @@ const Landing : React.FC<Props> = (props) => {
               <section id="government-partners">
                 <h2>Government partners</h2>
                 <p>
-                  This eligibility checker screens for federal loans and New
-                  Jersey state loans. We plan on adding other state programs.
+                  This eligibility checker screens for federal loans, and
+                  California and New Jersey state loans. We plan on adding other
+                  state programs.
                 </p>
                 <p>
                   If you’re from a government agency and would like to include
@@ -129,6 +130,6 @@ const Landing : React.FC<Props> = (props) => {
       <Footer />
     </div>
   );
-}
+};
 
 export default Landing;

@@ -31,8 +31,8 @@ const OldResults: React.FC = () => {
                 <h1>Emergency Assistance Eligibility Wizard</h1>
                 <p>
                   The COVID-19 outbreak is causing extraordinary disruption for
-                  companies and non-profits across the United States. The NJEDA
-                  wants to make it easy for organizations to understand what
+                  companies and non-profits across the United States. Our goal
+                  is to make it easy for organizations to understand what
                   support programs are available to you to help stabilize your
                   operations and get back on a pathway to growth.
                 </p>

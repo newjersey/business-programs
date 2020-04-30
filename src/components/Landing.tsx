@@ -92,7 +92,7 @@ function Landing() {
                   </button>
                 </Link>
               </section>
-              <section>
+              <section id="government-partners">
                 <h2>Government partners</h2>
                 <p>
                   This eligibility checker screens for federal loans and New

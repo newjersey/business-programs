@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation, useHistory } from "react-router-dom";
 
 import Header from "./Header";
 import Footer from "./Footer";
@@ -9,6 +9,7 @@ import "./old-results.scss";
 
 const OldResults: React.FC = () => {
   const { search } = useLocation();
+  const history = useHistory();
   useEffect(() => {
     // hacky port of raw js from previous results page, will redo with the new results page
     const eligible = new URLSearchParams(search).getAll("eligible");
@@ -412,14 +413,14 @@ const OldResults: React.FC = () => {
                   >
                     Change Answers
                   </button> */}
-                  <Link to="/questions">
-                    <button
-                      className="no-print usa-button usa-button--secondary"
-                      data-ga-label="Start over"
-                    >
-                      Start over
-                    </button>
-                  </Link>
+
+                  <button
+                    className="no-print usa-button usa-button--secondary"
+                    data-ga-label="Start over"
+                    onClick={() => history.goBack()}
+                  >
+                    Start over
+                  </button>
                 </div>
               </div>
             </div>

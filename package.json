@@ -33,7 +33,9 @@
   },
   "reactSnap": {
     "include": [
-      "/results"
+      "/results",
+      "/california",
+      "/california/questions"
     ]
   },
   "eslintConfig": {

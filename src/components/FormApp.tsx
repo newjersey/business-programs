@@ -18,15 +18,33 @@ interface FormValues {
   [questionId: string]: string;
 }
 
-const FormApp: React.FC<{}> = () => {
+interface Props {
+  ca?: boolean
+}
+
+const FormApp: React.FC<Props> = (props) => {
+
+  const { ca } = props
   const { language } = useContext(LanguageContext);
   const form = initializeForm();
 
   const { pages, seal } = form;
 
+  if (!ca) {
+    let rmPage = -1
+    pages.forEach((page, index) => {
+      if (page.title.en === 'California') {
+        rmPage = index
+      }
+    })
+    if (rmPage >= 0) {
+      pages.splice(rmPage, 1)
+    }
+  }
+
   const pageTitles = pages.map((page) => {
     return translate(page.title, language);
-  });
+  })
 
   const pageComponents = [...pages.map((page) => <Form page={page} />)];
 
@@ -91,6 +109,7 @@ const FormApp: React.FC<{}> = () => {
             </FormContext.Provider>
           </Card>
           <Sidebar
+            seal={ca ? seal : undefined}
             pages={pageTitles}
             currentIndex={currentIndex}
             setCurrentIndex={setNextPage}

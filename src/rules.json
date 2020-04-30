@@ -8,28 +8,13 @@
         "value": "true"
       },
       {
-        "op": "lt",
+        "op": "le",
         "qid": "business_age",
         "value": "2020-01-31"
       },
       {
         "op": "eq",
         "qid": "employee_count",
-        "value": "true"
-      },
-      {
-        "op": "eq",
-        "qid": "is_illegal",
-        "value": "true"
-      }
-    ]
-  },
-  {
-    "program": "eidl_advance",
-    "rules": [
-      {
-        "op": "eq",
-        "qid": "located_in_us",
         "value": "true"
       },
       {
@@ -48,28 +33,13 @@
         "value": "true"
       },
       {
-        "op": "lt",
+        "op": "le",
         "qid": "business_age",
         "value": "2020-02-15"
       },
       {
         "op": "eq",
         "qid": "employee_count",
-        "value": "true"
-      },
-      {
-        "op": "eq",
-        "qid": "is_necessary_bc_of_economic_trouble",
-        "value": "true"
-      },
-      {
-        "op": "eq",
-        "qid": "will_be_used_for_employment",
-        "value": "true"
-      },
-      {
-        "op": "eq",
-        "qid": "can_verify_numbers",
         "value": "true"
       },
       {
@@ -106,10 +76,20 @@
         "op": "eq",
         "qid": "has_other_sba_loans",
         "value": "true"
+      }
+    ]
+  },
+  {
+    "program": "ca_small_biz",
+    "rules": [
+      {
+        "op": "eq",
+        "qid": "ca_legal_business",
+        "value": "true"
       },
       {
         "op": "eq",
-        "qid": "has_other_sba_disaster_loans",
+        "qid": "ca_employees",
         "value": "true"
       }
     ]

@@ -8,7 +8,13 @@ import Footer from "./Footer";
 import "./footer.scss";
 import "./index.scss";
 
-function Landing() {
+interface Props {
+  ca?: boolean
+}
+
+const Landing : React.FC<Props> = (props) => {
+  const { ca } = props
+
   return (
     <div className="content-page">
       <Helmet>
@@ -46,7 +52,7 @@ function Landing() {
                   determine which financial relief programs you’re eligible for.
                 </p>
                 <p>Learn what you’ll need to prepare your loan applications.</p>
-                <Link to="/questions">
+                <Link to={ca ? "/california/questions" : "/questions"}>
                   <button className="usa-button usa-button--big">
                     Get Started
                   </button>

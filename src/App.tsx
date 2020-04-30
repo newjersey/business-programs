@@ -47,6 +47,12 @@ function App() {
       <LanguageProvider>
         <Router>
           <Switch>
+            <Route exact path="/california">
+              <Landing ca={true} />
+            </Route>
+            <Route exact path="/california/questions">
+              <FormApp ca={true} />
+            </Route>
             <Route exact path="/questions">
               <FormApp />
             </Route>

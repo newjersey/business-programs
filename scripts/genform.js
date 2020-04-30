@@ -126,7 +126,6 @@ function main() {
                     "results": {
                         "en": "Results"
                     }
-                }
             },
             pages: byPage.map(makePage)
         }
@@ -148,8 +147,9 @@ function main() {
                 }
 
                 let cond;
-                if (condition[0] === '<') {
-                    cond = {op: "lt", qid, value: condition.slice(1).trim()}
+                const LE = '<= '
+                if (condition.startsWith(LE)) {
+                    cond = {op: "le", qid, value: condition.slice(LE.length).trim()}
                 } else { // equals
                     cond = {op: "eq", qid, value: condition.toLowerCase()}
                 }

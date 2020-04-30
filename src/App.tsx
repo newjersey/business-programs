@@ -11,6 +11,8 @@ import OldResults from "./components/OldResults";
 
 import "./App.css";
 
+declare function gtag(eventName: String, id: String): any;
+
 const theme = {
   global: {
     text: {
@@ -69,6 +71,15 @@ function App() {
               <Landing></Landing>
             </Route>
           </Switch>
+          <Route
+            path="/"
+            render={() => {
+              if (typeof gtag === "function") {
+                gtag("config", "UA-163832126-1");
+              }
+              return null;
+            }}
+          />
         </Router>
       </LanguageProvider>
     </Grommet>

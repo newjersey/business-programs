@@ -80,7 +80,7 @@
     ]
   },
   {
-    "program": "ca_sbfc",
+    "program": "ca_small_biz",
     "rules": [
       {
         "op": "eq",

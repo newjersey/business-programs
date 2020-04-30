@@ -109,6 +109,7 @@ const FormApp: React.FC<Props> = (props) => {
             </FormContext.Provider>
           </Card>
           <Sidebar
+            seal={ca ? seal : undefined}
             pages={pageTitles}
             currentIndex={currentIndex}
             setCurrentIndex={setNextPage}

@@ -92,7 +92,7 @@ const Landing: React.FC<Props> = (props) => {
                   </a>{" "}
                   to look up the guidelines for your industry.
                 </p>
-                <Link to="/questions">
+                <Link to={ca ? "/california/questions" : "/questions"}>
                   <button className="usa-button">
                     Take our 10-minute questionnaire
                   </button>

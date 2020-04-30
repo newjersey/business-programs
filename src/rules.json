@@ -80,31 +80,6 @@
     ]
   },
   {
-    "program": "sba_7a",
-    "rules": [
-      {
-        "op": "eq",
-        "qid": "business_type",
-        "value": "must be for-profit"
-      },
-      {
-        "op": "eq",
-        "qid": "located_in_us",
-        "value": "true"
-      },
-      {
-        "op": "eq",
-        "qid": "is_illegal",
-        "value": "must be less than $5,000,000"
-      },
-      {
-        "op": "eq",
-        "qid": "has_other_sba_loans",
-        "value": "true"
-      }
-    ]
-  },
-  {
     "program": "ca_sbfc",
     "rules": [
       {

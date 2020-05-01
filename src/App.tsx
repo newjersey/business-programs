@@ -1,6 +1,7 @@
 import React from "react";
 import { Grommet } from "grommet";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 import FormApp from "./components/FormApp";
 import { LanguageProvider } from "./contexts/language";
@@ -50,6 +51,12 @@ function App() {
         <Router>
           <Switch>
             <Route exact path="/california">
+              <Helmet>
+                <link
+                  rel="canonical"
+                  href="https://businessrelief.usdigitalresponse.org"
+                />
+              </Helmet>
               <Landing ca={true} />
             </Route>
             <Route exact path="/california/questions">

@@ -262,7 +262,7 @@ const OldResults: React.FC = () => {
                     <dl className="row">
                       <dt className="col-sm-3">What is it?</dt>
                       <dd className="col-sm-9">
-                        Loan guarantees and direct loans for small businesses
+                        Loan guarantees for small businesses
                       </dd>
 
                       <dt className="col-sm-3">Who is it for?</dt>

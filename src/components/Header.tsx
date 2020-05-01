@@ -11,8 +11,7 @@ const Header: React.FC<Props> = ({ links = [] }) => (
   <nav className="navbar navbar-dark navbar-expand-lg bg-primary-vivid">
     <div className="container">
       <Link className="navbar-brand" to="/">
-        <img src="/usdr_logo_white.png" alt="USDR Logo" /> Federal Loan
-        Assistant
+        <img src="/usdr_logo_white.png" alt="USDR Logo" /> Business Assistant
       </Link>
       {links.length > 0 && (
         <>

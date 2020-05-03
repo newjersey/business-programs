@@ -1,6 +1,7 @@
 import React from "react";
 import { Grommet } from "grommet";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 import FormApp from "./components/FormApp";
 import { LanguageProvider } from "./contexts/language";
@@ -10,6 +11,8 @@ import PPPLoanInfo from "./components/PPPLoanInfo";
 import OldResults from "./components/OldResults";
 
 import "./App.css";
+
+declare function gtag(eventName: String, id: String): any;
 
 const theme = {
   global: {
@@ -48,6 +51,12 @@ function App() {
         <Router>
           <Switch>
             <Route exact path="/california">
+              <Helmet>
+                <link
+                  rel="canonical"
+                  href="https://businessrelief.usdigitalresponse.org"
+                />
+              </Helmet>
               <Landing ca={true} />
             </Route>
             <Route exact path="/california/questions">
@@ -69,6 +78,15 @@ function App() {
               <Landing></Landing>
             </Route>
           </Switch>
+          <Route
+            path="/"
+            render={() => {
+              if (typeof gtag === "function") {
+                gtag("config", "UA-163832126-1");
+              }
+              return null;
+            }}
+          />
         </Router>
       </LanguageProvider>
     </Grommet>

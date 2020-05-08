@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@craco/craco": "^5.6.4",
     "@hapi/joi": "^17.1.1",
     "aws-amplify": "^3.0.7",
     "aws-amplify-react": "^4.1.6",
@@ -22,10 +23,10 @@
     "validator": "^13.0.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "craco eject",
     "amplify:transformer": "FUNCTION_NAME=transformer scripts/compile-function.sh",
     "amplify:resolverFunctions": "FUNCTION_NAME=resolverFunctions scripts/compile-function.sh",
     "compile": "run-p amplify:*",

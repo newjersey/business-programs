@@ -25,7 +25,7 @@ const Footer: React.FC = () => (
           </p>
           <p className="d-inline">
             <a href="mailto:info@usdigitalresponse.org">
-              info@usdigitalresponse.com
+              info@usdigitalresponse.org
             </a>
           </p>
         </div>

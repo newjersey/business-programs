@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { Card } from "./helper-components/index";
 import styled from "styled-components";
-import { Box, Menu } from "grommet";
+import { Box, Menu, Text } from "grommet";
 import Form from "./Form";
 import ResultsButton from "./ResultsButton";
 import { Button } from "~/components/uswds-components";
@@ -26,7 +25,12 @@ interface Props {
 
 const FormApp: React.FC<Props> = (props) => {
   const { ca } = props;
-  const [back, next] = useFormDictionary("back", "next");
+  const [back, next, progress, complete] = useFormDictionary(
+    "back",
+    "next",
+    "progress",
+    "complete"
+  );
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const {
     form: { questions },
@@ -39,6 +43,7 @@ const FormApp: React.FC<Props> = (props) => {
     filteredQuestions.filter((q) => !q.ca_only);
   }
 
+  const percent = Math.floor((currentIndex / filteredQuestions.length) * 100);
   const setNextPage = (index: number) => {
     setCurrentIndex(index);
     window.scrollTo(0, 0);
@@ -75,6 +80,31 @@ const FormApp: React.FC<Props> = (props) => {
               },
             }))}
           />
+        </Box>
+        <Box margin={{ top: "medium" }} width="100%">
+          <Box
+            margin={{ top: "xsmall" }}
+            style={{
+              width: "100%",
+              height: "8px",
+              borderRadius: "12px",
+              background: "#E4E7EB",
+            }}
+          >
+            <Box
+              style={{
+                width: `${percent}%`,
+                height: "100%",
+                borderRadius: "12px",
+                background: "#008060",
+              }}
+            />
+          </Box>
+          <Box>
+            <Text color="black" weight={300} size="xsmall">
+              {percent}% {complete}
+            </Text>
+          </Box>
         </Box>
         <Form question={filteredQuestions[currentIndex]} />
 

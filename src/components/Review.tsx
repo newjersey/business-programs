@@ -5,7 +5,7 @@ import { LanguageContext } from '../contexts/language'
 import Amplify, { API } from 'aws-amplify'
 import awsconfig from '../aws-exports';
 
-import { FormContext } from '../contexts/form'
+import { useForm } from '../contexts/form'
 
 
 function sendData () {
@@ -13,7 +13,7 @@ function sendData () {
 
 const Review: React.FC<{}> = () => {
 
-  const { values } = useContext(FormContext)
+  const { values } = useForm()
 
   const { language } = useContext(LanguageContext)
   // TODO: the rules for program eligability

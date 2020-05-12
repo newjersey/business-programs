@@ -1,5 +1,6 @@
 footer {
-  color: white;
+  background-color: rgba($color: #0050d8, $alpha: 0.05);
+  flex: 1;
   .container {
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -11,7 +12,7 @@ footer {
 
   a,
   a:hover {
-    color: white;
+    color: black;
     text-decoration: underline;
   }
 

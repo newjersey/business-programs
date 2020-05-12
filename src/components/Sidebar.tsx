@@ -5,7 +5,7 @@ import { LanguageContext } from '../contexts/language'
 import { translate, getCopy } from '../forms/index';
 
 interface Props {
-  pages: string[]
+  questionCount: number
   currentIndex: number
   seal?: string
   setCurrentIndex: (index: number) => void
@@ -18,9 +18,8 @@ const languages = [
 ]
 
 const Sidebar: React.FC<Props> = (props) => {
-  const { pages, seal, currentIndex, setCurrentIndex } = props
-  const currentPage = pages[currentIndex]
-  const percent = Math.floor((currentIndex + 1) / pages.length * 100)
+  const { questionCount, seal, currentIndex, setCurrentIndex } = props
+  const percent = Math.floor((currentIndex + 1) / questionCount * 100)
   const { language, setLanguage } = useContext(LanguageContext)
 
   return (
@@ -44,11 +43,6 @@ const Sidebar: React.FC<Props> = (props) => {
           <Box style={{ width: `${percent}%`, height: '100%', borderRadius: '12px', background: "#008060" }} />
         </Box>
         <Box align="center"> <Text color="black" weight={300} size="xsmall">{percent}% {translate(getCopy('complete'), language)}</Text> </Box>
-      </Box>
-      <Box margin={{ top: 'small' }}>
-        {pages.map((page, i) =>
-          <Text style={{ cursor: 'pointer' }} onClick={() => setCurrentIndex(i)} color={currentPage === page ? 'black' : '#66788A'} margin={{ bottom: 'xsmall' }} key={page}>{page}</Text>
-        )}
       </Box>
     </Card >
   )

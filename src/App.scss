@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap");
+
+.App {
+  background-color: white;
+  width: 100%;
+  // For the footer taking the remaining height
+  display: flex;
+  flex-direction: column;
+}

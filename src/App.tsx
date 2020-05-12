@@ -5,14 +5,17 @@ import { Helmet } from "react-helmet";
 
 import FormApp from "./components/FormApp";
 import { LanguageProvider } from "./contexts/language";
+import { FormProvider } from "~/contexts/form";
 import Landing from "./components/Landing";
 import OldQuestionnaire from "./components/OldQuestionnaire";
 import PPPLoanInfo from "./components/PPPLoanInfo";
 import OldResults from "./components/OldResults";
 
-import "./App.css";
+import "./App.scss";
 
 declare function gtag(eventName: String, id: String): any;
+
+const uswdsPrimary = "#005ea2";
 
 const theme = {
   global: {
@@ -35,10 +38,33 @@ const theme = {
         color: "black",
       },
     },
+    colors: {
+      control: uswdsPrimary,
+    },
+  },
+  text: {
+    medium: {
+      size: "1.06rem",
+    },
   },
   select: {
     icons: {
       color: "#000000",
+    },
+  },
+  radioButton: {
+    size: "44px",
+    border: {
+      color: {
+        dark: uswdsPrimary,
+      },
+    },
+    color: "#005ea2",
+    check: {
+      color: uswdsPrimary,
+    },
+    icon: {
+      size: "40px",
     },
   },
 };
@@ -63,7 +89,9 @@ function App() {
               <FormApp ca={true} />
             </Route>
             <Route exact path="/questions">
-              <FormApp />
+              <FormProvider>
+                <FormApp />
+              </FormProvider>
             </Route>
             <Route exact path="/questionnaire">
               <OldQuestionnaire />

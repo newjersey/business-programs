@@ -1,9 +1,7 @@
-import React, { useState, useContext } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import { LanguageContext } from "../contexts/language";
-import { Card, Button } from "./helper-components/index";
-import { translate, getCopy } from "../forms/index";
-import { FormContext } from "../contexts/form";
+import { Button } from "~/components/uswds-components";
+import { useForm, useFormDictionary } from "../contexts/form";
 import rules from "../rules.json";
 import assert from "assert";
 
@@ -40,13 +38,12 @@ function evalRuleSet(values: Record<string, any>, ruleSet: Rule[]) {
     } else {
       assert(false, `unknown op ${op}`);
     }
-  })
+  });
 }
 
 const ResultsButton: React.FC<{}> = (props) => {
-  const { language } = useContext(LanguageContext);
-
-  const { values } = useContext(FormContext);
+  const { values } = useForm();
+  const [results] = useFormDictionary("results");
 
   // TODO: this should use the validation logic that the questions does
   const typedRules = rules as ProgramDef[];
@@ -63,10 +60,7 @@ const ResultsButton: React.FC<{}> = (props) => {
 
   return (
     <Link to={href}>
-      <Button
-        color="black !important"
-        label={translate(getCopy("results"), language)}
-      />
+      <Button size="large">{results}</Button>
     </Link>
   );
 };

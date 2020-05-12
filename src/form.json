@@ -58,232 +58,179 @@
       "zh": "结果"
     }
   },
-  "pages": [
+
+  "questions": [
     {
-      "title": {
-        "en": "Basic Info",
-        "es": "Información básica",
-        "zh": "基本信息"
+      "id": "business_type",
+      "name": {
+        "en": "Business Type",
+        "es": "Tipo de negocio",
+        "zh": "业务类型"
       },
-      "heading": {
-        "en": "Basic Info",
-        "es": "Información básica",
-        "zh": "基本信息"
-      },
-      "questions": [
+      "type": "singleselect",
+      "required": true,
+      "options": [
         {
-          "id": "business_type",
+          "id": "non_profit",
           "name": {
-            "en": "Business Type",
-            "es": "Tipo de negocio",
-            "zh": "业务类型"
-          },
-          "type": "dropdown",
-          "required": true,
-          "options": [
-            {
-              "id": "non_profit",
-              "name": {
-                "en": "Non-Profit - 501(c)(3)",
-                "es": "Sin fines de lucro - 501 (c) (3)",
-                "zh": "非营利 - 的501（c）（3）"
-              }
-            },
-            {
-              "id": "veterans",
-              "name": {
-                "en": "Veterans Organization - 501(c)(19)",
-                "es": "Organización de Veteranos - 501 (c) (19)",
-                "zh": "退伍军人组织-501（c）（19）"
-              }
-            },
-            {
-              "id": "tribal",
-              "name": {
-                "en": "Tribal",
-                "es": "Tribal",
-                "zh": "部族的"
-              }
-            },
-            {
-              "id": "independent_contractor",
-              "name": {
-                "en": "Independent Contractor",
-                "es": "Contratista independiente",
-                "zh": "独立承包商"
-              }
-            },
-            {
-              "id": "self_employed",
-              "name": {
-                "en": "Self Employed",
-                "es": "Trabajadores por cuenta propia",
-                "zh": "自雇"
-              }
-            },
-            {
-              "id": "none_of_the_above",
-              "name": {
-                "en": "None of the Above",
-                "es": "Ninguna de las anteriores",
-                "zh": "以上都不是"
-              }
-            }
-          ]
+            "en": "Non-Profit - 501(c)(3)",
+            "es": "Sin fines de lucro - 501 (c) (3)",
+            "zh": "非营利 - 的501（c）（3）"
+          }
         },
         {
-          "id": "located_in_us",
+          "id": "veterans",
           "name": {
-            "en": "Is your business/non-profit registered to do business in the United States or its territories?",
-            "es": "¿Su empresa / organización sin fines de lucro está registrada para hacer negocios en los Estados Unidos o sus territorios?",
-            "zh": "您的公司/非营利组织是否已注册在美国或其领土开展业务？"
-          },
-          "type": "boolean",
-          "required": true
+            "en": "Veterans Organization - 501(c)(19)",
+            "es": "Organización de Veteranos - 501 (c) (19)",
+            "zh": "退伍军人组织-501（c）（19）"
+          }
         },
         {
-          "id": "business_age",
+          "id": "tribal",
           "name": {
-            "en": "When did your business begin operation?",
-            "es": "¿Cuándo comenzó su negocio a operar?",
-            "zh": "您的企业何时开始营业？"
-          },
-          "type": "datepicker",
-          "required": true
+            "en": "Tribal",
+            "es": "Tribal",
+            "zh": "部族的"
+          }
         },
         {
-          "id": "employee_count",
+          "id": "independent_contractor",
           "name": {
-            "en": "Do you have:\n- 500 or less employees\n- or meet the SBA industry size standard for small business (www.sba.gov/size-standards)",
-            "es": "Tienes:\n- 500 o menos empleados\n- o cumpla con el estándar de tamaño de la industria de la SBA para pequeñas empresas (www.sba.gov/size-standards)",
-            "zh": "你有没有：\n-500名或更少的员工\n-或符合小型企业的SBA行业规模标准（www.sba.gov/size-standards）"
-          },
-          "type": "boolean",
-          "required": true
+            "en": "Independent Contractor",
+            "es": "Contratista independiente",
+            "zh": "独立承包商"
+          }
+        },
+        {
+          "id": "self_employed",
+          "name": {
+            "en": "Self Employed",
+            "es": "Trabajadores por cuenta propia",
+            "zh": "自雇"
+          }
+        },
+        {
+          "id": "none_of_the_above",
+          "name": {
+            "en": "None of the Above",
+            "es": "Ninguna de las anteriores",
+            "zh": "以上都不是"
+          }
         }
       ]
     },
     {
-      "title": {
-        "en": "Eligibility",
-        "es": "Elegibilidad",
-        "zh": "资格条件"
+      "id": "located_in_us",
+      "name": {
+        "en": "Is your business/non-profit registered to do business in the United States or its territories?",
+        "es": "¿Su empresa / organización sin fines de lucro está registrada para hacer negocios en los Estados Unidos o sus territorios?",
+        "zh": "您的公司/非营利组织是否已注册在美国或其领土开展业务？"
       },
-      "heading": {
-        "en": "Eligibility",
-        "es": "Elegibilidad",
-        "zh": "资格条件"
-      },
-      "questions": [
-        {
-          "id": "is_illegal",
-          "name": {
-            "en": "Are you, your chief executive officer or the equivalent able to certify that (This question is to determine eligibility for Federal Small Business Administration EIDL) \n- The organization is not engaged in any illegal activity (as defined by Federal guidelines). \n- No principal of the organization with a 50 percent or greater ownership interest is more than sixty (60) days delinquent on child support obligations.\n- Applicant is not an agricultural enterprise (e.g., farm), other than an aquaculture enterprise, agricultural cooperative, or nursery. \n- The organization does not present live performances of a prurient sexual nature or derive directly or indirectly more than de minimis gross revenue through the sale of products or services, or the presentation of any depictions or displays, of a prurient sexual nature. \n- The organization is not in the business of lobbying \n- The organization cannot be a state, local, or municipal government entity and cannot be a member of Congress.",
-            "es": "¿Es usted, su director ejecutivo o el equivalente capaz de certificar eso? (Esta pregunta es para determinar la elegibilidad para la Administración Federal de Pequeños Negocios EIDL)\n- La organización no participa en ninguna actividad ilegal (como se define en las pautas federales).\n- Ningún director de la organización con un interés de propiedad del 50 por ciento o más tiene más de sesenta (60) días de atraso en las obligaciones de manutención infantil.\n- El solicitante no es una empresa agrícola (por ejemplo, una granja), que no sea una empresa acuícola, una cooperativa agrícola o un vivero.\n- La organización no presenta presentaciones en vivo de una naturaleza sexual pruriente ni deriva directa o indirectamente más que los ingresos brutos de minimis a través de la venta de productos o servicios, o la presentación de representaciones o exhibiciones, de naturaleza sexual pruriente.\n- La organización no se dedica al cabildeo.\n- La organización no puede ser una entidad gubernamental estatal, local o municipal y no puede ser miembro del Congreso.",
-            "zh": "您，您的首席执行官或具有同等能力的人是否能够证明这一点（此问题是为了确定是否有资格获得联邦小企业管理局EIDL）\n-该组织未从事任何非法活动（由联邦准则定义）。\n-拥有50％或以上所有权的组织的负责人，对子女抚养义务的拖欠不得超过六十（60）天。\n-申请人不是水产养殖企业，农业合作社或苗圃以外的农业企业（例如农场）。\n-该组织没有通过多姿多彩的性行为现场表演或直接或间接地通过销售产品或服务，或以多姿多彩的性行为进行描绘或展示而获得的总收入不低于微薄的总收入。\n-该组织不从事游说活动\n-该组织不能是州，地方或市政府实体，也不能是国会议员。"
-          },
-          "type": "boolean",
-          "required": true
-        },
-        {
-          "id": "is_barred",
-          "name": {
-            "en": "Are you presently suspended, debarred, proposed for debarment, declared ineligible, voluntarily excluded from participation in this transaction by any Federal department or agency, or presently involved in any\nbankruptcy?",
-            "es": "¿Está actualmente suspendido, excluido, propuesto para exclusión, declarado no elegible, excluido voluntariamente de la participación en esta transacción por cualquier departamento o agencia federal, o actualmente involucrado en cualquier\n¿bancarrota?",
-            "zh": "您目前是否已被暂停，取消资格，提议取消资格，被宣布为不合格资格，是否自愿被任何联邦部门或机构排除在本次交易的参与范围之外，或者目前是否参与了任何\n破产？"
-          },
-          "type": "boolean",
-          "required": true
-        },
-        {
-          "id": "is_delinquent",
-          "name": {
-            "en": "Has the Applicant, any owner of the Applicant, or any business owned or controlled by any of them, ever obtained a direct or\r\nguaranteed loan from SBA or any other Federal agency that is currently delinquent or has defaulted in the last 7 years and\r\ncaused a loss to the government?",
-            "es": "¿El Solicitante, cualquier propietario del Solicitante, o cualquier negocio propiedad o controlado por alguno de ellos, alguna vez ha obtenido un\r\npréstamo garantizado de la SBA o de cualquier otra agencia federal que actualmente está en mora o ha incumplido en los últimos 7 años y\r\ncausó una pérdida al gobierno?",
-            "zh": "申请人，申请人的任何所有者或由他们任何人拥有或控制的任何业务是否曾直接获得或\r\n来自SBA或其他任何联邦政府的担保贷款，这些贷款目前已拖欠或在最近7年内违约，并且\r\n给政府造成了损失？"
-          },
-          "type": "boolean",
-          "required": true
-        },
-        {
-          "id": "is_criminal",
-          "name": {
-            "en": "Is the Applicant (if an individual) or any individual owning 20% or more of the equity of the Applicant subject\r\nto an indictment, criminal information, arraignment, or other means by which formal criminal charges are\r\nbrought in any jurisdiction, or presently incarcerated, or on probation or parole?",
-            "es": "¿Es el solicitante (si es un individuo) o cualquier individuo que posea el 20% o más del capital del sujeto solicitante\r\na una acusación, información criminal, lectura de cargos u otros medios por los cuales se presentan cargos penales formales\r\ntraído a alguna jurisdicción, o actualmente encarcelado, o en libertad condicional o en libertad condicional?",
-            "zh": "申请人（如果是个人）或拥有申请人20％或更多股权的任何个人？\r\n起诉书，刑事信息，传讯或其他形式的正式刑事指控\r\n被带入任何司法管辖区，或目前被监禁，或处于缓刑或假释状态？"
-          },
-          "type": "boolean",
-          "required": true
-        },
-        {
-          "id": "is_felony",
-          "name": {
-            "en": "Within the last 5 years, for any felony, has the Applicant (if an individual) or any owner of the Applicant 1)\r\nbeen convicted; 2) pleaded guilty; 3) pleaded nolo contendere; 4) been placed on pretrial diversion; or 5) been\r\nplaced on any form of parole or probation (including probation before judgment)?",
-            "es": "En los últimos 5 años, para cualquier delito grave, el solicitante (si es un individuo) o cualquier propietario del solicitante 1)\r\nsido condenado 2) se declaró culpable; 3) se declaró nolo contendere; 4) han sido colocados en desviación previa al juicio; o 5) estado\r\ncolocado en alguna forma de libertad condicional o libertad condicional (incluida la libertad condicional antes del juicio)?",
-            "zh": "在过去5年中，重罪包括申请人（如果是个人）或申请人的任何所有者1）\r\n被定罪； 2）认罪； 3）辩护诺洛竞争者； 4）被置于审前转移；或5）\r\n被置于任何形式的假释或缓刑（包括判决前的缓刑）？"
-          },
-          "type": "boolean",
-          "required": true
-        }
-      ]
+      "type": "boolean",
+      "required": true
     },
     {
-      "title": {
-        "en": "Other Loans",
-        "es": "Otros préstamos",
-        "zh": "其他贷款"
+      "id": "business_age",
+      "name": {
+        "en": "When did your business begin operation?",
+        "es": "¿Cuándo comenzó su negocio a operar?",
+        "zh": "您的企业何时开始营业？"
       },
-      "heading": {
-        "en": "Other Loans",
-        "es": "Otros préstamos",
-        "zh": "其他贷款"
-      },
-      "questions": [
-        {
-          "id": "has_other_sba_loans",
-          "name": {
-            "en": "Does your organization currently have any of the following SBA loans?\n- 7(a), 504, and/or microloans\n- SBA Disaster (Home or Business) Loans",
-            "es": "¿Tiene su organización actualmente alguno de los siguientes préstamos de la SBA?\n- 7 (a), 504 y / o micropréstamos\n- Préstamos por desastre de la SBA (hogar o empresa)",
-            "zh": "您的组织目前有以下任何SBA贷款吗？\n-7（a），504和/或小额贷款\n-SBA灾难（家庭或企业）贷款"
-          },
-          "type": "boolean",
-          "required": true
-        }
-      ]
+      "type": "datepicker",
+      "required": true
     },
     {
-      "title": {
-        "en": "California",
-        "es": "California",
-        "zh": "加利福尼亚州"
+      "id": "employee_count",
+      "name": {
+        "en": "Do you have:\n- 500 or less employees\n- or meet the SBA industry size standard for small business (www.sba.gov/size-standards)",
+        "es": "Tienes:\n- 500 o menos empleados\n- o cumpla con el estándar de tamaño de la industria de la SBA para pequeñas empresas (www.sba.gov/size-standards)",
+        "zh": "你有没有：\n-500名或更少的员工\n-或符合小型企业的SBA行业规模标准（www.sba.gov/size-standards）"
       },
-      "heading": {
-        "en": "California",
-        "es": "California",
-        "zh": "加利福尼亚州"
+      "type": "boolean",
+      "required": true
+    },
+    {
+      "id": "is_illegal",
+      "name": {
+        "en": "Are you, your chief executive officer or the equivalent able to certify that (This question is to determine eligibility for Federal Small Business Administration EIDL) \n- The organization is not engaged in any illegal activity (as defined by Federal guidelines). \n- No principal of the organization with a 50 percent or greater ownership interest is more than sixty (60) days delinquent on child support obligations.\n- Applicant is not an agricultural enterprise (e.g., farm), other than an aquaculture enterprise, agricultural cooperative, or nursery. \n- The organization does not present live performances of a prurient sexual nature or derive directly or indirectly more than de minimis gross revenue through the sale of products or services, or the presentation of any depictions or displays, of a prurient sexual nature. \n- The organization is not in the business of lobbying \n- The organization cannot be a state, local, or municipal government entity and cannot be a member of Congress.",
+        "es": "¿Es usted, su director ejecutivo o el equivalente capaz de certificar eso? (Esta pregunta es para determinar la elegibilidad para la Administración Federal de Pequeños Negocios EIDL)\n- La organización no participa en ninguna actividad ilegal (como se define en las pautas federales).\n- Ningún director de la organización con un interés de propiedad del 50 por ciento o más tiene más de sesenta (60) días de atraso en las obligaciones de manutención infantil.\n- El solicitante no es una empresa agrícola (por ejemplo, una granja), que no sea una empresa acuícola, una cooperativa agrícola o un vivero.\n- La organización no presenta presentaciones en vivo de una naturaleza sexual pruriente ni deriva directa o indirectamente más que los ingresos brutos de minimis a través de la venta de productos o servicios, o la presentación de representaciones o exhibiciones, de naturaleza sexual pruriente.\n- La organización no se dedica al cabildeo.\n- La organización no puede ser una entidad gubernamental estatal, local o municipal y no puede ser miembro del Congreso.",
+        "zh": "您，您的首席执行官或具有同等能力的人是否能够证明这一点（此问题是为了确定是否有资格获得联邦小企业管理局EIDL）\n-该组织未从事任何非法活动（由联邦准则定义）。\n-拥有50％或以上所有权的组织的负责人，对子女抚养义务的拖欠不得超过六十（60）天。\n-申请人不是水产养殖企业，农业合作社或苗圃以外的农业企业（例如农场）。\n-该组织没有通过多姿多彩的性行为现场表演或直接或间接地通过销售产品或服务，或以多姿多彩的性行为进行描绘或展示而获得的总收入不低于微薄的总收入。\n-该组织不从事游说活动\n-该组织不能是州，地方或市政府实体，也不能是国会议员。"
       },
-      "questions": [
-        {
-          "id": "ca_legal_business",
-          "name": {
-            "en": "Is your business a legal business in the state of California?",
-            "es": "¿Es su negocio un negocio legal en el estado de California?",
-            "zh": "您的公司在加利福尼亚州合法吗？"
-          },
-          "type": "boolean",
-          "required": true
-        },
-        {
-          "id": "ca_employees",
-          "name": {
-            "en": "Does your business you have 750 or fewer employees?",
-            "es": "¿Su empresa tiene 750 empleados o menos?",
-            "zh": "您的公司有750名以下员工吗？"
-          },
-          "type": "boolean",
-          "required": true
-        }
-      ]
+      "type": "boolean",
+      "required": true
+    },
+    {
+      "id": "is_barred",
+      "name": {
+        "en": "Are you presently suspended, debarred, proposed for debarment, declared ineligible, voluntarily excluded from participation in this transaction by any Federal department or agency, or presently involved in any\nbankruptcy?",
+        "es": "¿Está actualmente suspendido, excluido, propuesto para exclusión, declarado no elegible, excluido voluntariamente de la participación en esta transacción por cualquier departamento o agencia federal, o actualmente involucrado en cualquier\n¿bancarrota?",
+        "zh": "您目前是否已被暂停，取消资格，提议取消资格，被宣布为不合格资格，是否自愿被任何联邦部门或机构排除在本次交易的参与范围之外，或者目前是否参与了任何\n破产？"
+      },
+      "type": "boolean",
+      "required": true
+    },
+    {
+      "id": "is_delinquent",
+      "name": {
+        "en": "Has the Applicant, any owner of the Applicant, or any business owned or controlled by any of them, ever obtained a direct or\r\nguaranteed loan from SBA or any other Federal agency that is currently delinquent or has defaulted in the last 7 years and\r\ncaused a loss to the government?",
+        "es": "¿El Solicitante, cualquier propietario del Solicitante, o cualquier negocio propiedad o controlado por alguno de ellos, alguna vez ha obtenido un\r\npréstamo garantizado de la SBA o de cualquier otra agencia federal que actualmente está en mora o ha incumplido en los últimos 7 años y\r\ncausó una pérdida al gobierno?",
+        "zh": "申请人，申请人的任何所有者或由他们任何人拥有或控制的任何业务是否曾直接获得或\r\n来自SBA或其他任何联邦政府的担保贷款，这些贷款目前已拖欠或在最近7年内违约，并且\r\n给政府造成了损失？"
+      },
+      "type": "boolean",
+      "required": true
+    },
+    {
+      "id": "is_criminal",
+      "name": {
+        "en": "Is the Applicant (if an individual) or any individual owning 20% or more of the equity of the Applicant subject\r\nto an indictment, criminal information, arraignment, or other means by which formal criminal charges are\r\nbrought in any jurisdiction, or presently incarcerated, or on probation or parole?",
+        "es": "¿Es el solicitante (si es un individuo) o cualquier individuo que posea el 20% o más del capital del sujeto solicitante\r\na una acusación, información criminal, lectura de cargos u otros medios por los cuales se presentan cargos penales formales\r\ntraído a alguna jurisdicción, o actualmente encarcelado, o en libertad condicional o en libertad condicional?",
+        "zh": "申请人（如果是个人）或拥有申请人20％或更多股权的任何个人？\r\n起诉书，刑事信息，传讯或其他形式的正式刑事指控\r\n被带入任何司法管辖区，或目前被监禁，或处于缓刑或假释状态？"
+      },
+      "type": "boolean",
+      "required": true
+    },
+    {
+      "id": "is_felony",
+      "name": {
+        "en": "Within the last 5 years, for any felony, has the Applicant (if an individual) or any owner of the Applicant 1)\r\nbeen convicted; 2) pleaded guilty; 3) pleaded nolo contendere; 4) been placed on pretrial diversion; or 5) been\r\nplaced on any form of parole or probation (including probation before judgment)?",
+        "es": "En los últimos 5 años, para cualquier delito grave, el solicitante (si es un individuo) o cualquier propietario del solicitante 1)\r\nsido condenado 2) se declaró culpable; 3) se declaró nolo contendere; 4) han sido colocados en desviación previa al juicio; o 5) estado\r\ncolocado en alguna forma de libertad condicional o libertad condicional (incluida la libertad condicional antes del juicio)?",
+        "zh": "在过去5年中，重罪包括申请人（如果是个人）或申请人的任何所有者1）\r\n被定罪； 2）认罪； 3）辩护诺洛竞争者； 4）被置于审前转移；或5）\r\n被置于任何形式的假释或缓刑（包括判决前的缓刑）？"
+      },
+      "type": "boolean",
+      "required": true
+    },
+    {
+      "id": "has_other_sba_loans",
+      "name": {
+        "en": "Does your organization currently have any of the following SBA loans?\n- 7(a), 504, and/or microloans\n- SBA Disaster (Home or Business) Loans",
+        "es": "¿Tiene su organización actualmente alguno de los siguientes préstamos de la SBA?\n- 7 (a), 504 y / o micropréstamos\n- Préstamos por desastre de la SBA (hogar o empresa)",
+        "zh": "您的组织目前有以下任何SBA贷款吗？\n-7（a），504和/或小额贷款\n-SBA灾难（家庭或企业）贷款"
+      },
+      "type": "boolean",
+      "required": true
+    },
+    {
+      "id": "ca_legal_business",
+      "name": {
+        "en": "Is your business a legal business in the state of California?",
+        "es": "¿Es su negocio un negocio legal en el estado de California?",
+        "zh": "您的公司在加利福尼亚州合法吗？"
+      },
+      "type": "boolean",
+      "required": true,
+      "ca_only": true
+    },
+    {
+      "id": "ca_employees",
+      "name": {
+        "en": "Does your business you have 750 or fewer employees?",
+        "es": "¿Su empresa tiene 750 empleados o menos?",
+        "zh": "您的公司有750名以下员工吗？"
+      },
+      "type": "boolean",
+      "required": true,
+      "ca_only": true
     }
   ]
 }

@@ -1,61 +1,43 @@
-import React, { useState, useContext } from "react";
-import { Card, Button } from "./helper-components/index";
-import { Box } from "grommet";
-import { initializeForm } from "../forms";
-import Sidebar from "./Sidebar";
-import Introduction from "./Introduction";
-import Review from "./Review";
+import React, { useState } from "react";
+import { Card } from "./helper-components/index";
+import styled from "styled-components";
+import { Box, Menu } from "grommet";
 import Form from "./Form";
-import { LanguageContext } from "../contexts/language";
-import { translate, getCopy } from "../forms/index";
 import ResultsButton from "./ResultsButton";
+import { Button } from "~/components/uswds-components";
+import { useFormDictionary, useForm } from "~/contexts/form";
+import { useSelectLanguage } from "~/contexts/language";
 
-import { FormContext, Values, Errors, Value } from "../contexts/form";
 import Header from "./Header";
 import Footer from "./Footer";
+
+const StyledMenu = styled(Menu)`
+  text-decoration: underline;
+  color: black;
+`;
 
 interface FormValues {
   [questionId: string]: string;
 }
 
 interface Props {
-  ca?: boolean
+  ca?: boolean;
 }
 
 const FormApp: React.FC<Props> = (props) => {
-
-  const { ca } = props
-  const { language } = useContext(LanguageContext);
-  const form = initializeForm();
-
-  const { pages, seal } = form;
-
-  if (!ca) {
-    let rmPage = -1
-    pages.forEach((page, index) => {
-      if (page.title.en === 'California') {
-        rmPage = index
-      }
-    })
-    if (rmPage >= 0) {
-      pages.splice(rmPage, 1)
-    }
-  }
-
-  const pageTitles = pages.map((page) => {
-    return translate(page.title, language);
-  })
-
-  const pageComponents = [...pages.map((page) => <Form page={page} />)];
-
+  const { ca } = props;
+  const [back, next] = useFormDictionary("back", "next");
   const [currentIndex, setCurrentIndex] = useState<number>(0);
-  const [formValues, setFormValues] = useState<Values>({});
-  const [formErrors, setFormErrors] = useState<Errors>({});
+  const {
+    form: { questions },
+  } = useForm();
+  const [language, setLanguage, languageOpts] = useSelectLanguage();
 
-  const setFormValue = (key: string, value: Value) =>
-    setFormValues({ ...formValues, [key]: value });
-  const setFormError = (key: string, value: string) =>
-    setFormErrors({ ...formErrors, [key]: value });
+  let filteredQuestions = questions;
+  if (!ca) {
+    // This is a temporary fix until we flush out branching better
+    filteredQuestions.filter((q) => !q.ca_only);
+  }
 
   const setNextPage = (index: number) => {
     setCurrentIndex(index);
@@ -68,53 +50,41 @@ const FormApp: React.FC<Props> = (props) => {
   return (
     <>
       <Header />
-      <Box align="center" pad="medium" direction="column">
-        <Box width="100%" height="100%" justify="center" direction="row">
-          <Card
-            width="50%"
-            background="white"
-            display="flex"
-            justify="between"
-            flexDirection="column"
-            textAlign="left"
-          >
-            <FormContext.Provider
-              value={{
-                setError: setFormError,
-                setValue: setFormValue,
-                values: formValues,
-                errors: formErrors,
-              }}
+      <Box
+        align="start"
+        direction="column"
+        background="white"
+        pad={{ vertical: "30px", horizontal: "100px" }}
+      >
+        <Box justify="end" direction="row" pad="none" gap="medium">
+          {currentIndex > 0 && (
+            <Button
+              buttonType="unstyled"
+              onClick={onClickBack}
+              style={{ color: "black" }}
             >
-              {pageComponents[currentIndex]}
-              <Box justify="between" pad="medium" direction="row">
-                {currentIndex > 0 && (
-                  <Button
-                    border={{ radius: 0 }}
-                    color="black !important"
-                    onClick={onClickBack}
-                    label={translate(getCopy("back"), language)}
-                  />
-                )}
-                {currentIndex + 1 < pageTitles.length ? (
-                  <Button
-                    color="black !important"
-                    onClick={onClickNext}
-                    label={translate(getCopy("next"), language)}
-                  />
-                ) : (
-                  <ResultsButton />
-                )}
-              </Box>
-            </FormContext.Provider>
-          </Card>
-          <Sidebar
-            seal={ca ? seal : undefined}
-            pages={pageTitles}
-            currentIndex={currentIndex}
-            setCurrentIndex={setNextPage}
+              &#9666; {back}
+            </Button>
+          )}
+          <StyledMenu
+            label={languageOpts.find((lang) => lang.value === language)!.title}
+            items={languageOpts.map((lang) => ({
+              label: lang.title,
+              onClick: () => {
+                setLanguage(lang.value);
+              },
+            }))}
           />
         </Box>
+        <Form question={filteredQuestions[currentIndex]} />
+
+        {currentIndex + 1 < filteredQuestions.length ? (
+          <Button onClick={onClickNext} size="large">
+            {next}
+          </Button>
+        ) : (
+          <ResultsButton />
+        )}
       </Box>
       <Footer />
     </>

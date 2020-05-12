@@ -1,7 +1,7 @@
 import React from 'react'
+import { RadioButtonGroup } from 'grommet'
 import { Question } from '../../forms/types'
-import SingleSelect from './SingleSelect'
-import { getCopy } from '../../forms/index'
+import { useFormField, useFormDictionary } from '~/contexts/form'
 
 interface Props {
   [key: string]: any
@@ -9,19 +9,25 @@ interface Props {
   onChange: (val: string) => void
 }
 
-const Boolean: React.FC<Props> = (props) => {
+const Boolean: React.FC<Props> = ({ question }) => {
+  const [yes, no] = useFormDictionary('yes', 'no')
 
-  const question = props.question
-  question.options = [{
-    id: 'true',
-    name: getCopy("yes")
+  const options = [{
+    value: 'true',
+    name: yes,
+    label: yes
   },
   {
-    id: 'false',
-    name: getCopy("no")
+    value: 'false',
+    name: no,
+    label: no
   }]
 
-  return <SingleSelect question={question} />
+
+  const [value, setValue] = useFormField(question.id)
+  console.log(question, value)
+
+  return <RadioButtonGroup name={question.id} options={options} value={value} onChange={e => setValue(e.target.value)}/>
 }
 
 export default Boolean

@@ -1,19 +1,12 @@
 import React, { useState } from "react";
-import styled from "styled-components";
-import { Box, Menu, Text } from "grommet";
+import { Box, Text } from "grommet";
 import Form from "./Form";
 import ResultsButton from "./ResultsButton";
 import { Button } from "~/components/uswds-components";
 import { useFormDictionary, useForm } from "~/contexts/form";
-import { useSelectLanguage } from "~/contexts/language";
 
 import Header from "./Header";
 import Footer from "./Footer";
-
-const StyledMenu = styled(Menu)`
-  text-decoration: underline;
-  color: black;
-`;
 
 interface FormValues {
   [questionId: string]: string;
@@ -25,17 +18,11 @@ interface Props {
 
 const FormApp: React.FC<Props> = (props) => {
   const { ca } = props;
-  const [back, next, progress, complete] = useFormDictionary(
-    "back",
-    "next",
-    "progress",
-    "complete"
-  );
+  const [back, next, complete] = useFormDictionary("back", "next", "complete");
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const {
     form: { questions },
   } = useForm();
-  const [language, setLanguage, languageOpts] = useSelectLanguage();
 
   let filteredQuestions = questions;
   if (!ca) {
@@ -54,33 +41,23 @@ const FormApp: React.FC<Props> = (props) => {
 
   return (
     <>
-      <Header />
+      <Header showLanguageSelect />
       <Box
         align="start"
         direction="column"
         background="white"
-        pad={{ vertical: "30px", horizontal: "100px" }}
+        pad={{ vertical: "medium", horizontal: "xlarge" }}
       >
-        <Box justify="end" direction="row" pad="none" gap="medium">
-          {currentIndex > 0 && (
-            <Button
-              buttonType="unstyled"
-              onClick={onClickBack}
-              style={{ color: "black" }}
-            >
-              &#9666; {back}
-            </Button>
-          )}
-          <StyledMenu
-            label={languageOpts.find((lang) => lang.value === language)!.title}
-            items={languageOpts.map((lang) => ({
-              label: lang.title,
-              onClick: () => {
-                setLanguage(lang.value);
-              },
-            }))}
-          />
-        </Box>
+        {currentIndex > 0 && (
+          <Button
+            buttonType="unstyled"
+            onClick={onClickBack}
+            style={{ color: "black" }}
+          >
+            &#9666; {back}
+          </Button>
+        )}
+
         <Box margin={{ top: "medium" }} width="100%">
           <Box
             margin={{ top: "xsmall" }}

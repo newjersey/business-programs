@@ -39,7 +39,7 @@ const theme = {
       },
     },
     colors: {
-      control: uswdsPrimary,
+      control: { light: uswdsPrimary, dark: "#FFFFFF" },
     },
   },
   text: {

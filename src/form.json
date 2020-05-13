@@ -71,6 +71,14 @@
       "required": true,
       "options": [
         {
+              "id": "for_profit",
+              "name": {
+                "en": "Business (ie S-Corp, C-Corp, LLC)",
+                "es": "Negocio",
+                "zh": "商业"
+              }
+            },
+        {
           "id": "non_profit",
           "name": {
             "en": "Non-Profit - 501(c)(3)",

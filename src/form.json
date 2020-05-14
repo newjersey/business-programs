@@ -169,46 +169,6 @@
       "required": true
     },
     {
-      "id": "is_barred",
-      "name": {
-        "en": "Are you presently suspended, debarred, proposed for debarment, declared ineligible, voluntarily excluded from participation in this transaction by any Federal department or agency, or presently involved in any\nbankruptcy?",
-        "es": "¿Está actualmente suspendido, excluido, propuesto para exclusión, declarado no elegible, excluido voluntariamente de la participación en esta transacción por cualquier departamento o agencia federal, o actualmente involucrado en cualquier\n¿bancarrota?",
-        "zh": "您目前是否已被暂停，取消资格，提议取消资格，被宣布为不合格资格，是否自愿被任何联邦部门或机构排除在本次交易的参与范围之外，或者目前是否参与了任何\n破产？"
-      },
-      "type": "boolean",
-      "required": true
-    },
-    {
-      "id": "is_delinquent",
-      "name": {
-        "en": "Has the Applicant, any owner of the Applicant, or any business owned or controlled by any of them, ever obtained a direct or\r\nguaranteed loan from SBA or any other Federal agency that is currently delinquent or has defaulted in the last 7 years and\r\ncaused a loss to the government?",
-        "es": "¿El Solicitante, cualquier propietario del Solicitante, o cualquier negocio propiedad o controlado por alguno de ellos, alguna vez ha obtenido un\r\npréstamo garantizado de la SBA o de cualquier otra agencia federal que actualmente está en mora o ha incumplido en los últimos 7 años y\r\ncausó una pérdida al gobierno?",
-        "zh": "申请人，申请人的任何所有者或由他们任何人拥有或控制的任何业务是否曾直接获得或\r\n来自SBA或其他任何联邦政府的担保贷款，这些贷款目前已拖欠或在最近7年内违约，并且\r\n给政府造成了损失？"
-      },
-      "type": "boolean",
-      "required": true
-    },
-    {
-      "id": "is_criminal",
-      "name": {
-        "en": "Is the Applicant (if an individual) or any individual owning 20% or more of the equity of the Applicant subject\r\nto an indictment, criminal information, arraignment, or other means by which formal criminal charges are\r\nbrought in any jurisdiction, or presently incarcerated, or on probation or parole?",
-        "es": "¿Es el solicitante (si es un individuo) o cualquier individuo que posea el 20% o más del capital del sujeto solicitante\r\na una acusación, información criminal, lectura de cargos u otros medios por los cuales se presentan cargos penales formales\r\ntraído a alguna jurisdicción, o actualmente encarcelado, o en libertad condicional o en libertad condicional?",
-        "zh": "申请人（如果是个人）或拥有申请人20％或更多股权的任何个人？\r\n起诉书，刑事信息，传讯或其他形式的正式刑事指控\r\n被带入任何司法管辖区，或目前被监禁，或处于缓刑或假释状态？"
-      },
-      "type": "boolean",
-      "required": true
-    },
-    {
-      "id": "is_felony",
-      "name": {
-        "en": "Within the last 5 years, for any felony, has the Applicant (if an individual) or any owner of the Applicant 1)\r\nbeen convicted; 2) pleaded guilty; 3) pleaded nolo contendere; 4) been placed on pretrial diversion; or 5) been\r\nplaced on any form of parole or probation (including probation before judgment)?",
-        "es": "En los últimos 5 años, para cualquier delito grave, el solicitante (si es un individuo) o cualquier propietario del solicitante 1)\r\nsido condenado 2) se declaró culpable; 3) se declaró nolo contendere; 4) han sido colocados en desviación previa al juicio; o 5) estado\r\ncolocado en alguna forma de libertad condicional o libertad condicional (incluida la libertad condicional antes del juicio)?",
-        "zh": "在过去5年中，重罪包括申请人（如果是个人）或申请人的任何所有者1）\r\n被定罪； 2）认罪； 3）辩护诺洛竞争者； 4）被置于审前转移；或5）\r\n被置于任何形式的假释或缓刑（包括判决前的缓刑）？"
-      },
-      "type": "boolean",
-      "required": true
-    },
-    {
       "id": "has_other_sba_loans",
       "name": {
         "en": "Does your organization currently have any of the following SBA loans?\n- 7(a), 504, and/or microloans\n- SBA Disaster (Home or Business) Loans",

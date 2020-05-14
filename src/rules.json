@@ -41,26 +41,6 @@
         "op": "eq",
         "qid": "employee_count",
         "value": "true"
-      },
-      {
-        "op": "eq",
-        "qid": "is_barred",
-        "value": "false"
-      },
-      {
-        "op": "eq",
-        "qid": "is_delinquent",
-        "value": "false"
-      },
-      {
-        "op": "eq",
-        "qid": "is_criminal",
-        "value": "false"
-      },
-      {
-        "op": "eq",
-        "qid": "is_felony",
-        "value": "false"
       }
     ]
   },

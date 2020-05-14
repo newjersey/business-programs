@@ -1,10 +1,8 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import './select.css'
 import { Question, Option } from '../../forms/types'
 import { Select as GrommetSelect, Box } from 'grommet'
-import { LanguageContext } from '../../contexts/language'
-import { translate } from '../../forms/index'
-import { FormContext } from '../../contexts/form'
+import { useFormField } from '~/contexts/form'
 
 
 interface Props {
@@ -14,15 +12,13 @@ interface Props {
 
 const Select: React.FC<Props> = (props) => {
   const { question } = props
-  const { language } = useContext(LanguageContext)
-  const { values, setValue } = useContext(FormContext)
-  const value = values[question!.id]
+  const [ value, setValue ] = useFormField(question.id)
 
   if (!props.question) {
     return <Box />
   }
 
-  const options = question.options!.map((option: Option) => translate(option.name, language))
+  const options = question.options!.map((option: Option) => option.name)
 
   return (
     <GrommetSelect
@@ -31,9 +27,9 @@ const Select: React.FC<Props> = (props) => {
       margin={{ top: 'xsmall' }}
       options={options}
       value={value}
-      onChange={({ option }) => setValue(question.id, option)}
+      onChange={({ option }) => setValue(option)}
       id={question.id}
-      name={translate(question.name, language)}
+      name={question.name}
     />
   )
 }

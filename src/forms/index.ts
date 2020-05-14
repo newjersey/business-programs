@@ -1,6 +1,6 @@
 import validator from 'validator'
 import form from '../form.json'
-import { FormSchema, Form, Question, QuestionType, Copy } from './types';
+import { FormSchema, RawForm, Question, QuestionType, Copy } from './types';
 import DatePicker from '../components/form-components/DatePicker'
 import TextInput from '../components/form-components/TextInput'
 import Select from '../components/form-components/Select'
@@ -11,7 +11,7 @@ import PhoneNumber from '../components/form-components/PhoneNumber'
 import TextArea from '../components/form-components/TextArea'
 
 
-export function initializeForm(): Form {
+export function initializeForm(): RawForm {
   const rawForm = form
 
   // Validate the schema against our Joi schema
@@ -32,7 +32,7 @@ export function initializeForm(): Form {
     }
   }
 
-  return rawForm as Form;
+  return rawForm as RawForm;
 }
 
 export const getCopy = (id: string) => {
@@ -62,11 +62,11 @@ export function translate(copy: Copy, language: string): string {
 export function isValid(question: Question, answer: string | undefined, secondAnswer?: string): { valid: boolean, reason?: string } {
   // TODO: translate these validation warningss
   if (question.required && !answer) {
-    return { valid: false, reason: `"${question.name.en}" is a required field.` }
+    return { valid: false, reason: `"${question.name}" is a required field.` }
   }
 
   if (question.validate === 're-enter' && answer !== secondAnswer) {
-    return { valid: false, reason: `The two values for "${question.name.en}" must match.` }
+    return { valid: false, reason: `The two values for "${question.name}" must match.` }
   }
 
   if (question.validate && question.type === 'email' && (!answer || !validator.isEmail(answer))) {

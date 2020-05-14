@@ -1,7 +1,7 @@
-import React, { useContext } from 'react'
-import { Question } from '../../forms/types'
+import React  from 'react'
+import { Question } from '~/forms/types'
 import { TextArea as GrommetTextArea } from 'grommet'
-import { FormContext } from '../../contexts/form'
+import { useFormField } from '~/contexts/form'
 
 interface Props {
   question: Question
@@ -10,8 +10,8 @@ interface Props {
 
 const TextArea: React.FC<Props> = (props) => {
   const { question } = props
-  const { values, setValue } = useContext(FormContext)
-  return <GrommetTextArea value={values[question.id] as string} onChange={e => setValue(question.id, e.target.value)} />
+  const [ value, setValue ] = useFormField(question.id)
+  return <GrommetTextArea value={value as string} onChange={e => setValue(e.target.value)} />
 }
 
 export default TextArea

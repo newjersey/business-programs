@@ -1,10 +1,8 @@
-import React, { useState, useContext } from 'react'
+import React from 'react'
 import { Question as QuestionInterface } from '../forms/types'
 import { getComponent } from '../forms'
 import { Box, Heading, Text, Markdown } from 'grommet'
-import { LanguageContext } from '../contexts/language';
-import { translate } from '../forms/index';
-import { FormContext } from '../contexts/form';
+import { useForm } from '../contexts/form';
 
 interface Props {
   question: QuestionInterface
@@ -14,14 +12,13 @@ const Question: React.FC<Props> = (props) => {
   const { question } = props
   const Component: React.FC<{ [key: string]: any }> = getComponent(question.type)
 
-  const { language } = useContext(LanguageContext)
-  const { values } = useContext(FormContext)
+  const { values } = useForm()
 
   const value = values[question.id]
   const hasSwitch = question.switch && value && typeof value === 'string'
 
   // simple formatting for the question text
-  const text = translate(question.name, language).replace(/\n/g, "\n<br/>")
+  const text = question.name.replace(/\n/g, "\n<br/>")
 
   return (
     <Box direction="column" margin={{ bottom: 'small' }}>

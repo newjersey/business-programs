@@ -1,16 +1,10 @@
-import React, { useState, useContext } from "react";
-import { Card, Button } from "./helper-components/index";
-import { Box } from "grommet";
-import { initializeForm } from "../forms";
-import Sidebar from "./Sidebar";
-import Introduction from "./Introduction";
-import Review from "./Review";
+import React, { useState } from "react";
+import { Box, Text } from "grommet";
 import Form from "./Form";
-import { LanguageContext } from "../contexts/language";
-import { translate, getCopy } from "../forms/index";
 import ResultsButton from "./ResultsButton";
+import { Button } from "~/components/uswds-components";
+import { useFormDictionary, useForm } from "~/contexts/form";
 
-import { FormContext, Values, Errors, Value } from "../contexts/form";
 import Header from "./Header";
 import Footer from "./Footer";
 
@@ -19,44 +13,24 @@ interface FormValues {
 }
 
 interface Props {
-  ca?: boolean
+  ca?: boolean;
 }
 
 const FormApp: React.FC<Props> = (props) => {
+  const { ca } = props;
+  const [back, next, complete] = useFormDictionary("back", "next", "complete");
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
+  const {
+    form: { questions },
+  } = useForm();
 
-  const { ca } = props
-  const { language } = useContext(LanguageContext);
-  const form = initializeForm();
-
-  const { pages, seal } = form;
-
+  let filteredQuestions = questions;
   if (!ca) {
-    let rmPage = -1
-    pages.forEach((page, index) => {
-      if (page.title.en === 'California') {
-        rmPage = index
-      }
-    })
-    if (rmPage >= 0) {
-      pages.splice(rmPage, 1)
-    }
+    // This is a temporary fix until we flush out branching better
+    filteredQuestions.filter((q) => !q.ca_only);
   }
 
-  const pageTitles = pages.map((page) => {
-    return translate(page.title, language);
-  })
-
-  const pageComponents = [...pages.map((page) => <Form page={page} />)];
-
-  const [currentIndex, setCurrentIndex] = useState<number>(0);
-  const [formValues, setFormValues] = useState<Values>({});
-  const [formErrors, setFormErrors] = useState<Errors>({});
-
-  const setFormValue = (key: string, value: Value) =>
-    setFormValues({ ...formValues, [key]: value });
-  const setFormError = (key: string, value: string) =>
-    setFormErrors({ ...formErrors, [key]: value });
-
+  const percent = Math.floor((currentIndex / filteredQuestions.length) * 100);
   const setNextPage = (index: number) => {
     setCurrentIndex(index);
     window.scrollTo(0, 0);
@@ -67,54 +41,57 @@ const FormApp: React.FC<Props> = (props) => {
 
   return (
     <>
-      <Header />
-      <Box align="center" pad="medium" direction="column">
-        <Box width="100%" height="100%" justify="center" direction="row">
-          <Card
-            width="50%"
-            background="white"
-            display="flex"
-            justify="between"
-            flexDirection="column"
-            textAlign="left"
+      <Header showLanguageSelect />
+      <Box
+        align="start"
+        direction="column"
+        background="white"
+        pad={{ vertical: "medium", horizontal: "xlarge" }}
+      >
+        {currentIndex > 0 && (
+          <Button
+            buttonType="unstyled"
+            onClick={onClickBack}
+            style={{ color: "black" }}
           >
-            <FormContext.Provider
-              value={{
-                setError: setFormError,
-                setValue: setFormValue,
-                values: formValues,
-                errors: formErrors,
+            &#9666; {back}
+          </Button>
+        )}
+
+        <Box margin={{ top: "medium" }} width="100%">
+          <Box
+            margin={{ top: "xsmall" }}
+            style={{
+              width: "100%",
+              height: "8px",
+              borderRadius: "12px",
+              background: "#E4E7EB",
+            }}
+          >
+            <Box
+              style={{
+                width: `${percent}%`,
+                height: "100%",
+                borderRadius: "12px",
+                background: "#008060",
               }}
-            >
-              {pageComponents[currentIndex]}
-              <Box justify="between" pad="medium" direction="row">
-                {currentIndex > 0 && (
-                  <Button
-                    border={{ radius: 0 }}
-                    color="black !important"
-                    onClick={onClickBack}
-                    label={translate(getCopy("back"), language)}
-                  />
-                )}
-                {currentIndex + 1 < pageTitles.length ? (
-                  <Button
-                    color="black !important"
-                    onClick={onClickNext}
-                    label={translate(getCopy("next"), language)}
-                  />
-                ) : (
-                  <ResultsButton />
-                )}
-              </Box>
-            </FormContext.Provider>
-          </Card>
-          <Sidebar
-            seal={ca ? seal : undefined}
-            pages={pageTitles}
-            currentIndex={currentIndex}
-            setCurrentIndex={setNextPage}
-          />
+            />
+          </Box>
+          <Box>
+            <Text color="black" weight={300} size="xsmall">
+              {percent}% {complete}
+            </Text>
+          </Box>
         </Box>
+        <Form question={filteredQuestions[currentIndex]} />
+
+        {currentIndex + 1 < filteredQuestions.length ? (
+          <Button onClick={onClickNext} size="large">
+            {next}
+          </Button>
+        ) : (
+          <ResultsButton />
+        )}
       </Box>
       <Footer />
     </>

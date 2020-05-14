@@ -86,7 +86,9 @@ function App() {
               <Landing ca={true} />
             </Route>
             <Route exact path="/california/questions">
-              <FormApp ca={true} />
+              <FormProvider>
+                <FormApp ca={true} />
+              </FormProvider>
             </Route>
             <Route exact path="/questions">
               <FormProvider>

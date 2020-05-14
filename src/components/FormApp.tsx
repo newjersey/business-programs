@@ -27,7 +27,7 @@ const FormApp: React.FC<Props> = (props) => {
   let filteredQuestions = questions;
   if (!ca) {
     // This is a temporary fix until we flush out branching better
-    filteredQuestions.filter((q) => !q.ca_only);
+    filteredQuestions = filteredQuestions.filter((q) => !q.ca_only);
   }
 
   const percent = Math.floor((currentIndex / filteredQuestions.length) * 100);

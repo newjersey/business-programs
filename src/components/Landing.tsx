@@ -66,7 +66,7 @@ const Landing: React.FC<Props> = (props) => {
                   There are a few federal and state loan options available.
                 </p>
                 <p>
-                  We created a 10-minute questionnaire to help you figure out
+                  We created a 3-minute questionnaire to help you figure out
                   which programs your organization are qualified for.
                 </p>
               </section>
@@ -74,6 +74,7 @@ const Landing: React.FC<Props> = (props) => {
                 <h2>Who is it for?</h2>
                 <p>This free tool is for U.S.-based businesses including:</p>
                 <ul>
+                  <li>Businesses (C-Corp, S-Corp, LLC)</li>
                   <li>Nonprofits</li>
                   <li>Veteran's organizations</li>
                   <li>Tribal business concerns</li>
@@ -94,7 +95,7 @@ const Landing: React.FC<Props> = (props) => {
                 </p>
                 <Link to={ca ? "/california/questions" : "/questions"}>
                   <button className="usa-button">
-                    Take our 10-minute questionnaire
+                    Take our 3-minute questionnaire
                   </button>
                 </Link>
               </section>

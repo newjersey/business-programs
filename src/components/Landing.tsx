@@ -110,7 +110,7 @@ const Landing: React.FC<Props> = (props) => {
                   your state’s programs, please contact the{" "}
                   <a
                     target="_blank"
-                    href="https://docs.google.com/forms/d/e/1FAIpQLSfdwDvDnFd2dOyuMKuhjn0uUy5uw4Vf5lnVZQDH0obslTCrOg/viewform"
+                    href="https://www.usdigitalresponse.org/requesthelp"
                   >
                     US Digital Response
                   </a>

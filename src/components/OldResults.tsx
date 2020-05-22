@@ -70,6 +70,18 @@ const OldResults: React.FC = () => {
                       >
                         California Small Business Finance Center
                       </li>
+                      <li
+                          className="ca_cleen_program"
+                          data-program-name="California Lending for Energy and Environmental Needs (CLEEN)"
+                      >
+                        California Lending for Energy and Environmental Needs (CLEEN)
+                      </li>
+                      <li
+                          className="ca_501"
+                          data-program-name="California Tax-exempt Bonds"
+                      >
+                        California Tax-exempt 501(c)(3) Bonds
+                      </li>
                     </ul>
                   </li>
                 </ul>
@@ -287,6 +299,71 @@ const OldResults: React.FC = () => {
                     </p>
                   </div>
                 </div>
+
+                <div className="ca_cleen_program program card">
+                  <div className="card-header">
+                    <h4>California Lending for Energy and Environmental Needs (CLEEN)</h4>
+                  </div>
+                  <div className="card-body">
+                    <dl className="row">
+                      <dt className="col-sm-3">What is it?</dt>
+                      <dd className="col-sm-9">
+                        Public financing to help organizations reduce greenhouse gas emissions, improve water conservation and energy conservation.
+                      </dd>
+
+                      <dt className="col-sm-3">Who is it for?</dt>
+                      <dd className="col-sm-9">
+                        Municipalities, Universities, Schools and Hospitals
+                      </dd>
+                    </dl>
+                  </div>
+                  <div className="card-footer">
+                    <a
+                        href="https://ibank.ca.gov/cleen-center/"
+                        className="no-print btn btn-primary"
+                        target="_blank"
+                    >
+                      Learn more
+                    </a>
+                    <p className="yes-print">
+                      Learn more about CLEEN:
+                      https://ibank.ca.gov/cleen-center/
+                    </p>
+                  </div>
+                </div>
+
+                <div className="ca_501 program card">
+                  <div className="card-header">
+                    <h4>California Tax-exempt 501(c)(3) Bonds</h4>
+                  </div>
+                  <div className="card-body">
+                    <dl className="row">
+                      <dt className="col-sm-3">What is it?</dt>
+                      <dd className="col-sm-9">
+                        Tax-exempt financing to help acquire or improve facilities.
+                      </dd>
+
+                      <dt className="col-sm-3">Who is it for?</dt>
+                      <dd className="col-sm-9">
+                        Nonprofit public benefit corporations.  Typical borrowers include cultural, educational, charitable and recreational organizations.
+                      </dd>
+                    </dl>
+                  </div>
+                  <div className="card-footer">
+                    <a
+                        href="https://ibank.ca.gov/501c3-bond-financing/"
+                        className="no-print btn btn-primary"
+                        target="_blank"
+                    >
+                      Learn more
+                    </a>
+                    <p className="yes-print">
+                      Learn more about CLEEN:
+                      https://ibank.ca.gov/501c3-bond-financing/
+                    </p>
+                  </div>
+                </div>
+
 
                 <h3>Counseling and Training</h3>
 

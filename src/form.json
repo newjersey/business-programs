@@ -199,6 +199,42 @@
       "type": "boolean",
       "required": true,
       "ca_only": true
+    },
+    {
+      "id": "ca_public_benefit",
+      "name": {
+        "en": "Is your organization a public benefit nonprofit?"
+      },
+      "type": "boolean",
+      "required": true,
+      "ca_only": true
+    },
+    {
+      "id": "ca_cleen",
+      "name": {
+        "en": "Is your organization a hospital, school or university looking to fund energy efficiency upgrades?"
+      },
+      "type": "boolean",
+      "required": true,
+      "ca_only": true
+    },
+    {
+      "id": "ca_manufacturing",
+      "name": {
+        "en": "Is your organization a manufacturing and processing company?"
+      },
+      "type": "boolean",
+      "required": true,
+      "ca_only": true
+    },
+    {
+      "id": "ca_community_benefit",
+      "name": {
+        "en": "Is your organization working on improving facilities or capital assets?"
+      },
+      "type": "boolean",
+      "required": true,
+      "ca_only": true
     }
   ]
 }

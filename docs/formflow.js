@@ -21,9 +21,11 @@ function parseNumber(num) {
 var nonprofit_q = "q11",
   yearlong_q = "q7",
   nj_business_q = "q1",
+  phase1_part = "q301",
   requirements = {
-    eag: { // Emergency Assistance Grant
-      required_yes: ["q1", "q2", "q12", "q17", "q20", "q21", "q22", "q23", "q42"],
+    eag: { // Emergency Assistance Grant (Phase 1)
+      required_yes: ["q1", "q2", "q17", "q20", "q21", "q22", "q23", "q42"],
+        // q12 no longer part of the form
       required_no: ["q3", "q14"],
       eval: {
         "q8": function (fte) {
@@ -35,6 +37,24 @@ var nonprofit_q = "q11",
         },
         "q18": function (val) {
           return (val === true) || (val === -1); // yes or not sure
+        }
+      }
+    },
+    eag2: { // Emergency Assistance Grant (Phase 2)
+      required_yes: ["q1", "q17", "q20", "q21", "q22", "q23", "q42", "q204"],
+      required_no: ["q14"],
+      eval: {
+        "q8": function (fte) {
+          fte = parseNumber(fte);
+          if (answers[phase1_part] === true) {
+            // yes, participated in old program
+            return fte >= 6 && fte <= 25;
+          } else {
+            return fte >= 0 && fte <= 25;
+          }
+        },
+        "q11": function (val) {
+          return (val === true) || (answers[nonprofit_q] === false);
         }
       }
     },
@@ -199,7 +219,7 @@ var answers = {};
 
 function moveToReport(e) {
   e.preventDefault();
-  $("form, .hidden_options, .preamble").hide();
+  $("form, .preamble").hide();
   $(".report").show();
 
   var njeligible = $(".program.eag").css("display")
@@ -234,7 +254,7 @@ function moveToReport(e) {
 function viewQs(e) {
   e.preventDefault();
   $(".report").hide();
-  $("form, .hidden_options, .preamble").show();
+  $("form, .preamble").show();
   return false;
 }
 
@@ -421,7 +441,7 @@ $(document).ready(function () {
         formplace.append($("<label>").attr("for", q.input.name).text(lang_src.input.label || q.input.label));
       }
       if ((lang_src.input && lang_src.input.examples) || q.input.examples) {
-        formplace.append($("<small>").attr("class", "form-text text-muted").text(language_defaults[select_lang].examples + ": " + (lang_src.input || q.input).examples));
+        formplace.append($("<small>").attr("class", "form-text text-muted").text(" " + language_defaults[select_lang].examples + ": " + (lang_src.input || q.input).examples));
       }
 
       formplace.append($("<input>").attr("type", "text").attr("class", "input form-control form-control-lg").attr("name", q.input.name).attr("id", q.input.name));

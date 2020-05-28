@@ -57,11 +57,7 @@ var form_questions = {
       The information you share for purposes of this Eligibility Wizard will be \
       anonymous and may be shared with NJ State agencies to improve access to \
       benefits and programs. \
-    </p> \
-    <blockquote> \
-      At this time, the Small Business Emergency Assistance Grant and the Small Business Emergency Assistance Loan Program applications \
-      have closed. We encourage you to continue with the Eligibility Wizard to determine other financing opportunities your business may be eligible for. \
-    </blockquote> ",
+    </p>",
     hard_pass: false, // if saying no to agreement
     yes_text: "Agree",
     no_text: "Cancel",
@@ -87,12 +83,7 @@ var form_questions = {
           debe hacerlo a través de la agencia administradora correspondiente. La agencia \
           administradora determinará todos los requisitos de elegibilidad en el momento en que \
           usted envíe la solicitud a esa agencia para el respectivo programa. \
-        </p> \
-        <blockquote> \
-          En este momento, las solicitudes de Emergency Assistance Grant (Programa de Subsidios para Asistencia de Emergencia) y \
-          el Emergency Assistance Loan Program (Programa de Préstamos para Asistencia de Emergencia) están cerradas.  \
-          Le sugerimos a que continúe con El Asistente de Elegibilidad para determinar otras oportunidades de financiamiento para las que su empresa puede ser elegible. \
-        </blockquote>"
+        </p>"
     }
   },
 
@@ -148,7 +139,7 @@ var form_questions = {
     classes: "non-profit",
     html: "<span class=\"badge badge-success\">Federal SBA Programs</span> \
     <p> \
-      Does your not-for-profit have one of the following designations: 501(c)(3), 501(c)(19)? \
+      Does your organization have one of the following designations: 501(c)(3), 501(c)(19)? \
     </p>",
     es: {
       html: "<p>¿Tiene su organización una de las siguientes designaciones: 501(c)(3), 501(c)(19)?</p>"
@@ -157,10 +148,18 @@ var form_questions = {
   "q0": {
     html: "<p> \
       Does your organization have an existing financial relationship \
-      with NJEDA, such as a loan or incentive agreement? \
+      with NJEDA, such as a loan, grant, or incentive agreement? \
     </p>",
     es: {
-      html: "<p>¿Tiene su organización una relación financiera existente con NJEDA, por ejemplo un préstamo o un acuerdo de incentivo?</p>"
+      html: "<p>¿Tiene su organización una relación financiera existente con NJEDA, por ejemplo un préstamo, un acuerdo de incentivo, o Emergency Assistance Grant?</p>"
+    }
+  },
+  "q301": {
+    html: "<p> \
+      Did your organization receive funding under Phase 1 of the Small Business Emergency Grant Program? \
+    </p>",
+    es: {
+      html: "<p>Recibió su organización fondos bajo Phase 1 del Small Business Emergency Grant Program?</p>"
     }
   },
   "q203": {
@@ -197,17 +196,16 @@ var form_questions = {
   "q2": {
     html: "<p> \
       Does your organization have a physical commercial location in the State of New Jersey (e.g., a \
-      non-homebased office, \
       a physical-retail store, a production facility, a \
-      warehouse, etc.)? \
+      warehouse, a home office, etc.)? \
     </p>",
     yes_hides: ["not_in_nj"],
     no_hides: ["physical_nj"],
     es: {
       html: "<p>¿Tiene su organización una ubicación comercial física \
-        en el estado de New Jersey (por ejemplo, una oficina que no se encuentre \
-          en el hogar, una tienda minorista física, una planta de producción, \
-          un almacén, etc.)?</p>"
+        en el estado de New Jersey (por ejemplo, una tienda minorista física, \
+          una planta de producción, \
+          un almacén, una oficina en el hogar, etc.)?</p>"
     }
   },
   "q3": {
@@ -223,38 +221,6 @@ var form_questions = {
   "Industry": {
     header: true,
     es: "Industria"
-  },
-  "q12": {
-    html: "<p> \
-      Is your organization classified in one of the following industries? \
-    </p> \
-    <ul> \
-      <li>Retail</li> \
-      <li>Accommodation & food services</li> \
-      <li>Arts, entertainment & recreation </li> \
-      <li>Other services, such as repair and maintenance of vehicles, machinery, equipment, or products </li> \
-      <li>Other services, such as personal services (barbers, cleaners, nail salons, etc.) or laundry</li> \
-    </ul> \
-    <p>If you are unsure about if you fall into one of the “Other services” categories, please confirm you are \
-      in an industry with an industry code that starts with 811 or 812 on this list: \
-        <a href=\"https://www.naics.com/six-digit-naics/?code=81\" target=\"_blank\"> \
-        https://www.naics.com/six-digit-naics/?code=81</a> \
-    </p>",
-    no_text: "None of the above",
-    es: {
-      html: "<p>¿Está clasificada su organización en una de las siguientes industrias?</p> \
-      <ul> \
-        <li>Minorista</li> \
-        <li>Servicios de alojamiento y alimentos</li> \
-        <li>Artes, entretenimiento y recreación </li> \
-        <li>Otros servicios, tales como la reparación y el mantenimiento de vehículos, maquinaria, equipos o productos</li> \
-        <li>Otros servicios, como servicios personales (peluqueros, tintorerías, salones de manicura, etc.) o lavandería</li> \
-      </ul> \
-      <p>Si no está seguro acerca de si está incluido en uno de los “Otros servicios”, confirme que está en una industria \
-        con un código que comienza con 811 o 812 en la siguiente lista: \
-        <a href=\"https://www.naics.com/six-digit-naics/?code=81\">https://www.naics.com/six-digit-naics/?code=81</a> \
-      </p>"
-    }
   },
   "q13": {
     classes: "for-profit",

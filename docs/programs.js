@@ -1,6 +1,6 @@
 var program_descriptions = {
   eag: {
-    disclaimer: "The Small Business Emergency Assistance Grant is now closed.",
+    disclaimer: "The Small Business Emergency Assistance Grant (Phase 1) is now closed.",
     description: "An operating expense grant for NJ-based businesses or non-profits \
       with 1-10 full time employees in the retail/accommodation/food \
       service/arts/entertainment/recreation/service industries.",
@@ -10,8 +10,8 @@ var program_descriptions = {
     funding: "$1K per full-time employee, up to $5,000.",
     learn_more: "https://faq.business.nj.gov/en/articles/3835237",
     es: {
-      alt_name: "Programa de Subsidios para Asistencia de Emergencia",
-      disclaimer: "El Emergency Assistant Grant (Programa de Subsidios para Asistencia de Emergencia) ahora está cerrada",
+      alt_name: "Programa de Subsidios para Asistencia de Emergencia (Phase 1)",
+      disclaimer: "El Emergency Assistant Grant (Programa de Subsidios para Asistencia de Emergencia) (Phase 1) ahora está cerrada",
       description: "Un subsidio para gastos operativos de empresas u organizaciones sin fines de lucro \
         con sede en NJ que cuenten con 1 a 10 empleados de tiempo completo en las \
         siguientes industrias: minorista, alojamiento, servicio de alimentos, artes, \
@@ -20,6 +20,22 @@ var program_descriptions = {
         y reducir las suspensiones o despidos para las empresas que pueden demostrar que se \
         han visto afectadas de manera negativa por la emergencia de la COVID-19.",
       funding: "$1,000 por empleado a tiempo completo, hasta $5,000."
+    }
+  },
+
+  eag2: {
+    description: "The program is designed to provide short-term, immediate payroll and working capital support to New Jersey small and medium sized enterprises (businesses and non-profits) (“SMEs”), with no more than  25 Full Time Equivalent employees (FTEs), that that have been negatively impacted during the declared state of emergency, thereby helping to stabilize their operations and minimizing any potential furloughs and/or layoffs.",
+    uses: "Grant funding to be used for reimbursement of working capital expenses incurred between March 1, 2020 and the date of the grant agreement.",
+    funding: "$1K per full-time employee, up to $10,000 as applicable. Certain restrictions may apply for those who successfully received other COVID-19 related relief funding such as a phase 1 grant or a federal PPP loan. \
+      Please use our Grant Calculator to estimate your award <a href=\"https://forms.business.nj.gov/grant-2-size/\">https://forms.business.nj.gov/grant-2-size/</a>",
+    learn_more: "https://faq.business.nj.gov/en/articles/3835237-what-is-the-status-of-the-njeda-small-business-emergency-assistance-grant-program-phase-2-information-now-available",
+    es: {
+      alt_name: "Programa de Subsidios para Asistencia de Emergencia (Phase 2)",
+      description: "El programa está diseñado para proporcionar apoyo de nómina y capital de trabajo inmediato a corto plazo a las empresas medianas y pequeñas (incluye negocios y negocios sin fines de lucro) de Nueva Jersey, con no más de 25 empleados equivalentes a tiempo completo, que han sido impactados negativamente durante el estado de emergencia declarado, ayudando así a estabilizar sus operaciones y disminuir cualquier posible licencia a largo plazo y/o despido.",
+      uses: "El financiamiento de el subsidio sera utilizado para el reembolso de los gastos de capital de trabajo incurridos entre el 1 de marzo de 2020 y la fecha del acuerdo al subsidio.",
+      funding: "$ 1,000 por empleado de tiempo completo, hasta $ 10,000 según corresponda. Se pueden aplicar ciertas restricciones para aquellos que recibieron con éxito otros fondos de ayuda relacionados con COVID-19, como por ejemplo Phase 1 Grant o un Federal PPP Loan. \
+        Por favor use nuestra calculadora de subsidio para determinar su elegibildad. \
+        <a href=\"https://forms.business.nj.gov/grant-2-size/\">https://forms.business.nj.gov/grant-2-size/</a>"
     }
   },
 

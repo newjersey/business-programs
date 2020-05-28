@@ -27,7 +27,7 @@ var program_descriptions = {
     description: "The program is designed to provide short-term, immediate payroll and working capital support to New Jersey small and medium sized enterprises (businesses and non-profits) (“SMEs”), with no more than  25 Full Time Equivalent employees (FTEs), that that have been negatively impacted during the declared state of emergency, thereby helping to stabilize their operations and minimizing any potential furloughs and/or layoffs.",
     uses: "Grant funding to be used for reimbursement of working capital expenses incurred between March 1, 2020 and the date of the grant agreement.",
     funding: "$1K per full-time employee, up to $10,000 as applicable. Certain restrictions may apply for those who successfully received other COVID-19 related relief funding such as a phase 1 grant or a federal PPP loan. \
-      Please use our Grant Calculator to estimate your award <a href=\"https://forms.business.nj.gov/grant-2-size/\">https://forms.business.nj.gov/grant-2-size/</a>",
+      Please use our Grant Calculator to estimate your award <a target=\"_blank\" href=\"https://forms.business.nj.gov/grant-2-size/\">https://forms.business.nj.gov/grant-2-size/</a>",
     learn_more: "https://faq.business.nj.gov/en/articles/3835237-what-is-the-status-of-the-njeda-small-business-emergency-assistance-grant-program-phase-2-information-now-available",
     es: {
       alt_name: "Programa de Subsidios para Asistencia de Emergencia (Phase 2)",
@@ -35,7 +35,7 @@ var program_descriptions = {
       uses: "El financiamiento de el subsidio sera utilizado para el reembolso de los gastos de capital de trabajo incurridos entre el 1 de marzo de 2020 y la fecha del acuerdo al subsidio.",
       funding: "$ 1,000 por empleado de tiempo completo, hasta $ 10,000 según corresponda. Se pueden aplicar ciertas restricciones para aquellos que recibieron con éxito otros fondos de ayuda relacionados con COVID-19, como por ejemplo Phase 1 Grant o un Federal PPP Loan. \
         Por favor use nuestra calculadora de subsidio para determinar su elegibildad. \
-        <a href=\"https://forms.business.nj.gov/grant-2-size/\">https://forms.business.nj.gov/grant-2-size/</a>"
+        <a target=\"_blank\" href=\"https://forms.business.nj.gov/grant-2-size/\">https://forms.business.nj.gov/grant-2-size/</a>"
     }
   },
 
@@ -143,7 +143,7 @@ var program_descriptions = {
         fundamental al proporcionar acceso a herramientas y recursos financieros a las empresas\
          y las personas que tienen dificultades para acceder al sector bancario tradicional. \
          Específicamente, NJEDA creó dos programas ( \
-           <a href=\"https://faq.business.nj.gov/en/articles/3835240\">https://faq.business.nj.gov/en/articles/3835240</a> \
+           <a target=\"_blank\" href=\"https://faq.business.nj.gov/en/articles/3835240\">https://faq.business.nj.gov/en/articles/3835240</a> \
          ), el CDFI Emergency Assistance Grant Program (Programa de Subsidios para Asistencia de Emergencia de las CDFI) y el CDFI Loan Loss Reserve Fund (Fondo de Reserva de Emergencia para Morosidad de las CDFI) para ayudar a las CDFI locales a aumentar sus préstamos a microempresas y pequeñas empresas, sobre todo en comunidades y segmentos comerciales tradicionalmente marginados. \
         </p><p> \
         Puede comunicarse directamente con una CDFI para ver si es elegible para cualquiera de sus programas de financiamiento con apoyo estatal o sin este. Haga clic en el enlace de arriba para ver una lista de las CDFI con sede en New Jersey que se enfocan en el financiamiento de microempresas y pequeñas empresas. \
@@ -169,14 +169,14 @@ var program_descriptions = {
     availability: "Loans are administered by the federal government. Businesses are advised to submit \
     applications as soon as possible. Businesses with over 500 FTE employees should confirm that their \
     business meets the definition of ‘small business concern’ before applying - please use the \
-    <a href=\"https://www.sba.gov/size-standards\">https://www.sba.gov/size-standards</a>",
+    <a target=\"_blank\" href=\"https://www.sba.gov/size-standards\">https://www.sba.gov/size-standards</a>",
     learn_more: "https://disasterloan.sba.gov/ela",
     es: {
       description: "Ofrece préstamos federales de bajo interés por desastre para capital de trabajo a pequeñas empresas que sufren daños económicos sustanciales a causa del Coronavirus (COVID-19).",
       uses: "Capital de trabajo",
       availability: " El gobierno federal administra los préstamos. Se aconseja a las empresas que presenten sus solicitudes lo antes posible. \
         Las empresas con más de 500 empleados equivalentes a tiempo completo (full-time equivalent, FTE) deben confirmar que su empresa cumple con la definición de ‘pequeña empresa’ antes de presentar la solicitud; utilice\
-        <a href=\"https://www.sba.gov/size-standards\">https://www.sba.gov/size-standards</a>"
+        <a target=\"_blank\" href=\"https://www.sba.gov/size-standards\">https://www.sba.gov/size-standards</a>"
     }
   },
   eidl_advance: {
@@ -189,14 +189,14 @@ var program_descriptions = {
     availability: "Loans are administered by the federal government. Businesses must first apply for an EIDL. \
       Businesses with over 500 FTE employees should confirm that their \
       business meets the definition of ‘small business concern’ before applying - please use the \
-      <a href=\"https://www.sba.gov/size-standards\">https://www.sba.gov/size-standards</a>",
+      <a target=\"_blank\" href=\"https://www.sba.gov/size-standards\">https://www.sba.gov/size-standards</a>",
     learn_more: "https://www.sba.gov/page/coronavirus-covid-19-small-business-guidance-loan-resources",
     es: {
       description: "Ofrece un adelanto de emergencia de hasta $10,000, dentro de los 3 días posteriores de solicitar el SBA Economic Injury Disaster Loan (EIDL), a pequeñas empresas y organizaciones privadas sin fines de lucro que han sido perjudicadas por la COVID-19. <em>Este adelanto de préstamo no deberá devolverse.</em>",
       uses: "Se puede utilizar para mantener a los empleados en nómina, pagar licencias por enfermedad, cubrir el aumento de costos de producción debido a interrupciones en la cadena de suministro, o pagar obligaciones comerciales, incluidos pagos de deudas, alquiler e hipoteca.",
       availability: "El gobierno federal administra los préstamos. Primero, las empresas deben solicitar el EIDL. \
         Las empresas con más de 500 empleados equivalentes a tiempo completo (full-time equivalent, FTE) deben confirmar que su empresa cumple con la definición de ‘pequeña empresa’ antes de presentar la solicitud; utilice\
-        <a href=\"https://www.sba.gov/size-standards\">https://www.sba.gov/size-standards</a>"
+        <a target=\"_blank\" href=\"https://www.sba.gov/size-standards\">https://www.sba.gov/size-standards</a>"
     }
   },
   a7: {
@@ -226,14 +226,14 @@ var program_descriptions = {
       service tool called Lender Match to help find a lender near you. \
       Businesses with over 500 FTE employees should confirm that their \
       business meets the definition of ‘small business concern’ before applying - please use the \
-      <a href=\"https://www.sba.gov/size-standards\">https://www.sba.gov/size-standards</a>",
+      <a target=\"_blank\" href=\"https://www.sba.gov/size-standards\">https://www.sba.gov/size-standards</a>",
     learn_more: "https://www.sba.gov/page/coronavirus-covid-19-small-business-guidance-loan-resources",
     es: {
       description: "Proporciona asistencia de flujo de caja a través de préstamos con garantía federal del 100 % a los empleadores que mantienen su nómina durante esta emergencia. Si los empleadores mantienen su nómina, <em>los préstamos serán condonados</em>.",
       uses: "Puede utilizarse para mantener a los empleados en nómina, pagar vacaciones, licencias por maternidad/paternidad, familiar, médica o por enfermedad, pagar por despido o desvinculación, pagar beneficios de salud grupales, beneficios de jubilación o pagar impuestos estatales o locales sobre la compensación de empleados. ",
       availability: "Los préstamos son administrados por prestamistas SBA 7(a) elegibles. La SBA tiene una herramienta de servicio de remisión gratuita llamada Lender Match para ayudarlo a encontrar un prestamista cercano. \
         Las empresas con más de 500 empleados equivalentes a tiempo completo (full-time equivalent, FTE) deben confirmar que su empresa cumple con la definición de ‘pequeña empresa’ antes de presentar la solicitud; utilice\
-        <a href=\"https://www.sba.gov/size-standards\">https://www.sba.gov/size-standards</a>"
+        <a target=\"_blank\" href=\"https://www.sba.gov/size-standards\">https://www.sba.gov/size-standards</a>"
     }
   },
   sba_debt: {

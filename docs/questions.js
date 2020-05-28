@@ -75,7 +75,7 @@ var form_questions = {
           cualquier programa de asistencia estatal o federal. Las especificaciones completas de \
           cada programa de asistencia para emergencias del estado se encuentran en el Centro de \
            Información para Empresas sobre la COVID: \
-           <a href=\"https://cv.business.nj.gov\">https://cv.business.nj.gov</a> \
+           <a target=\"_blank\" href=\"https://cv.business.nj.gov\">https://cv.business.nj.gov</a> \
            . Si tiene más preguntas, comuníquese con ellos a través de la función de chat de ese sitio web (en este momento, solo disponible en inglés). \
         </p> \
         <p> \

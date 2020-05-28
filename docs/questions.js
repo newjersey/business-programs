@@ -150,11 +150,13 @@ var form_questions = {
       Does your organization have an existing financial relationship \
       with NJEDA, such as a loan, grant, or incentive agreement? \
     </p>",
+    no_hides: ["prev_nj"],
     es: {
       html: "<p>¿Tiene su organización una relación financiera existente con NJEDA, por ejemplo un préstamo, un acuerdo de incentivo, o Emergency Assistance Grant?</p>"
     }
   },
   "q301": {
+    classes: "prev_nj",
     html: "<p> \
       Did your organization receive funding under Phase 1 of the Small Business Emergency Grant Program? \
     </p>",

@@ -223,6 +223,7 @@ function moveToReport(e) {
   $(".report").show();
 
   var njeligible = $(".program.eag").css("display")
+    + $(".program.eag2").css("display")
     + $(".program.eawcl").css("display")
     + $(".program.guarantee").css("display")
     + $(".program.egp").css("display")

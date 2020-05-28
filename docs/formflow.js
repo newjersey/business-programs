@@ -48,9 +48,9 @@ var nonprofit_q = "q11",
           fte = parseNumber(fte);
           if (answers[phase1_part] === true) {
             // yes, participated in old program
-            return fte >= 6 && fte <= 25;
+            return fte > 5 && fte <= 25;
           } else {
-            return fte >= 0 && fte <= 25;
+            return fte > 0 && fte <= 25;
           }
         },
         "q11": function (val) {

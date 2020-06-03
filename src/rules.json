@@ -103,5 +103,20 @@
         "value": "true"
       }
     ]
+  },
+  {
+    "program": "pitt_elf",
+    "rules": [
+      {
+        "op": "eq",
+        "qid": "pitt_city_location",
+        "value": "true"
+      },
+      {
+        "op": "le",
+        "qid": "business_age",
+        "value": "2019-01-01"
+      }
+    ]
   }
 ]

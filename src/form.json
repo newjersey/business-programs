@@ -235,6 +235,15 @@
       "type": "boolean",
       "required": true,
       "ca_only": true
+    },
+    {
+      "id": "pitt_city_location",
+      "name": {
+        "en": "Is your business located in Pittsburgh?"
+      },
+      "type": "boolean",
+      "required": true,
+      "pitt_only": true
     }
   ]
 }

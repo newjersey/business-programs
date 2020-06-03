@@ -82,6 +82,12 @@ const OldResults: React.FC = () => {
                       >
                         California Tax-exempt 501(c)(3) Bonds
                       </li>
+                      <li
+                          className="pitt_elf"
+                          data-program-name="Pittsburgh Small Business Emergency Loan Fund"
+                      >
+                        Pittsburgh Small Business Emergency Loan Fund
+                      </li>
                     </ul>
                   </li>
                 </ul>
@@ -360,6 +366,38 @@ const OldResults: React.FC = () => {
                     <p className="yes-print">
                       Learn more about CLEEN:
                       https://ibank.ca.gov/501c3-bond-financing/
+                    </p>
+                  </div>
+                </div>
+
+                <div className="pitt_elf program card">
+                  <div className="card-header">
+                    <h4>Pittsburgh Small Business Emergency Loan Fund</h4>
+                  </div>
+                  <div className="card-body">
+                    <dl className="row">
+                      <dt className="col-sm-3">What is it?</dt>
+                      <dd className="col-sm-9">
+                        0% interest loans offered by the Urban Redevelopment Authority.
+                      </dd>
+
+                      <dt className="col-sm-3">Who is it for?</dt>
+                      <dd className="col-sm-9">
+                        Small businesses located in Pittsburgh.
+                      </dd>
+                    </dl>
+                  </div>
+                  <div className="card-footer">
+                    <a
+                        href="https://tinyurl.com/uracovidloan"
+                        className="no-print btn btn-primary"
+                        target="_blank"
+                    >
+                      Apply now
+                    </a>
+                    <p className="yes-print">
+                      Apply to the Pittsburgh Small Business Emergency Loan Fund:
+                      https://tinyurl.com/uracovidloan
                     </p>
                   </div>
                 </div>

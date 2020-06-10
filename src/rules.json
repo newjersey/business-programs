@@ -118,5 +118,51 @@
         "value": "2019-01-01"
       }
     ]
+  },
+  {
+    "program": "pitt_bridgeway",
+    "rules": [
+      {
+        "op": "eq",
+        "qid": "pitt_city_location",
+        "value": "true"
+      },
+      {
+        "op": "le",
+        "qid": "business_age",
+        "value": "2019-01-01"
+      }
+    ]
+  },
+  {
+    "program": "pitt_kiva",
+    "rules": [
+      {
+        "op": "eq",
+        "qid": "pa_state",
+        "value": "true"
+      },
+      {
+        "op": "le",
+        "qid": "business_age",
+        "value": "2019-01-01"
+      }
+    ]
+  },
+  {
+    "program": "pitt_honeycomb",
+    "rules": [
+      {
+        "op": "eq",
+        "qid": "pa_state",
+        "value": "true"
+      },
+      {
+        "op": "le",
+        "qid": "business_age",
+        "value": "2019-01-01"
+      }
+    ]
   }
+
 ]

@@ -237,9 +237,18 @@
       "ca_only": true
     },
     {
+      "id": "pa_state",
+      "name": {
+        "en": "Is your business located in Pennsylvania?"
+      },
+      "type": "boolean",
+      "required": true,
+      "pitt_only": true
+    },
+    {
       "id": "pitt_city_location",
       "name": {
-        "en": "Is your business located in Pittsburgh?"
+        "en": "Is your business located in within the city limits of Pittsburgh?"
       },
       "type": "boolean",
       "required": true,

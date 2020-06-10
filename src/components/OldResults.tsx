@@ -88,6 +88,24 @@ const OldResults: React.FC = () => {
                       >
                         Pittsburgh Small Business Emergency Loan Fund
                       </li>
+                      <li
+                          className="pitt_bridgeway"
+                          data-program-name="Bridgeway Capital Response Fund"
+                      >
+                        Bridgeway Capital Response Fund
+                      </li>
+                      <li
+                          className="pitt_kiva"
+                          data-program-name="Kiva Pittsburgh Loan"
+                      >
+                        Kiva Pittsburgh Loan
+                      </li>
+                      <li
+                          className="pitt_honeycomb"
+                          data-program-name="Honeycomb Small Business Relief Loan"
+                      >
+                        Honeycomb Small Business Relief Loan
+                      </li>
                     </ul>
                   </li>
                 </ul>
@@ -402,6 +420,101 @@ const OldResults: React.FC = () => {
                   </div>
                 </div>
 
+                <div className="pitt_bridgeway program card">
+                  <div className="card-header">
+                    <h4>Bridgeway Capital Response Fund</h4>
+                  </div>
+                  <div className="card-body">
+                    <dl className="row">
+                      <dt className="col-sm-3">What is it?</dt>
+                      <dd className="col-sm-9">
+                        Connecting small businesses in western Pennsylvania to capital when it is needed most.
+                      </dd>
+
+                      <dt className="col-sm-3">Who is it for?</dt>
+                      <dd className="col-sm-9">
+                        small businesses in western Pennsylvania.
+                      </dd>
+                    </dl>
+                  </div>
+                  <div className="card-footer">
+                    <a
+                        href="https://www.bridgewaycapital.org/loans-and-modifications/covid-19-response-fund/"
+                        className="no-print btn btn-primary"
+                        target="_blank"
+                    >
+                      Apply now
+                    </a>
+                    <p className="yes-print">
+                      Apply to the Bridgeway Capital Response Fund:
+                      https://www.bridgewaycapital.org/loans-and-modifications/covid-19-response-fund/
+                    </p>
+                  </div>
+                </div>
+
+                <div className="pitt_kiva program card">
+                  <div className="card-header">
+                    <h4>Kiva Kiva Pittsburgh Loans</h4>
+                  </div>
+                  <div className="card-body">
+                    <dl className="row">
+                      <dt className="col-sm-3">What is it?</dt>
+                      <dd className="col-sm-9">
+                        Kiva helps financially excluded and socially impactful entrepreneurs access capital via crowdfunding.
+                      </dd>
+
+                      <dt className="col-sm-3">Who is it for?</dt>
+                      <dd className="col-sm-9">
+                        Small businesses located in the surrounding areas around Pittsburgh.
+                      </dd>
+                    </dl>
+                  </div>
+                  <div className="card-footer">
+                    <a
+                        href="https://www.riversidecenterforinnovation.com/kiva/home"
+                        className="no-print btn btn-primary"
+                        target="_blank"
+                    >
+                      Apply now
+                    </a>
+                    <p className="yes-print">
+                      Apply to Kiva Loans:
+                      https://www.riversidecenterforinnovation.com/kiva/home
+                    </p>
+                  </div>
+                </div>
+
+                <div className="pitt_honeycomb program card">
+                  <div className="card-header">
+                    <h4>Honeycomb Small Business Relief Loan</h4>
+                  </div>
+                  <div className="card-body">
+                    <dl className="row">
+                      <dt className="col-sm-3">What is it?</dt>
+                      <dd className="col-sm-9">
+                        Honeycomb Crowdfunded Small Business Relief Loan.
+                      </dd>
+
+                      <dt className="col-sm-3">Who is it for?</dt>
+                      <dd className="col-sm-9">
+                        Small businesses located in the surrounding areas around Pittsburgh.
+                      </dd>
+                    </dl>
+                  </div>
+                  <div className="card-footer">
+                    <a
+                        href="https://www.honeycombcredit.com/relief"
+                        className="no-print btn btn-primary"
+                        target="_blank"
+                    >
+                      Apply now
+                    </a>
+                    <p className="yes-print">
+                      Apply to the Honeycomb Small Business Relief Loan:
+                      https://www.honeycombcredit.com/relief
+                    </p>
+                  </div>
+                </div>
 
                 <h3>Counseling and Training</h3>
 

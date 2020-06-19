@@ -454,7 +454,7 @@ const OldResults: React.FC = () => {
 
                 <div className="pitt_kiva program card">
                   <div className="card-header">
-                    <h4>Kiva Kiva Pittsburgh Loans</h4>
+                    <h4>Kiva Pittsburgh Loans</h4>
                   </div>
                   <div className="card-body">
                     <dl className="row">

@@ -124,7 +124,7 @@
     "rules": [
       {
         "op": "eq",
-        "qid": "pitt_city_location",
+        "qid": "pa_state",
         "value": "true"
       },
       {

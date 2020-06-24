@@ -312,7 +312,7 @@
     {
       "id": "hawaii_native",
       "name": {
-        "en": "Are you of Native Hawaiian ancestry"
+        "en": "Are you of Native Hawaiian ancestry?"
       },
       "type": "boolean",
       "required": true,

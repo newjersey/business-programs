@@ -106,6 +106,38 @@ const OldResults: React.FC = () => {
                       >
                         Honeycomb Small Business Relief Loan
                       </li>
+
+                      <li
+                          className="hawaii_community"
+                          data-program-name="Hawaii Community-Based Economic Development Loan"
+                      >
+                        Hawaii Community-Based Economic Development Loan
+                      </li>
+                      <li
+                          className="hawaii_small_business"
+                          data-program-name="Hawaii Small Business Relief & Recovery Fund"
+                      >
+                        Hawaii Small Business Relief & Recovery Fund
+                      </li>
+                      <li
+                          className="hawaii_manufacturing"
+                          data-program-name="Hawaii Manufacturing Assistance Program"
+                      >
+                        Hawaii Manufacturing Assistance Program
+                      </li>
+                      <li
+                          className="hawaii_malama"
+                          data-program-name="Hawaii Malama Business Loan Program"
+                      >
+                        Hawaii Malama Business Loan Program
+                      </li>
+                      <li
+                          className="hawaii_hua"
+                          data-program-name="Hawaii Hua Kanu Business Loan Program "
+                      >
+                        Hawaii Hua Kanu Business Loan Program
+                      </li>
+
                     </ul>
                   </li>
                 </ul>
@@ -515,6 +547,182 @@ const OldResults: React.FC = () => {
                     </p>
                   </div>
                 </div>
+
+                <div className="hawaii_community program card">
+                  <div className="card-header">
+                    <h4>Hawaii Community-Based Economic Development Loan</h4>
+                  </div>
+                  <div className="card-body">
+                    <dl className="row">
+                      <dt className="col-sm-3">What is it?</dt>
+                      <dd className="col-sm-9">
+                        CBED offers micro-loans usually up to $50,000 to eligible small businesses that support economic development in their communities.
+                      </dd>
+
+                      <dt className="col-sm-3">Who is it for?</dt>
+                      <dd className="col-sm-9">
+                        Small businesses located in Hawaii that have been turned down by at least one financial institution.  The loan must result in
+                        a community-based economic development outcome such as:
+                        a) increase in jobs in an economically challenged community
+                        b) increase in local sourcing of inputs to a manufactured product
+                        c) addition of needed service or business to an economically challenged community and
+                        d) other community economic benefits of business growth.
+                      </dd>
+                    </dl>
+                  </div>
+                  <div className="card-footer">
+                    <a
+                        href="https://invest.hawaii.gov/business/cbed/"
+                        className="no-print btn btn-primary"
+                        target="_blank"
+                    >
+                      Apply now
+                    </a>
+                    <p className="yes-print">
+                      Apply to the Hawaii Community-Based Economic Development Loan:
+                      https://invest.hawaii.gov/business/cbed/
+                    </p>
+                  </div>
+                </div>
+
+                <div className="hawaii_small_business program card">
+                  <div className="card-header">
+                    <h4>Hawaii Small Business Relief & Recovery Fund</h4>
+                  </div>
+                  <div className="card-body">
+                    <dl className="row">
+                      <dt className="col-sm-3">What is it?</dt>
+                      <dd className="col-sm-9">
+                        Small Business Relief & Recovery Fund offers a one-time reimbursement for expenses of up to $10,000.
+                      </dd>
+
+                      <dt className="col-sm-3">Who is it for?</dt>
+                      <dd className="col-sm-9">
+                        Small businesses who have incurred costs from business interruption due to
+                        Emergency Proclamations or costs to implement safety precautions to prevent the spread of COVID-19.
+                        Businesses must have less than 1 million in gross annual revenue and 30 or fewer employees.
+                        Businesses must also be located in the City and County of Honolulu.
+                      </dd>
+                    </dl>
+                  </div>
+                  <div className="card-footer">
+                    <a
+                        href="https://www.oneoahu.org/small-business"
+                        className="no-print btn btn-primary"
+                        target="_blank"
+                    >
+                      Apply now
+                    </a>
+                    <p className="yes-print">
+                      Apply to the Hawaii Small Business Relief & Recovery Fund:
+                      https://www.oneoahu.org/small-business
+                    </p>
+                  </div>
+                </div>
+
+                <div className="hawaii_manufacturing program card">
+                  <div className="card-header">
+                    <h4>Hawaii Manufacturing Assistance Program</h4>
+                  </div>
+                  <div className="card-body">
+                    <dl className="row">
+                      <dt className="col-sm-3">What is it?</dt>
+                      <dd className="col-sm-9">
+                        HTDC’s Manufacturing Assistance Program Grant (MAP) offers Hawaii-based manufacturers
+                        up to a 20% reimbursement (up to $100,000) on qualified expenses to help Hawaii manufacturers
+                        become globally competitive.  Qualifying expenses include: equipment purchases, training,
+                        energy efficiency projects, and manufacturing feasibility studies.
+                      </dd>
+
+                      <dt className="col-sm-3">Who is it for?</dt>
+                      <dd className="col-sm-9">
+                        Must conduct manufacturing activities in Hawaii and be categorized as NAICS 31, 32, 33.
+                      </dd>
+                    </dl>
+                  </div>
+                  <div className="card-footer">
+                    <a
+                        href="https://www.htdc.org/money/#map"
+                        className="no-print btn btn-primary"
+                        target="_blank"
+                    >
+                      Apply now
+                    </a>
+                    <p className="yes-print">
+                      Apply to the Hawaii Small Business Relief & Recovery Fund:
+                      https://www.htdc.org/money/#map
+                    </p>
+                  </div>
+                </div>
+
+                <div className="hawaii_malama program card">
+                  <div className="card-header">
+                    <h4>Hawaii Malama Business Loan Program</h4>
+                  </div>
+                  <div className="card-body">
+                    <dl className="row">
+                      <dt className="col-sm-3">What is it?</dt>
+                      <dd className="col-sm-9">
+                        This is the most popular loan the Office of Hawaiian Affairs offers that support
+                        Native Hawaiian Business owners with loans between $2,500 to $100,000.
+                      </dd>
+
+                      <dt className="col-sm-3">Who is it for?</dt>
+                      <dd className="col-sm-9">
+                        Must be of Native Hawaiian ancestry with a credit score of 600 or higher with an income to debt ratio of no more than 45%.
+                      </dd>
+                    </dl>
+                  </div>
+                  <div className="card-footer">
+                    <a
+                        href="https://loans.oha.org/business/malama-business/"
+                        className="no-print btn btn-primary"
+                        target="_blank"
+                    >
+                      Apply now
+                    </a>
+                    <p className="yes-print">
+                      Apply to the Hawaii Malama Business Loan Program:
+                      https://loans.oha.org/business/malama-business/
+                    </p>
+                  </div>
+                </div>
+
+                <div className="hawaii_hua program card">
+                  <div className="card-header">
+                    <h4>Hawaii Hua Kanu Business Loan Program </h4>
+                  </div>
+                  <div className="card-body">
+                    <dl className="row">
+                      <dt className="col-sm-3">What is it?</dt>
+                      <dd className="col-sm-9">
+                        The Hua Kanu Business Loan Program is available to Native Hawaiians who own established business.
+                        Created on July 17, 2013, the low-cost loans are intended to help these small-businesses expand.
+                        It is meant to provide them access to credit and capital that allow them to grow as well as remain financially viable.
+                        Loans between $200,000 to $1,000,000.
+                      </dd>
+
+                      <dt className="col-sm-3">Who is it for?</dt>
+                      <dd className="col-sm-9">
+                        Principals must be Native Hawaiian and verified by current Office of Hawaiian Affairs Registry Card.
+                      </dd>
+                    </dl>
+                  </div>
+                  <div className="card-footer">
+                    <a
+                        href="https://loans.oha.org/business/hua-kanu-business-loan/"
+                        className="no-print btn btn-primary"
+                        target="_blank"
+                    >
+                      Apply now
+                    </a>
+                    <p className="yes-print">
+                      Apply to the Hawaii Hua Kanu Business Loan Program :
+                      https://loans.oha.org/business/hua-kanu-business-loan/
+                    </p>
+                  </div>
+                </div>
+
 
                 <h3>Counseling and Training</h3>
 

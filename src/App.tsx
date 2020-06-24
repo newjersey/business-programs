@@ -108,6 +108,21 @@ function App() {
               </FormProvider>
             </Route>
 
+            <Route exact path="/hawaii">
+                <Helmet>
+                    <link
+                        rel="canonical"
+                        href="https://businessrelief.usdigitalresponse.org"
+                    />
+                </Helmet>
+                <Landing hawaii={true} />
+            </Route>
+
+            <Route exact path="/hawaii/questions">
+                <FormProvider>
+                    <FormApp hawaii={true} />
+                </FormProvider>
+            </Route>
 
             <Route exact path="/questions">
               <FormProvider>

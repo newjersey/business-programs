@@ -10,11 +10,12 @@ import "./index.scss";
 
 interface Props {
   ca?: boolean
-  pitt?: boolean;
+  pitt?: boolean
+  hawaii?:boolean;
 }
 
 const Landing: React.FC<Props> = (props) => {
-  const { ca, pitt } = props;
+  const { ca, pitt, hawaii } = props;
 
   return (
     <div className="content-page">
@@ -53,7 +54,7 @@ const Landing: React.FC<Props> = (props) => {
                   determine which financial relief programs you’re eligible for.
                 </p>
                 <p>Learn what you’ll need to prepare your loan applications.</p>
-                <Link to={ca ? "/california/questions" : pitt ? "/pittsburgh/questions" : "/questions"}>
+                <Link to={ca ? "/california/questions" : pitt ? "/pittsburgh/questions" : hawaii ? "/hawaii/questions" : "/questions"}>
                   <button className="usa-button usa-button--big">
                     Get Started
                   </button>

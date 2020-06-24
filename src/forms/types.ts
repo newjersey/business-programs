@@ -30,7 +30,8 @@ QuestionSchema = Joi.object({
     .pattern(Joi.string(), [null, Joi.array().items(QuestionSchema)])
     .optional(),
   ca_only: Joi.boolean().optional(),
-  pitt_only: Joi.boolean().optional()
+  pitt_only: Joi.boolean().optional(),
+  hawaii_only: Joi.boolean().optional()
 });
 export const FormSchema = Joi.object({
   variables: Joi.object().pattern(Joi.string(), Joi.string()),
@@ -67,6 +68,7 @@ interface Question {
   switch?: Switch;
   ca_only?: Boolean;
   pitt_only?: Boolean;
+  hawaii_only?: Boolean;
 
 }
 type TranslatedQuestion = Translated<Question>;

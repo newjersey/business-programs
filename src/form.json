@@ -253,6 +253,70 @@
       "type": "boolean",
       "required": true,
       "pitt_only": true
+    },
+    {
+      "id": "hawaii_business",
+      "name": {
+        "en": "Is your business registered in Hawaii?"
+      },
+      "type": "boolean",
+      "required": true,
+      "hawaii_only": true
+    },
+    {
+      "id": "hawaii_turned_down",
+      "name": {
+        "en": "Have you been turned down for a loan from at least one financial institution (ie a bank)?"
+      },
+      "type": "boolean",
+      "required": true,
+      "hawaii_only": true
+    },
+    {
+      "id": "hawaii_revenue",
+      "name": {
+        "en": "Does your business have less than $1 million in gross annual revenue?"
+      },
+      "type": "boolean",
+      "required": true,
+      "hawaii_only": true
+    },
+    {
+      "id": "hawaii_employees",
+      "name": {
+        "en": "Does your business have less than 30 employees?"
+      },
+      "type": "boolean",
+      "required": true,
+      "hawaii_only": true
+    },
+    {
+      "id": "honolulu_location",
+      "name": {
+        "en": "Is your business or non-profit located in the City and County of Honolulu?"
+      },
+      "type": "boolean",
+      "required": true,
+      "hawaii_only": true
+    },
+    {
+      "id": "hawaii_manufacturing",
+      "name": {
+        "en": "Do you conduct manufacturing activities in Hawaii?"
+      },
+      "type": "boolean",
+      "required": true,
+      "hawaii_only": true
+    },
+
+    {
+      "id": "hawaii_native",
+      "name": {
+        "en": "Are you of Native Hawaiian ancestry"
+      },
+      "type": "boolean",
+      "required": true,
+      "hawaii_only": true
     }
   ]
 }

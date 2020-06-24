@@ -163,6 +163,90 @@
         "value": "2020-01-01"
       }
     ]
+  },
+  {
+    "program": "hawaii_community",
+    "rules": [
+      {
+        "op": "eq",
+        "qid": "hawaii_business",
+        "value": "true"
+      },
+      {
+        "op": "eq",
+        "qid": "hawaii_turned_down",
+        "value": "true"
+      }
+    ]
+  },
+  {
+    "program": "hawaii_small_business",
+    "rules": [
+      {
+        "op": "eq",
+        "qid": "hawaii_business",
+        "value": "true"
+      },
+      {
+        "op": "eq",
+        "qid": "hawaii_revenue",
+        "value": "true"
+      },
+      {
+        "op": "eq",
+        "qid": "hawaii_employees",
+        "value": "true"
+      },
+      {
+        "op": "eq",
+        "qid": "honolulu_location",
+        "value": "true"
+      }
+    ]
+  },
+  {
+    "program": "hawaii_manufacturing",
+    "rules": [
+      {
+        "op": "eq",
+        "qid": "hawaii_business",
+        "value": "true"
+      },
+      {
+        "op": "eq",
+        "qid": "hawaii_manufacturing",
+        "value": "true"
+      }
+    ]
+  },
+  {
+    "program": "hawaii_malama",
+    "rules": [
+      {
+        "op": "eq",
+        "qid": "hawaii_business",
+        "value": "true"
+      },
+      {
+        "op": "eq",
+        "qid": "hawaii_native",
+        "value": "true"
+      }
+    ]
+  },
+  {
+    "program": "hawaii_hua",
+    "rules": [
+      {
+        "op": "eq",
+        "qid": "hawaii_business",
+        "value": "true"
+      },
+      {
+        "op": "eq",
+        "qid": "hawaii_native",
+        "value": "true"
+      }
+    ]
   }
-
 ]

@@ -35,10 +35,10 @@ const Landing: React.FC<Props> = (props) => {
         links={[
           <a className="nav-link" href="#government-partners">
             Government Partners
-          </a>,
-          <Link className="nav-link" to="/ppp-loans">
-            PPP Loans
-          </Link>,
+          </a>
+          //<Link className="nav-link" to="/ppp-loans">
+          //  PPP Loans
+          //</Link>,
         ]}
       />
 

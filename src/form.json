@@ -255,6 +255,15 @@
       "pitt_only": true
     },
     {
+      "id": "pitt_employees",
+      "name": {
+        "en": "Does your business have less than 30 full-time employees?"
+      },
+      "type": "boolean",
+      "required": true,
+      "pitt_only": true
+    },
+    {
       "id": "hawaii_business",
       "name": {
         "en": "Is your business registered in Hawaii?"

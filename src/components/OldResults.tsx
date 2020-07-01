@@ -52,12 +52,7 @@ const OldResults: React.FC = () => {
                       >
                         Federal SBA Emergency Injury Disaster Loans
                       </li>
-                      <li
-                        className="ppp"
-                        data-program-name="Paycheck Protection Program (PPP) Loans"
-                      >
-                        Paycheck Protection Program (PPP) Loans
-                      </li>
+
                       <li
                         className="sba_debt"
                         data-program-name="Federal SBA Debt Relief Program"
@@ -87,6 +82,12 @@ const OldResults: React.FC = () => {
                           data-program-name="Pittsburgh Small Business Emergency Loan Fund"
                       >
                         Pittsburgh Small Business Emergency Loan Fund
+                      </li>
+                      <li
+                          className="pitt_ura"
+                          data-program-name="Urban Redevelopment Authority of Pittsburgh Recovery Loan"
+                      >
+                        Urban Redevelopment Authority of Pittsburgh Recovery Loan
                       </li>
                       <li
                           className="pitt_bridgeway"
@@ -229,59 +230,7 @@ const OldResults: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="ppp program card">
-                  <div className="card-header">
-                    <h4>Paycheck Protection Program (PPP) Loans</h4>
-                  </div>
-                  <div className="card-body">
-                    <dl className="row">
-                      <dt className="col-sm-3">What is it?</dt>
-                      <dd className="col-sm-9">
-                        A 100% federally guaranteed loan
-                      </dd>
 
-                      <dt className="col-sm-3">Who is it for?</dt>
-                      <dd className="col-sm-9">
-                        <p>
-                          Employers who maintain their payroll during the
-                          emergency.
-                        </p>
-
-                        <p>
-                          If the employer maintains their payroll, the lender
-                          will forgive the loan.
-                        </p>
-                      </dd>
-
-                      <dt className="col-sm-3">What can I use it&nbsp;for?</dt>
-                      <dd className="col-sm-9">
-                        <ul>
-                          <li>Employee payroll</li>
-                          <li>
-                            Employee vacation, sick, parental, medical, or
-                            family leave
-                          </li>
-                          <li>Employee dismissal or separation</li>
-                          <li>Retirement and group health care benefits</li>
-                          <li>State or local employee compensation tax</li>
-                        </ul>
-                      </dd>
-                    </dl>
-                  </div>
-                  <div className="card-footer">
-                    <a
-                      href="https://www.sba.gov/paycheckprotection/find"
-                      className="no-print btn btn-primary"
-                      target="_blank"
-                    >
-                      Find a PPP lender near you
-                    </a>
-                    <p className="yes-print">
-                      Find a PPP lender near you:
-                      https://www.sba.gov/paycheckprotection/find
-                    </p>
-                  </div>
-                </div>
 
                 <div className="sba_debt program card">
                   <div className="card-header">
@@ -428,26 +377,58 @@ const OldResults: React.FC = () => {
                     <dl className="row">
                       <dt className="col-sm-3">What is it?</dt>
                       <dd className="col-sm-9">
-                        0% interest loans offered by the Urban Redevelopment Authority.
+                        Loans up to $15,000 with 0% interest offered by the Urban Redevelopment Authority.
                       </dd>
 
                       <dt className="col-sm-3">Who is it for?</dt>
                       <dd className="col-sm-9">
-                        Small businesses located in Pittsburgh.
+                        Small businesses located in Pittsburgh with fewer than 30 full-time employees.
                       </dd>
                     </dl>
                   </div>
                   <div className="card-footer">
                     <a
-                        href="https://tinyurl.com/uracovidloan"
+                        href="https://www.ura.org/pages/covid-19-small-business-fund"
                         className="no-print btn btn-primary"
                         target="_blank"
                     >
                       Apply now
                     </a>
                     <p className="yes-print">
-                      Apply to the Pittsburgh Small Business Emergency Loan Fund:
-                      https://tinyurl.com/uracovidloan
+                      Learn more about the Pittsburgh Small Business Emergency Loan Fund:
+                      https://www.ura.org/pages/covid-19-small-business-fund
+                    </p>
+                  </div>
+                </div>
+
+                <div className="pitt_ura program card">
+                  <div className="card-header">
+                    <h4>Urban Redevelopment Authority of Pittsburgh Recovery Loan</h4>
+                  </div>
+                  <div className="card-body">
+                    <dl className="row">
+                      <dt className="col-sm-3">What is it?</dt>
+                      <dd className="col-sm-9">
+                        Loans up to $75,000 with 0% interest for the first year and 2% for the balance of loan term.
+                      </dd>
+
+                      <dt className="col-sm-3">Who is it for?</dt>
+                      <dd className="col-sm-9">
+                        Small businesses located in Pittsburgh with fewer than 30 full-time employees.
+                      </dd>
+                    </dl>
+                  </div>
+                  <div className="card-footer">
+                    <a
+                        href="https://www.ura.org/pages/covid-19-small-business-fund"
+                        className="no-print btn btn-primary"
+                        target="_blank"
+                    >
+                      Apply now
+                    </a>
+                    <p className="yes-print">
+                      Learn more about the Urban Redevelopment Authority of Pittsburgh Recovery Loan:
+                      https://www.ura.org/pages/covid-19-small-business-fund
                     </p>
                   </div>
                 </div>

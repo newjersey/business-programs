@@ -113,9 +113,34 @@
         "value": "true"
       },
       {
+        "op": "eq",
+        "qid": "pitt_employees",
+        "value": "true"
+      },
+      {
         "op": "le",
         "qid": "business_age",
-        "value": "2020-01-01"
+        "value": "2019-09-01"
+      }
+    ]
+  },
+  {
+    "program": "pitt_ura",
+    "rules": [
+      {
+        "op": "eq",
+        "qid": "pitt_city_location",
+        "value": "true"
+      },
+      {
+        "op": "eq",
+        "qid": "pitt_employees",
+        "value": "true"
+      },
+      {
+        "op": "le",
+        "qid": "business_age",
+        "value": "2019-09-01"
       }
     ]
   },

@@ -73,5 +73,205 @@
         "value": "true"
       }
     ]
+  },
+  {
+    "program": "ca_cleen_program",
+    "rules": [
+      {
+        "op": "eq",
+        "qid": "ca_legal_business",
+        "value": "true"
+      },
+      {
+        "op": "eq",
+        "qid": "ca_cleen",
+        "value": "true"
+      }
+    ]
+  },
+  {
+    "program": "ca_501",
+    "rules": [
+      {
+        "op": "eq",
+        "qid": "ca_legal_business",
+        "value": "true"
+      },
+      {
+        "op": "eq",
+        "qid": "ca_public_benefit",
+        "value": "true"
+      }
+    ]
+  },
+  {
+    "program": "pitt_elf",
+    "rules": [
+      {
+        "op": "eq",
+        "qid": "pitt_city_location",
+        "value": "true"
+      },
+      {
+        "op": "eq",
+        "qid": "pitt_employees",
+        "value": "true"
+      },
+      {
+        "op": "le",
+        "qid": "business_age",
+        "value": "2019-09-01"
+      }
+    ]
+  },
+  {
+    "program": "pitt_ura",
+    "rules": [
+      {
+        "op": "eq",
+        "qid": "pitt_city_location",
+        "value": "true"
+      },
+      {
+        "op": "eq",
+        "qid": "pitt_employees",
+        "value": "true"
+      },
+      {
+        "op": "le",
+        "qid": "business_age",
+        "value": "2019-09-01"
+      }
+    ]
+  },
+  {
+    "program": "pitt_bridgeway",
+    "rules": [
+      {
+        "op": "eq",
+        "qid": "pa_state",
+        "value": "true"
+      },
+      {
+        "op": "le",
+        "qid": "business_age",
+        "value": "2020-01-01"
+      }
+    ]
+  },
+  {
+    "program": "pitt_kiva",
+    "rules": [
+      {
+        "op": "eq",
+        "qid": "pa_state",
+        "value": "true"
+      },
+      {
+        "op": "le",
+        "qid": "business_age",
+        "value": "2020-01-01"
+      }
+    ]
+  },
+  {
+    "program": "pitt_honeycomb",
+    "rules": [
+      {
+        "op": "eq",
+        "qid": "pa_state",
+        "value": "true"
+      },
+      {
+        "op": "le",
+        "qid": "business_age",
+        "value": "2020-01-01"
+      }
+    ]
+  },
+  {
+    "program": "hawaii_community",
+    "rules": [
+      {
+        "op": "eq",
+        "qid": "hawaii_business",
+        "value": "true"
+      },
+      {
+        "op": "eq",
+        "qid": "hawaii_turned_down",
+        "value": "true"
+      }
+    ]
+  },
+  {
+    "program": "hawaii_small_business",
+    "rules": [
+      {
+        "op": "eq",
+        "qid": "hawaii_business",
+        "value": "true"
+      },
+      {
+        "op": "eq",
+        "qid": "hawaii_revenue",
+        "value": "true"
+      },
+      {
+        "op": "eq",
+        "qid": "hawaii_employees",
+        "value": "true"
+      },
+      {
+        "op": "eq",
+        "qid": "honolulu_location",
+        "value": "true"
+      }
+    ]
+  },
+  {
+    "program": "hawaii_manufacturing",
+    "rules": [
+      {
+        "op": "eq",
+        "qid": "hawaii_business",
+        "value": "true"
+      },
+      {
+        "op": "eq",
+        "qid": "hawaii_manufacturing",
+        "value": "true"
+      }
+    ]
+  },
+  {
+    "program": "hawaii_malama",
+    "rules": [
+      {
+        "op": "eq",
+        "qid": "hawaii_business",
+        "value": "true"
+      },
+      {
+        "op": "eq",
+        "qid": "hawaii_native",
+        "value": "true"
+      }
+    ]
+  },
+  {
+    "program": "hawaii_hua",
+    "rules": [
+      {
+        "op": "eq",
+        "qid": "hawaii_business",
+        "value": "true"
+      },
+      {
+        "op": "eq",
+        "qid": "hawaii_native",
+        "value": "true"
+      }
+    ]
   }
 ]

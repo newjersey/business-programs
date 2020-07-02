@@ -14,10 +14,12 @@ interface FormValues {
 
 interface Props {
   ca?: boolean;
+  pitt?:boolean;
+  hawaii?:boolean;
 }
 
 const FormApp: React.FC<Props> = (props) => {
-  const { ca } = props;
+  const { ca, pitt, hawaii } = props;
   const [back, next, complete] = useFormDictionary("back", "next", "complete");
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const {
@@ -25,9 +27,21 @@ const FormApp: React.FC<Props> = (props) => {
   } = useForm();
 
   let filteredQuestions = questions;
-  if (!ca) {
+  if (!ca && !pitt && !hawaii) {
     // This is a temporary fix until we flush out branching better
-    filteredQuestions = filteredQuestions.filter((q) => !q.ca_only);
+    filteredQuestions = filteredQuestions.filter((q) => !q.ca_only && !q.pitt_only && !q.hawaii_only);
+  }
+  if (ca) {
+        // This is a temporary fix until we flush out branching better
+        filteredQuestions = filteredQuestions.filter((q) => !q.pitt_only && !q.hawaii_only);
+  }
+  if (pitt) {
+        // This is a temporary fix until we flush out branching better
+        filteredQuestions = filteredQuestions.filter((q) => !q.ca_only && !q.hawaii_only);
+  }
+  if (hawaii) {
+      // This is a temporary fix until we flush out branching better
+      filteredQuestions = filteredQuestions.filter((q) => !q.ca_only && !q.pitt_only);
   }
 
   const percent = Math.floor((currentIndex / filteredQuestions.length) * 100);

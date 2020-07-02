@@ -9,11 +9,13 @@ import "./footer.scss";
 import "./index.scss";
 
 interface Props {
-  ca?: boolean;
+  ca?: boolean
+  pitt?: boolean
+  hawaii?:boolean;
 }
 
 const Landing: React.FC<Props> = (props) => {
-  const { ca } = props;
+  const { ca, pitt, hawaii } = props;
 
   return (
     <div className="content-page">
@@ -33,10 +35,10 @@ const Landing: React.FC<Props> = (props) => {
         links={[
           <a className="nav-link" href="#government-partners">
             Government Partners
-          </a>,
-          <Link className="nav-link" to="/ppp-loans">
-            PPP Loans
-          </Link>,
+          </a>
+          //<Link className="nav-link" to="/ppp-loans">
+          //  PPP Loans
+          //</Link>,
         ]}
       />
 
@@ -45,54 +47,36 @@ const Landing: React.FC<Props> = (props) => {
           <div className="row">
             <div className="col-md-6">
               <section>
-                <h1>Check your eligibility for small business loans</h1>
+                <h1>Find COVID-19 financial assistance for your business.</h1>
 
                 <p>
-                  Answering a few questions using this free tool will help
-                  determine which financial relief programs you’re eligible for.
+
+                  Answer a few questions to find loans and funding alternatives.
                 </p>
-                <p>Learn what you’ll need to prepare your loan applications.</p>
-                <Link to={ca ? "/california/questions" : "/questions"}>
+
+
+                <Link to={ca ? "/california/questions" : pitt ? "/pittsburgh/questions" : hawaii ? "/hawaii/questions" : "/questions"}>
                   <button className="usa-button usa-button--big">
                     Get Started
                   </button>
                 </Link>
+
               </section>
 
-              <section>
-                <h2>What is it?</h2>
-                <p>
-                  The COVID-19 stimulus is the largest ever in American history.
-                  There are a few federal and state loan options available.
-                </p>
-                <p>
-                  We created a 3-minute questionnaire to help you figure out
-                  which programs your organization are qualified for.
-                </p>
-              </section>
+
               <section>
                 <h2>Who is it for?</h2>
                 <p>This free tool is for U.S.-based businesses including:</p>
                 <ul>
-                  <li>Businesses (C-Corp, S-Corp, LLC)</li>
                   <li>Nonprofits</li>
-                  <li>Veteran's organizations</li>
                   <li>Tribal business concerns</li>
-                  <li>Sole proprietorships</li>
                   <li>Self-employed individuals</li>
-                  <li>Independent contractors</li>
+                  <li>Contractors, freelancers, and gig workers</li>
+                  <li>Small business with fewer than 500 employees (including C Corp, S Corp, LLC)</li>
                 </ul>
-                <p>
-                  If you have more than 500 employees, your business may still
-                  qualify for certain loans. Visit the{" "}
-                  <a
-                    href="https://www.sba.gov/document/support--table-size-standards"
-                    target="_blank"
-                  >
-                    Small Business Administration size standards
-                  </a>{" "}
-                  to look up the guidelines for your industry.
-                </p>
+                <p>If you have more than 500 employees, check the <a href = "https://www.sba.gov/document/support--table-size-standards" target="_blank">
+                  Small Business Administration size standards </a> to find loans specific to your industry.</p>
+
                 <Link to={ca ? "/california/questions" : "/questions"}>
                   <button className="usa-button">
                     Take our 3-minute questionnaire
@@ -101,14 +85,9 @@ const Landing: React.FC<Props> = (props) => {
               </section>
               <section id="government-partners">
                 <h2>Government partners</h2>
+
                 <p>
-                  This eligibility checker screens for federal loans, and
-                  California and New Jersey state loans. We plan on adding other
-                  state programs.
-                </p>
-                <p>
-                  If you’re from a government agency and would like to include
-                  your state’s programs, please contact the{" "}
+                  To get a free tool built for your agency or to include your state's programs, please email the {" "}
                   <a
                     target="_blank"
                     href="https://www.usdigitalresponse.org/requesthelp"

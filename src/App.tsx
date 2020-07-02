@@ -85,11 +85,45 @@ function App() {
               </Helmet>
               <Landing ca={true} />
             </Route>
+
             <Route exact path="/california/questions">
               <FormProvider>
                 <FormApp ca={true} />
               </FormProvider>
             </Route>
+
+            <Route exact path="/pittsburgh">
+              <Helmet>
+                <link
+                    rel="canonical"
+                    href="https://businessrelief.usdigitalresponse.org"
+                />
+              </Helmet>
+              <Landing pitt={true} />
+            </Route>
+
+            <Route exact path="/pittsburgh/questions">
+              <FormProvider>
+                <FormApp pitt={true} />
+              </FormProvider>
+            </Route>
+
+            <Route exact path="/hawaii">
+                <Helmet>
+                    <link
+                        rel="canonical"
+                        href="https://businessrelief.usdigitalresponse.org"
+                    />
+                </Helmet>
+                <Landing hawaii={true} />
+            </Route>
+
+            <Route exact path="/hawaii/questions">
+                <FormProvider>
+                    <FormApp hawaii={true} />
+                </FormProvider>
+            </Route>
+
             <Route exact path="/questions">
               <FormProvider>
                 <FormApp />

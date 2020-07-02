@@ -52,12 +52,7 @@ const OldResults: React.FC = () => {
                       >
                         Federal SBA Emergency Injury Disaster Loans
                       </li>
-                      <li
-                        className="ppp"
-                        data-program-name="Paycheck Protection Program (PPP) Loans"
-                      >
-                        Paycheck Protection Program (PPP) Loans
-                      </li>
+
                       <li
                         className="sba_debt"
                         data-program-name="Federal SBA Debt Relief Program"
@@ -70,6 +65,80 @@ const OldResults: React.FC = () => {
                       >
                         California Small Business Finance Center
                       </li>
+                      <li
+                          className="ca_cleen_program"
+                          data-program-name="California Lending for Energy and Environmental Needs (CLEEN)"
+                      >
+                        California Lending for Energy and Environmental Needs (CLEEN)
+                      </li>
+                      <li
+                          className="ca_501"
+                          data-program-name="California Tax-exempt Bonds"
+                      >
+                        California Tax-exempt 501(c)(3) Bonds
+                      </li>
+                      <li
+                          className="pitt_elf"
+                          data-program-name="Pittsburgh Small Business Emergency Loan Fund"
+                      >
+                        Pittsburgh Small Business Emergency Loan Fund
+                      </li>
+                      <li
+                          className="pitt_ura"
+                          data-program-name="Urban Redevelopment Authority of Pittsburgh Recovery Loan"
+                      >
+                        Urban Redevelopment Authority of Pittsburgh Recovery Loan
+                      </li>
+                      <li
+                          className="pitt_bridgeway"
+                          data-program-name="Bridgeway Capital Response Fund"
+                      >
+                        Bridgeway Capital Response Fund
+                      </li>
+                      <li
+                          className="pitt_kiva"
+                          data-program-name="Kiva Pittsburgh Loan"
+                      >
+                        Kiva Pittsburgh Loan
+                      </li>
+                      <li
+                          className="pitt_honeycomb"
+                          data-program-name="Honeycomb Small Business Relief Loan"
+                      >
+                        Honeycomb Small Business Relief Loan
+                      </li>
+
+                      <li
+                          className="hawaii_community"
+                          data-program-name="Hawaii Community-Based Economic Development Loan"
+                      >
+                        Hawaii Community-Based Economic Development Loan
+                      </li>
+                      <li
+                          className="hawaii_small_business"
+                          data-program-name="Hawaii Small Business Relief & Recovery Fund"
+                      >
+                        Hawaii Small Business Relief & Recovery Fund
+                      </li>
+                      <li
+                          className="hawaii_manufacturing"
+                          data-program-name="Hawaii Manufacturing Assistance Program"
+                      >
+                        Hawaii Manufacturing Assistance Program
+                      </li>
+                      <li
+                          className="hawaii_malama"
+                          data-program-name="Hawaii Malama Business Loan Program"
+                      >
+                        Hawaii Malama Business Loan Program
+                      </li>
+                      <li
+                          className="hawaii_hua"
+                          data-program-name="Hawaii Hua Kanu Business Loan Program "
+                      >
+                        Hawaii Hua Kanu Business Loan Program
+                      </li>
+
                     </ul>
                   </li>
                 </ul>
@@ -161,59 +230,7 @@ const OldResults: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="ppp program card">
-                  <div className="card-header">
-                    <h4>Paycheck Protection Program (PPP) Loans</h4>
-                  </div>
-                  <div className="card-body">
-                    <dl className="row">
-                      <dt className="col-sm-3">What is it?</dt>
-                      <dd className="col-sm-9">
-                        A 100% federally guaranteed loan
-                      </dd>
 
-                      <dt className="col-sm-3">Who is it for?</dt>
-                      <dd className="col-sm-9">
-                        <p>
-                          Employers who maintain their payroll during the
-                          emergency.
-                        </p>
-
-                        <p>
-                          If the employer maintains their payroll, the lender
-                          will forgive the loan.
-                        </p>
-                      </dd>
-
-                      <dt className="col-sm-3">What can I use it&nbsp;for?</dt>
-                      <dd className="col-sm-9">
-                        <ul>
-                          <li>Employee payroll</li>
-                          <li>
-                            Employee vacation, sick, parental, medical, or
-                            family leave
-                          </li>
-                          <li>Employee dismissal or separation</li>
-                          <li>Retirement and group health care benefits</li>
-                          <li>State or local employee compensation tax</li>
-                        </ul>
-                      </dd>
-                    </dl>
-                  </div>
-                  <div className="card-footer">
-                    <a
-                      href="https://www.sba.gov/paycheckprotection/find"
-                      className="no-print btn btn-primary"
-                      target="_blank"
-                    >
-                      Find a PPP lender near you
-                    </a>
-                    <p className="yes-print">
-                      Find a PPP lender near you:
-                      https://www.sba.gov/paycheckprotection/find
-                    </p>
-                  </div>
-                </div>
 
                 <div className="sba_debt program card">
                   <div className="card-header">
@@ -287,6 +304,406 @@ const OldResults: React.FC = () => {
                     </p>
                   </div>
                 </div>
+
+                <div className="ca_cleen_program program card">
+                  <div className="card-header">
+                    <h4>California Lending for Energy and Environmental Needs (CLEEN)</h4>
+                  </div>
+                  <div className="card-body">
+                    <dl className="row">
+                      <dt className="col-sm-3">What is it?</dt>
+                      <dd className="col-sm-9">
+                        Public financing to help organizations reduce greenhouse gas emissions, improve water conservation and energy conservation.
+                      </dd>
+
+                      <dt className="col-sm-3">Who is it for?</dt>
+                      <dd className="col-sm-9">
+                        Municipalities, Universities, Schools and Hospitals
+                      </dd>
+                    </dl>
+                  </div>
+                  <div className="card-footer">
+                    <a
+                        href="https://ibank.ca.gov/cleen-center/"
+                        className="no-print btn btn-primary"
+                        target="_blank"
+                    >
+                      Learn more
+                    </a>
+                    <p className="yes-print">
+                      Learn more about CLEEN:
+                      https://ibank.ca.gov/cleen-center/
+                    </p>
+                  </div>
+                </div>
+
+                <div className="ca_501 program card">
+                  <div className="card-header">
+                    <h4>California Tax-exempt 501(c)(3) Bonds</h4>
+                  </div>
+                  <div className="card-body">
+                    <dl className="row">
+                      <dt className="col-sm-3">What is it?</dt>
+                      <dd className="col-sm-9">
+                        Tax-exempt financing to help acquire or improve facilities.
+                      </dd>
+
+                      <dt className="col-sm-3">Who is it for?</dt>
+                      <dd className="col-sm-9">
+                        Nonprofit public benefit corporations.  Typical borrowers include cultural, educational, charitable and recreational organizations.
+                      </dd>
+                    </dl>
+                  </div>
+                  <div className="card-footer">
+                    <a
+                        href="https://ibank.ca.gov/501c3-bond-financing/"
+                        className="no-print btn btn-primary"
+                        target="_blank"
+                    >
+                      Learn more
+                    </a>
+                    <p className="yes-print">
+                      Learn more about CLEEN:
+                      https://ibank.ca.gov/501c3-bond-financing/
+                    </p>
+                  </div>
+                </div>
+
+                <div className="pitt_elf program card">
+                  <div className="card-header">
+                    <h4>Pittsburgh Small Business Emergency Loan Fund</h4>
+                  </div>
+                  <div className="card-body">
+                    <dl className="row">
+                      <dt className="col-sm-3">What is it?</dt>
+                      <dd className="col-sm-9">
+                        Loans up to $15,000 with 0% interest offered by the Urban Redevelopment Authority.
+                      </dd>
+
+                      <dt className="col-sm-3">Who is it for?</dt>
+                      <dd className="col-sm-9">
+                        Small businesses located in Pittsburgh with fewer than 30 full-time employees.
+                      </dd>
+                    </dl>
+                  </div>
+                  <div className="card-footer">
+                    <a
+                        href="https://www.ura.org/pages/covid-19-small-business-fund"
+                        className="no-print btn btn-primary"
+                        target="_blank"
+                    >
+                      Apply now
+                    </a>
+                    <p className="yes-print">
+                      Learn more about the Pittsburgh Small Business Emergency Loan Fund:
+                      https://www.ura.org/pages/covid-19-small-business-fund
+                    </p>
+                  </div>
+                </div>
+
+                <div className="pitt_ura program card">
+                  <div className="card-header">
+                    <h4>Urban Redevelopment Authority of Pittsburgh Recovery Loan</h4>
+                  </div>
+                  <div className="card-body">
+                    <dl className="row">
+                      <dt className="col-sm-3">What is it?</dt>
+                      <dd className="col-sm-9">
+                        Loans up to $75,000 with 0% interest for the first year and 2% for the balance of loan term.
+                      </dd>
+
+                      <dt className="col-sm-3">Who is it for?</dt>
+                      <dd className="col-sm-9">
+                        Small businesses located in Pittsburgh with fewer than 30 full-time employees.
+                      </dd>
+                    </dl>
+                  </div>
+                  <div className="card-footer">
+                    <a
+                        href="https://www.ura.org/pages/covid-19-small-business-fund"
+                        className="no-print btn btn-primary"
+                        target="_blank"
+                    >
+                      Apply now
+                    </a>
+                    <p className="yes-print">
+                      Learn more about the Urban Redevelopment Authority of Pittsburgh Recovery Loan:
+                      https://www.ura.org/pages/covid-19-small-business-fund
+                    </p>
+                  </div>
+                </div>
+
+                <div className="pitt_bridgeway program card">
+                  <div className="card-header">
+                    <h4>Bridgeway Capital Response Fund</h4>
+                  </div>
+                  <div className="card-body">
+                    <dl className="row">
+                      <dt className="col-sm-3">What is it?</dt>
+                      <dd className="col-sm-9">
+                        Connecting small businesses in western Pennsylvania to capital when it is needed most.
+                      </dd>
+
+                      <dt className="col-sm-3">Who is it for?</dt>
+                      <dd className="col-sm-9">
+                        small businesses in western Pennsylvania.
+                      </dd>
+                    </dl>
+                  </div>
+                  <div className="card-footer">
+                    <a
+                        href="https://www.bridgewaycapital.org/loans-and-modifications/covid-19-response-fund/"
+                        className="no-print btn btn-primary"
+                        target="_blank"
+                    >
+                      Apply now
+                    </a>
+                    <p className="yes-print">
+                      Apply to the Bridgeway Capital Response Fund:
+                      https://www.bridgewaycapital.org/loans-and-modifications/covid-19-response-fund/
+                    </p>
+                  </div>
+                </div>
+
+                <div className="pitt_kiva program card">
+                  <div className="card-header">
+                    <h4>Kiva Pittsburgh Loans</h4>
+                  </div>
+                  <div className="card-body">
+                    <dl className="row">
+                      <dt className="col-sm-3">What is it?</dt>
+                      <dd className="col-sm-9">
+                        Kiva helps financially excluded and socially impactful entrepreneurs access capital via crowdfunding.
+                      </dd>
+
+                      <dt className="col-sm-3">Who is it for?</dt>
+                      <dd className="col-sm-9">
+                        Small businesses located in the surrounding areas around Pittsburgh.
+                      </dd>
+                    </dl>
+                  </div>
+                  <div className="card-footer">
+                    <a
+                        href="https://www.riversidecenterforinnovation.com/kiva/home"
+                        className="no-print btn btn-primary"
+                        target="_blank"
+                    >
+                      Apply now
+                    </a>
+                    <p className="yes-print">
+                      Apply to Kiva Loans:
+                      https://www.riversidecenterforinnovation.com/kiva/home
+                    </p>
+                  </div>
+                </div>
+
+                <div className="pitt_honeycomb program card">
+                  <div className="card-header">
+                    <h4>Honeycomb Small Business Relief Loan</h4>
+                  </div>
+                  <div className="card-body">
+                    <dl className="row">
+                      <dt className="col-sm-3">What is it?</dt>
+                      <dd className="col-sm-9">
+                        Honeycomb Crowdfunded Small Business Relief Loan.
+                      </dd>
+
+                      <dt className="col-sm-3">Who is it for?</dt>
+                      <dd className="col-sm-9">
+                        Small businesses located in the surrounding areas around Pittsburgh.
+                      </dd>
+                    </dl>
+                  </div>
+                  <div className="card-footer">
+                    <a
+                        href="https://www.honeycombcredit.com/relief"
+                        className="no-print btn btn-primary"
+                        target="_blank"
+                    >
+                      Apply now
+                    </a>
+                    <p className="yes-print">
+                      Apply to the Honeycomb Small Business Relief Loan:
+                      https://www.honeycombcredit.com/relief
+                    </p>
+                  </div>
+                </div>
+
+                <div className="hawaii_community program card">
+                  <div className="card-header">
+                    <h4>Hawaii Community-Based Economic Development Loan</h4>
+                  </div>
+                  <div className="card-body">
+                    <dl className="row">
+                      <dt className="col-sm-3">What is it?</dt>
+                      <dd className="col-sm-9">
+                        CBED offers micro-loans usually up to $50,000 to eligible small businesses that support economic development in their communities.
+                      </dd>
+
+                      <dt className="col-sm-3">Who is it for?</dt>
+                      <dd className="col-sm-9">
+                        Small businesses located in Hawaii that have been turned down by at least one financial institution.  The loan must result in
+                        a community-based economic development outcome such as:
+                        a) increase in jobs in an economically challenged community
+                        b) increase in local sourcing of inputs to a manufactured product
+                        c) addition of needed service or business to an economically challenged community and
+                        d) other community economic benefits of business growth.
+                      </dd>
+                    </dl>
+                  </div>
+                  <div className="card-footer">
+                    <a
+                        href="https://invest.hawaii.gov/business/cbed/"
+                        className="no-print btn btn-primary"
+                        target="_blank"
+                    >
+                      Apply now
+                    </a>
+                    <p className="yes-print">
+                      Apply to the Hawaii Community-Based Economic Development Loan:
+                      https://invest.hawaii.gov/business/cbed/
+                    </p>
+                  </div>
+                </div>
+
+                <div className="hawaii_small_business program card">
+                  <div className="card-header">
+                    <h4>Hawaii Small Business Relief & Recovery Fund</h4>
+                  </div>
+                  <div className="card-body">
+                    <dl className="row">
+                      <dt className="col-sm-3">What is it?</dt>
+                      <dd className="col-sm-9">
+                        Small Business Relief & Recovery Fund offers a one-time reimbursement for expenses of up to $10,000.
+                      </dd>
+
+                      <dt className="col-sm-3">Who is it for?</dt>
+                      <dd className="col-sm-9">
+                        Small businesses who have incurred costs from business interruption due to
+                        Emergency Proclamations or costs to implement safety precautions to prevent the spread of COVID-19.
+                        Businesses must have less than 1 million in gross annual revenue and 30 or fewer employees.
+                        Businesses must also be located in the City and County of Honolulu.
+                      </dd>
+                    </dl>
+                  </div>
+                  <div className="card-footer">
+                    <a
+                        href="https://www.oneoahu.org/small-business"
+                        className="no-print btn btn-primary"
+                        target="_blank"
+                    >
+                      Apply now
+                    </a>
+                    <p className="yes-print">
+                      Apply to the Hawaii Small Business Relief & Recovery Fund:
+                      https://www.oneoahu.org/small-business
+                    </p>
+                  </div>
+                </div>
+
+                <div className="hawaii_manufacturing program card">
+                  <div className="card-header">
+                    <h4>Hawaii Manufacturing Assistance Program</h4>
+                  </div>
+                  <div className="card-body">
+                    <dl className="row">
+                      <dt className="col-sm-3">What is it?</dt>
+                      <dd className="col-sm-9">
+                        HTDC’s Manufacturing Assistance Program Grant (MAP) offers Hawaii-based manufacturers
+                        up to a 20% reimbursement (up to $100,000) on qualified expenses to help Hawaii manufacturers
+                        become globally competitive.  Qualifying expenses include: equipment purchases, training,
+                        energy efficiency projects, and manufacturing feasibility studies.
+                      </dd>
+
+                      <dt className="col-sm-3">Who is it for?</dt>
+                      <dd className="col-sm-9">
+                        Must conduct manufacturing activities in Hawaii and be categorized as NAICS 31, 32, 33.
+                      </dd>
+                    </dl>
+                  </div>
+                  <div className="card-footer">
+                    <a
+                        href="https://www.htdc.org/money/#map"
+                        className="no-print btn btn-primary"
+                        target="_blank"
+                    >
+                      Apply now
+                    </a>
+                    <p className="yes-print">
+                      Apply to the Hawaii Small Business Relief & Recovery Fund:
+                      https://www.htdc.org/money/#map
+                    </p>
+                  </div>
+                </div>
+
+                <div className="hawaii_malama program card">
+                  <div className="card-header">
+                    <h4>Hawaii Malama Business Loan Program</h4>
+                  </div>
+                  <div className="card-body">
+                    <dl className="row">
+                      <dt className="col-sm-3">What is it?</dt>
+                      <dd className="col-sm-9">
+                        This is the most popular loan the Office of Hawaiian Affairs offers that support
+                        Native Hawaiian Business owners with loans between $2,500 to $100,000.
+                      </dd>
+
+                      <dt className="col-sm-3">Who is it for?</dt>
+                      <dd className="col-sm-9">
+                        Must be of Native Hawaiian ancestry with a credit score of 600 or higher with an income to debt ratio of no more than 45%.
+                      </dd>
+                    </dl>
+                  </div>
+                  <div className="card-footer">
+                    <a
+                        href="https://loans.oha.org/business/malama-business/"
+                        className="no-print btn btn-primary"
+                        target="_blank"
+                    >
+                      Apply now
+                    </a>
+                    <p className="yes-print">
+                      Apply to the Hawaii Malama Business Loan Program:
+                      https://loans.oha.org/business/malama-business/
+                    </p>
+                  </div>
+                </div>
+
+                <div className="hawaii_hua program card">
+                  <div className="card-header">
+                    <h4>Hawaii Hua Kanu Business Loan Program </h4>
+                  </div>
+                  <div className="card-body">
+                    <dl className="row">
+                      <dt className="col-sm-3">What is it?</dt>
+                      <dd className="col-sm-9">
+                        The Hua Kanu Business Loan Program is available to Native Hawaiians who own established business.
+                        Created on July 17, 2013, the low-cost loans are intended to help these small-businesses expand.
+                        It is meant to provide them access to credit and capital that allow them to grow as well as remain financially viable.
+                        Loans between $200,000 to $1,000,000.
+                      </dd>
+
+                      <dt className="col-sm-3">Who is it for?</dt>
+                      <dd className="col-sm-9">
+                        Principals must be Native Hawaiian and verified by current Office of Hawaiian Affairs Registry Card.
+                      </dd>
+                    </dl>
+                  </div>
+                  <div className="card-footer">
+                    <a
+                        href="https://loans.oha.org/business/hua-kanu-business-loan/"
+                        className="no-print btn btn-primary"
+                        target="_blank"
+                    >
+                      Apply now
+                    </a>
+                    <p className="yes-print">
+                      Apply to the Hawaii Hua Kanu Business Loan Program :
+                      https://loans.oha.org/business/hua-kanu-business-loan/
+                    </p>
+                  </div>
+                </div>
+
 
                 <h3>Counseling and Training</h3>
 

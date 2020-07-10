@@ -35,10 +35,10 @@ const Landing: React.FC<Props> = (props) => {
         links={[
           <a className="nav-link" href="#government-partners">
             Government Partners
-          </a>
-          //<Link className="nav-link" to="/ppp-loans">
-          //  PPP Loans
-          //</Link>,
+          </a>,
+          <Link className="nav-link" to="/ppp-loans">
+            PPP Loans
+          </Link>,
         ]}
       />
 
@@ -47,11 +47,15 @@ const Landing: React.FC<Props> = (props) => {
           <div className="row">
             <div className="col-md-6">
               <section>
-                <h1>Find COVID-19 financial assistance for your business.</h1>
+                <h1>Find COVID-19 financial assistance for your business</h1>
 
                 <p>
 
                   Answer a few questions to find loans and funding alternatives.
+                </p>
+                <p>
+                  UPDATE: The federal Payroll Protection Program has been extended to August 8, 2020. Find a lender and complete your application before the deadline.
+
                 </p>
 
 
@@ -77,11 +81,7 @@ const Landing: React.FC<Props> = (props) => {
                 <p>If you have more than 500 employees, check the <a href = "https://www.sba.gov/document/support--table-size-standards" target="_blank">
                   Small Business Administration size standards </a> to find loans specific to your industry.</p>
 
-                <Link to={ca ? "/california/questions" : "/questions"}>
-                  <button className="usa-button">
-                    Take our 3-minute questionnaire
-                  </button>
-                </Link>
+
               </section>
               <section id="government-partners">
                 <h2>Government partners</h2>

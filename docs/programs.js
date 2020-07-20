@@ -24,12 +24,14 @@ var program_descriptions = {
   },
 
   eag2: {
+    disclaimer: "The Small Business Emergency Assistance Grant (Phase 2) is now closed.",
     description: "The program is designed to provide short-term, immediate payroll and working capital support to New Jersey small and medium sized enterprises (businesses and non-profits) (“SMEs”), with no more than  25 Full Time Equivalent employees (FTEs), that that have been negatively impacted during the declared state of emergency, thereby helping to stabilize their operations and minimizing any potential furloughs and/or layoffs.",
     uses: "Grant funding to be used for reimbursement of working capital expenses incurred between March 1, 2020 and the date of the grant agreement.",
     funding: "$1K per full-time employee, up to $10,000 as applicable. Certain restrictions may apply for those who successfully received other COVID-19 related relief funding such as a phase 1 grant or a federal PPP loan. \
       Please use our Grant Calculator to estimate your award <a target=\"_blank\" href=\"https://forms.business.nj.gov/grant-2-size/\">https://forms.business.nj.gov/grant-2-size/</a>",
     learn_more: "https://faq.business.nj.gov/en/articles/3835237-what-is-the-status-of-the-njeda-small-business-emergency-assistance-grant-program-phase-2-information-now-available",
     es: {
+      disclaimer: "El Small Business Emergency Assistance Grant (Programa de Subsidios para Asistencia de Emergencia) (Phase 2) ahora está cerrada",
       alt_name: "Programa de Subsidios para Asistencia de Emergencia (Phase 2)",
       description: "El programa está diseñado para proporcionar apoyo de nómina y capital de trabajo inmediato a corto plazo a las empresas medianas y pequeñas (incluye negocios y negocios sin fines de lucro) de Nueva Jersey, con no más de 25 empleados equivalentes a tiempo completo, que han sido impactados negativamente durante el estado de emergencia declarado, ayudando así a estabilizar sus operaciones y disminuir cualquier posible licencia a largo plazo y/o despido.",
       uses: "El financiamiento de el subsidio sera utilizado para el reembolso de los gastos de capital de trabajo incurridos entre el 1 de marzo de 2020 y la fecha del acuerdo al subsidio.",

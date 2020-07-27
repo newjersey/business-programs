@@ -216,7 +216,7 @@ const OldResults: React.FC = () => {
                       <dd className="col-sm-9">
                         You may qualify for an emergency advance of up to
                         $10,000 for payroll, sick leave, and business
-                        obligations. within 3 days after you submit.
+                        obligations. within 3 days after you submit.&nbsp;
                         <a href="https://www.sba.gov/funding-programs/loans/coronavirus-relief-options/economic-injury-disaster-loan-emergency-advance">
                           Learn more about applying for an advance.
                         </a>

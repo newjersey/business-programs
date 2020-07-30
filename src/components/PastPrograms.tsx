@@ -15,7 +15,7 @@ const PastPrograms: React.FC = () => {
         Programs no longer accepting applications
       </h2>
       <p>
-        State Program
+        <strong>State Program</strong>
       </p>
       <p>
       As of April 27, 2020 the state program is unable to accept new applications for COVID-19 related assistance at this time.

@@ -9,27 +9,33 @@ import "./new_results.scss";
 const pppLenders = [
   {
     name: 'BlueVine',
-    subtext: ''
+    subtext: '',
+    url: 'https://www.bluevine.com/'
   },
   {
     name: 'Funding Circle',
-    subtext: ''
+    subtext: '',
+    url: 'http://www.teamcenterstone.com/ppploan/'
   },
   {
     name: 'Kabbage',
-    subtext: 'Kabbage can only process loans of up to $2 million'
+    subtext: 'Kabbage can only process loans of up to $2 million',
+    url: 'https://www.kabbage.com/paycheck-protection-program-loans/'
   },
   {
     name: 'Loan Source',
-    subtext: ''
+    subtext: '',
+    url: 'https://www.covidreserve.com/'
   },
   {
     name: 'NewTek Small Business Finance',
-    subtext: ''
+    subtext: '',
+    url: 'https://partners.newtekone.com/caresact/business-lending/'
   },
   {
     name: 'OnDeck',
-    subtext: ''
+    subtext: '',
+    url: 'https://online.ondeck.com/?sba_ppp=true&_ga=2.120667080.1313386691.1588787633-1585010504.1588109996'
   },
 ]
 
@@ -51,12 +57,19 @@ const PPPSection: React.FC = () => {
       </p>
       <div className="ppp-lenders-container">
         {pppLenders.map(lenderObject => 
-          <div className="ppp-item">
-            {lenderObject.name}
+          <div 
+            className="ppp-item"
+          >
+            <a
+              href={lenderObject.url}
+              target="_blank"
+            >
+              {lenderObject.name}
+            </a>
           </div>
         )}
       </div>
-      <div className="ppp-cta">Find other lenders.</div>
+      {/* <div className="ppp-cta">Find other lenders.</div> */}
     </div>
               
   );

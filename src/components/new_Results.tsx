@@ -1,4 +1,6 @@
-import React, { useEffect } from "react";
+// @ts-nocheck
+
+import React, { useEffect , useState} from "react";
 import { useLocation, useHistory } from "react-router-dom";
 import PPPSection from './PayrollProtectionProgramSection'
 import EIDLProgramSection from './EconomicInjuryDisasterLoanProgramSection'
@@ -11,26 +13,24 @@ import "./new_results.scss";
 const Results: React.FC = () => {
   const { search } = useLocation();
   const history = useHistory();
+  const [eligiblePrograms, setEligiblePrograms] = useState([]);
 
-  useEffect(() => {
-    // hacky port of raw js from previous results page, will redo with the new results page
-    const eligible = new URLSearchParams(search).getAll("eligible");
-    eligible.forEach(function (el) {
-      var nodes = document.querySelectorAll("." + el);
-      nodes.forEach(function (node) {
-        node.classList.add("is_eligible");
-      });
-    });
-  });
-
-  const eligiblePrograms = [
-    {name: 'Payroll Protection Plan', url: ''},
-    {name: 'Economic Injury Disaster Loan Program', url: ''},
-  ]
+  const allPrograms = {
+    'ppp': {name: 'Payroll Protection Plan', url: ''},
+    'eidl': {name: 'Economic Injury Disaster Loan Program', url: ''},
+    'sbdrp': {name: 'Small Business Debt Relief Program', url: ''}
+  }
 
   const expiredPrograms = [
     {name: 'State Program', url: ''}
   ]
+
+  useEffect(() => {
+    // hacky port of raw js from previous results page, will redo with the new results page
+    const eligibleProgramsParams = new URLSearchParams(search).getAll("eligible");
+
+    setEligiblePrograms(eligibleProgramsParams);
+  }, []);
 
   return (
     <div>
@@ -45,11 +45,10 @@ const Results: React.FC = () => {
               <p>
                 If you and your business have an existing relationship with a bank, contact your banker for more information about available relief programs. 
               </p>
-                <PPPSection /> 
-  
-              
-              
-              <EIDLProgramSection/>
+              <a name="ppp"></a>
+              {eligiblePrograms.includes('ppp') && <PPPSection/>} 
+              <a name="eidl"></a>
+              {eligiblePrograms.includes('eidl') && <EIDLProgramSection/>}
               <PastPrograms/>
             </div>
             <div className="col-4 right">
@@ -60,7 +59,7 @@ const Results: React.FC = () => {
                   </div>
                   <div>
                     {eligiblePrograms.map(program => 
-                      <div className="sidebar-item"><a href={program.url}>{program.name}</a></div>
+                      <div className="sidebar-item"><a href={`#${program}`}>{allPrograms[program]?.name}</a></div>
                     )}
                   </div>
                   <div className="sidebar-title sidebar-expired">

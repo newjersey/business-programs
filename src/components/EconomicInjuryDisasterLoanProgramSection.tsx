@@ -74,8 +74,12 @@ const EIDLProgramSection: React.FC = () => {
       <p>Complete your application on the SBA EIDL site</p>
       <button
         className="usa-button eidl-cta"
-        onClick={() => {}}
         data-ga-label="Print this report"
+        onClick={(e) => {
+          e.preventDefault();
+          window.open('https://covid19relief.sba.gov/', '_blank')
+          }}
+        type="button"
       >
         Apply Now
       </button>
@@ -85,3 +89,4 @@ const EIDLProgramSection: React.FC = () => {
 };
 
 export default EIDLProgramSection;
+

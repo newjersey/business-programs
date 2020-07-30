@@ -49,6 +49,7 @@ const Results: React.FC = () => {
               {eligiblePrograms.includes('ppp') && <PPPSection/>} 
               <a name="eidl"></a>
               {eligiblePrograms.includes('eidl') && <EIDLProgramSection/>}
+              <a name="expired"></a>
               <PastPrograms/>
             </div>
             <div className="col-4 right">
@@ -67,7 +68,7 @@ const Results: React.FC = () => {
                   </div>
                   <div>
                     {expiredPrograms.map(program => 
-                      <div className="sidebar-item"><a href={program.url}>{program.name}</a></div>
+                      <div className="sidebar-item"><a href={'#expired'}>{program.name}</a></div>
                     )}
                   </div>
                 </div>

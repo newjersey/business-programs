@@ -6,33 +6,6 @@ import Footer from "./Footer";
 
 import "./new_results.scss";
 
-const pppLenders = [
-  {
-    name: 'BlueVine',
-    subtext: ''
-  },
-  {
-    name: 'Funding Circle',
-    subtext: ''
-  },
-  {
-    name: 'Kabbage',
-    subtext: 'Kabbage can only process loans of up to $2 million'
-  },
-  {
-    name: 'Loan Source',
-    subtext: ''
-  },
-  {
-    name: 'NewTek Small Business Finance',
-    subtext: ''
-  },
-  {
-    name: 'OnDeck',
-    subtext: ''
-  },
-]
-
 const EIDLProgramSection: React.FC = () => {
 
   return (

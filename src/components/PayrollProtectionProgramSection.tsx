@@ -15,17 +15,12 @@ const pppLenders = [
   {
     name: 'Funding Circle',
     subtext: '',
-    url: 'http://www.teamcenterstone.com/ppploan/'
+    url: 'https://www.fundingcircle.com/us/paycheck-protection-program-loans/'
   },
   {
     name: 'Kabbage',
     subtext: 'Kabbage can only process loans of up to $2 million',
     url: 'https://www.kabbage.com/paycheck-protection-program-loans/'
-  },
-  {
-    name: 'Loan Source',
-    subtext: '',
-    url: 'https://www.covidreserve.com/'
   },
   {
     name: 'NewTek Small Business Finance',

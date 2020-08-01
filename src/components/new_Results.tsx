@@ -39,7 +39,7 @@ const Results: React.FC = () => {
         <div className="container-fluid">
           <div className="row">
             <div className="col-8 left">
-              <h1 className="title">
+              <h1 className="title-top">
                 Your Recommendations
               </h1>
               <p>

@@ -44,7 +44,7 @@ const PPPSection: React.FC = () => {
       <h2 className="title">
         Payroll Protection Program
       </h2>
-      <p>
+      <p className="loan-description">
       For this federal program, you can submit multiple applications through different lenders to maximize your chances of receiving a loan. However, you can only accept one loan for your business.
       </p>
       <p>
@@ -52,6 +52,7 @@ const PPPSection: React.FC = () => {
       </p>
       <div className="ppp-lenders-container">
         {pppLenders.map(lenderObject => 
+        <>
           <div 
             className="ppp-item"
           >
@@ -62,6 +63,10 @@ const PPPSection: React.FC = () => {
               {lenderObject.name}
             </a>
           </div>
+          <div>
+          {lenderObject.subtext && <div className="ppp-subtext">{lenderObject.subtext}</div>}
+          </div>
+        </>
         )}
       </div>
       {/* <div className="ppp-cta">Find other lenders.</div> */}

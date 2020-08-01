@@ -4,8 +4,8 @@
   margin-top: 5em;
   background-color: white;
   .container-fluid {
-    width: 60%;
     background-color: #fff;
+    max-width: 1140px;
   }
 }
 
@@ -14,7 +14,7 @@ p {
 }
 
 .left {
-  padding-right: 2em;
+  padding-right: 7em;
 }
 
 .sidebar-container {
@@ -65,13 +65,19 @@ p {
 
 .title {
   font-weight: 700;
-  font-size: 40px;
-  line-height: 48px;
+  font-size: 32px;
+  line-height: 38px;
   color: #171617;
   font-family: 'Public Sans', sans-serif;
-  padding-bottom: 16px;
   padding-right: 106px;
   margin: 0px;
+}
+
+.title-top {
+  font-size: 40px;
+  color: #171617;
+  font-family: 'Public Sans', sans-serif;
+  font-weight: 700;
 }
 
 .loan-container {
@@ -92,7 +98,7 @@ p {
 .top-label {
   font-size: 16px;
   line-height: 26px;
-  color: #595959;
+  color:#4A4A4A;
 }
 
 .eidl-terms {
@@ -111,4 +117,16 @@ p {
   padding-top: 4em;
   margin-bottom: 5em;
   border-top: #f2f2f2 solid 3px;
+}
+
+.loan-description {
+  margin-top: 16px;
+}
+
+.ppp-subtext {
+  font-size: 16px;
+  color:#4A4A4A;
+  padding-left: 10px;
+  margin-top: -8px;
+  margin-bottom: 16px;
 }

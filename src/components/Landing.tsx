@@ -31,17 +31,7 @@ const Landing: React.FC<Props> = (props) => {
           content="Learn about support programs available to help stabilize your business."
         />
       </Helmet>
-      <Header
-        links={[
-          <a className="nav-link" href="#government-partners">
-            Government Partners
-          </a>,
-          <Link className="nav-link" to="/ppp-loans">
-            PPP Loans
-          </Link>,
-        ]}
-      />
-
+      <Header/>
       <main>
         <div className="container">
           <div className="row">

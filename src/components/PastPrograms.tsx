@@ -14,7 +14,7 @@ const PastPrograms: React.FC = () => {
       <h2 className="title">
         Programs no longer accepting applications
       </h2>
-      <p>
+      <p className="loan-description">
         <strong>State Program</strong>
       </p>
       <p>

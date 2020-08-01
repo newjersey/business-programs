@@ -16,7 +16,7 @@ const EIDLProgramSection: React.FC = () => {
       <h2 className="title">
         Economic Injury Disaster Loan Program
       </h2>
-      <p>
+      <p className="loan-description">
         This low-interest loan from the Small Business Administration provides up to $10,000 of economic relief to businesses that are experiencing temporary difficulties.
       </p>
       <p>

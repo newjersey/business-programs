@@ -19,10 +19,10 @@ interface Props {
 const Header: React.FC<Props> = ({ links = [], showLanguageSelect }) => {
   const [language, setLanguage, languageOpts] = useSelectLanguage();
   return (
-    <nav className="navbar navbar-dark navbar-expand-lg bg-primary-vivid">
+    <nav className="navbar navbar-dark navbar-expand-lg">
       <div className="container">
         <Link className="navbar-brand" to="/">
-          <img src="/usdr_logo_white.png" alt="USDR Logo" /> Business Assistant
+          <img src="/usdr_logo_black.svg" alt="USDR Logo" />
         </Link>
 
         {showLanguageSelect && (

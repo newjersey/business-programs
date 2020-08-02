@@ -203,7 +203,10 @@
     {
       "id": "ca_public_benefit",
       "name": {
-        "en": "Is your organization a public benefit nonprofit?"
+        "en": "Is your organization a public benefit nonprofit?",
+        "es": "¿Es su organización una organización sin fines de lucro para el beneficio público?",
+        "zh": "您的组织是公益非营利组织吗?"
+
       },
       "type": "boolean",
       "required": true,
@@ -212,7 +215,9 @@
     {
       "id": "ca_cleen",
       "name": {
-        "en": "Is your organization a hospital, school or university looking to fund energy efficiency upgrades?"
+        "en": "Is your organization a hospital, school or university looking to fund energy efficiency upgrades?",
+        "es": "¿Es su organización un hospital, escuela o universidad que busca financiar mejoras en la eficiencia energética?",
+        "zh": "您的组织是否正在寻求资金来改善能源效率的医院、学校、或大学?"
       },
       "type": "boolean",
       "required": true,
@@ -221,7 +226,9 @@
     {
       "id": "ca_manufacturing",
       "name": {
-        "en": "Is your organization a manufacturing and processing company?"
+        "en": "Is your organization a manufacturing and processing company?",
+        "es": "¿Es su organización una empresa de fabricación y procesamiento?",
+        "zh": "您的组织是否为加工制造业的公司?"
       },
       "type": "boolean",
       "required": true,
@@ -230,7 +237,9 @@
     {
       "id": "ca_community_benefit",
       "name": {
-        "en": "Is your organization working on improving facilities or capital assets?"
+        "en": "Is your organization working on improving facilities or capital assets?",
+        "es": "¿Su organización está trabajando para mejorar las instalaciones o los activos fijos?",
+        "zh": "您的组织是否正在改善设施或资本资产?"
       },
       "type": "boolean",
       "required": true,
@@ -239,7 +248,9 @@
     {
       "id": "pa_state",
       "name": {
-        "en": "Is your business located in Pennsylvania?"
+        "en": "Is your business located in Pennsylvania?",
+        "es": "¿Su empresa o negocio está ubicado en Pennsylvania?",
+        "zh": "您的组织是否位于宾夕法尼亚州?\n"
       },
       "type": "boolean",
       "required": true,
@@ -248,7 +259,9 @@
     {
       "id": "pitt_city_location",
       "name": {
-        "en": "Is your business located in within the city limits of Pittsburgh?"
+        "en": "Is your business located in within the city limits of Pittsburgh?",
+        "es": "¿Su empresa o negocio está ubicado dentro de los límites de la ciudad de Pittsburgh?",
+        "zh": "您的公司是否位于匹兹堡市区范围内?"
       },
       "type": "boolean",
       "required": true,
@@ -257,7 +270,9 @@
     {
       "id": "pitt_employees",
       "name": {
-        "en": "Does your business have less than 30 full-time employees?"
+        "en": "Does your business have less than 30 full-time employees?",
+        "es": "¿Su empresa o negocio tiene menos de 30 empleados a tiempo completo?",
+        "zh": "您的公司是否雇有少于30名全职员工?"
       },
       "type": "boolean",
       "required": true,
@@ -266,7 +281,9 @@
     {
       "id": "hawaii_business",
       "name": {
-        "en": "Is your business registered in Hawaii?"
+        "en": "Is your business registered in Hawaii?",
+        "es": "¿Su empresa o negocio está registrado en Hawai?",
+        "zh": "您的公司是否有在夏威夷注册?"
       },
       "type": "boolean",
       "required": true,
@@ -275,7 +292,9 @@
     {
       "id": "hawaii_turned_down",
       "name": {
-        "en": "Have you been turned down for a loan from at least one financial institution (ie a bank)?"
+        "en": "Have you been turned down for a loan from at least one financial institution (ie a bank)?",
+        "es": "¿Alguna una institución financiera (por ejemplo, un banco) le ha rechazado una solicitud de préstamo?",
+        "zh": "您是否曾经被至少一家金融机构(例如银行)拒绝贷款?"
       },
       "type": "boolean",
       "required": true,
@@ -284,7 +303,9 @@
     {
       "id": "hawaii_revenue",
       "name": {
-        "en": "Does your business have less than $1 million in gross annual revenue?"
+        "en": "Does your business have less than $1 million in gross annual revenue?",
+        "es": "¿Su empresa o negocio genera menos de $1 millón de dólares en ingresos brutos anuales?",
+        "zh": "您的公司年收入总额是否少于一百万美元？"
       },
       "type": "boolean",
       "required": true,
@@ -293,7 +314,9 @@
     {
       "id": "hawaii_employees",
       "name": {
-        "en": "Does your business have less than 30 employees?"
+        "en": "Does your business have less than 30 employees?",
+        "es": "¿Su empresa o negocio tiene menos de 30 empleados?",
+        "zh": "您的公司是否雇有少于30名员工?"
       },
       "type": "boolean",
       "required": true,
@@ -302,7 +325,9 @@
     {
       "id": "honolulu_location",
       "name": {
-        "en": "Is your business or non-profit located in the City and County of Honolulu?"
+        "en": "Is your business or non-profit located in the City and County of Honolulu?",
+        "es": "¿Su empresa, negocio u organización sin fines de lucro se encuentra en la ciudad y el condado de Honolulu?",
+        "zh": "您的公司或非营利机构是否位于檀香山市县(火奴鲁鲁市县)?"
       },
       "type": "boolean",
       "required": true,
@@ -311,7 +336,9 @@
     {
       "id": "hawaii_manufacturing",
       "name": {
-        "en": "Do you conduct manufacturing activities in Hawaii?"
+        "en": "Do you conduct manufacturing activities in Hawaii?",
+        "es": "¿Realiza actividades de fabricación en Hawai?",
+        "zh": "您是否在夏威夷从事制造业活动?"
       },
       "type": "boolean",
       "required": true,
@@ -321,7 +348,9 @@
     {
       "id": "hawaii_native",
       "name": {
-        "en": "Are you of Native Hawaiian ancestry?"
+        "en": "Are you of Native Hawaiian ancestry?",
+        "es": "¿Es usted de ascendencia hawaiana nativa?",
+        "zh": "您是夏威夷族原住民吗?"
       },
       "type": "boolean",
       "required": true,

@@ -8,7 +8,7 @@ import "./header.scss";
 
 const StyledMenu = styled(Menu)`
   text-decoration: underline;
-  color: white;
+  color: black;
 `;
 
 interface Props {
@@ -19,14 +19,14 @@ interface Props {
 const Header: React.FC<Props> = ({ links = [], showLanguageSelect }) => {
   const [language, setLanguage, languageOpts] = useSelectLanguage();
   return (
-    <nav className="navbar navbar-dark navbar-expand-lg">
+    <nav className="navbar navbar-light navbar-expand-lg">
       <div className="container">
         <Link className="navbar-brand" to="/">
           <img src="/usdr_logo_black.svg" alt="USDR Logo" />
         </Link>
 
         {showLanguageSelect && (
-          <Box background={{ dark: true }}>
+          <Box background={{ dark: false }}>
             <StyledMenu
               label={
                 languageOpts.find((lang) => lang.value === language)!.title
@@ -39,28 +39,6 @@ const Header: React.FC<Props> = ({ links = [], showLanguageSelect }) => {
               }))}
             />
           </Box>
-        )}
-        {links.length > 0 && (
-          <>
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-toggle="collapse"
-              data-target="#navbarNav"
-              aria-controls="navbarNav"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="collapse navbar-collapse" id="navbarNav">
-              <ul className="navbar-nav ml-auto">
-                {links.map((link) => (
-                  <li className="nav-item">{link}</li>
-                ))}
-              </ul>
-            </div>
-          </>
         )}
       </div>
     </nav>

@@ -40,6 +40,28 @@ const Header: React.FC<Props> = ({ links = [], showLanguageSelect }) => {
             />
           </Box>
         )}
+        {links.length > 0 && (
+          <>
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span className="navbar-toggler-icon"></span>
+            </button>
+            <div className="collapse navbar-collapse" id="navbarNav">
+              <ul className="navbar-nav ml-auto">
+                {links.map((link) => (
+                  <li className="nav-item">{link}</li>
+                ))}
+              </ul>
+            </div>
+          </>
+        )}
       </div>
     </nav>
   );

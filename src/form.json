@@ -201,51 +201,6 @@
       "ca_only": true
     },
     {
-      "id": "ca_public_benefit",
-      "name": {
-        "en": "Is your organization a public benefit nonprofit?",
-        "es": "¿Es su organización una organización sin fines de lucro para el beneficio público?",
-        "zh": "您的组织是公益非营利组织吗?"
-
-      },
-      "type": "boolean",
-      "required": true,
-      "ca_only": true
-    },
-    {
-      "id": "ca_cleen",
-      "name": {
-        "en": "Is your organization a hospital, school or university looking to fund energy efficiency upgrades?",
-        "es": "¿Es su organización un hospital, escuela o universidad que busca financiar mejoras en la eficiencia energética?",
-        "zh": "您的组织是否正在寻求资金来改善能源效率的医院、学校、或大学?"
-      },
-      "type": "boolean",
-      "required": true,
-      "ca_only": true
-    },
-    {
-      "id": "ca_manufacturing",
-      "name": {
-        "en": "Is your organization a manufacturing and processing company?",
-        "es": "¿Es su organización una empresa de fabricación y procesamiento?",
-        "zh": "您的组织是否为加工制造业的公司?"
-      },
-      "type": "boolean",
-      "required": true,
-      "ca_only": true
-    },
-    {
-      "id": "ca_community_benefit",
-      "name": {
-        "en": "Is your organization working on improving facilities or capital assets?",
-        "es": "¿Su organización está trabajando para mejorar las instalaciones o los activos fijos?",
-        "zh": "您的组织是否正在改善设施或资本资产?"
-      },
-      "type": "boolean",
-      "required": true,
-      "ca_only": true
-    },
-    {
       "id": "pa_state",
       "name": {
         "en": "Is your business located in Pennsylvania?",

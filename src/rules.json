@@ -74,36 +74,7 @@
       }
     ]
   },
-  {
-    "program": "ca_cleen_program",
-    "rules": [
-      {
-        "op": "eq",
-        "qid": "ca_legal_business",
-        "value": "true"
-      },
-      {
-        "op": "eq",
-        "qid": "ca_cleen",
-        "value": "true"
-      }
-    ]
-  },
-  {
-    "program": "ca_501",
-    "rules": [
-      {
-        "op": "eq",
-        "qid": "ca_legal_business",
-        "value": "true"
-      },
-      {
-        "op": "eq",
-        "qid": "ca_public_benefit",
-        "value": "true"
-      }
-    ]
-  },
+
   {
     "program": "pitt_elf",
     "rules": [

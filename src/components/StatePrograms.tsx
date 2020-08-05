@@ -60,7 +60,7 @@ const allStatePrograms = [
     id: 'hawaii_community',
     name: 'Hawaii Community-Based Economic Development Loan',
     what: 'CBED offers micro-loans usually up to $50,000 to eligible small businesses that support economic development in their communities.',
-    who: 'Small businesses located in Hawaii that have been turned down by at least one financial institution.  The loan must result in a community-based economic development outcome such as: a) increase in jobs in an economically challenged community b) increase in local sourcing of inputs to a manufactured product c) addition of needed service or business to an economically challenged community and d) other community economic benefits of business growth.',
+    who: '',
     url: 'https://invest.hawaii.gov/business/cbed/',
     status: 'Available Now'
   },
@@ -87,8 +87,15 @@ const allStatePrograms = [
     who: 'Must be of Native Hawaiian ancestry with a credit score of 600 or higher with an income to debt ratio of no more than 45%.',
     url: 'https://loans.oha.org/business/malama-business/',
     status: 'Available Now'
+  },
+  {
+    id: 'hawaii_hua',
+    name: 'Hawaii Hua Kanu Business Loan Program',
+    what: 'The Hua Kanu Business Loan Program is available to Native Hawaiians who own established business. Created on July 17, 2013, the low-cost loans are intended to help these small-businesses expand. It is meant to provide them access to credit and capital that allow them to grow as well as remain financially viable. Loans between $200,000 to $1,000,000.',
+    who: 'Principals must be Native Hawaiian and verified by current Office of Hawaiian Affairs Registry Card.',
+    url: 'https://loans.oha.org/business/hua-kanu-business-loan/',
+    status: 'Available Now'
   }
-  
 ]
 
 const StatePrograms: React.FC = () => {
@@ -111,9 +118,19 @@ const StatePrograms: React.FC = () => {
         <p className="loan-description">
           <strong>Who is it for?</strong>
         </p>
-        <p>
-          {program.who}
-        </p>
+        {
+          program.id === 'hawaii_community' ?
+            (<p>Small businesses located in Hawaii that have been turned down by at least one financial institution. The loan must result in a community-based economic development outcome such as: 
+              <ul>
+                <li>Increase in jobs in an economically challenged community </li>
+                <li>Increase in local sourcing of inputs to a manufactured product </li>
+                <li>Addition of needed service or business to an economically challenged community and </li>
+                <li>Other community economic benefits of business growth.</li>
+              </ul>
+            </p>)
+            :
+            <p>{program.who}</p>
+        }
         <button
         className="usa-button eidl-cta"
         data-ga-label={program.id}

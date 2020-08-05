@@ -137,8 +137,8 @@ function App() {
               <PPPLoanInfo />
             </Route>
             <Route exact path="/results">
-              <OldResults/>
-              {/* <Results /> */}
+              {/* <OldResults/> */}
+              <Results />
             </Route>
             <Route exact path="/">
               <Landing></Landing>

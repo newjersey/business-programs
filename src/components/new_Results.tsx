@@ -4,7 +4,7 @@ import React, { useEffect , useState} from "react";
 import { useLocation, useHistory } from "react-router-dom";
 import PPPSection from './PayrollProtectionProgramSection'
 import EIDLProgramSection from './EconomicInjuryDisasterLoanProgramSection'
-import PastPrograms from './PastPrograms'
+import StatePrograms from './StatePrograms'
 import Header from "./Header";
 import Footer from "./Footer";
 
@@ -50,7 +50,7 @@ const Results: React.FC = () => {
               <a name="eidl"></a>
               {eligiblePrograms.includes('eidl') && <EIDLProgramSection/>}
               <a name="expired"></a>
-              <PastPrograms/>
+              <StatePrograms/>
             </div>
             <div className="col-4 right">
               <div className="sidebar-container">

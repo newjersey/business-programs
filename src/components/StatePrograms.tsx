@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import React, { useEffect } from "react";
 import { useLocation, useHistory } from "react-router-dom";
 
@@ -12,7 +14,7 @@ const allStatePrograms = [
     id: 'ca_small_biz',
     name: 'California Small Business Finance Center',
     what: 'Loan guarantees for small businesses',
-    who: "California small businesses. Loan proceeds can be used for business continuance or to cure 'economic injury' as a result of the COVID-19 pandemic.",
+    who: 'California small businesses. Loan proceeds can be used for business continuance or to cure "economic injury" as a result of the COVID-19 pandemic.',
     url: 'https://ibank.ca.gov/small-business-finance-center/',
     status: 'Available Now'
   },
@@ -91,16 +93,21 @@ const allStatePrograms = [
   {
     id: 'hawaii_hua',
     name: 'Hawaii Hua Kanu Business Loan Program',
-    what: 'The Hua Kanu Business Loan Program is available to Native Hawaiians who own established business. Created on July 17, 2013, the low-cost loans are intended to help these small-businesses expand. It is meant to provide them access to credit and capital that allow them to grow as well as remain financially viable. Loans between $200,000 to $1,000,000.',
+    what: 'The Hua Kanu Business Loan Program is available to Native Hawaiians who own established business. Created on July 17, 2013, the low-cost loans are intended to help these small-businesses expand. It is meant to provide them access to credit and capital that will allow them to grow as well as remain financially viable. Loans between $200,000 to $1,000,000.',
     who: 'Principals must be Native Hawaiian and verified by current Office of Hawaiian Affairs Registry Card.',
     url: 'https://loans.oha.org/business/hua-kanu-business-loan/',
     status: 'Available Now'
   }
 ]
 
-const StatePrograms: React.FC = () => {
+const StatePrograms: React.FC = (props) => {
+  console.log(props)
+  const allEligiblePrograms = props.eligiblePrograms;
+  const elibileStatePrograms = allStatePrograms.filter((stateProgram) => {
+    return allEligiblePrograms.includes(stateProgram.id)
+  })
 
-  const stateProgramList = allStatePrograms.map(program => {
+  const stateProgramList = elibileStatePrograms.map(program => {
     return (
       <div className="expired-container">
         <label className="top-label">

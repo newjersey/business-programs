@@ -50,7 +50,9 @@ const Results: React.FC = () => {
               <a name="eidl"></a>
               {eligiblePrograms.includes('eidl') && <EIDLProgramSection/>}
               <a name="expired"></a>
-              <StatePrograms/>
+              <StatePrograms
+                eligiblePrograms={eligiblePrograms}
+              />
             </div>
             <div className="col-4 right">
               <div className="sidebar-container">

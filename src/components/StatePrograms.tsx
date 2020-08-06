@@ -109,7 +109,7 @@ const StatePrograms: React.FC = (props) => {
 
   const stateProgramList = elibileStatePrograms.map(program => {
     return (
-      <div className="expired-container">
+      <div className="loan-container">
         <label className="top-label">
           {program.status}
         </label>

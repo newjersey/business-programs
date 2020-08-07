@@ -11,9 +11,9 @@ import "./new_results.scss";
 
 const StatePrograms: React.FC = (props) => {
 
-  const stateProgramList = props.eligibleStatePrograms.map(program => {
+  const stateProgramList = props.eligibleStatePrograms.map((program, i) => {
     return (
-      <div className="loan-container">
+      <div className={i === props.eligibleStatePrograms.length - 1 ? "loan-container-last" : "loan-container"}>
         <a name={program.name}></a>
         <label className="top-label">
           {program.status}

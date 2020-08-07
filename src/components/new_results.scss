@@ -21,6 +21,9 @@ p {
   border: 0.5px solid #efefef;
   width: auto;
   padding: 30px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 30px;
 }
 
 .sidebar-title {

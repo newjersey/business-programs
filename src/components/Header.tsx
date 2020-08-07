@@ -1,3 +1,5 @@
+// @ts-ignore
+
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
@@ -18,6 +20,7 @@ interface Props {
 
 const Header: React.FC<Props> = ({ links = [], showLanguageSelect }) => {
   const [language, setLanguage, languageOpts] = useSelectLanguage();
+  console.log(languageOpts)
   return (
     <nav className="navbar navbar-light navbar-expand-lg">
       <div className="container">
@@ -26,20 +29,16 @@ const Header: React.FC<Props> = ({ links = [], showLanguageSelect }) => {
         </Link>
 
         {showLanguageSelect && (
-          <Box background={{ dark: false }}>
-            <StyledMenu
-              label={
-                languageOpts.find((lang) => lang.value === language)!.title
-              }
-              items={languageOpts.map((lang) => ({
-                label: lang.title,
-                onClick: () => {
-                  setLanguage(lang.value);
-                },
-              }))}
-            />
-          </Box>
+          <div>
+          {languageOpts.map(lang => {
+            if (lang.value !== language) {
+              return <span className="language-option" onClick={() => {setLanguage(lang.value)}}>{lang.title}</span>
+            }
+          })}
+          </div>
+          
         )}
+
         {links.length > 0 && (
           <>
             <button
@@ -68,3 +67,17 @@ const Header: React.FC<Props> = ({ links = [], showLanguageSelect }) => {
 };
 
 export default Header;
+
+// <Box background={{ dark: false }}>
+          //   <StyledMenu
+          //     label={
+          //       languageOpts.find((lang) => lang.value === language)!.title
+          //     }
+          //     items={languageOpts.map((lang) => ({
+          //       label: lang.title,
+          //       onClick: () => {
+          //         setLanguage(lang.value);
+          //       },
+          //     }))}
+          //   />
+          // </Box>

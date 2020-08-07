@@ -96,6 +96,13 @@ var nonprofit_q = "q11",
         }
       }
     },
+    emergency_lease: { // Small Business Lease Emergency Assistance Grant Program
+      required_yes: ["q201", "q1", "q11", "q2", "q17", "q21", "q401", "q402"],
+      required_no: ["q3", "q14"],
+      eval: {
+
+      }
+    },
     egp: { // Entrepreneur Guarantee
       required_yes: ["q1", "q4", "q5", "q6", "q13", "q17", "q23", "q42"],
       required_no: ["q14"],
@@ -360,7 +367,7 @@ $(document).ready(function () {
 
   Object.keys(program_descriptions).forEach(function (pcode) {
     var p = program_descriptions[pcode],
-      lang_src = (select_lang === "en") ? p : p[select_lang],
+      lang_src = (select_lang === "en" || !p[select_lang]) ? p : p[select_lang],
       shell = $(".program." + pcode);
 
     // language changes name of program or adds parenthetical alt_name

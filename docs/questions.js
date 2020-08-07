@@ -62,6 +62,8 @@ var form_questions = {
     yes_text: "Agree",
     no_text: "Cancel",
     es: {
+      yes_text: "Acordar",
+      no_text: "Cancelar",
       html: "<strong>Descargo de responsabilidad de NJEDA</strong>: \
         <p>Como cortesía, NJEDA ofrece esta herramienta de evaluación (el \
           “Asistente de Eligibilidad”) que enumera los programas de asistencia para emergencias que \
@@ -121,7 +123,9 @@ var form_questions = {
     no_text: "Not-for-profit",
     yes_hides: ["non-profit"],
     es: {
-      html: "<p>¿Es la suya una organización con fines de lucro o sin fines de lucro?</p>"
+      html: "<p>¿Es la suya una organización con fines de lucro o sin fines de lucro?</p>",
+      yes_text: "Con fines de lucro",
+      no_text: "Sin fines de lucro"
     }
   },
   "q11": {
@@ -214,10 +218,101 @@ var form_questions = {
     html: "<p> \
       Is your business home-based? \
     </p>",
-    yes_hides: ["detail_qs"],
+    yes_hides: ["detail_qs", "not-home"],
     es: {
       html: "<p>¿Maneja su negocio desde su hogar?</p>"
     }
+  },
+
+  "q401": {
+    classes: "not-home physical_nj",
+    no_hides: ["approp_small_space"],
+    html: "<p>Is your business one of the following?</p> \
+    <ul><li>Small businesses (5,000 sq. ft. or less) leasing commercial space in mixed-use buildings</li> \
+    <li>Small businesses ( 5,000 sq. ft. or less) leasing space in commercial buildings</li> \
+    <li>Store front businesses ( 5,000 sq. ft. or less) that lease their space</li></ul>"
+    // ,
+    // es: {
+    //   html: ""
+    // }
+  },
+  "q402": {
+    classes: "not-home physical_nj approp_small_space",
+    html: "<p> \
+      Is your business located in one of the following Cities, Boroughs or Townships? \
+      <select> \
+<option>Select</option> \
+<option>None (select No on form)</option> \
+<option>Asbury Park City</option> \
+<option>Atlantic City</option> \
+<option>Bayonne City</option> \
+<option>Belleville Township</option> \
+<option>Bergenfield Borough</option> \
+<option>Bloomfield Township</option> \
+<option>Brick Township</option> \
+<option>Bridgeton City</option> \
+<option>Burlington City</option> \
+<option>Camden City</option> \
+<option>Carteret Borough</option> \
+<option>Clifton City</option> \
+<option>East Orange City</option> \
+<option>Elizabeth City</option> \
+<option>Garfield City</option> \
+<option>Glassboro Borough</option> \
+<option>Gloucester City</option> \
+<option>Gloucester Township</option> \
+<option>Hackensack City</option> \
+<option>Harrison Town</option> \
+<option>Hillside Township</option> \
+<option>Hoboken City</option> \
+<option>Irvington Township</option> \
+<option>Jersey City</option> \
+<option>Keansburg Borough</option> \
+<option>Kearny Town</option> \
+<option>Lakewood Township</option> \
+<option>Lindenwold Borough</option> \
+<option>Lodi Borough</option> \
+<option>Long Branch City</option> \
+<option>Millville City</option> \
+<option>Monroe Township (Gloucester)</option> \
+<option>Montclair Township</option> \
+<option>Mount Holly Township</option> \
+<option>Neptune City Borough</option> \
+<option>Neptune Township</option> \
+<option>New Brunswick City</option> \
+<option>Newark City</option> \
+<option>North Bergen Township</option> \
+<option>Nutley Township</option> \
+<option>Old Bridge Township</option> \
+<option>Orange City</option> \
+<option>Passaic City</option> \
+<option>Paterson City</option> \
+<option>Pemberton Township</option> \
+<option>Penns Grove Borough</option> \
+<option>Pennsauken Township</option> \
+<option>Perth Amboy City</option> \
+<option>Phillipsburg Town</option> \
+<option>Plainfield City</option> \
+<option>Pleasantville City</option> \
+<option>Rahway City</option> \
+<option>Roselle Borough</option> \
+<option>Salem City</option> \
+<option>Sussex Boro</option> \
+<option>Trenton City</option> \
+<option>Union City</option> \
+<option>Vineland City</option> \
+<option>Weehawken Township</option> \
+<option>West New York Town</option> \
+<option>Willingboro Township</option> \
+<option>Winslow Township</option> \
+<option>Woodbridge Township</option> \
+<option>Woodbury City</option> \
+<option>None (select No on form)</option> \
+    </select></p>"
+    // ,
+    // es: {
+    //   html: ""
+    // }
   },
 
   "Industry": {

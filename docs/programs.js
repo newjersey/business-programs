@@ -171,13 +171,13 @@ var program_descriptions = {
       COVID-relief funds to assist in monthly lease payments, per the CARES Act, the request \
       will be denied.",
     learn_more: "https://www.njra.us/Small-Business-Lease-Emergency-Assistance-Grant-Program"
-    // ,
-    // es: {
-    //   name: "",
-    //   description: "",
-    //   uses: "",
-    //   funding: ""
-    // }
+    ,
+    es: {
+      name: "Programa de subvenciones de asistencia de emergencia para arrendamientos para pequeñas empresas",
+      description: "Este es un programa de subvenciones de asistencia para el alquiler desarrollado por la Autoridad de Reurbanización de Nueva Jersey para ayudar a las pequeñas empresas que se han visto afectadas negativamente por COVID-19. El programa está abierto a pequeñas empresas u organizaciones sin fines de lucro ubicadas en municipios elegibles para la NJRA que actualmente alquilan espacios comerciales en edificios de uso mixto, inquilinos que alquilan espacio en edificios comerciales y negocios con escaparates que alquilan su espacio. Para ser elegible como pequeña empresa, las instalaciones del solicitante deben tener menos de 5,000 pies cuadrados de espacio alquilable. Se agregarán varias ubicaciones arrendadas por la misma empresa.",
+      uses: "Los fondos de la subvención se utilizarán para los costos de alquiler incurridos entre el 1 de marzo de 2020 y la fecha del acuerdo de subvención. Los solicitantes deberán proporcionar una verificación del propietario de que la empresa respectiva está al día con las obligaciones de arrendamiento mensuales antes del 1 de marzo de 2020. El propietario y la pequeña empresa deberán firmar certificaciones que reconozcan la cantidad de obligaciones de arrendamiento pendientes, que no exceda los $ 10,000 ( el inquilino no será descalificado si los pagos mensuales del arrendamiento están al día).",
+      funding: "El premio máximo por empresa es de $ 10K. Si el propietario de la empresa ha utilizado fondos de alivio de COVID anteriores para ayudar con los pagos mensuales del arrendamiento, según la Ley CARES, la solicitud será denegada."
+    }
   },
   bank: {
     html: "<p> \

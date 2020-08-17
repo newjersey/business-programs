@@ -194,6 +194,15 @@ var form_questions = {
       html: "<p>¿Ha estado su empresa en funcionamiento desde el 15 de febrero de 2020?</p>"
     }
   },
+  "q501": {
+    no_hides: ["landlord_qs"],
+    html: "<p> \
+      Are you the primary property owner of a residential rental property in the State of New Jersey \
+      that has been registered with NJ Department of Community Affairs’ Bureau of Housing Inspection’s \
+      Registration Inspection Management System (RIMS), current as of July 17, 2020? \
+    </p>"
+    //, es: {}
+  },
 
   "Physical Location": {
     header: true,
@@ -314,6 +323,28 @@ var form_questions = {
 //     //   html: ""
 //     // }
 //   },
+
+  "Property Owners": {
+    header: true,
+    classes: "landlord_qs"
+    // , es:
+  },
+  "q502": {
+    classes: "landlord_qs",
+    html: "<p>Does your residential rental property contain at least 3 and no more than 10 total housing units?</p>"
+  },
+  "q503": {
+    classes: "landlord_qs",
+    html: "<p>Does your residential rental property have a fire inspection certificate, current as of December 31, 2019?</p>"
+  },
+  "q504": {
+    classes: "landlord_qs",
+    html: "<p>Does your residential rental property contain at least one non-vacant COVID-impacted unit with a net rent deficit between April 2020 and July 2020 (i.e. the total rent due from the tenant of the impacted unit during the above period exceeds the amount of rent paid by the tenant during this period)?</p>"
+  },
+  "q505": {
+    classes: "landlord_qs",
+    html: "<p>Is your residential rental property a seasonal or vacation rental property?</p>"
+  },
 
   "Industry": {
     header: true,

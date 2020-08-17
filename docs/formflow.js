@@ -97,7 +97,7 @@ var nonprofit_q = "q11",
       }
     },
     emergency_lease: { // Small Business Lease Emergency Assistance Grant Program
-      required_yes: ["q201", "q1", "q11", "q2", "q17", "q21", "q401", "q402"],
+      required_yes: ["q201", "q1", "q11", "q2", "q17", "q21"], //, "q401", "q402"],
       required_no: ["q3", "q14"],
       eval: {
 

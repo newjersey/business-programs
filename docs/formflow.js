@@ -390,10 +390,33 @@ $(document).ready(function () {
       $(shell).append(lang_src.html);
     } else {
       // structured HTML sections
-      ["description", "uses", "funding", "availability"].forEach(function (section) {
+      var active_table = null;
+      ["description", "table_headers", "table_data", "table_footer", "uses", "funding", "availability"].forEach(function (section) {
         if (lang_src[section] || p[section]) {
-          $(shell).append("<p><strong>" + language_defaults[select_lang][section] + "</strong>: "
-            + (lang_src[section] || p[section]) + "</p>");
+          var content = lang_src[section] || p[section];
+          if (section.indexOf("table") === -1) {
+            $(shell).append("<p><strong>" + language_defaults[select_lang][section] + "</strong>: "
+              + content + "</p>");
+          } else if (section === "table_headers") {
+            active_table = $("<table class='table table-striped'>");
+            $(shell).append(active_table);
+            active_table.append($("<tr>").append($("<th>").attr("colspan", content[1].length).text(content[0][0])));
+            var hrow = $("<tr>");
+            active_table.append(hrow);
+            content[1].forEach(function(h){
+              hrow.append($("<th>").text(h));
+            });
+          } else if (section === "table_data") {
+            content.forEach(function(row){
+              var trow = $("<tr>");
+              active_table.append(trow);
+              row.forEach(function(col){
+                trow.append("<td>" + col.toLocaleString() + "</td>");
+              });
+            });
+          } else if (section === "table_footer") {
+            $(shell).append("<p><strong>" + content + "</strong></p>");
+          }
         }
       });
     }

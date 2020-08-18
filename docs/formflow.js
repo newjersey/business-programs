@@ -97,11 +97,13 @@ var nonprofit_q = "q11",
       }
     },
     emergency_lease: { // Small Business Lease Emergency Assistance Grant Program
-      required_yes: ["q201", "q1", "q11", "q2", "q17", "q21", "q401", "q402"],
+      required_yes: ["q201", "q1", "q11", "q2", "q17", "q21"], //, "q401", "q402"],
       required_no: ["q3", "q14"],
-      eval: {
-
-      }
+      eval: {}
+    },
+    landlord: { // Small Business Lease Emergency Assistance Grant Program
+      required_yes: ["q17", "q501", "q502", "q503", "q504"],
+      required_no: ["q505"]
     },
     egp: { // Entrepreneur Guarantee
       required_yes: ["q1", "q4", "q5", "q6", "q13", "q17", "q23", "q42"],
@@ -421,7 +423,7 @@ $(document).ready(function () {
         shell = outer_shell;
 
     if (q.header) {
-      shell.append($("<h3>").text(typeof lang_src === "string" ? lang_src : qcode));
+      shell.append($("<h3>").attr("class", q.classes || "").text(typeof lang_src === "string" ? lang_src : qcode));
       return;
     }
 

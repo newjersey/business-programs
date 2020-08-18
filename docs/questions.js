@@ -194,6 +194,15 @@ var form_questions = {
       html: "<p>¿Ha estado su empresa en funcionamiento desde el 15 de febrero de 2020?</p>"
     }
   },
+  "q501": {
+    no_hides: ["landlord_qs"],
+    html: "<p> \
+      Are you the primary property owner of a residential rental property in the State of New Jersey \
+      that has been registered with NJ Department of Community Affairs’ Bureau of Housing Inspection’s \
+      Registration Inspection Management System (RIMS), current as of July 17, 2020? \
+    </p>"
+    //, es: {}
+  },
 
   "Physical Location": {
     header: true,
@@ -224,168 +233,117 @@ var form_questions = {
     }
   },
 
-  "q401": {
-    classes: "not-home physical_nj",
-    no_hides: ["approp_small_space"],
-    html: "<p>Is your business one of the following?</p> \
-    <ul><li>Small businesses (5,000 sq. ft. or less) leasing commercial space in mixed-use buildings</li> \
-    <li>Small businesses ( 5,000 sq. ft. or less) leasing space in commercial buildings</li> \
-    <li>Store front businesses ( 5,000 sq. ft. or less) that lease their space</li></ul>"
-    ,
-    es: {
-      html: "<p>¿Su empresa es una de las siguientes?</p> \
-      <ul><li>Pequeñas empresas (5,000 pies cuadrados o menos) que alquilan espacios comerciales en edificios de uso mixto</li> \
-      <li>Pequeñas empresas (5,000 pies cuadrados o menos) alquilan espacio en edificios comerciales</li> \
-      <li>Tiendas de escaparates (5,000 pies cuadrados o menos) que alquilan su espacio</li></ul>"
-    }
+//   "q401": {
+//     classes: "not-home physical_nj",
+//     no_hides: ["approp_small_space"],
+//     html: "<p>Is your business one of the following?</p> \
+//     <ul><li>Small businesses (5,000 sq. ft. or less) leasing commercial space in mixed-use buildings</li> \
+//     <li>Small businesses ( 5,000 sq. ft. or less) leasing space in commercial buildings</li> \
+//     <li>Store front businesses ( 5,000 sq. ft. or less) that lease their space</li></ul>"
+//     // ,
+//     // es: {
+//     //   html: ""
+//     // }
+//   },
+//   "q402": {
+//     classes: "not-home physical_nj approp_small_space",
+//     html: "<p> \
+//       Is your business located in one of the following Cities, Boroughs or Townships? \
+//       <select> \
+// <option>Select</option> \
+// <option>None (select No on form)</option> \
+// <option>Asbury Park City</option> \
+// <option>Atlantic City</option> \
+// <option>Bayonne City</option> \
+// <option>Belleville Township</option> \
+// <option>Bergenfield Borough</option> \
+// <option>Bloomfield Township</option> \
+// <option>Brick Township</option> \
+// <option>Bridgeton City</option> \
+// <option>Burlington City</option> \
+// <option>Camden City</option> \
+// <option>Carteret Borough</option> \
+// <option>Clifton City</option> \
+// <option>East Orange City</option> \
+// <option>Elizabeth City</option> \
+// <option>Garfield City</option> \
+// <option>Glassboro Borough</option> \
+// <option>Gloucester City</option> \
+// <option>Gloucester Township</option> \
+// <option>Hackensack City</option> \
+// <option>Harrison Town</option> \
+// <option>Hillside Township</option> \
+// <option>Hoboken City</option> \
+// <option>Irvington Township</option> \
+// <option>Jersey City</option> \
+// <option>Keansburg Borough</option> \
+// <option>Kearny Town</option> \
+// <option>Lakewood Township</option> \
+// <option>Lindenwold Borough</option> \
+// <option>Lodi Borough</option> \
+// <option>Long Branch City</option> \
+// <option>Millville City</option> \
+// <option>Monroe Township (Gloucester)</option> \
+// <option>Montclair Township</option> \
+// <option>Mount Holly Township</option> \
+// <option>Neptune City Borough</option> \
+// <option>Neptune Township</option> \
+// <option>New Brunswick City</option> \
+// <option>Newark City</option> \
+// <option>North Bergen Township</option> \
+// <option>Nutley Township</option> \
+// <option>Old Bridge Township</option> \
+// <option>Orange City</option> \
+// <option>Passaic City</option> \
+// <option>Paterson City</option> \
+// <option>Pemberton Township</option> \
+// <option>Penns Grove Borough</option> \
+// <option>Pennsauken Township</option> \
+// <option>Perth Amboy City</option> \
+// <option>Phillipsburg Town</option> \
+// <option>Plainfield City</option> \
+// <option>Pleasantville City</option> \
+// <option>Rahway City</option> \
+// <option>Roselle Borough</option> \
+// <option>Salem City</option> \
+// <option>Sussex Boro</option> \
+// <option>Trenton City</option> \
+// <option>Union City</option> \
+// <option>Vineland City</option> \
+// <option>Weehawken Township</option> \
+// <option>West New York Town</option> \
+// <option>Willingboro Township</option> \
+// <option>Winslow Township</option> \
+// <option>Woodbridge Township</option> \
+// <option>Woodbury City</option> \
+// <option>None (select No on form)</option> \
+//     </select></p>"
+//     // ,
+//     // es: {
+//     //   html: ""
+//     // }
+//   },
+
+  "Property Owners": {
+    header: true,
+    classes: "landlord_qs"
+    // , es:
   },
-  "q402": {
-    classes: "not-home physical_nj approp_small_space",
-    html: "<p> \
-      Is your business located in one of the following Cities, Boroughs or Townships? \
-      <select> \
-<option>Select</option> \
-<option>None (select No on form)</option> \
-<option>Asbury Park City</option> \
-<option>Atlantic City</option> \
-<option>Bayonne City</option> \
-<option>Belleville Township</option> \
-<option>Bergenfield Borough</option> \
-<option>Bloomfield Township</option> \
-<option>Brick Township</option> \
-<option>Bridgeton City</option> \
-<option>Burlington City</option> \
-<option>Camden City</option> \
-<option>Carteret Borough</option> \
-<option>Clifton City</option> \
-<option>East Orange City</option> \
-<option>Elizabeth City</option> \
-<option>Garfield City</option> \
-<option>Glassboro Borough</option> \
-<option>Gloucester City</option> \
-<option>Gloucester Township</option> \
-<option>Hackensack City</option> \
-<option>Harrison Town</option> \
-<option>Hillside Township</option> \
-<option>Hoboken City</option> \
-<option>Irvington Township</option> \
-<option>Jersey City</option> \
-<option>Keansburg Borough</option> \
-<option>Kearny Town</option> \
-<option>Lakewood Township</option> \
-<option>Lindenwold Borough</option> \
-<option>Lodi Borough</option> \
-<option>Long Branch City</option> \
-<option>Millville City</option> \
-<option>Monroe Township (Gloucester)</option> \
-<option>Montclair Township</option> \
-<option>Mount Holly Township</option> \
-<option>Neptune City Borough</option> \
-<option>Neptune Township</option> \
-<option>New Brunswick City</option> \
-<option>Newark City</option> \
-<option>North Bergen Township</option> \
-<option>Nutley Township</option> \
-<option>Old Bridge Township</option> \
-<option>Orange City</option> \
-<option>Passaic City</option> \
-<option>Paterson City</option> \
-<option>Pemberton Township</option> \
-<option>Penns Grove Borough</option> \
-<option>Pennsauken Township</option> \
-<option>Perth Amboy City</option> \
-<option>Phillipsburg Town</option> \
-<option>Plainfield City</option> \
-<option>Pleasantville City</option> \
-<option>Rahway City</option> \
-<option>Roselle Borough</option> \
-<option>Salem City</option> \
-<option>Sussex Boro</option> \
-<option>Trenton City</option> \
-<option>Union City</option> \
-<option>Vineland City</option> \
-<option>Weehawken Township</option> \
-<option>West New York Town</option> \
-<option>Willingboro Township</option> \
-<option>Winslow Township</option> \
-<option>Woodbridge Township</option> \
-<option>Woodbury City</option> \
-<option>None (select No on form)</option> \
-    </select></p>"
-    ,
-    es: {
-      html: "<p> \
-      ¿Está su empresa ubicada en una de las siguientes ciudades, distritos o municipios? \
-      <select> \
-<option>Select</option> \
-<option>None (select No on form)</option> \
-<option>Asbury Park City</option> \
-<option>Atlantic City</option> \
-<option>Bayonne City</option> \
-<option>Belleville Township</option> \
-<option>Bergenfield Borough</option> \
-<option>Bloomfield Township</option> \
-<option>Brick Township</option> \
-<option>Bridgeton City</option> \
-<option>Burlington City</option> \
-<option>Camden City</option> \
-<option>Carteret Borough</option> \
-<option>Clifton City</option> \
-<option>East Orange City</option> \
-<option>Elizabeth City</option> \
-<option>Garfield City</option> \
-<option>Glassboro Borough</option> \
-<option>Gloucester City</option> \
-<option>Gloucester Township</option> \
-<option>Hackensack City</option> \
-<option>Harrison Town</option> \
-<option>Hillside Township</option> \
-<option>Hoboken City</option> \
-<option>Irvington Township</option> \
-<option>Jersey City</option> \
-<option>Keansburg Borough</option> \
-<option>Kearny Town</option> \
-<option>Lakewood Township</option> \
-<option>Lindenwold Borough</option> \
-<option>Lodi Borough</option> \
-<option>Long Branch City</option> \
-<option>Millville City</option> \
-<option>Monroe Township (Gloucester)</option> \
-<option>Montclair Township</option> \
-<option>Mount Holly Township</option> \
-<option>Neptune City Borough</option> \
-<option>Neptune Township</option> \
-<option>New Brunswick City</option> \
-<option>Newark City</option> \
-<option>North Bergen Township</option> \
-<option>Nutley Township</option> \
-<option>Old Bridge Township</option> \
-<option>Orange City</option> \
-<option>Passaic City</option> \
-<option>Paterson City</option> \
-<option>Pemberton Township</option> \
-<option>Penns Grove Borough</option> \
-<option>Pennsauken Township</option> \
-<option>Perth Amboy City</option> \
-<option>Phillipsburg Town</option> \
-<option>Plainfield City</option> \
-<option>Pleasantville City</option> \
-<option>Rahway City</option> \
-<option>Roselle Borough</option> \
-<option>Salem City</option> \
-<option>Sussex Boro</option> \
-<option>Trenton City</option> \
-<option>Union City</option> \
-<option>Vineland City</option> \
-<option>Weehawken Township</option> \
-<option>West New York Town</option> \
-<option>Willingboro Township</option> \
-<option>Winslow Township</option> \
-<option>Woodbridge Township</option> \
-<option>Woodbury City</option> \
-<option>Ningun (seleccione No en el formulario)</option> \
-    </select></p>"
-    }
+  "q502": {
+    classes: "landlord_qs",
+    html: "<p>Does your residential rental property contain at least 3 and no more than 10 total housing units?</p>"
+  },
+  "q503": {
+    classes: "landlord_qs",
+    html: "<p>Does your residential rental property have a fire inspection certificate, current as of December 31, 2019?</p>"
+  },
+  "q504": {
+    classes: "landlord_qs",
+    html: "<p>Does your residential rental property contain at least one non-vacant COVID-impacted unit with a net rent deficit between April 2020 and July 2020 (i.e. the total rent due from the tenant of the impacted unit during the above period exceeds the amount of rent paid by the tenant during this period)?</p>"
+  },
+  "q505": {
+    classes: "landlord_qs",
+    html: "<p>Is your residential rental property a seasonal or vacation rental property?</p>"
   },
 
   "Industry": {

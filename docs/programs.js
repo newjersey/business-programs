@@ -40,7 +40,6 @@ var program_descriptions = {
         <a target=\"_blank\" href=\"https://forms.business.nj.gov/grant-2-size/\">https://forms.business.nj.gov/grant-2-size/</a>"
     }
   },
-
   eawcl: {
     disclaimer: "The Small Business Assistance Loan Program application window has closed.",
     description: "A no/low-cost loan for up to 10 years for NJ-based businesses with under $5M in revenue.",
@@ -153,6 +152,7 @@ var program_descriptions = {
     }
   },
   emergency_lease: {
+    disclaimer: "The Small Business Lease Emergency Assistance Grant Program application window is oversubscribed, but may reopen in the future.",
     description: "This is a rental assistance grant program developed by the New Jersey \
       Redevelopment Authority to assist small businesses that have been negatively impacted \
       by COVID-19. The program is open to small businesses or non-profits located in NJRA \
@@ -178,6 +178,23 @@ var program_descriptions = {
       uses: "Los fondos de la subvención se utilizarán para los costos de alquiler incurridos entre el 1 de marzo de 2020 y la fecha del acuerdo de subvención. Los solicitantes deberán proporcionar una verificación del propietario de que la empresa respectiva está al día con las obligaciones de arrendamiento mensuales antes del 1 de marzo de 2020. El propietario y la pequeña empresa deberán firmar certificaciones que reconozcan la cantidad de obligaciones de arrendamiento pendientes, que no exceda los $ 10,000 ( el inquilino no será descalificado si los pagos mensuales del arrendamiento están al día).",
       funding: "El premio máximo por empresa es de $ 10K. Si el propietario de la empresa ha utilizado fondos de alivio de COVID anteriores para ayudar con los pagos mensuales del arrendamiento, según la Ley CARES, la solicitud será denegada."
     }
+  },
+  landlord: {
+    description: "This is a rental assistance grant program developed by the New Jersey Redevelopment Authority\
+     to assist small businesses that have been negatively impacted by COVID-19. The program is open to small businesses or \
+     non-profits located in NJRA eligible municipalities currently leasing commercial space in mixed-used buildings, \
+     tenants leasing space in commercial buildings, and store front businesses that lease their space. To be eligible \
+     as a small business, the applicant’s leased premises must be less than 5,000 square feet of leasable space. \
+     Multiple locations leased by the same business shall be aggregated.",
+    uses: "Grant funding to be used for rent costs incurred between March 1, 2020 and the date of the grant agreement. \
+    Applicants will need to provide veri­fication from the landlord that the respective business is in good standing with \
+    monthly lease obligations prior to March 1, 2020. The landlord and small business will need to sign certifi­cations \
+    acknowledging amount of outstanding lease obligations, not to exceed $10,000 (tenant will not be disqualifi­ed if monthly \
+      lease payments are current/up to date).",
+    funding: "The maximum award per business is $10K.  If the business owner has used prior COVID-relief funds to assist in \
+      monthly lease payments, per the CARES Act, the request will be denied.",
+    learn_more: "https://www.njra.us/Small-Business-Lease-Emergency-Assistance-Grant-Program"
+    // , es: {}
   },
   bank: {
     html: "<p> \

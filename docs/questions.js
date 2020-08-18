@@ -200,8 +200,10 @@ var form_questions = {
       Are you the primary property owner of a residential rental property in the State of New Jersey \
       that has been registered with NJ Department of Community Affairs’ Bureau of Housing Inspection’s \
       Registration Inspection Management System (RIMS), current as of July 17, 2020? \
-    </p>"
-    //, es: {}
+    </p>",
+    es: {
+      html: "<p>¿Es usted el propietario principal de alguna propiedad residencial de alquiler en el estado de Nueva Jersey que se haya registrado en el Registration Inspection Management System (RIMS) de la Oficina de Inspección de Vivienda del Departamento de Asuntos Comunitarios de Nueva Jersey, con vigencia al 17 de julio de 2020?</p>"
+    }
   },
 
   "Physical Location": {
@@ -331,19 +333,31 @@ var form_questions = {
   },
   "q502": {
     classes: "landlord_qs",
-    html: "<p>Does your residential rental property contain at least 3 and no more than 10 total housing units?</p>"
+    html: "<p>Does your residential rental property contain at least 3 and no more than 10 total housing units?</p>",
+    es: {
+      html: "<p>¿Tiene su propiedad residencial de alquiler un mínimo de 3 y un máximo total de 10 unidades de vivienda?</p>"
+    }
   },
   "q503": {
     classes: "landlord_qs",
-    html: "<p>Does your residential rental property have a fire inspection certificate, current as of December 31, 2019?</p>"
+    html: "<p>Does your residential rental property have a fire inspection certificate, current as of December 31, 2019?</p>",
+    es: {
+      html: "¿Tiene su propiedad residencial de alquiler un certificado de inspección contra incendios con vigencia al 31 de diciembre de 2019?"
+    }
   },
   "q504": {
     classes: "landlord_qs",
-    html: "<p>Does your residential rental property contain at least one non-vacant COVID-impacted unit with a net rent deficit between April 2020 and July 2020 (i.e. the total rent due from the tenant of the impacted unit during the above period exceeds the amount of rent paid by the tenant during this period)?</p>"
+    html: "<p>Does your residential rental property contain at least one non-vacant COVID-impacted unit with a net rent deficit between April 2020 and July 2020 (i.e. the total rent due from the tenant of the impacted unit during the above period exceeds the amount of rent paid by the tenant during this period)?</p>",
+    es: {
+      html: "<p>¿Tiene su propiedad residencial de alquiler al menos una unidad ocupada y afectada por COVID con un déficit de alquiler neto entre abril de 2020 y julio de 2020 (es decir, el total del alquiler que adeuda el inquilino de la unidad afectada durante el período indicado anteriormente excede el monto de alquiler que pagó el inquilino durante ese período)?</p>"
+    }
   },
   "q505": {
     classes: "landlord_qs",
-    html: "<p>Is your residential rental property a seasonal or vacation rental property?</p>"
+    html: "<p>Is your residential rental property a seasonal or vacation rental property?</p>",
+    es: {
+      html: "¿Su propiedad residencial de alquiler se alquila por temporada o para vacaciones?"
+    }
   },
 
   "Industry": {

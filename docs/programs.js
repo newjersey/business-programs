@@ -180,21 +180,59 @@ var program_descriptions = {
     }
   },
   landlord: {
-    description: "This is a rental assistance grant program developed by the New Jersey Redevelopment Authority\
-     to assist small businesses that have been negatively impacted by COVID-19. The program is open to small businesses or \
-     non-profits located in NJRA eligible municipalities currently leasing commercial space in mixed-used buildings, \
-     tenants leasing space in commercial buildings, and store front businesses that lease their space. To be eligible \
-     as a small business, the applicant’s leased premises must be less than 5,000 square feet of leasable space. \
-     Multiple locations leased by the same business shall be aggregated.",
-    uses: "Grant funding to be used for rent costs incurred between March 1, 2020 and the date of the grant agreement. \
-    Applicants will need to provide veri­fication from the landlord that the respective business is in good standing with \
-    monthly lease obligations prior to March 1, 2020. The landlord and small business will need to sign certifi­cations \
-    acknowledging amount of outstanding lease obligations, not to exceed $10,000 (tenant will not be disqualifi­ed if monthly \
-      lease payments are current/up to date).",
-    funding: "The maximum award per business is $10K.  If the business owner has used prior COVID-relief funds to assist in \
-      monthly lease payments, per the CARES Act, the request will be denied.",
-    learn_more: "https://www.njra.us/Small-Business-Lease-Emergency-Assistance-Grant-Program"
-    // , es: {}
+    description: "A NJHMFA program that will assist small rental property owners and their tenants \
+during the COVID-19 emergency. Eligible properties must have between 3 and 10 units; may not be \
+seasonal/vacation rentals; must be registered with the Department of Community Affairs Bureau of \
+Housing Inspection; must have a current fire inspection certificate as of March 9, 2020; must have at \
+least one non-vacant rental unit that has been negatively impacted by COVID-19; and must have \
+low-to-moderate income rent levels.<br/> \
+Rents charged to those COVID-impacted unit(s) can be no greater than the maximum rent \
+thresholds listed below:",
+    table_headers: [["Maximum Rent Thresholds by Bedroom Size"],
+      ["County of Rental Property", "Studio", "1BR", "2BR", "3BR", "4BR", "5BR"]
+    ],
+    table_data: [
+      ["Atlantic County",1182,1266,1518,1754,1956,2159],
+["Bergen County",1504,1611,1932,2232,2490,2748],
+["Burlington County",1354,1450,1740,2010,2242,2474],
+["Camden County",1354,1450,1740,2010,2242,2474],
+["Cape May County",1202,1288,1546,1785,1992,2197],
+["Cumberland County",1028,1102,1322,1527,1704,1880],
+["Essex County",1496,1603,1924,2222,2478,2735],
+["Gloucester County",1354,1450,1740,2010,2242,2474],
+["Hudson County",1382,1480,1776,2051,2288,2525],
+["Hunterdon County",1674,1793,2152,2486,2774,3060],
+["Mercer County",1564,1676,2012,2324,2592,2861],
+["Middlesex County",1674,1793,2152,2486,2774,3060],
+["Monmouth County",1532,1642,1970,2276,2540,2802],
+["Morris County",1496,1603,1924,2222,2478,2735],
+["Ocean County",1532,1642,1970,2276,2540,2802],
+["Passaic County",1504,1611,1932,2232,2490,2748],
+["Salem County",1354,1450,1740,2010,2242,2474],
+["Somerset County",1674,1793,2152,2486,2774,3060],
+["Sussex County",1496,1603,1924,2222,2478,2735],
+["Union County",1496,1603,1924,2222,2478,2735],
+["Warren County",1448,1552,1862,2151,2400,2648]
+    ],
+    table_footer: "If a unit has an above-threshold rent for its bedroom size, that unit is ineligible for SLEG assistance.",
+    uses: "The grant will support vulnerable landlords and renters by reimbursing small landlords \
+for missed/reduced rent payments between April and July 2020. Landlord grantees will be required \
+to forgive back rent and late fees that their tenants have accrued during the April to July period.",
+    funding: "There is $25 million in available funding for this program. The Application Portal \
+will open on August 19th at 9 AM online and close on August 26th at 1 PM. After the Portal closes, \
+applications will be computer-randomized and then reviewed and awarded in the randomized order \
+to give all properties an equal opportunity to be assisted.",
+    learn_more: "https://www.njhousing.gov/rentals/sleg/",
+    es: {
+      description: "Programa de la Agencia de Vivienda y Financiamiento de Hipotecas de Nueva Jersey (NJHMFA) que ayudará a los pequeños propietarios de viviendas de alquiler y a sus inquilinos durante la emergencia por COVID-19. Las propiedades elegibles deberán tener entre 3 y 10 unidades; no deberá tratarse de alquileres por temporada o de vacaciones; deberán estar registradas en la Oficina de Inspección de Vivienda del Departamento de Asuntos Comunitarios; deberán tener un certificado de \ inspección contra incendios con vigencia al 9 de marzo de 2020; deberán tener al menos una unidad de alquiler ocupada que se haya visto afectada negativamente por el la COVID-19; y sus niveles de ingreso por alquiler deberán ser de bajos a moderados. \
+      El alquiler que se cobre por las unidades afectadas por la COVID no podrá exceder los límites máximos de alquiler a continuación:",
+      table_headers: [["Límites máximos de alquiler por cantidad de habitaciones"],
+        ["County of Rental Property","Monoambiente","1 HAB.","2 HAB.","3 HAB.","4 HAB.","5 HAB."]
+      ],
+      table_footer: "Si en alguna unidad se cobra un alquiler que supere el máximo correspondiente a su cantidad de habitaciones, se considerará no elegible para la asistencia del SLEG.",
+      uses: "Este subsidio apoyará a los propietarios e inquilinos vulnerables reembolsándoles a los pequeños propietarios los pagos de alquiler incumplidos o reducidos entre abril y julio de 2020. Se les solicitará a los propietarios que reciban este subsidio que eximan a sus inquilinos de los alquileres o costos por atraso acumulados durante el período de abril a julio.",
+      funding: "Hay $25 millones disponibles para la financiación de este programa. El Portal de solicitudes abrirá el 19 de agosto a las 9:00 a. m. en línea y cerrará el 26 de agosto a la 1:00 p. m. Una vez que haya cerrado el Portal, las solicitudes serán distribuidas de manera aleatoria por computadora y luego se revisarán y se adjudicarán según el orden de distribución aleatoria para que todas las propiedades tengan las mismas oportunidades de recibir asistencia."
+    }
   },
   bank: {
     html: "<p> \

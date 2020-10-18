@@ -220,6 +220,16 @@ var nonprofit_q = "q11",
     counseling: {
       required_yes: [],
       required_no: []
+    },
+    phase3: {
+      required_yes: ["q1", "q204", "q2", "q17", "q23", "q20", "q22", "q21"],
+      required_no: ["q14"],
+      eval: {
+        "q8": function(val) {
+          var fte = parseNumber(val);
+          return fte <= 50;
+        }
+      }
     }
   };
 var programs = Object.keys(requirements);

@@ -355,5 +355,16 @@ to give all properties an equal opportunity to be assisted.",
         la SBA para recibir préstamos de capital de trabajo destinados a ayudarlos a superar esta \
         crisis.</p>"
     }
+  },
+  phase3: {
+    description: "This is a grant program developed by the NJEDA to assist small businesses, micro-business, \
+      and restaurants that have been negatively impacted by COVID-19. The program is open to New Jersey-based businesses \
+      with 50 or fewer full-time-employees.",
+    uses: "Grant funding to be used for reimbursement of lost revenue as result of the business interruption \
+      caused by COVID-19 between March 1, 2020 and the date of the grant agreement. Grant money can be \
+      used for short-term, immediate payroll, and working capital costs.",
+    availability: "The maximum award per business is $20K.  There is a restriction on duplication of benefits \
+      if the business owner has used prior COVID-relief funds, per the CARES Act.",
+    learn_more: "https://www.njeda.com/Press-Room/News-Articles/News-Articles/NOFA-Phase-3-Grant"
   }
 };

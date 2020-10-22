@@ -342,7 +342,7 @@ var form_questions = {
     classes: "landlord_qs",
     html: "<p>Does your residential rental property have a fire inspection certificate, current as of December 31, 2019?</p>",
     es: {
-      html: "¿Tiene su propiedad residencial de alquiler un certificado de inspección contra incendios con vigencia al 31 de diciembre de 2019?"
+      html: "<p>¿Tiene su propiedad residencial de alquiler un certificado de inspección contra incendios con vigencia al 31 de diciembre de 2019?</p>"
     }
   },
   "q504": {
@@ -356,7 +356,7 @@ var form_questions = {
     classes: "landlord_qs",
     html: "<p>Is your residential rental property a seasonal or vacation rental property?</p>",
     es: {
-      html: "¿Su propiedad residencial de alquiler se alquila por temporada o para vacaciones?"
+      html: "<p>¿Su propiedad residencial de alquiler se alquila por temporada o para vacaciones?</p>"
     }
   },
 

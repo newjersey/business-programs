@@ -68,6 +68,16 @@ var nonprofit_q = "q11",
         }
       }
     },
+    eag4: { // Emergency Assistance Grant (Phase 4)
+      required_yes: ["q1", "q204", "q2", "q17", "q23", "q20", "q22", "q21"],
+      required_no: ["q14"],
+      eval: {
+        "q8": function(val) {
+          var fte = parseNumber(val);
+          return fte <= 50;
+        }
+      }
+    },
     eawcl: { // Emergency Assistance 0% Working Capital
       required_yes: ["q1", "q2", "q7", "q16", "q17", "q20", "q21", "q22", "q23", "q42"],
       required_no: ["q3", "q14"],

@@ -40,6 +40,26 @@ var program_descriptions = {
         <a target=\"_blank\" href=\"https://forms.business.nj.gov/grant-2-size/\">https://forms.business.nj.gov/grant-2-size/</a>"
     }
   },
+  eag3: {
+    disclaimer: "The Small Business Emergency Assistance Grant (Phase 3) is now closed.",
+    description: "This is a grant program developed by the NJEDA to assist small businesses, micro-business, \
+      and restaurants that have been negatively impacted by COVID-19. The program is open to New Jersey-based businesses \
+      with 50 or fewer full-time-employees.",
+    uses: "Grant funding to be used for reimbursement of lost revenue as result of the business interruption \
+      caused by COVID-19 between March 1, 2020 and the date of the grant agreement. Grant money can be \
+      used for short-term, immediate payroll, and working capital costs.",
+    availability: "The maximum award per business is $20K.  There is a restriction on duplication of benefits \
+      if the business owner has used prior COVID-relief funds, per the CARES Act.",
+    learn_more: "https://www.njeda.com/Press-Room/News-Articles/News-Articles/NOFA-Phase-3-Grant",
+    es: {
+      disclaimer: "El Small Business Emergency Assistance Grant (Programa de Subsidios para Asistencia de Emergencia) (Phase 3) ahora está cerrada",
+      alt_name: "Programa de Subsidios para Asistencia de Emergencia (Phase 3)",
+      name: "Fase 3: Programa de subsidios para asistencia de emergencia a pequeñas empresas (Small Business Emergency Assistance Grant Program)",
+      description: "Este es un programa de subsidios desarrollado por la New Jersey Economic Development Authority (NJEDA) para ayudar a las pequeñas empresas, las microempresas y los restaurantes que se han visto afectados negativamente por la COVID-19. El programa está disponible para las empresas con sede en New Jersey con 50 empleados de tiempo completo o menos.",
+      uses: "Los fondos de subsidios se utilizarán para el reembolso por pérdida de ingresos como resultado de la interrupción comercial causada por la COVID-19 entre el 1.° de marzo de 2020 y la fecha del acuerdo del subsidio. El dinero del subsidio se puede utilizar para los costos inmediatos y de corto plazo de nómina y de capital de trabajo.",
+      availability: "El subsidio máximo por empresa es de $20,000. Existe una restricción respecto de la duplicación de beneficios si el propietario de la empresa ya ha utilizado previamente fondos de ayuda por COVID, conforme a la Ley Federal de Ayuda, Alivio y Seguridad Económica por Coronavirus (Federal Coronavirus Aid, Relief, and Economic Security, [CARES] Act)."
+    }
+  },
   eawcl: {
     disclaimer: "The Small Business Assistance Loan Program application window has closed.",
     description: "A no/low-cost loan for up to 10 years for NJ-based businesses with under $5M in revenue.",
@@ -354,23 +374,6 @@ to give all properties an equal opportunity to be assisted.",
         ayudarán a los propietarios de pequeñas empresas a presentar sus solicitudes a través de \
         la SBA para recibir préstamos de capital de trabajo destinados a ayudarlos a superar esta \
         crisis.</p>"
-    }
-  },
-  phase3: {
-    description: "This is a grant program developed by the NJEDA to assist small businesses, micro-business, \
-      and restaurants that have been negatively impacted by COVID-19. The program is open to New Jersey-based businesses \
-      with 50 or fewer full-time-employees.",
-    uses: "Grant funding to be used for reimbursement of lost revenue as result of the business interruption \
-      caused by COVID-19 between March 1, 2020 and the date of the grant agreement. Grant money can be \
-      used for short-term, immediate payroll, and working capital costs.",
-    availability: "The maximum award per business is $20K.  There is a restriction on duplication of benefits \
-      if the business owner has used prior COVID-relief funds, per the CARES Act.",
-    learn_more: "https://www.njeda.com/Press-Room/News-Articles/News-Articles/NOFA-Phase-3-Grant",
-    es: {
-      name: "Fase 3: Programa de subsidios para asistencia de emergencia a pequeñas empresas (Small Business Emergency Assistance Grant Program)",
-      description: "Este es un programa de subsidios desarrollado por la New Jersey Economic Development Authority (NJEDA) para ayudar a las pequeñas empresas, las microempresas y los restaurantes que se han visto afectados negativamente por la COVID-19. El programa está disponible para las empresas con sede en New Jersey con 50 empleados de tiempo completo o menos.",
-      uses: "Los fondos de subsidios se utilizarán para el reembolso por pérdida de ingresos como resultado de la interrupción comercial causada por la COVID-19 entre el 1.° de marzo de 2020 y la fecha del acuerdo del subsidio. El dinero del subsidio se puede utilizar para los costos inmediatos y de corto plazo de nómina y de capital de trabajo.",
-      availability: "El subsidio máximo por empresa es de $20,000. Existe una restricción respecto de la duplicación de beneficios si el propietario de la empresa ya ha utilizado previamente fondos de ayuda por COVID, conforme a la Ley Federal de Ayuda, Alivio y Seguridad Económica por Coronavirus (Federal Coronavirus Aid, Relief, and Economic Security, [CARES] Act)."
     }
   }
 };

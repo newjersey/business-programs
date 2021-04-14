@@ -657,7 +657,7 @@ var form_questions = {
       <li>No principal of the organization with a 50 percent or greater ownership interest is more than sixty (60) days delinquent on child support obligations.</li> \
       <li>The organization does not present live performances of a prurient sexual nature or derive directly or indirectly more than de minimis gross revenue through the sale of products or services, or the presentation of any depictions or displays, of a prurient sexual nature.</li> \
       <li>The organization is not in the business of lobbying</li> \
-      <li>The organization cannot be a state, local, or municipal government entity and cannot be a member of Congress.</li> \
+      <li>The organization is not a state, local, or municipal government entity and you are not a member of Congress.</li> \
     </ul>",
     skippable: "Skip",
     es: {
